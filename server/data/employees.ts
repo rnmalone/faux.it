@@ -3,7 +3,7 @@ import {EmployeeDTO} from "../entities/Employee";
 const employees: EmployeeDTO[] = [
     {
         id: 1,
-        firstName: 'Stourton',
+        firstName: 'Storton',
         lastName: 'Montgomery',
         jobTitle: 'Senior Sales Executive',
         division: 'Nautical',
@@ -65,8 +65,7 @@ const employees: EmployeeDTO[] = [
         joinDate: new Date(),
         imageUrl: '',
         locationId: 2
-    }
-    ,
+    },
     {
         id: 6,
         firstName: 'Baz',
@@ -79,6 +78,71 @@ const employees: EmployeeDTO[] = [
         joinDate: new Date(),
         imageUrl: '',
         locationId: 5
+    },
+    {
+        id: 7,
+        firstName: 'Edwina',
+        lastName: 'Chins-Ranton',
+        jobTitle: 'Sales Executive',
+        division: 'Motor',
+        salary: 70000,
+        commissionRate: 6,
+        email: 'edwina.chinsranton@faux.it',
+        joinDate: new Date(),
+        imageUrl: '',
+        locationId: 3
+    },
+    {
+        id: 8,
+        firstName: 'Prudence',
+        lastName: 'Whitehall',
+        jobTitle: 'Senior Sales Executive',
+        division: 'Motor',
+        salary: 90000,
+        commissionRate: 6,
+        email: 'prudence.whitehall@faux.it',
+        joinDate: new Date(),
+        imageUrl: '',
+        locationId: 3
+    },
+    {
+        id: 9,
+        firstName: 'Dame Claudette',
+        lastName: 'Winthrope',
+        jobTitle: 'Sales Executive',
+        division: 'Motor',
+        salary: 70000,
+        commissionRate: 6.1,
+        email: 'claudette.winthrope@faux.it',
+        joinDate: new Date(),
+        imageUrl: '',
+        locationId: 3
+    },
+    {
+        id: 10,
+        firstName: 'Miles',
+        lastName: 'Izzard-Crew',
+        jobTitle: 'Business Manager',
+        division: 'Aerospace',
+        salary: 200000,
+        commissionRate: 2,
+        email: 'miles.izzardcrew@faux.it',
+        joinDate: new Date(),
+        imageUrl: '',
+        locationId: 2
+    },
+    {
+        id: 11,
+        firstName: 'Tobias',
+        lastName: 'Forbes',
+        jobTitle: 'Sales Manager',
+        division: 'Aerospace',
+        salary: 400000,
+        commissionRate: 0,
+        email: 'tobias.forbes@faux.it',
+        joinDate: new Date(),
+        imageUrl: '',
+        locationId: 2
     }
 ]
 
