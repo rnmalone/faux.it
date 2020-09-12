@@ -2,6 +2,8 @@ import "reflect-metadata";
 import server from './server';
 import {initDb} from "./lib/db";
 import injectMockData from "./lib/db/injectMockData";
+import {createConnection} from "typeorm";
+import dbConfig from "./config/database.config";
 
 const debug = require('debug')('app:bin:server');
 const project = require('../config/project.config');
@@ -9,10 +11,10 @@ const project = require('../config/project.config');
 
 (async () => {
     const database = await initDb();
+    const connection = await createConnection(dbConfig.orm);
 
-    await injectMockData()
-
-    server();
+    await injectMockData(connection)
+    server(connection);
 })()
 
 
