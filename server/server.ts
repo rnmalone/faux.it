@@ -9,12 +9,19 @@ import webpackHotMiddleware from 'webpack-hot-middleware';
 const { ApolloServer, gql } = require('apollo-server-express');
 import schema from './schema/schema'
 import resolvers from './resolvers/employee'
-
 import {assets} from "./middleware";
-import bodyParser from "body-parser";
+import {Connection} from "typeorm";
 
-export default function startServer() {
-    const server = new ApolloServer({typeDefs: schema, resolvers})
+export interface IContext {
+    connection: Connection
+}
+
+export default function startServer(connection: Connection) {
+    const server = new ApolloServer({
+        typeDefs: schema,
+        resolvers,
+        context: () => ({ connection })
+    })
 
     const webpackCompiler = webpack(webpackConfig as Configuration);
     const debug = _debug('app:server:main');
