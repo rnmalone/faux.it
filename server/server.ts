@@ -6,11 +6,12 @@ import webpackConfig from '../config/webpack.config';
 import webpack, {Configuration} from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
-const { ApolloServer, gql } = require('apollo-server-express');
 import schema from './schema/schema'
 import resolvers from './resolvers/employee'
 import {assets} from "./middleware";
 import {Connection} from "typeorm";
+
+const {ApolloServer, gql} = require('apollo-server-express');
 
 export interface IContext {
     connection: Connection
@@ -20,7 +21,7 @@ export default function startServer(connection: Connection) {
     const server = new ApolloServer({
         typeDefs: schema,
         resolvers,
-        context: () => ({ connection })
+        context: () => ({connection})
     })
 
     const webpackCompiler = webpack(webpackConfig as Configuration);
@@ -55,7 +56,7 @@ export default function startServer(connection: Connection) {
 
     webpackCompiler.hooks.done.tap('HashedAssetPlugin', assetsMiddleware.hashedAssetsUpdated);
 
-    server.applyMiddleware({app, path: '/v1/api' })
+    server.applyMiddleware({app, path: '/v1/api'})
 
     app.use(assetsMiddleware)
 

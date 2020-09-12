@@ -1,7 +1,6 @@
 import {employees, locations} from "../../data";
 import {Employee, Location, Sale} from "../../entities";
-import {Connection, createConnection} from "typeorm";
-import dbConfig from "../../config/database.config";
+import {Connection} from "typeorm";
 import sales from "../../data/sales";
 
 function applyProperties<T>(obj: T, properties: Partial<T>) {
@@ -44,7 +43,7 @@ export default async function injectMockData(connection: Connection) {
         )
 
         console.log(`Added ${saleEntries.length} sales`)
-    } catch(e) {
+    } catch (e) {
         console.error(`Failed to load test data: ${e}`)
     }
 }

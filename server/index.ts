@@ -1,11 +1,12 @@
 import "reflect-metadata";
 import dotenv from 'dotenv';
-dotenv.config();
 import server from './server';
 import {initDb} from "./lib/db";
 import injectMockData from "./lib/db/injectMockData";
 import {createConnection} from "typeorm";
 import dbConfig from "./config/database.config";
+
+dotenv.config();
 
 const debug = require('debug')('app:bin:server');
 const project = require('../config/project.config');

@@ -1,11 +1,12 @@
 import Employee, {EmployeeDTO} from "../entities/Employee";
 import Location from "../entities/Location";
 import {IContext} from "../server";
-import {facetExtractor, paginateResults} from "../lib";
+import {facetExtractor, filterResults, paginateResults} from "../lib";
 import {Sale} from "../entities";
-import {sort, sortByAlphaNumeric} from "../lib/sorters";
+import {sort} from "../lib/sorters";
 import {ISortInput} from "../@types/SortInput";
 import {IPagingInput} from "../@types/Paging";
+import {IFacetInput} from "../@types/Facet";
 
 const EMPLOYEE_FACET_FIELDS: (keyof Partial<EmployeeDTO>)[] = [
     'division',
@@ -15,18 +16,26 @@ const EMPLOYEE_FACET_FIELDS: (keyof Partial<EmployeeDTO>)[] = [
 
 export interface IEmployeeListQueryInput {
     sort: ISortInput,
-    paging: IPagingInput
+    paging: IPagingInput,
+    facets: IFacetInput[]
 }
 
 const employeeResolver = {
     Query: {
-        employeeList: async(root: any, { paging, sort: sortInput }: IEmployeeListQueryInput, { connection }: IContext) => {
-            let items: Employee[] = await connection
+        employeeList: async (root: any, {paging, sort: sortInput, facets: facetInput}: IEmployeeListQueryInput, {connection}: IContext) => {
+            const builder = connection
                 .getRepository(Employee)
                 .createQueryBuilder("employee")
                 .innerJoinAndMapOne('employee.location', 'Location', 'location', 'location.id = employee.locationId')
-                .getMany()
-            
+
+
+            let items: Employee[] = await builder.getMany()
+
+            if (facetInput) {
+                items = filterResults(items, facetInput)
+            }
+
+
             const facets = facetExtractor(items, EMPLOYEE_FACET_FIELDS)
 
             const sorted = sort(items, 'lastName', sortInput?.type, sortInput?.direction)
@@ -40,14 +49,14 @@ const employeeResolver = {
             }
         },
 
-        employee: async(root: any, { id, }: any, { connection }: IContext) => {
+        employee: async (root: any, {id,}: any, {connection}: IContext) => {
             const employee = await connection
                 .getRepository(Employee)
                 .createQueryBuilder("employee")
-                .where('Employee.id = :id', { id })
+                .where('Employee.id = :id', {id})
                 .getOne()
 
-            if(!employee) {
+            if (!employee) {
                 //TODO error handle
 
                 return {}
@@ -56,7 +65,7 @@ const employeeResolver = {
             const sales = await connection
                 .getRepository(Sale)
                 .createQueryBuilder('sale')
-                .where('Sale.employeeId = :id', { id })
+                .where('Sale.employeeId = :id', {id})
                 .getMany();
 
             employee.sales = sales

@@ -34,7 +34,7 @@ export default class Sale {
     @Column()
     dateOpened: Date;
 
-    @Column({ nullable: true })
+    @Column({nullable: true})
     dateClosed: Date | null;
 }
 

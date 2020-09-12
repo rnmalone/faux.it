@@ -1,5 +1,5 @@
 //TODO extract out by entity
-import { gql } from 'apollo-server'
+import {gql} from 'apollo-server'
 
 const typeDefs = gql`
     #Employee structure

@@ -9,3 +9,8 @@ export interface IFacetResult {
 }
 
 export type ResultFacets = IFacetResult[]
+
+export interface IFacetInput {
+    category: string;
+    selected: string[];
+}
