@@ -1,4 +1,5 @@
 import Employee, {EmployeeDTO} from "../entities/Employee";
+import Location from "../entities/Location";
 import {IContext} from "../server";
 import {facetExtractor, paginateResults} from "../lib";
 import {Sale} from "../entities";
@@ -20,8 +21,12 @@ export interface IEmployeeListQueryInput {
 const employeeResolver = {
     Query: {
         employeeList: async(root: any, { paging, sort: sortInput }: IEmployeeListQueryInput, { connection }: IContext) => {
-            let items: Employee[] = await connection.manager.find(Employee)
-
+            let items: Employee[] = await connection
+                .getRepository(Employee)
+                .createQueryBuilder("employee")
+                .innerJoinAndMapOne('employee.location', 'Location', 'location', 'location.id = employee.locationId')
+                .getMany()
+            
             const facets = facetExtractor(items, EMPLOYEE_FACET_FIELDS)
 
             const sorted = sort(items, 'lastName', sortInput?.type, sortInput?.direction)
@@ -31,7 +36,6 @@ const employeeResolver = {
             return {
                 count: items.length,
                 items: paginatedItems,
-                // @ts-ignore
                 facets
             }
         },
