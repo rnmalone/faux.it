@@ -1,19 +1,18 @@
 import {Direction} from "../../@types/Direction";
 
-export default function sortByAlphanumeric<T>(items: T[], keyToSortOn: keyof T, direction: Direction) {
-    // return items.sort((itemA, itemB) => {
-    //     if(typeof itemA[keyToSortOn] === 'string') {
-    //         var valueA = itemA[keyToSortOn].toUpperCase(); // ignore upper and lowercase
-    //         var valueB = itemB[keyToSortOn].toUpperCase(); // ignore upper and lowercase
-    //         if (valueA < valueB) {
-    //             return -1;
-    //         }
-    //         if (valueA > valueB) {
-    //             return 1;
-    //         }
-    //
-    //         // names must be equal
-    //         return 0;
-    //     }
-    // })
+export default function sortByAlphanumeric<T>(items: T[], keyToSortOn: keyof T, direction: Direction): T[] {
+    return items.sort((itemA, itemB) => {
+        const valueA = String(itemA[keyToSortOn]).toUpperCase();
+        const valueB = String(itemB[keyToSortOn]).toUpperCase();
+
+        if (valueA < valueB) {
+            return direction === Direction.DOWN ? -1 : 1;
+        }
+
+        if (valueA > valueB) {
+            return direction === Direction.DOWN ? 1 : -1;
+        }
+
+        return 0;
+    })
 }

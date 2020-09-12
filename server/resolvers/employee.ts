@@ -2,6 +2,9 @@ import Employee, {EmployeeDTO} from "../entities/Employee";
 import {IContext} from "../server";
 import {facetExtractor, paginateResults} from "../lib";
 import {Sale} from "../entities";
+import {sort, sortByAlphaNumeric} from "../lib/sorters";
+import {ISortInput} from "../@types/SortInput";
+import {IPagingInput} from "../@types/Paging";
 
 const EMPLOYEE_FACET_FIELDS: (keyof Partial<EmployeeDTO>)[] = [
     'division',
@@ -9,15 +12,21 @@ const EMPLOYEE_FACET_FIELDS: (keyof Partial<EmployeeDTO>)[] = [
     'locationId'
 ]
 
+export interface IEmployeeListQueryInput {
+    sort: ISortInput,
+    paging: IPagingInput
+}
+
 const employeeResolver = {
     Query: {
-        employeeList: async(root: any, { paging }: any, { connection }: IContext) => {
-            console.log('root', root)
-            const items: Employee[] = await connection.manager.find(Employee)
+        employeeList: async(root: any, { paging, sort: sortInput }: IEmployeeListQueryInput, { connection }: IContext) => {
+            let items: Employee[] = await connection.manager.find(Employee)
 
             const facets = facetExtractor(items, EMPLOYEE_FACET_FIELDS)
 
-            const paginatedItems = paginateResults(items, paging)
+            const sorted = sort(items, 'lastName', sortInput?.type, sortInput?.direction)
+
+            const paginatedItems = paginateResults(sorted, paging)
 
             return {
                 count: items.length,
