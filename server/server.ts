@@ -47,4 +47,4 @@ app.use(express.static(config.paths.public()));
 
 app.use('*', (req: Request, res: Response): void => void res.render('index'));
 
-module.exports = app;
+export default app;

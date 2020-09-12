@@ -9,7 +9,9 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "noImplicitReturns": false,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
   "exclude": [
     "client/setupTests.ts"

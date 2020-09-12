@@ -56,7 +56,7 @@ config.server.templateLocals.basePath = config.client.basePath;
 // -------------------------------------
 // Path utilities
 // -------------------------------------
-const basePath = path.resolve(__dirname, '../..');
+const basePath = path.resolve(__dirname, '..');
 
 function getPath(...args) {
     return path.resolve(basePath, ...args);

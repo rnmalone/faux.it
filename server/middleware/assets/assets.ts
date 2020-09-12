@@ -1,4 +1,3 @@
-
 import {IAssetMiddlewareConfig, IAssetsObject, IHashedAssetMetaData} from './models';
 import {NextFunction, Request, Response} from 'express';
 import path from "path";

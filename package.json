@@ -1,17 +1,16 @@
 {
-  "name": "arm-react-coding-assessment",
+  "name": "faux.it",
   "version": "1.0.0",
   "engines": {
-    "node": "12.12.0"
+    "node": "12.13.1"
   },
-  "description": "Arm React coding assessment",
+  "description": "",
   "scripts": {
-    "start": "cross-env NODE_PATH=. DEBUG=app:* npm run build:server && node ./bin/server.js",
+    "start": "nodemon",
     "build:server": "rimraf ./dist && tsc --project tsconfig.server.json",
-    "test": "jest --reporters=default --config ./config/jest.config.js --maxWorkers=4",
-    "zip": "node scripts/zipBundler.js"
+    "build:client": "echo TODO",
+    "test": "jest --reporters=default --config ./config/jest.config.js --maxWorkers=4"
   },
-  "author": "rory.malone@arm.com",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
@@ -24,7 +23,10 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-hot-loader": "^4.8.2",
-    "react-router-dom": "^5.0.0"
+    "react-router-dom": "^5.0.0",
+    "sqlite": "^4.0.14",
+    "sqlite3": "^5.0.0",
+    "typeorm": "^0.2.26"
   },
   "devDependencies": {
     "@babel/polyfill": "^7.0.0",
@@ -38,6 +40,7 @@
     "@types/node": "^13.9.1",
     "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.5",
+    "@types/sqlite3": "^3.1.6",
     "@types/webpack": "^4.41.7",
     "@types/webpack-dev-middleware": "^3.7.0",
     "@types/webpack-hot-middleware": "^2.25.0",
@@ -53,15 +56,17 @@
     "jest-enzyme": "^7.1.2",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
-    "nodemon": "^2.0.2",
+    "nodemon": "^2.0.4",
     "normalize.css": "^7.0.0",
     "postcss-loader": "^3.0.0",
+    "reflect-metadata": "^0.1.13",
     "resolve-url-loader": "^3.1.1",
     "rimraf": "^3.0.2",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.3",
     "ts-jest": "^25.2.1",
     "ts-loader": "^6.2.1",
+    "ts-node": "^9.0.0",
     "typescript": "^3.8.3",
     "url-loader": "^0.6.2",
     "webpack": "^4.29.6",
