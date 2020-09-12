@@ -1,7 +1,13 @@
-import Employee from "../entities/Employee";
+import Employee, {EmployeeDTO} from "../entities/Employee";
 import {IContext} from "../server";
-import {paginateResults} from "../lib";
+import {facetExtractor, paginateResults} from "../lib";
 import {Sale} from "../entities";
+
+const EMPLOYEE_FACET_FIELDS: (keyof Partial<EmployeeDTO>)[] = [
+    'division',
+    'jobTitle',
+    'locationId'
+]
 
 const employeeResolver = {
     Query: {
@@ -9,15 +15,18 @@ const employeeResolver = {
             console.log('root', root)
             const items: Employee[] = await connection.manager.find(Employee)
 
+            const facets = facetExtractor(items, EMPLOYEE_FACET_FIELDS)
+
             const paginatedItems = paginateResults(items, paging)
 
             return {
                 count: items.length,
                 items: paginatedItems,
                 // @ts-ignore
-                facets: []
+                facets
             }
         },
+
         employee: async(root: any, { id, }: any, { connection }: IContext) => {
             const employee = await connection
                 .getRepository(Employee)

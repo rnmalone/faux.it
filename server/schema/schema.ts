@@ -56,8 +56,8 @@ const typeDefs = gql`
     }
     
     type FacetResult {
-        header: String!
-        facet: [Facet]!
+        category: String!
+        items: [Facet]!
     }
     
     enum SaleStatus {
@@ -68,7 +68,7 @@ const typeDefs = gql`
     }
     
     input FacetFilterInput {
-        header: String!
+        category: String!
         selected: [String]!
         maxSelected: Int = 50
         limit: Int
@@ -109,7 +109,7 @@ const typeDefs = gql`
    
     
     type Query {
-        employee: Employee
+        employee(id: Int): Employee
         
         employeeList(
             term: String

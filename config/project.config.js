@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const debug = require('debug')('app:config:project');
 const path = require('path');
 
@@ -36,6 +38,8 @@ const config = {
         port: process.env.PORT || 3000,
 
         publicAddress: process.env.HOST || 'localhost',
+
+        apiBaseUri: process.env.API_BASE_PATH,
 
         templateLocals: {
             title: 'Template'

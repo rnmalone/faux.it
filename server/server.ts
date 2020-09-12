@@ -55,7 +55,7 @@ export default function startServer(connection: Connection) {
 
     webpackCompiler.hooks.done.tap('HashedAssetPlugin', assetsMiddleware.hashedAssetsUpdated);
 
-    server.applyMiddleware({app, path: '/v1/api'})
+    server.applyMiddleware({app, path: '/v1/api' })
 
     app.use(assetsMiddleware)
 

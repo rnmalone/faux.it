@@ -1,4 +1,6 @@
 import "reflect-metadata";
+import dotenv from 'dotenv';
+dotenv.config();
 import server from './server';
 import {initDb} from "./lib/db";
 import injectMockData from "./lib/db/injectMockData";

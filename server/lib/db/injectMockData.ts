@@ -1,6 +1,6 @@
 import {employees, locations} from "../../data";
 import {Employee, Location, Sale} from "../../entities";
-import {createConnection} from "typeorm";
+import {Connection, createConnection} from "typeorm";
 import dbConfig from "../../config/database.config";
 import sales from "../../data/sales";
 
@@ -11,9 +11,8 @@ function applyProperties<T>(obj: T, properties: Partial<T>) {
     }, obj)
 }
 
-export default async function injectMockData() {
+export default async function injectMockData(connection: Connection) {
     try {
-        const connection = await createConnection(dbConfig.orm);
 
         const employeeEntries = await Promise.all(
             employees.map((employeeProperties) => {

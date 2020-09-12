@@ -3,10 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/project.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/project.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/db/injectMockData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/db/injectMockData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/resolvers/employee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/employee.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/schema/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/schema/schema.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,11 +59,11 @@
       <recent name="$PROJECT_DIR$/bin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Rorym\Documents\faux.it\server\assets\images" />
       <recent name="C:\Users\Rorym\Documents\faux.it\server\lib\db" />
       <recent name="C:\Users\Rorym\react-template\public" />
       <recent name="$PROJECT_DIR$/resources" />
       <recent name="$PROJECT_DIR$/lib" />
-      <recent name="$PROJECT_DIR$/server/middleware/assets" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -90,7 +94,7 @@
       <workItem from="1599850802723" duration="258000" />
       <workItem from="1599851668642" duration="320000" />
       <workItem from="1599902515155" duration="52000" />
-      <workItem from="1599902693269" duration="19192000" />
+      <workItem from="1599902693269" duration="29305000" />
     </task>
     <servers />
   </component>
