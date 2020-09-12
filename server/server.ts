@@ -6,45 +6,56 @@ import webpackConfig from '../config/webpack.config';
 import webpack, {Configuration} from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
+const { ApolloServer, gql } = require('apollo-server-express');
+import schema from './schema/schema'
+import resolvers from './resolvers/employee'
 
 import {assets} from "./middleware";
+import bodyParser from "body-parser";
 
-const webpackCompiler = webpack(webpackConfig as Configuration);
-const debug = _debug('app:server:main');
+export default function startServer() {
+    const server = new ApolloServer({typeDefs: schema, resolvers})
 
-let config = require('../config/project.config');
-const app = express();
+    const webpackCompiler = webpack(webpackConfig as Configuration);
+    const debug = _debug('app:server:main');
 
-app.disable('etag');
+    let config = require('../config/project.config');
+    const app = express();
 
-app.set('views', config.paths.public());
-app.set('view engine', 'pug');
+    app.disable('etag');
 
-Object.assign(app.locals, config.globals, config.server.templateLocals);
+    app.set('views', config.paths.public());
+    app.set('view engine', 'pug');
 
-app.use(cors());
-app.use(compress());
+    Object.assign(app.locals, config.globals, config.server.templateLocals);
 
-config = require('../config/project.config');
+    app.use(cors());
+    app.use(compress());
 
-debug('Enabling webpack dev and hot reloading middleware.');
+    config = require('../config/project.config');
 
-app.use(webpackDevMiddleware(webpackCompiler, {
-    publicPath: config.client.basePath
-}));
+    debug('Enabling webpack dev and hot reloading middleware.');
 
-app.use(webpackHotMiddleware(webpackCompiler, {
-    path: '/__hot_reload'
-}));
+    app.use(webpackDevMiddleware(webpackCompiler, {
+        publicPath: config.client.basePath
+    }));
 
-const assetsMiddleware = assets({webpackCompiler});
+    app.use(webpackHotMiddleware(webpackCompiler, {
+        path: '/__hot_reload'
+    }));
 
-webpackCompiler.hooks.done.tap('HashedAssetPlugin', assetsMiddleware.hashedAssetsUpdated);
+    const assetsMiddleware = assets({webpackCompiler});
 
-app.use(assetsMiddleware);
+    webpackCompiler.hooks.done.tap('HashedAssetPlugin', assetsMiddleware.hashedAssetsUpdated);
 
-app.use(express.static(config.paths.public()));
+    server.applyMiddleware({app, path: '/v1/api'})
 
-app.use('*', (req: Request, res: Response): void => void res.render('index'));
+    app.use(assetsMiddleware)
 
-export default app;
+    app.use(express.static(config.paths.public()));
+
+    app.use('*', (req: Request, res: Response): void => void res.render('index'));
+
+    app.listen(config.server.port)
+}
+

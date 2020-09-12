@@ -8,12 +8,12 @@ const project = require('../config/project.config');
 
 
 (async () => {
-
     const database = await initDb();
 
     await injectMockData()
+
+    server();
 })()
 
-server.listen(project.server.port);
 
 debug(`server is now running at http://${project.server.host}:${project.server.port}.`);
