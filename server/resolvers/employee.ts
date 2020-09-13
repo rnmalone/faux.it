@@ -1,7 +1,7 @@
 import Employee, {EmployeeDTO} from "../entities/Employee";
 import Location from "../entities/Location";
 import {IContext} from "../server";
-import {applySearchTermToItems, facetExtractor, filterResults, paginateResults} from "../lib";
+import {applySearchTermToItems, facetExtractor, filterResults, paginateResults, Results} from "../lib";
 import {Sale} from "../entities";
 import {sort} from "../lib/sorters";
 import {ISortInput} from "../@types/SortInput";
@@ -34,36 +34,26 @@ export interface IListQueryInput {
 const employeeResolver = {
     Query: {
         employeeList: async (root: any, {term, paging, sort: sortInput, facets: facetInput}: IListQueryInput, {connection}: IContext) => {
-            const builder = connection
+            const items = await connection
                 .getRepository(Employee)
                 .createQueryBuilder("employee")
                 .innerJoinAndMapOne('employee.location', 'Location', 'location', 'location.id = employee.locationId')
+                .getMany()
 
+            const resultsBuilder = new Results(items, {
+                facetFields: EMPLOYEE_FACET_FIELDS,
+                searchableFields: EMPLOYEE_SEARCHABLE_FIELDS,
+                sortInput,
+                facetInput,
+                searchTerm: term,
+                sortKey: 'lastName',
+                paging
+            })
 
-            let items: Employee[] = await builder.getMany()
-
-            if (facetInput) {
-                items = filterResults(items, facetInput)
-            }
-
-            if(term) {
-                items = applySearchTermToItems(items, term, EMPLOYEE_SEARCHABLE_FIELDS)
-            }
-
-            const facets = facetExtractor(items, EMPLOYEE_FACET_FIELDS)
-
-            const sorted = sort(items, 'lastName', sortInput?.type, sortInput?.direction)
-
-            const paginatedItems = paginateResults(sorted, paging)
-
-            return {
-                count: items.length,
-                items: paginatedItems,
-                facets
-            }
+            return resultsBuilder.getResponseObject()
         },
 
-        employee: async (root: any, {id,}: any, {connection}: IContext) => {
+        employee: async (root: any, { id }: { id: string }, { connection }: IContext) => {
             const employee = await connection
                 .getRepository(Employee)
                 .createQueryBuilder("employee")

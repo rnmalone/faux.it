@@ -1,6 +1,16 @@
 import {IContext} from "../server";
 import {IListQueryInput} from "./employee";
 import {Sale} from "../entities";
+import {Results} from "../lib";
+
+const SALE_FACET_FIELDS: (keyof Partial<Sale>)[] = [
+    'status'
+]
+
+const SALE_SEARCHABLE_FIELDS = [
+    'customerName',
+    'employee'
+]
 
 const saleResolver = {
     Query: {
@@ -10,13 +20,22 @@ const saleResolver = {
                 .createQueryBuilder('sale')
                 .innerJoinAndMapOne('sale.employee', 'employee', 'employee', 'employee.id = sale.employeeId')
                 .getMany()
-            
-            return {
-                count: items.length,
-                items,
-                // @ts-ignore
-                facets: []
-            }
+
+            // TODO add this to query builder
+            // @ts-ignore
+            items = items.map((item) => ({ ...item, employee: `${item.employee.firstName} ${item.employee.lastName}` }))
+
+            const resultsBuilder = new Results(items, {
+                facetFields: SALE_FACET_FIELDS,
+                searchableFields: SALE_SEARCHABLE_FIELDS,
+                sortInput,
+                facetInput,
+                searchTerm: term,
+                sortKey: 'item',
+                paging
+            })
+
+            return resultsBuilder.getResponseObject()
         }
     }
 }

@@ -21,7 +21,7 @@ const typeDefs = gql`
     type Sale { 
         id: Int 
         employeeId: Int 
-        employee: Employee
+        employee: String
         item: String   
         agreedPrice: Int    
         ticketPrice: Int    
