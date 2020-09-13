@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/Results.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/Results.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/applySearchTermToItems.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/applySearchTermToItems.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/queries/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/resolvers/employee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/employee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/resolvers/sale.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/sale.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/resolvers/search.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/search.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/schema/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/schema/schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/setupTests.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/setupTests.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +90,7 @@
       <workItem from="1599851668642" duration="320000" />
       <workItem from="1599902515155" duration="52000" />
       <workItem from="1599902693269" duration="38639000" />
-      <workItem from="1599986998010" duration="19847000" />
+      <workItem from="1599986998010" duration="21135000" />
     </task>
     <servers />
   </component>

@@ -9,7 +9,8 @@
     "start": "nodemon",
     "build:server": "rimraf ./dist && tsc --project tsconfig.server.json",
     "build:client": "echo TODO",
-    "test": "jest --reporters=default --config ./config/jest.config.js --maxWorkers=4"
+    "test": "jest --reporters=default --config ./config/jest.config.js --maxWorkers=4",
+    "lint": "eslint ./*/**.ts* --fix"
   },
   "license": "ISC",
   "dependencies": {
@@ -49,12 +50,15 @@
     "@types/webpack": "^4.41.7",
     "@types/webpack-dev-middleware": "^3.7.0",
     "@types/webpack-hot-middleware": "^2.25.0",
+    "@typescript-eslint/eslint-plugin": "^4.1.0",
+    "@typescript-eslint/parser": "^4.1.0",
     "archiver": "^3.1.1",
     "babel-jest": "^25.1.0",
     "css-loader": "^0.28.8",
     "cssnano": "^3.10.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
+    "eslint": "^7.9.0",
     "file-loader": "^3.0.1",
     "inquirer": "^7.1.0",
     "jest": "^25.1.0",
