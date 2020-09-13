@@ -1,7 +1,7 @@
 import Employee, {EmployeeDTO} from "../entities/Employee";
 import Location from "../entities/Location";
 import {IContext} from "../server";
-import {facetExtractor, filterResults, paginateResults} from "../lib";
+import {applySearchTermToItems, facetExtractor, filterResults, paginateResults} from "../lib";
 import {Sale} from "../entities";
 import {sort} from "../lib/sorters";
 import {ISortInput} from "../@types/SortInput";
@@ -14,7 +14,18 @@ const EMPLOYEE_FACET_FIELDS: (keyof Partial<EmployeeDTO>)[] = [
     'locationId'
 ]
 
+const EMPLOYEE_SEARCHABLE_FIELDS: (string | string[])[] = [
+    'firstName',
+    'lastName',
+    'email',
+    'division',
+    'jobTitle',
+    'locationId',
+    ['location', 'address'],
+]
+
 export interface IEmployeeListQueryInput {
+    term?: string;
     sort: ISortInput,
     paging: IPagingInput,
     facets: IFacetInput[]
@@ -22,7 +33,7 @@ export interface IEmployeeListQueryInput {
 
 const employeeResolver = {
     Query: {
-        employeeList: async (root: any, {paging, sort: sortInput, facets: facetInput}: IEmployeeListQueryInput, {connection}: IContext) => {
+        employeeList: async (root: any, {term, paging, sort: sortInput, facets: facetInput}: IEmployeeListQueryInput, {connection}: IContext) => {
             const builder = connection
                 .getRepository(Employee)
                 .createQueryBuilder("employee")
@@ -35,6 +46,9 @@ const employeeResolver = {
                 items = filterResults(items, facetInput)
             }
 
+            if(term) {
+                items = applySearchTermToItems(items, term, EMPLOYEE_SEARCHABLE_FIELDS)
+            }
 
             const facets = facetExtractor(items, EMPLOYEE_FACET_FIELDS)
 
