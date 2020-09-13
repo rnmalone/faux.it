@@ -2,6 +2,7 @@ import {IContext} from "../server";
 import {IListQueryInput} from "./employee";
 import {Sale} from "../entities";
 import {Results} from "../lib";
+import {selectAllSales} from "../lib/queries";
 
 const SALE_FACET_FIELDS: (keyof Partial<Sale>)[] = [
     'status'
@@ -15,11 +16,7 @@ const SALE_SEARCHABLE_FIELDS = [
 const saleResolver = {
     Query: {
         saleList: async (root: any, {term, paging, sort: sortInput, facets: facetInput}: IListQueryInput, {connection}: IContext) => {
-            let items = await connection
-                .getRepository(Sale)
-                .createQueryBuilder('sale')
-                .innerJoinAndMapOne('sale.employee', 'employee', 'employee', 'employee.id = sale.employeeId')
-                .getMany()
+            let items = await selectAllSales(connection)
 
             // TODO add this to query builder
             // @ts-ignore

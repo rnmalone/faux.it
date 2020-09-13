@@ -107,8 +107,25 @@ const typeDefs = gql`
         type: SortType!
         direction: Direction
     }
-   
     
+    enum Entity {
+        EMPLOYEE
+        SALE
+        LOCATION
+    }
+    
+    type SearchSuggestion {
+        entity: Entity!
+        primaryText: String
+        secondaryText: String
+        imageUrl: String
+    }
+    
+    type SearchSuggestionResult {
+        count: Int
+        items: [SearchSuggestion]
+    }
+   
     type Query {
         employee(id: Int): Employee
         
@@ -125,6 +142,10 @@ const typeDefs = gql`
             paging: PagingInput
             sort: SortInput
         ): SaleResult
+        
+        searchSuggestions(
+            term: String
+        ): SearchSuggestionResult
     }
 `
 

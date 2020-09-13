@@ -7,6 +7,7 @@ import {sort} from "../lib/sorters";
 import {ISortInput} from "../@types/SortInput";
 import {IPagingInput} from "../@types/Paging";
 import {IFacetInput} from "../@types/Facet";
+import {selectAllEmployees, selectEmployeeById} from "../lib/queries";
 
 const EMPLOYEE_FACET_FIELDS: (keyof Partial<EmployeeDTO>)[] = [
     'division',
@@ -34,11 +35,7 @@ export interface IListQueryInput {
 const employeeResolver = {
     Query: {
         employeeList: async (root: any, {term, paging, sort: sortInput, facets: facetInput}: IListQueryInput, {connection}: IContext) => {
-            const items = await connection
-                .getRepository(Employee)
-                .createQueryBuilder("employee")
-                .innerJoinAndMapOne('employee.location', 'Location', 'location', 'location.id = employee.locationId')
-                .getMany()
+            const items = await selectAllEmployees(connection)
 
             const resultsBuilder = new Results(items, {
                 facetFields: EMPLOYEE_FACET_FIELDS,
@@ -54,25 +51,7 @@ const employeeResolver = {
         },
 
         employee: async (root: any, { id }: { id: string }, { connection }: IContext) => {
-            const employee = await connection
-                .getRepository(Employee)
-                .createQueryBuilder("employee")
-                .where('Employee.id = :id', {id})
-                .getOne()
-
-            if (!employee) {
-                //TODO error handle
-
-                return {}
-            }
-
-            const sales = await connection
-                .getRepository(Sale)
-                .createQueryBuilder('sale')
-                .where('Sale.employeeId = :id', {id})
-                .getMany();
-
-            employee.sales = sales
+            const employee = await selectEmployeeById(connection, id)
 
             return employee
         }
