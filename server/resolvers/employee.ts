@@ -24,7 +24,7 @@ const EMPLOYEE_SEARCHABLE_FIELDS: (string | string[])[] = [
     ['location', 'address'],
 ]
 
-export interface IEmployeeListQueryInput {
+export interface IListQueryInput {
     term?: string;
     sort: ISortInput,
     paging: IPagingInput,
@@ -33,7 +33,7 @@ export interface IEmployeeListQueryInput {
 
 const employeeResolver = {
     Query: {
-        employeeList: async (root: any, {term, paging, sort: sortInput, facets: facetInput}: IEmployeeListQueryInput, {connection}: IContext) => {
+        employeeList: async (root: any, {term, paging, sort: sortInput, facets: facetInput}: IListQueryInput, {connection}: IContext) => {
             const builder = connection
                 .getRepository(Employee)
                 .createQueryBuilder("employee")

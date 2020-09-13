@@ -7,7 +7,7 @@ import webpack, {Configuration} from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import schema from './schema/schema'
-import resolvers from './resolvers/employee'
+import resolvers from './resolvers'
 import {assets} from "./middleware";
 import {Connection} from "typeorm";
 

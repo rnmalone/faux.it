@@ -21,6 +21,7 @@ const typeDefs = gql`
     type Sale { 
         id: Int 
         employeeId: Int 
+        employee: Employee
         item: String   
         agreedPrice: Int    
         ticketPrice: Int    
@@ -118,11 +119,11 @@ const typeDefs = gql`
             sort: SortInput
             ): EmployeeResult
             
-        salesList(
+        saleList(
             term: String
-            employeeId: String
             facets: [FacetFilterInput]
             paging: PagingInput
+            sort: SortInput
         ): SaleResult
     }
 `
