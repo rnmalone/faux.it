@@ -119,6 +119,7 @@ const typeDefs = gql`
         primaryText: String
         secondaryText: String
         imageUrl: String
+        score: Int
     }
     
     type SearchSuggestionResult {

@@ -35,36 +35,20 @@ export default class Results<T> {
         this.config = opts
     }
 
-    private applyRequestFacets = () => {
-        this.items = filterResults(this.items, this.config.facetInput)
-    }
-
-    private applySearchTerm = () => {
-        this.items = applySearchTermToItems(this.items, this.config.searchTerm, this.config.searchableFields)
-    }
-
-    private sort = () => {
-        this.items = sort(this.items, this.config.sortKey, this.config.sortInput?.type, this.config.sortInput?.direction)
-    }
-
-    private paginate = () => {
-        this.items = paginateResults(this.items, this.config.paging)
-    }
-
     public getResponseObject = (): IListResultsResponse<T> => {
-        if(this.config.facetInput) {
+        if (this.config.facetInput) {
             this.applyRequestFacets()
         }
 
-        if(this.config.searchTerm) {
+        if (this.config.searchTerm) {
             this.applySearchTerm()
         }
 
-        if(this.config.sortInput) {
+        if (this.config.sortInput) {
             this.sort()
         }
 
-        if(this.config.paging) {
+        if (this.config.paging) {
             this.paginate()
         }
 
@@ -73,5 +57,21 @@ export default class Results<T> {
             count: this.items.length,
             facets: facetExtractor(this.items, this.config.facetFields)
         }
+    }
+
+    private applyRequestFacets = () => {
+        this.items = filterResults(this.items, this.config.facetInput)
+    }
+
+    private applySearchTerm = () => {
+        this.items = applySearchTermToItems(this.items, this.config.searchTerm, this.config.searchableFields, false) as T[]
+    }
+
+    private sort = () => {
+        this.items = sort(this.items, this.config.sortKey, this.config.sortInput?.type, this.config.sortInput?.direction)
+    }
+
+    private paginate = () => {
+        this.items = paginateResults(this.items, this.config.paging)
     }
 }

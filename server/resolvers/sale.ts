@@ -3,15 +3,12 @@ import {IListQueryInput} from "./employee";
 import {Sale} from "../entities";
 import {Results} from "../lib";
 import {selectAllSales} from "../lib/queries";
+import {SALE_SEARCHABLE_FIELDS} from "../config/search.config";
 
 const SALE_FACET_FIELDS: (keyof Partial<Sale>)[] = [
     'status'
 ]
 
-const SALE_SEARCHABLE_FIELDS = [
-    'customerName',
-    'employee'
-]
 
 const saleResolver = {
     Query: {
@@ -20,7 +17,7 @@ const saleResolver = {
 
             // TODO add this to query builder
             // @ts-ignore
-            items = items.map((item) => ({ ...item, employee: `${item.employee.firstName} ${item.employee.lastName}` }))
+            items = items.map((item) => ({...item, employee: `${item.employee.firstName} ${item.employee.lastName}`}))
 
             const resultsBuilder = new Results(items, {
                 facetFields: SALE_FACET_FIELDS,

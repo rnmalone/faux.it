@@ -1,13 +1,11 @@
-import Employee, {EmployeeDTO} from "../entities/Employee";
-import Location from "../entities/Location";
+import {EmployeeDTO} from "../entities/Employee";
 import {IContext} from "../server";
-import {applySearchTermToItems, facetExtractor, filterResults, paginateResults, Results} from "../lib";
-import {Sale} from "../entities";
-import {sort} from "../lib/sorters";
+import {Results} from "../lib";
 import {ISortInput} from "../@types/SortInput";
 import {IPagingInput} from "../@types/Paging";
 import {IFacetInput} from "../@types/Facet";
 import {selectAllEmployees, selectEmployeeById} from "../lib/queries";
+import {EMPLOYEE_SEARCHABLE_FIELDS} from "../config/search.config";
 
 const EMPLOYEE_FACET_FIELDS: (keyof Partial<EmployeeDTO>)[] = [
     'division',
@@ -15,15 +13,6 @@ const EMPLOYEE_FACET_FIELDS: (keyof Partial<EmployeeDTO>)[] = [
     'locationId'
 ]
 
-const EMPLOYEE_SEARCHABLE_FIELDS: (string | string[])[] = [
-    'firstName',
-    'lastName',
-    'email',
-    'division',
-    'jobTitle',
-    'locationId',
-    ['location', 'address'],
-]
 
 export interface IListQueryInput {
     term?: string;
@@ -50,7 +39,7 @@ const employeeResolver = {
             return resultsBuilder.getResponseObject()
         },
 
-        employee: async (root: any, { id }: { id: string }, { connection }: IContext) => {
+        employee: async (root: any, {id}: { id: string }, {connection}: IContext) => {
             const employee = await selectEmployeeById(connection, id)
 
             return employee

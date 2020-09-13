@@ -1,5 +1,4 @@
 import {Connection} from "typeorm";
-import Employee from "../../entities/Employee";
 import {Sale} from "../../entities";
 
 export default async function selectAllSales(connection: Connection): Promise<Sale[]> {
