@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/Navigation/components/Navigation-Container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/Navigation/components/Navigation-Container.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/Navigation/styles/Navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/Navigation/styles/Navigation.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/Title/Title.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Title/Title.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/Title/Title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Title/Title.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/Title/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Title/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/core/vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/core/vars.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/main.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +89,7 @@
       <workItem from="1599902515155" duration="52000" />
       <workItem from="1599902693269" duration="38639000" />
       <workItem from="1599986998010" duration="29400000" />
-      <workItem from="1600103806010" duration="7030000" />
+      <workItem from="1600103806010" duration="7568000" />
     </task>
     <servers />
   </component>
