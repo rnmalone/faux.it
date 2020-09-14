@@ -26,6 +26,9 @@
       margin-top: 2rem;
 
       &__item {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 500;
         cursor: pointer;
         display: flex;
         padding: 1rem 2rem;

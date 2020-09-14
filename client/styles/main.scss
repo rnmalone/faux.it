@@ -1,9 +1,10 @@
 @import 'core/vars';
 @import 'transitions/slideIn';
+@import 'fonts/_BaiJamjuree.scss';
 
 #root {
   margin: 0;
-  font-family: Arial;
+  font-family: "Bai Jamjuree";
 }
 
 body {
