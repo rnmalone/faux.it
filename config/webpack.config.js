@@ -77,8 +77,12 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
-                use: 'ts-loader',
+                loader: 'ts-loader',
                 exclude: /node_modules/,
+                options: {
+                    // Allows to compile the client code in development when there are ts errors
+                    transpileOnly: true
+                }
             },
             {
                 test: /\.js$/,

@@ -7,12 +7,16 @@ import App from "./App";
 
 import './styles/main.scss';
 
+import {BrowserRouter} from "react-router-dom";
+
 const MOUNT_NODE = document.getElementById('root');
 
 ReactDOM.render(<HotLoaderContainer>
-        <CoreLayout>
-            <App/>
-        </CoreLayout>
+        <BrowserRouter>
+            <CoreLayout>
+                <App/>
+            </CoreLayout>
+        </BrowserRouter>
     </HotLoaderContainer>,
     MOUNT_NODE);
 

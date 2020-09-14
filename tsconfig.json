@@ -1,19 +1,25 @@
 {
   "compilerOptions": {
-    "noImplicitAny": true,
-    "module": "esnext",
     "target": "es5",
-    "jsx": "react",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
-    "sourceMap": true,
+    "skipLibCheck": true,
     "esModuleInterop": true,
-    "moduleResolution": "node",
-    "noImplicitReturns": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "jsx": "react"
   },
-  "exclude": [
-    "client/setupTests.ts"
+  "include": [
+    "client"
   ]
 }
