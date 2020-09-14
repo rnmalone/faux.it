@@ -181,6 +181,11 @@ module.exports = {
                         limit: 10000
                     }
                 }
+            },
+            {
+                test: /\.(graphql|gql)$/,
+                exclude: ['node_modules', 'server'],
+                loader: ['graphql-tag/loader']
             }
         ]
     },

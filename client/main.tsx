@@ -7,15 +7,20 @@ import Routes from './routes';
 import './styles/main.scss';
 
 import {BrowserRouter} from "react-router-dom";
+import Apollo from "./containers/Apollo";
 
 const MOUNT_NODE = document.getElementById('root');
 
-ReactDOM.render(<HotLoaderContainer>
-        <BrowserRouter>
-            <CoreLayout>
-                <Routes/>
-            </CoreLayout>
-        </BrowserRouter>
+ReactDOM.render(
+    <HotLoaderContainer>
+        <Apollo>
+            <BrowserRouter>
+                <CoreLayout>
+                    <Routes/>
+                </CoreLayout>
+            </BrowserRouter>
+        </Apollo>
     </HotLoaderContainer>,
-    MOUNT_NODE);
+    MOUNT_NODE
+);
 
