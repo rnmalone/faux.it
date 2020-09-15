@@ -77,7 +77,7 @@ const employees: EmployeeDTO[] = [
         email: 'bazza@faux.it',
         joinDate: new Date(),
         imageUrl: '/assets/images/6.jpg',
-        locationId: 5
+        locationId: 6
     },
     {
         id: 7,
@@ -143,6 +143,97 @@ const employees: EmployeeDTO[] = [
         joinDate: new Date(),
         imageUrl: '/assets/images/11.jpg',
         locationId: 2
+    },
+    {
+        id: 12,
+        firstName: 'Antoinette',
+        lastName: 'St.Claire',
+        jobTitle: 'Sales Manager',
+        division: 'Motor',
+        salary: 92500,
+        commissionRate: 3.56,
+        email: 'antoinette.stclaire@faux.it',
+        joinDate: new Date(),
+        imageUrl: '/assets/images/12.jpg',
+        locationId: 5
+    },
+    {
+        id: 13,
+        firstName: 'Duke Sterling',
+        lastName: 'Hillingham',
+        jobTitle: 'Sales Executive',
+        division: 'Motor',
+        salary: 50000,
+        commissionRate: 4.70,
+        email: 'sterling.hillingham@faux.it',
+        joinDate: new Date(),
+        imageUrl: '/assets/images/13.jpg',
+        locationId: 5
+    },
+    {
+        id: 14,
+        firstName: 'Arthur',
+        lastName: 'Garrington II',
+        jobTitle: 'Business Manager',
+        division: 'Motor',
+        salary: 87000,
+        commissionRate: 4.70,
+        email: 'arthur.garrington@faux.it',
+        joinDate: new Date(),
+        imageUrl: '/assets/images/14.jpg',
+        locationId: 5
+    },
+    {
+        id: 15,
+        firstName: 'Claudette',
+        lastName: 'Montcroix',
+        jobTitle: 'Senior Sales Executive',
+        division: 'Motor',
+        salary: 76000,
+        commissionRate: 4.70,
+        email: 'claudette.montcroix@faux.it',
+        joinDate: new Date(),
+        imageUrl: '/assets/images/15.jpg',
+        locationId: 5
+    },
+    {
+        id: 16,
+        firstName: 'Mirabelle',
+        lastName: 'Musgrave',
+        jobTitle: 'Senior Sales Executive',
+        division: 'Motor',
+        salary: 76000,
+        commissionRate: 4.70,
+        email: 'mirabelee.musgrave@faux.it',
+        joinDate: new Date(),
+        imageUrl: '/assets/images/16.jpg',
+        locationId: 5
+    },
+    {
+        id: 17,
+        firstName: 'Lucretia',
+        lastName: 'Breckenridge',
+        jobTitle: 'Senior Sales Executive',
+        division: 'Watches',
+        salary: 120000,
+        commissionRate: 4.70,
+        email: 'lucretia.breckenridge@faux.it',
+        joinDate: new Date(),
+        imageUrl: '/assets/images/17.jpg',
+        locationId: 4
+    },
+    {
+        id: 18,
+        firstName: 'Matthias',
+        lastName: 'Von Charmant III',
+        jobTitle: 'Senior Sales Executive',
+        division: 'Watches',
+        salary: 120000,
+        commissionRate: 4.70,
+        email: 'mattias.charmant@faux.it',
+        joinDate: new Date(),
+        imageUrl: '/assets/images/18.jpg',
+        locationId: 4
     }
 ]
 

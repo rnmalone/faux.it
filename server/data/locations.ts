@@ -4,14 +4,14 @@ const locations: LocationDTO[] = [
     {
         id: 1,
         address: '1 Friday Street, London',
-        countryCode: 'UK',
+        countryCode: 'GB',
         countryName: 'United Kingdom'
     },
     {
         id: 2,
-        address: '2 Twister Road, Manchester',
-        countryCode: 'UK',
-        countryName: 'United Kingdom'
+        address: '2a Trance Square, Frankfurt',
+        countryCode: 'DE',
+        countryName: 'Germany'
     },
     {
         id: 3,
@@ -21,15 +21,21 @@ const locations: LocationDTO[] = [
     },
     {
         id: 4,
-        address: '1444 Awamo Street, Alaska',
-        countryCode: 'US',
-        countryName: 'United States'
+        address: '404 Ieiks Tower, Eindhoven',
+        countryCode: 'NL',
+        countryName: 'Netherlands'
     },
     {
         id: 5,
+        address: 'Snow, Oslo',
+        countryCode: 'NR',
+        countryName: 'Norway'
+    },
+    {
+        id: 6,
         address: '22 Steak slice street, Newcastle',
-        countryCode: 'UK',
-        countryName: 'United Kingdom'
+        countryCode: 'EN',
+        countryName: 'ENGLAND'
     }
 ]
 
