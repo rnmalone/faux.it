@@ -61,6 +61,7 @@ export default function startServer(connection: Connection) {
     app.use(assetsMiddleware)
 
     app.use(express.static(config.paths.public()));
+    app.use('/assets', express.static(config.paths.server('assets')))
 
     app.use('*', (req: Request, res: Response): void => void res.render('index'));
 
