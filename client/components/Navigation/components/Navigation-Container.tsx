@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import cx from 'classnames';
 import {useHistory, useLocation, useRouteMatch} from "react-router";
-import Title from "../../components/Title";
-import {INavigationRoute, NAVIGATION_ROUTES} from "../../config/navigation";
+import Title from "../../Title";
+import {INavigationRoute, NAVIGATION_ROUTES} from "../../../config/navigation";
 import DesktopOptions from "./Navigation-Desktop";
 import MobileOptions from "./Navigation-Mobile";
 

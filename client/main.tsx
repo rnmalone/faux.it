@@ -14,7 +14,7 @@ const MOUNT_NODE = document.getElementById('root');
 ReactDOM.render(
     <HotLoaderContainer>
         <Apollo>
-            <BrowserRouter>
+            <BrowserRouter basename={'/'}>
                 <CoreLayout>
                     <Routes/>
                 </CoreLayout>

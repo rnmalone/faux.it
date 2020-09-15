@@ -2,7 +2,7 @@ import React from 'react';
 import shortid from 'shortid';
 import cx from 'classnames';
 import {INavigationTools} from "./Navigation-Container";
-import {NAVIGATION_ROUTES} from "../../config/navigation";
+import {NAVIGATION_ROUTES} from "../../../config/navigation";
 
 export default function DesktopOptions({ onSelectRoute, selectedRoute }: INavigationTools) {
     console.log(selectedRoute)

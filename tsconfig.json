@@ -1,11 +1,16 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "esnext",
+      "es7",
+      "es2017",
+      "es6"
     ],
+    "rootDir": "client",
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -20,6 +25,6 @@
     "jsx": "react"
   },
   "include": [
-    "client"
+    "client/**/*.ts"
   ]
 }

@@ -1,10 +1,10 @@
 import React, {useRef, useState} from 'react';
 import {INavigationTools} from "./Navigation-Container";
 import {CSSTransition} from "react-transition-group";
-import {NAVIGATION_ROUTES} from "../../config/navigation";
+import {NAVIGATION_ROUTES} from "../../../config/navigation";
 import cx from "classnames";
 import shortid from "shortid";
-import {useOutsideClicks} from "../../lib/hooks";
+import {useOutsideClicks} from "../../../lib/hooks";
 
 export default function MobileOptions({ onSelectRoute, selectedRoute }: INavigationTools) {
     const ref = useRef(null)

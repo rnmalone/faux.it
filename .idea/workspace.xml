@@ -3,8 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Navigation/components/Navigation-Container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Navigation/components/Navigation-Container.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Navigation/components/Navigation-Desktop.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Navigation/components/Navigation-Desktop.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Navigation/components/Navigation-Mobile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Navigation/components/Navigation-Mobile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/containers/Apollo/Apollo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/containers/Apollo/Apollo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/global.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/global.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/layouts/CoreLayout/CoreLayout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/layouts/CoreLayout/CoreLayout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/layouts/CoreLayout/CoreLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/layouts/CoreLayout/CoreLayout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/routes/EmployeeList/components/EmployeeList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/EmployeeList/components/EmployeeList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +29,8 @@
       <list>
         <option value="tsconfig.json" />
         <option value="JavaScript File" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -37,7 +50,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/routes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
@@ -46,18 +59,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Rorym\Documents\faux.it\client" />
       <recent name="C:\Users\Rorym\Documents\faux.it\client\routes" />
       <recent name="C:\Users\Rorym\Documents\faux.it\client\lib\hooks" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/client" />
-      <recent name="$PROJECT_DIR$/config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Rorym\Documents\faux.it\client\components" />
-      <recent name="C:\Users\Rorym\Documents\faux.it\client\Navigation\styles" />
-      <recent name="C:\Users\Rorym\Documents\faux.it\client\Navigation\components" />
-      <recent name="C:\Users\Rorym\Documents\faux.it\server\assets\images" />
-      <recent name="C:\Users\Rorym\Documents\faux.it\server\lib\db" />
+      <recent name="C:\Users\Rorym\Documents\faux.it\client\@types" />
+      <recent name="C:\Users\Rorym\Documents\faux.it\client\api" />
+      <recent name="C:\Users\Rorym\Documents\faux.it\client" />
+      <recent name="C:\Users\Rorym\Documents\faux.it\client\api\queries\employee" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -90,7 +103,9 @@
       <workItem from="1599902515155" duration="52000" />
       <workItem from="1599902693269" duration="38639000" />
       <workItem from="1599986998010" duration="29400000" />
-      <workItem from="1600103806010" duration="9411000" />
+      <workItem from="1600103806010" duration="12276000" />
+      <workItem from="1600121149027" duration="1087000" />
+      <workItem from="1600190755489" duration="4125000" />
     </task>
     <servers />
   </component>

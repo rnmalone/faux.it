@@ -1,0 +1,43 @@
+query EmployeeList(
+    $term: String,
+    $facets: [FacetFilterInput],
+    $offset: Int,
+    $limit: Int,
+    $sortType: SortType!,
+    $sortDirection: Direction
+) {
+    employeeList(
+        term: $term
+        facets: $facets
+        paging: {
+            offset: $offset,
+            limit: $limit
+        }
+        sort: {
+            type: $sortType,
+            direction: $sortDirection
+        }
+    ) {
+        count
+        facets {
+            category
+            items {
+                value
+                count
+            }
+        }
+        items {
+            firstName
+            lastName
+            division
+            jobTitle
+            imageUrl
+            email
+            joinDate
+            location {
+                address
+                countryName
+            }
+        }
+    }
+}
