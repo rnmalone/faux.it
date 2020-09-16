@@ -1,15 +1,18 @@
 @import 'core/vars';
 @import 'transitions/slideIn';
-@import 'fonts/_BaiJamjuree.scss';
+@import 'fonts/Poppins';
 @import 'common/images.scss';
+@import 'common/table.scss';
+@import 'common/typeography.scss';
+@import 'common/page.scss';
 
 #root {
   margin: 0;
-  font-family: "Bai Jamjuree";
+  font-family: "Poppins";
 }
 
 body {
-  background-color: $bg-color-accent;
+  background-color: $bg-color-accent2;
   padding: 0;
   margin: 0;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import  employeeListQuery from '../../../api/employeeList.graphql'
+import employeeListQuery from '../../../api/employeeList.graphql'
 import '../styles/EmployeeList.scss';
 import {useQuery} from "@apollo/client";
 import ListTable from "../../../components/ListTable";
@@ -18,11 +18,10 @@ export default function EmployeeList() {
         }
     })
 
-    console.log(data)
-
-
     return (
-        <ListTable RowComponent={EmployeeRow} data={data?.employeeList?.items || []} columns={EMPLOYEE_LIST_TABLE_COLUMNS} />
+        <div className="page">
+            <ListTable RowComponent={EmployeeRow} data={data?.employeeList?.items || []} columns={EMPLOYEE_LIST_TABLE_COLUMNS} />
+        </div>
     )
 }
 

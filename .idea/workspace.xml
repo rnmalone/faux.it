@@ -3,21 +3,29 @@
   <component name="ChangeListManager">
     <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Navigation/components/Navigation-Container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Navigation/components/Navigation-Container.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Navigation/components/Navigation-Desktop.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Navigation/components/Navigation-Desktop.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Navigation/components/Navigation-Mobile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Navigation/components/Navigation-Mobile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/containers/Apollo/Apollo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/containers/Apollo/Apollo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/global.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/global.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/layouts/CoreLayout/CoreLayout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/layouts/CoreLayout/CoreLayout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/layouts/CoreLayout/CoreLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/layouts/CoreLayout/CoreLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/api/employeeList.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/employeeList.graphql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BaiJamjuree-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BaiJamjuree-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BaiJamjuree-ExtraLight.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BaiJamjuree-ExtraLightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BaiJamjuree-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BaiJamjuree-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BaiJamjuree-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BaiJamjuree-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BaiJamjuree-MediumItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BaiJamjuree-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BaiJamjuree-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BaiJamjuree-SemiBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/OFL.txt" beforeDir="false" afterPath="$PROJECT_DIR$/client/assets/fonts/OFL.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/EmployeeRow/EmployeeRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/EmployeeRow/EmployeeRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Navigation/styles/Navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Navigation/styles/Navigation.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/routes/EmployeeList/components/EmployeeList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/EmployeeList/components/EmployeeList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/common/images.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/common/images.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/core/vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/core/vars.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/fonts/_BaiJamjuree.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/fonts/Poppins.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/13.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +58,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/assets/images/flags" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
@@ -59,18 +67,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Rorym\Documents\faux.it\client\assets\images\flags" />
+      <recent name="C:\Users\Rorym\Documents\faux.it\client\assets\images" />
       <recent name="C:\Users\Rorym\Documents\faux.it\client" />
       <recent name="C:\Users\Rorym\Documents\faux.it\client\routes" />
       <recent name="C:\Users\Rorym\Documents\faux.it\client\lib\hooks" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/client" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Rorym\Documents\faux.it\client\assets\images\flags" />
       <recent name="C:\Users\Rorym\Documents\faux.it\client\components" />
       <recent name="C:\Users\Rorym\Documents\faux.it\client\@types" />
       <recent name="C:\Users\Rorym\Documents\faux.it\client\api" />
       <recent name="C:\Users\Rorym\Documents\faux.it\client" />
-      <recent name="C:\Users\Rorym\Documents\faux.it\client\api\queries\employee" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -105,7 +113,8 @@
       <workItem from="1599986998010" duration="29400000" />
       <workItem from="1600103806010" duration="12276000" />
       <workItem from="1600121149027" duration="1087000" />
-      <workItem from="1600190755489" duration="4125000" />
+      <workItem from="1600190755489" duration="11950000" />
+      <workItem from="1600273977990" duration="3295000" />
     </task>
     <servers />
   </component>
@@ -129,10 +138,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="713" y="310" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600115732315" />
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599850990564">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600274610024">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599850990564" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600274610024" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1595453665824">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -141,9 +150,21 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600114912046" />
-    <state x="646" y="241" width="627" height="558" key="find.popup" timestamp="1599850869218">
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600275661711">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="646" y="241" width="627" height="558" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599850869218" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600275661711" />
+    <state x="646" y="241" width="627" height="624" key="find.popup" timestamp="1600274308240">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="646" y="241" width="627" height="624" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600274308240" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1600203803517">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600203803517" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600201807480">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600201807480" />
   </component>
 </project>

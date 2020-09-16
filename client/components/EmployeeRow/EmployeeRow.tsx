@@ -1,21 +1,28 @@
 import React from 'react';
 import moment from 'moment';
 import {Cell, TableRowProps} from "react-table";
-import {EmployeeDTO} from "../../../server/entities/Employee";
+
+import './EmployeeRow.scss';
+import Flag from "../Flag/Flag";
+import {IEmployeeEntity} from "../../@types/employe";
 
 export interface IEmployeeRowProps {
     rowProps: TableRowProps,
-    cells: Cell<EmployeeDTO>[]
+    cells: Cell<IEmployeeEntity>[]
 }
 
 export default function EmployeeRow({ rowProps, cells }: IEmployeeRowProps) {
-    console.log(cells)
-
     const rowCellRenderableMap: {
-        [key: string]: (cell: Cell<EmployeeDTO>) => any
+        [key: string]: (cell: Cell<IEmployeeEntity>) => any
     } = {
         imageUrl: (cell) => <img className="thumbnail" src={cell.value} />,
-        name: (cell) => `${cell.row.original.firstName} ${cell.row.original.lastName}`,
+        name: (cell) => (<div className="EmployeeRow__name">
+            {`${cell.row.original.firstName} ${cell.row.original.lastName}`}
+            <span>
+                {`${cell.row.original.location.address}`}
+                <Flag countryCode={cell.row.original.location.countryCode} />
+            </span>
+        </div>),
         jobTitle: (cell) => cell.value,
         division: (cell) => cell.value,
         email: (cell) => cell.value,
@@ -23,9 +30,9 @@ export default function EmployeeRow({ rowProps, cells }: IEmployeeRowProps) {
     }
 
     return (
-        <tr {...rowProps}>
+        <tr className="list-row EmployeeRow" {...rowProps}>
             {
-                cells.map((cell: Cell<EmployeeDTO>) => (
+                cells.map((cell: Cell<IEmployeeEntity>) => (
                     <td {...cell.getCellProps()}>
                         {rowCellRenderableMap[cell.column.id] && rowCellRenderableMap[cell.column.id](cell)}
                     </td>
