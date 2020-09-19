@@ -4,7 +4,7 @@ import {IAppStore} from "../../../@types/store";
 import {toggleFilterItem} from "../../../modules/filters/filters";
 
 const mapStateToProps = (state: IAppStore) => ({
-    ...state.filters
+    filters: state.filters.filter
 })
 
 const mapDispatchToProps = {

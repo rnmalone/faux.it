@@ -1,0 +1,21 @@
+@import 'core/vars';
+
+.Dropdown {
+
+  &__widget {
+    height: 40px;
+    width: 160px;
+    border-radius: 5px;
+    border: #333333 2px solid;
+  }
+
+  &__item {
+    list-style: none;
+    cursor: pointer;
+
+    &--selected {
+      color: red;
+    }
+  }
+
+}

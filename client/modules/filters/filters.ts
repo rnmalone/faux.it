@@ -11,8 +11,8 @@ export enum FilterActionTypes {
 }
 
 export enum FilterType {
-    Employee,
-    Sale,
+    Employee='employee',
+    Sale='sale',
 }
 
 export type StoredFilters = Record<string, string[]>
@@ -61,7 +61,29 @@ const INITIAL_STATE: Readonly<IFilterState> = {
 export function toggleFilterItem(filterType: FilterType) {
     return (dispatch: Dispatch<FilterActionTypes>, getState: () => IAppStore) => {
         return (facet: string, value: string) => {
+            return () => {
 
+                const { filters: { filter } } = getState();
+
+                const facetArr = filter[filterType].activeFilters[facet]
+
+                const newState = {
+                    ...filter,
+                    [filterType]: {
+                        ...filter[filterType],
+                        activeFilters: {
+                            ...filter[filterType].activeFilters,
+                            [facet]: facetArr.includes(value) ?
+                                facetArr.filter((item) => item !== value) :
+                                [...facetArr, value]
+                        }
+                    }
+                }
+
+                dispatch({ type: FilterActionTypes.SET_FILTER, payload: newState })
+
+                console.log(newState)
+            }
         }
     }
 }
@@ -73,7 +95,8 @@ const actionHandlers: ActionHandler<FilterActionTypes, IFilterState> = {
                 ...state.filter,
                 [action.payload.filterType]: INITIAL_STATE.filter[action.payload.filterType as FilterType]
             }
-        })
+        }),
+    [FilterActionTypes.SET_FILTER]: (state, action) => ({ ...state, filter: action.payload })
 }
 
 export default function reducer(state: IFilterState = INITIAL_STATE, action: IAction<FilterActionTypes>) {
