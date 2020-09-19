@@ -76,7 +76,7 @@ const actionHandlers: ActionHandler<FilterActionTypes, IFilterState> = {
         })
 }
 
-export default function reducer(state: IFilterState, action: IAction<FilterActionTypes>) {
+export default function reducer(state: IFilterState = INITIAL_STATE, action: IAction<FilterActionTypes>) {
     const handler = actionHandlers[action.type]
 
     return handler ? handler(state, action) : state;

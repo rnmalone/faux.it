@@ -7,6 +7,9 @@ declare module '*.graphql' {
     export = Schema
 }
 
-interface IWindow extends Window {
-    __REDUX_DEVTOOLS_EXTENSION_COMPOSE__: any
+declare global {
+    interface Window {
+        __REDUX_DEVTOOLS_EXTENSION_COMPOSE__: any,
+        __INITIAL_STATE__: any
+    }
 }

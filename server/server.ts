@@ -8,7 +8,7 @@ import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import schema from './schema/schema'
 import resolvers from './resolvers'
-import {assets} from "./middleware";
+import {assets, clientRenderer} from "./middleware";
 import {Connection} from "typeorm";
 
 const {ApolloServer, gql} = require('apollo-server-express');
@@ -63,7 +63,7 @@ export default function startServer(connection: Connection) {
     app.use(express.static(config.paths.public()));
     app.use('/assets', express.static(config.paths.server('assets')))
 
-    app.use('*', (req: Request, res: Response): void => void res.render('index'));
+    app.use('*', clientRenderer);
 
     app.listen(config.server.port)
 }

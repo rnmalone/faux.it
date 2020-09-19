@@ -15,5 +15,8 @@ html(lang=locale)
     body
         #root(style='height: 100%')
 
+        script.
+            window.__INITIAL_STATE__ = !{initialClientState};
+
         each scriptSrc in assets.js
             script(src=scriptSrc)
