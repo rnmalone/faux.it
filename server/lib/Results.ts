@@ -26,12 +26,14 @@ export interface IListResultsResponse<T> {
 export default class Results<T> {
 
     public items: T[] = []
+    public readonly rawItems: T[] = []
     public facets: ResultFacets = []
     public count: number = 0;
     protected config: IResultsOptions<T>
 
     constructor(rawItems: T[], opts?: IResultsOptions<T>) {
         this.items = rawItems
+        this.rawItems = rawItems
         this.config = opts
     }
 
@@ -39,6 +41,8 @@ export default class Results<T> {
         if (this.config.facetInput) {
             this.applyRequestFacets()
         }
+
+        const facets = facetExtractor(this.items, this.config.facetFields)
 
         if (this.config.searchTerm) {
             this.applySearchTerm()
@@ -54,8 +58,8 @@ export default class Results<T> {
 
         return {
             items: this.items,
-            count: this.items.length,
-            facets: facetExtractor(this.items, this.config.facetFields)
+            count: this.rawItems.length,
+            facets
         }
     }
 
