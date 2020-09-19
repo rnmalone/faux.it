@@ -1,6 +1,8 @@
 import React from "react";
 import Dropdown from "../../Dropdown";
 import {IFacet} from "../../../../server/@types/Facet";
+import {EMPLOYEE_KEY_STRING_MAP} from "../../../../server/config/strings.config";
+import {IEmployeeEntity} from "../../../@types/employe";
 
 export default function Filters({ stateKey, facets = [], filters, toggleFilterItem }) {
     return (
@@ -11,7 +13,8 @@ export default function Filters({ stateKey, facets = [], filters, toggleFilterIt
                         key={`filter-${filterCategory}`}
                         itemList={facets.find((facet: IFacet) => facet.category === filterCategory)?.items || []}
                         selectedList={activeItems}
-                        label={filterCategory}
+                        filterKey={filterCategory}
+                        label={EMPLOYEE_KEY_STRING_MAP[filterCategory as keyof IEmployeeEntity]}
                         onSelect={toggleFilterItem(stateKey)}
                    />
                 ))

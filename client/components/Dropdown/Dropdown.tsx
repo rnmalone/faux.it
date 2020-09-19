@@ -3,7 +3,7 @@ import cx from 'classnames';
 import './Dropdown.scss'
 import {IFacet} from "../../../server/@types/Facet";
 
-export default function Dropdown({ label, itemList = [], selectedList, onSelect }) {
+export default function Dropdown({ filterKey, label, itemList = [], selectedList, onSelect }) {
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
     return (
@@ -16,10 +16,10 @@ export default function Dropdown({ label, itemList = [], selectedList, onSelect 
                     {
                         itemList.map((item: IFacet) => (
                             <li
-                                key={`${label}-${item.value}`}
+                                key={`${filterKey}-${item.value}`}
                                 tabIndex={0}
                                 role="button"
-                                onClick={onSelect(label, item.value)}
+                                onClick={onSelect(filterKey, item.value)}
                                 className={cx('Dropdown__item', {
                                     'Dropdown__item--selected': selectedList.includes(item.value)
                                 })}
