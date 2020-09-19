@@ -1,1 +1,1 @@
-export { default } from './components/EmployeeList';
+export { default } from './container/EmployeeList';

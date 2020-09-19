@@ -6,10 +6,11 @@ import ListTable from "../../../components/ListTable";
 import {EMPLOYEE_LIST_TABLE_COLUMNS} from "../../../config/tables";
 import EmployeeRow from "../../../components/EmployeeRow/EmployeeRow";
 import Filters from "../../../components/Filters";
-import webpack from "webpack";
 import {FilterType} from "../../../modules/filters/filters";
+import {buildFacetInputFromFilters} from "../../../lib";
 
-export default function EmployeeList() {
+export default function EmployeeList({ filters }) {
+    console.log(buildFacetInputFromFilters(filters))
     const { data, error, loading } = useQuery(employeeListQuery, {
         variables: {
             sortType: 'ALPHANUMERIC',
@@ -17,7 +18,7 @@ export default function EmployeeList() {
             offset: 0,
             limit: 10,
             term: '',
-            facets: []
+            facets: buildFacetInputFromFilters(filters)
         }
     })
 
