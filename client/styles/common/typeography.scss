@@ -4,6 +4,12 @@ td, th, p, span, label, h1, h2, h3, h4, h5, h6, i {
   color: $text-color;
 }
 
+h2 {
+  font-weight: 300;
+  font-size: 2em;
+  margin: 1rem 0;
+}
+
 span {
   vertical-align: middle;
 }

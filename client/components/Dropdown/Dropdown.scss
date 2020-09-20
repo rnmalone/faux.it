@@ -1,6 +1,6 @@
 @import 'core/vars';
 
-$widget-height: 50px;
+$widget-height: 40px;
 
 .Dropdown {
   position: relative;
@@ -8,7 +8,6 @@ $widget-height: 50px;
   width: 180px;
 
   &__widget {
-    height: 100%;
     width: calc(100% - 2rem);
     border-radius: 5px;
     border: $border-color 1px solid;

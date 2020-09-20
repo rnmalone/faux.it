@@ -16,8 +16,8 @@
       <list>
         <option value="tsconfig.json" />
         <option value="JavaScript File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -97,7 +97,7 @@
       <workItem from="1600458733735" duration="7071000" />
       <workItem from="1600502399060" duration="9808000" />
       <workItem from="1600594917011" duration="466000" />
-      <workItem from="1600595397917" duration="7937000" />
+      <workItem from="1600595397917" duration="14506000" />
     </task>
     <servers />
   </component>

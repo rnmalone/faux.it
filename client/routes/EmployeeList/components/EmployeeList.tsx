@@ -8,30 +8,36 @@ import EmployeeRow from "../../../components/EmployeeRow/EmployeeRow";
 import Filters from "../../../components/Filters";
 import {FilterType} from "../../../modules/filters/filters";
 import {buildFacetInputFromFilters} from "../../../lib";
+import Input from "../../../components/Input/Input";
 
-export default function EmployeeList({ filters }) {
+export default function EmployeeList({ filters, term }) {
     const {data, error, loading} = useQuery(employeeListQuery, {
         variables: {
             sortType: 'ALPHANUMERIC',
             sortDirection: 'DOWN',
             offset: 0,
             limit: 10,
-            term: '',
+            term,
             facets: filters
         }
     })
 
     return (
         <div className="page">
-            <Filters
-                stateKey={FilterType.Employee}
-                facets={data?.employeeList?.facets}
-            />
-            <ListTable
-                RowComponent={EmployeeRow}
-                data={data?.employeeList?.items || []}
-                columns={EMPLOYEE_LIST_TABLE_COLUMNS}
-            />
+            <div className="page__upper">
+                <h2>Employees</h2>
+            </div>
+            <div className="page__body">
+                <Filters
+                    stateKey={FilterType.Employee}
+                    facets={data?.employeeList?.facets}
+                />
+                <ListTable
+                    RowComponent={EmployeeRow}
+                    data={data?.employeeList?.items || []}
+                    columns={EMPLOYEE_LIST_TABLE_COLUMNS}
+                />
+            </div>
         </div>
     )
 }

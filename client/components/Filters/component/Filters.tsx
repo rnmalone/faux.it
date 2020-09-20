@@ -5,10 +5,16 @@ import {EMPLOYEE_KEY_STRING_MAP} from "../../../../server/config/strings.config"
 import {IEmployeeEntity} from "../../../@types/employe";
 
 import '../styles/Filters.scss'
+import Input from "../../Input/Input";
 
-export default function Filters({stateKey, facets = [], filters, toggleFilterItem}) {
+export default function Filters({ stateKey, facets = [], filters, toggleFilterItem, setTerm}) {
     return (
         <section className="Filters">
+            <Input
+                onChange={setTerm(stateKey)}
+                placeholder="Filter by term"
+                value={filters[stateKey].term}
+            />
             {
                 Object.entries(filters[stateKey].activeFilters).map(([filterCategory, activeItems]) => (
                     <Dropdown

@@ -24,7 +24,7 @@ export default function Dropdown({filterKey, label, itemList = [], selectedList,
         if(!selectedList.length) return 'all'
         if(selectedList.length === 1) {
             const value = selectedList[0];
-            if(value.length > 22) {
+            if(value.length > 14) {
                 return '1 selected';
             }
 
@@ -42,7 +42,7 @@ export default function Dropdown({filterKey, label, itemList = [], selectedList,
             >
                 <div>
                     <p>{label}</p>
-                    <span>{getNote()}</span>
+                    {/*<span>{getNote()}</span>*/}
                 </div>
                 <Icon type={IconType.Chevron} />
             </div>

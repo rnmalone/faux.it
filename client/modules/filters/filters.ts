@@ -1,6 +1,7 @@
 import {Direction} from "../../../server/@types/Direction";
 import {SortType} from "../../../server/@types/SortType";
 import {IAppStore, ActionHandler, Dispatch, IAction} from "../../@types/store";
+import {ChangeEvent} from "react";
 
 export enum FilterActionTypes {
     SET_FILTER = 'app/modules/filters/SET_FILTER',
@@ -81,9 +82,26 @@ export function toggleFilterItem(filterType: FilterType) {
                 }
 
                 dispatch({type: FilterActionTypes.SET_FILTER, payload: newState})
-
-                console.log(newState)
             }
+        }
+    }
+}
+
+export function setTerm(filterType: FilterType) {
+    return (dispatch: Dispatch<FilterActionTypes>, getState: () => IAppStore) => {
+        return (event: ChangeEvent<HTMLInputElement>) => {
+            const {filters: {filter}} = getState();
+            console.log('ss')
+
+            const newState = {
+                ...filter,
+                [filterType]: {
+                    ...filter[filterType],
+                    term: event.target.value
+                }
+            }
+
+            dispatch({type: FilterActionTypes.SET_FILTER, payload: newState})
         }
     }
 }
@@ -96,7 +114,7 @@ const actionHandlers: ActionHandler<FilterActionTypes, IFilterState> = {
             [action.payload.filterType]: INITIAL_STATE.filter[action.payload.filterType as FilterType]
         }
     }),
-    [FilterActionTypes.SET_FILTER]: (state, action) => ({...state, filter: action.payload})
+    [FilterActionTypes.SET_FILTER]: (state, action) => ({...state, filter: action.payload}),
 }
 
 export default function reducer(state: IFilterState = INITIAL_STATE, action: IAction<FilterActionTypes>) {

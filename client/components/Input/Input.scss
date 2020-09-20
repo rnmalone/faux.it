@@ -1,0 +1,30 @@
+@import 'core/vars';
+
+.Input {
+  width: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: $border-color 1px solid;
+  height: 40px;
+  background-color: white;
+  border-radius: 5px;
+
+  input {
+    padding-left: 1rem;
+    border: 0;
+    width: 220px;
+    height: 38px;
+    font-family: "Poppins";
+    color: $text-color;
+  }
+
+  i {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+  }
+
+}
