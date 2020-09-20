@@ -16,10 +16,10 @@ const countryCodeMap = {
     US
 }
 
-export default function Flag({ countryCode }: { countryCode: string }) {
+export default function Flag({countryCode}: { countryCode: string }) {
     return (
         <div className="Flag">
-            <img src={countryCodeMap[countryCode]} alt={countryCode} />
+            <img src={countryCodeMap[countryCode]} alt={countryCode}/>
         </div>
     )
 }

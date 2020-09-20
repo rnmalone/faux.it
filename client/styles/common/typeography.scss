@@ -1,5 +1,14 @@
 @import '../core/vars.scss';
 
-td, th, p, span, label, h1, h2, h3, h4, h5, h6 {
+td, th, p, span, label, h1, h2, h3, h4, h5, h6, i {
   color: $text-color;
+}
+
+span {
+  vertical-align: center;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
 }

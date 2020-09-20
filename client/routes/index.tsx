@@ -8,10 +8,10 @@ import Employee from "./Employee";
 export default () => {
     return (
         <Switch>
-            <Route exact path="/employees" component={EmployeeList} />
+            <Route exact path="/employees" component={EmployeeList}/>
             <Route path="/sales" coponent={SaleList}/>
-            <Route path="/sale/:sale" component={Sale} />
-            <Route path="/employee/:employee" component={Employee} />
+            <Route path="/sale/:sale" component={Sale}/>
+            <Route path="/employee/:employee" component={Employee}/>
         </Switch>
     )
 }

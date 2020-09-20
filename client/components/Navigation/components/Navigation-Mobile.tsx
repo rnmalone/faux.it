@@ -6,7 +6,7 @@ import cx from "classnames";
 import shortid from "shortid";
 import {useOutsideClicks} from "../../../lib/hooks";
 
-export default function MobileOptions({ onSelectRoute, selectedRoute }: INavigationTools) {
+export default function MobileOptions({onSelectRoute, selectedRoute}: INavigationTools) {
     const ref = useRef(null)
     const [open, setOpen] = useState<boolean>(false);
     const closeOptions = () => void setOpen(false);
@@ -32,7 +32,7 @@ export default function MobileOptions({ onSelectRoute, selectedRoute }: INavigat
             >
                 <div ref={ref} className="Navigation__mobile__options-popover">
                     {
-                        NAVIGATION_ROUTES.map(({ route, displayName }) => (
+                        NAVIGATION_ROUTES.map(({route, displayName}) => (
                             <div
                                 className={cx('Navigation__desktop__options__item', {
                                     'Navigation__desktop__options__item--selected': selectedRoute === route

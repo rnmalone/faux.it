@@ -1,1 +1,1 @@
-export { default } from './container/EmployeeList';
+export {default} from './container/EmployeeList';

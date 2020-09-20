@@ -5,5 +5,5 @@ export default function useOverlay() {
     const closeOverlay = () => void setOverlayOpen(false)
     const openOverlay = () => void setOverlayOpen(true)
 
-    return { closeOverlay, openOverlay, overlayOpen }
+    return {closeOverlay, openOverlay, overlayOpen}
 }

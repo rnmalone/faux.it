@@ -39,7 +39,7 @@ const config = {
 
         publicAddress: process.env.HOST || 'localhost',
 
-        apiBaseUri: process.env.API_BASE_PATH,
+        apiBaseUri: process.env.API_BASE_PATH || '/v1/api',
 
         templateLocals: {
             title: 'Template'

@@ -1,1 +1,1 @@
-export { default } from './Apollo';
+export {default} from './Apollo';

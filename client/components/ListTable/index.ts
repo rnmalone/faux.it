@@ -1,1 +1,1 @@
-export { default } from './ListTable'
+export {default} from './ListTable'

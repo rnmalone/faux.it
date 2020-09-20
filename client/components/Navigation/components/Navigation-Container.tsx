@@ -10,19 +10,20 @@ import '../styles/Navigation.scss';
 
 export interface INavigationTools {
     onSelectRoute(route: string): () => void,
+
     selectedRoute: INavigationRoute["route"]
 }
 
 
-export default function NavigationContainer({ isMobile }: { isMobile: boolean }) {
+export default function NavigationContainer({isMobile}: { isMobile: boolean }) {
     const [selectedRoute, setSelectedRoute] = useState<INavigationRoute["route"] | undefined>()
     const location = useLocation()
     const history = useHistory();
 
     useEffect(() => {
-        const activeRoute = NAVIGATION_ROUTES.find(({ route }) => location.pathname.includes(route))
+        const activeRoute = NAVIGATION_ROUTES.find(({route}) => location.pathname.includes(route))
 
-        if(activeRoute) setSelectedRoute(activeRoute.route);
+        if (activeRoute) setSelectedRoute(activeRoute.route);
     }, [location.pathname])
 
     const menuProps = {
@@ -38,7 +39,7 @@ export default function NavigationContainer({ isMobile }: { isMobile: boolean })
             'Navigation__mobile': isMobile
         })}>
             <header>
-                <Title />
+                <Title/>
             </header>
             {
                 isMobile ? <MobileOptions {...menuProps} /> : <DesktopOptions {...menuProps} />

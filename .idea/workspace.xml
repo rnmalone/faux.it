@@ -37,7 +37,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/assets/images/flags" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
@@ -96,6 +96,8 @@
       <workItem from="1600273977990" duration="5459000" />
       <workItem from="1600458733735" duration="7071000" />
       <workItem from="1600502399060" duration="9808000" />
+      <workItem from="1600594917011" duration="466000" />
+      <workItem from="1600595397917" duration="7014000" />
     </task>
     <servers />
   </component>
@@ -115,25 +117,32 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="713" y="310" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600115732315">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="951" y="417" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600596974210">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state x="951" y="417" key="#com.intellij.fileTypes.FileTypeChooser/-1920.366.1920.1040/2560.366.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1600596974210" />
     <state x="713" y="310" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600115732315" />
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600274610024">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600274610024" />
+    <state x="92" y="92" width="2376" height="1216" key="DiffContextDialog" timestamp="1600597211670">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="92" y="92" width="2376" height="1216" key="DiffContextDialog/-1920.366.1920.1040/2560.366.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1600597211670" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1595453665824">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595453665824" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1600114912046">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="941" y="360" key="SettingsEditor" timestamp="1600595431237">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state x="941" y="360" key="SettingsEditor/-1920.366.1920.1040/2560.366.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1600595431237" />
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600114912046" />
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600275661711">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="123" y="124" width="2315" height="1153" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600597211670">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state x="123" y="124" width="2315" height="1153" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-1920.366.1920.1040/2560.366.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1600597211670" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600275661711" />
     <state x="646" y="241" width="627" height="624" key="find.popup" timestamp="1600274308240">
       <screen x="0" y="0" width="1920" height="1040" />

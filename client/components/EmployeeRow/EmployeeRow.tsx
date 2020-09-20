@@ -11,16 +11,16 @@ export interface IEmployeeRowProps {
     cells: Cell<IEmployeeEntity>[]
 }
 
-export default function EmployeeRow({ rowProps, cells }: IEmployeeRowProps) {
+export default function EmployeeRow({rowProps, cells}: IEmployeeRowProps) {
     const rowCellRenderableMap: {
         [key: string]: (cell: Cell<IEmployeeEntity>) => any
     } = {
-        imageUrl: (cell) => <img className="thumbnail" src={cell.value} />,
+        imageUrl: (cell) => <img className="thumbnail" src={cell.value}/>,
         name: (cell) => (<div className="EmployeeRow__name">
             {`${cell.row.original.firstName} ${cell.row.original.lastName}`}
             <span>
                 {`${cell.row.original.location.address}`}
-                <Flag countryCode={cell.row.original.location.countryCode} />
+                <Flag countryCode={cell.row.original.location.countryCode}/>
             </span>
         </div>),
         jobTitle: (cell) => cell.value,

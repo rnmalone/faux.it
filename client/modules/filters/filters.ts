@@ -11,8 +11,8 @@ export enum FilterActionTypes {
 }
 
 export enum FilterType {
-    Employee='employee',
-    Sale='sale',
+    Employee = 'employee',
+    Sale = 'sale',
 }
 
 export type StoredFilters = Record<string, string[]>
@@ -63,7 +63,7 @@ export function toggleFilterItem(filterType: FilterType) {
         return (facet: string, value: string) => {
             return () => {
 
-                const { filters: { filter } } = getState();
+                const {filters: {filter}} = getState();
 
                 const facetArr = filter[filterType].activeFilters[facet]
 
@@ -80,7 +80,7 @@ export function toggleFilterItem(filterType: FilterType) {
                     }
                 }
 
-                dispatch({ type: FilterActionTypes.SET_FILTER, payload: newState })
+                dispatch({type: FilterActionTypes.SET_FILTER, payload: newState})
 
                 console.log(newState)
             }
@@ -90,13 +90,13 @@ export function toggleFilterItem(filterType: FilterType) {
 
 const actionHandlers: ActionHandler<FilterActionTypes, IFilterState> = {
     [FilterActionTypes.CLEAR_FILTER]: (state, action) => ({
-            ...state,
-            filter: {
-                ...state.filter,
-                [action.payload.filterType]: INITIAL_STATE.filter[action.payload.filterType as FilterType]
-            }
-        }),
-    [FilterActionTypes.SET_FILTER]: (state, action) => ({ ...state, filter: action.payload })
+        ...state,
+        filter: {
+            ...state.filter,
+            [action.payload.filterType]: INITIAL_STATE.filter[action.payload.filterType as FilterType]
+        }
+    }),
+    [FilterActionTypes.SET_FILTER]: (state, action) => ({...state, filter: action.payload})
 }
 
 export default function reducer(state: IFilterState = INITIAL_STATE, action: IAction<FilterActionTypes>) {

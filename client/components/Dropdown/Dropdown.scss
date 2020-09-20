@@ -1,20 +1,99 @@
 @import 'core/vars';
 
+$widget-height: 50px;
+
 .Dropdown {
+  position: relative;
+  height: $widget-height;
+  width: 180px;
 
   &__widget {
-    height: 40px;
-    width: 160px;
+    height: 100%;
+    width: calc(100% - 2rem);
     border-radius: 5px;
-    border: #333333 2px solid;
+    border: $border-color 1px solid;
+    position: relative;
+    cursor: pointer;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    transition: all .2s linear;
+
+    i {
+      transform: rotate(-90deg);
+      transition: transform .2s linear;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: .9em;
+      margin: 0 !important;
+    }
+
+    span {
+      font-size: .8em;
+    }
+
+    &--open {
+      background-color: $primary-color;
+      pointer-events: none;
+
+      i {
+        transform: rotate(0deg)
+      }
+
+      p, span, i {
+        color: $text-color-invert;
+      }
+    }
+  }
+
+  &__overlay {
+    border-radius: 5px;
+    border: $border-color 1px solid;
+    position: absolute;
+    top: calc(#{$widget-height} + 1rem);
+    width: 260px;
+    max-height: 400px;
+    z-index: 100;
+    transition: max-height, opacity .15s linear;
+    padding: 1rem;
+    -webkit-box-shadow: 0px 0px 36px 5px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 36px 5px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 36px 5px rgba(0,0,0,0.25);
+    background-color: $bg-color-accent1;
+
   }
 
   &__item {
-    list-style: none;
     cursor: pointer;
+    font-size: .9em;
+    height: 30px;
+    border-radius: 5px;
+    width: calc(100% - 2rem);
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding: .3rem 1rem;
+    background-color: white;
+    margin: .5rem 0;
+    border: $border-color 1px solid;
+    font-weight: 300;
+
+    span {
+      &:last-child {
+        font-size: .85em;
+      }
+    }
 
     &--selected {
-      color: red;
+      background-color: $primary-color;
+
+      span {
+        color: $text-color-invert !important;
+      }
     }
   }
 

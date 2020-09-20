@@ -1,4 +1,4 @@
-import { IFilterState } from "../modules/filters/filters";
+import {IFilterState} from "../modules/filters/filters";
 
 export interface IAppStore {
     filters: IFilterState
@@ -11,4 +11,4 @@ export interface IAction<T> {
     payload: any
 }
 
-export type ActionHandler <ActionType extends PropertyKey, State> = Partial<{ [K in ActionType]: (state: State, action: IAction<ActionType>) => State }>
+export type ActionHandler<ActionType extends PropertyKey, State> = Partial<{ [K in ActionType]: (state: State, action: IAction<ActionType>) => State }>

@@ -1,6 +1,6 @@
 import '@babel/polyfill';
 import React from 'react';
-import { Provider } from 'react-redux'
+import {Provider} from 'react-redux'
 import ReactDOM from 'react-dom';
 import {AppContainer as HotLoaderContainer} from 'react-hot-loader';
 import {CoreLayout} from './layouts';
