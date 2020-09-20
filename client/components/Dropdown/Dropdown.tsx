@@ -19,6 +19,19 @@ export default function Dropdown({filterKey, label, itemList = [], selectedList,
     const {overlayOpen, openOverlay, closeOverlay} = useOverlay()
     useOutsideClicks(dropdownRef, closeOverlay)
 
+    const getNote = () => {
+        if(itemList.length === 1) return itemList[0].value
+        if(!selectedList.length) return 'all'
+        if(selectedList.length === 1) {
+            const value = selectedList[0];
+            if(value.length > 22) {
+                return '1 selected';
+            }
+
+            return value
+        }
+    }
+
     return (
         <div className="Dropdown">
             <div
@@ -29,7 +42,7 @@ export default function Dropdown({filterKey, label, itemList = [], selectedList,
             >
                 <div>
                     <p>{label}</p>
-                    <span>Foo bar</span>
+                    <span>{getNote()}</span>
                 </div>
                 <Icon type={IconType.Chevron} />
             </div>
