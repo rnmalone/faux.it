@@ -5,7 +5,6 @@ import {INavigationTools} from "./Navigation-Container";
 import {NAVIGATION_ROUTES} from "../../../config/navigation";
 
 export default function DesktopOptions({onSelectRoute, selectedRoute}: INavigationTools) {
-    console.log(selectedRoute)
     return (
         <div className="Navigation__desktop__options">
             {

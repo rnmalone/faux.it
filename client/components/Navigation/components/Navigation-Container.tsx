@@ -38,12 +38,14 @@ export default function NavigationContainer({isMobile}: { isMobile: boolean }) {
             'Navigation__desktop': !isMobile,
             'Navigation__mobile': isMobile
         })}>
-            <header>
-                <Title/>
-            </header>
-            {
-                isMobile ? <MobileOptions {...menuProps} /> : <DesktopOptions {...menuProps} />
-            }
+            <div>
+                <header>
+                    <Title/>
+                </header>
+                {
+                    isMobile ? <MobileOptions {...menuProps} /> : <DesktopOptions {...menuProps} />
+                }
+            </div>
         </div>
     )
 }
