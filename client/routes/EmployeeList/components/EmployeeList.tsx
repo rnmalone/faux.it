@@ -10,15 +10,15 @@ import {FilterType} from "../../../modules/filters/filters";
 import {buildFacetInputFromFilters} from "../../../lib";
 import Input from "../../../components/Input/Input";
 
-export default function EmployeeList({ filters, term }) {
-    const {data, error, loading} = useQuery(employeeListQuery, {
+export default function EmployeeList({ filters, term, paging, setPaging }) {
+    const {data, error, loading, fetchMore } = useQuery(employeeListQuery, {
+        fetchPolicy: "cache-and-network",
         variables: {
             sortType: 'ALPHANUMERIC',
             sortDirection: 'DOWN',
-            offset: 0,
-            limit: 10,
             term,
-            facets: filters
+            facets: filters,
+            ...paging
         }
     })
 
@@ -36,6 +36,10 @@ export default function EmployeeList({ filters, term }) {
                     RowComponent={EmployeeRow}
                     data={data?.employeeList?.items || []}
                     columns={EMPLOYEE_LIST_TABLE_COLUMNS}
+                    totalItems={data?.employeeList?.count}
+                    setPaging={setPaging(FilterType.Employee)}
+                    limit={paging.limit}
+                    offset={paging.offset}
                 />
             </div>
         </div>

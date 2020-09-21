@@ -24,3 +24,5 @@ export const EMPLOYEE_LIST_TABLE_COLUMNS = [
         accessor: 'joinDate'
     }
 ]
+
+export const PAGE_SIZES = [5, 10, 25, 50]

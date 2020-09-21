@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Dropdown/Dropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Dropdown/Dropdown.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/lib/hooks/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/hooks/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ListTable/ListTable.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ListTable/ListTable.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ListTable/ListTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ListTable/ListTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/config/tables.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/config/tables.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/modules/filters/filters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/modules/filters/filters.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/routes/EmployeeList/components/EmployeeList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/EmployeeList/components/EmployeeList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/routes/EmployeeList/container/EmployeeList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/EmployeeList/container/EmployeeList.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +20,8 @@
       <list>
         <option value="tsconfig.json" />
         <option value="JavaScript File" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -97,7 +101,8 @@
       <workItem from="1600458733735" duration="7071000" />
       <workItem from="1600502399060" duration="9808000" />
       <workItem from="1600594917011" duration="466000" />
-      <workItem from="1600595397917" duration="15747000" />
+      <workItem from="1600595397917" duration="19163000" />
+      <workItem from="1600712628017" duration="9006000" />
     </task>
     <servers />
   </component>

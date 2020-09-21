@@ -1,12 +1,17 @@
 import {connect} from 'react-redux';
 import EmployeeList from '../components/EmployeeList'
 import {IAppStore} from "../../../@types/store";
-import {FilterType} from "../../../modules/filters/filters";
+import {FilterType, setPaging} from "../../../modules/filters/filters";
 import {buildFacetInputFromFilters} from "../../../lib";
 
 const mapStateToProps = (state: IAppStore) => ({
     filters: buildFacetInputFromFilters(state.filters.filter[FilterType.Employee].activeFilters),
-    term: state.filters.filter[FilterType.Employee].term
+    term: state.filters.filter[FilterType.Employee].term,
+    paging: state.filters.filter[FilterType.Employee].paging
 })
 
-export default connect(mapStateToProps)(EmployeeList)
+const mapDispatchToProps = {
+    setPaging
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(EmployeeList)

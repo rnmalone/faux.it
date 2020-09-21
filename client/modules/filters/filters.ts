@@ -2,10 +2,12 @@ import {Direction} from "../../../server/@types/Direction";
 import {SortType} from "../../../server/@types/SortType";
 import {IAppStore, ActionHandler, Dispatch, IAction} from "../../@types/store";
 import {ChangeEvent} from "react";
+import {IPaging} from "../../@types/tables";
 
 export enum FilterActionTypes {
     SET_FILTER = 'app/modules/filters/SET_FILTER',
     CLEAR_FILTER = 'app/modules/filters/CLEAR_FILTER',
+    SET_PAGING = 'app/modules/filters/SET_PAGING',
     SET_TERM = 'app/modules/filters/SET_TERM',
     SET_SORT = 'app/modules/filters/SET_SORT',
     RESET_ALL = 'app/modules/filters/RESET_ALL',
@@ -20,6 +22,7 @@ export type StoredFilters = Record<string, string[]>
 
 export interface ISearchFilters {
     term: string,
+    paging: IPaging
     sort: {
         direction: Direction,
         type: SortType
@@ -33,6 +36,10 @@ export interface IFilterState {
 
 const boilerPlate = {
     term: '',
+    paging: {
+        offset: 0,
+        limit: 10
+    },
     sort: {
         direction: Direction.DOWN,
         type: SortType.ALPHANUMERIC
@@ -87,6 +94,20 @@ export function toggleFilterItem(filterType: FilterType) {
     }
 }
 
+export function setPaging(filterType: FilterType) {
+    return (dispatch: Dispatch<FilterActionTypes>) => {
+        return (paging: IPaging) => {
+            dispatch({
+                type: FilterActionTypes.SET_PAGING,
+                payload: {
+                    filterType,
+                    paging
+                }
+            })
+        }
+    }
+}
+
 export function setTerm(filterType: FilterType) {
     return (dispatch: Dispatch<FilterActionTypes>, getState: () => IAppStore) => {
         return (event: ChangeEvent<HTMLInputElement>) => {
@@ -115,6 +136,16 @@ const actionHandlers: ActionHandler<FilterActionTypes, IFilterState> = {
         }
     }),
     [FilterActionTypes.SET_FILTER]: (state, action) => ({...state, filter: action.payload}),
+    [FilterActionTypes.SET_PAGING]: (state, action) => ({
+        ...state,
+        filter: {
+            ...state.filter,
+            [action.payload.filterType]: {
+                ...state.filter[action.payload.filterType],
+                paging: action.payload.paging
+            }
+        }
+    }),
 }
 
 export default function reducer(state: IFilterState = INITIAL_STATE, action: IAction<FilterActionTypes>) {
