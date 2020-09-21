@@ -50,7 +50,7 @@ const SASS_LOADER = {
 };
 
 module.exports = {
-    devtool: 'eval',
+    devtool: 'inline-source-map',
     mode: 'development',
     target: 'web',
     entry: [
