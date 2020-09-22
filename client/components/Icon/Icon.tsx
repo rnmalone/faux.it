@@ -5,8 +5,8 @@ export enum IconType {
     Search = 'fas fa-search'
 }
 
-export default function Icon({ type }: { type: IconType }) {
+export default function Icon({type}: { type: IconType }) {
     return (
-        <i className={type} />
+        <i className={type}/>
     )
 }

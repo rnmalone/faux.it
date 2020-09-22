@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import cx from 'classnames';
-import {useHistory, useLocation, useRouteMatch} from "react-router";
+import {useHistory, useLocation} from "react-router";
 import Title from "../../Title";
 import {INavigationRoute, NAVIGATION_ROUTES} from "../../../config/navigation";
 import DesktopOptions from "./Navigation-Desktop";
@@ -9,9 +9,9 @@ import MobileOptions from "./Navigation-Mobile";
 import '../styles/Navigation.scss';
 
 export interface INavigationTools {
-    onSelectRoute(route: string): () => void,
-
     selectedRoute: INavigationRoute["route"]
+
+    onSelectRoute(route: string): () => void,
 }
 
 

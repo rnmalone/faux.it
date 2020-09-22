@@ -7,7 +7,7 @@ import {IEmployeeEntity} from "../../../@types/employe";
 import '../styles/Filters.scss'
 import Input from "../../Input/Input";
 
-export default function Filters({ stateKey, facets = [], filters, toggleFilterItem, setTerm}) {
+export default function Filters({stateKey, facets = [], filters, toggleFilterItem, setTerm}) {
     return (
         <section className="Filters">
             <Input

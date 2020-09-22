@@ -1,20 +1,33 @@
-import React, {useMemo} from 'react';
+import React, {ChangeEvent, useMemo} from 'react';
 import cx from 'classnames';
 
 import './Pagination.scss';
 import Icon from "../Icon";
 import {IconType} from "../Icon/Icon";
 import {PAGE_SIZES} from "../../config/tables";
+import {IPaging} from "../../@types/tables";
 
-export default function Pagination({ offset, limit, setPaging, pageCount}) {
+interface IPaginationProps {
+    offset: number;
+    limit: number;
+    pageCount: number
+
+    setPaging(paging: IPaging): void;
+}
+
+export default function Pagination({offset, limit, setPaging, pageCount}: IPaginationProps) {
     const pageNodes = useMemo(() => Array(pageCount).fill(null), [pageCount])
 
     const handleChangePage = (newOffset: number) => () => {
-        setPaging({ offset: newOffset, limit })
+        setPaging({offset: newOffset, limit})
+    }
+
+    const handlePageSizeChange = (event: ChangeEvent<HTMLSelectElement>) => {
+        setPaging({offset, limit: Number(event.target.value)})
     }
 
     const renderPageSizes = () => (
-        <select>
+        <select onChange={handlePageSizeChange}>
             {
                 PAGE_SIZES.map((size: number) => (
                     <option
@@ -37,7 +50,7 @@ export default function Pagination({ offset, limit, setPaging, pageCount}) {
                     className="Pagination__node Pagination__node--previous"
                     onClick={handleChangePage(offset - limit)}
                 >
-                    <Icon type={IconType.Chevron} />
+                    <Icon type={IconType.Chevron}/>
                 </div>
                 <div className="Pagination__pages">
                     {
@@ -46,7 +59,10 @@ export default function Pagination({ offset, limit, setPaging, pageCount}) {
                                 role="button"
                                 tabIndex={0}
                                 key={`page-${i}`}
-                                className={cx('Pagination__node', { 'Pagination__node--selected': false })}
+                                onClick={handleChangePage(limit * i)}
+                                className={cx('Pagination__node', {
+                                    'Pagination__node--selected': offset === limit * i
+                                })}
                             >
                                 {i + 1}
                             </div>
@@ -59,7 +75,7 @@ export default function Pagination({ offset, limit, setPaging, pageCount}) {
                     onClick={handleChangePage(offset + limit)}
                     className="Pagination__node Pagination__node--next"
                 >
-                    <Icon type={IconType.Chevron} />
+                    <Icon type={IconType.Chevron}/>
                 </div>
             </div>
             {renderPageSizes()}

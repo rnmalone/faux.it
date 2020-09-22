@@ -6,12 +6,14 @@ import './Input.scss';
 
 interface IInputProps {
     value: string;
-    onChange(event: ChangeEvent<HTMLInputElement>): void;
     placeholder: string
+
+    onChange(event: ChangeEvent<HTMLInputElement>): void;
+
     onUse(): void;
 }
 
-export default function Input({ value, onChange, placeholder, onUse }: IInputProps) {
+export default function Input({value, onChange, placeholder, onUse}: IInputProps) {
 
     return (
         <div className="Input">
@@ -20,7 +22,7 @@ export default function Input({ value, onChange, placeholder, onUse }: IInputPro
                 value={value}
                 placeholder={placeholder}
             />
-            <Icon onClick={onUse} type={IconType.Search} />
+            <Icon onClick={onUse} type={IconType.Search}/>
         </div>
-       )
+    )
 }

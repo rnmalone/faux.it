@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef} from 'react';
 import cx from 'classnames';
 import './Dropdown.scss'
 import {IFacet} from "../../../server/@types/Facet";
@@ -20,11 +20,11 @@ export default function Dropdown({filterKey, label, itemList = [], selectedList,
     useOutsideClicks(dropdownRef, closeOverlay)
 
     const getNote = () => {
-        if(itemList.length === 1) return itemList[0].value
-        if(!selectedList.length) return 'all'
-        if(selectedList.length === 1) {
+        if (itemList.length === 1) return itemList[0].value
+        if (!selectedList.length) return 'all'
+        if (selectedList.length === 1) {
             const value = selectedList[0];
-            if(value.length > 14) {
+            if (value.length > 14) {
                 return '1 selected';
             }
 
@@ -44,7 +44,7 @@ export default function Dropdown({filterKey, label, itemList = [], selectedList,
                     <p>{label}</p>
                     {/*<span>{getNote()}</span>*/}
                 </div>
-                <Icon type={IconType.Chevron} />
+                <Icon type={IconType.Chevron}/>
             </div>
             {overlayOpen ? <div ref={dropdownRef} className={'Dropdown__overlay'}>
                 {
@@ -63,7 +63,7 @@ export default function Dropdown({filterKey, label, itemList = [], selectedList,
                         </div>
                     ))
                 }
-            </div> : null }
+            </div> : null}
         </div>
     )
 }

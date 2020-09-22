@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {usePagination, useTable} from "react-table";
 import Pagination from "../Pagination";
 
@@ -10,9 +10,9 @@ export default function ListTable({
                                       RowComponent,
                                       totalItems = 1,
                                       setPaging,
-    offset,
-    limit
-}) {
+                                      offset,
+                                      limit
+                                  }) {
     const {
         getTableProps,
         getTableBodyProps,
@@ -40,7 +40,7 @@ export default function ListTable({
                 {rows.map((row, i) => {
                     prepareRow(row)
                     return (
-                        <RowComponent rowProps={row.getRowProps()} cells={row.cells}/>
+                        <RowComponent key={`row-${i}`} rowProps={row.getRowProps()} cells={row.cells}/>
                     )
                 })}
                 </tbody>

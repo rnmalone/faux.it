@@ -3,12 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ListTable/ListTable.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ListTable/ListTable.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/images/flags/DE.svg" beforeDir="false" afterPath="$PROJECT_DIR$/client/assets/images/flags/DE.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/images/flags/EN.svg" beforeDir="false" afterPath="$PROJECT_DIR$/client/assets/images/flags/EN.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/images/flags/GB.svg" beforeDir="false" afterPath="$PROJECT_DIR$/client/assets/images/flags/GB.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/images/flags/NL.svg" beforeDir="false" afterPath="$PROJECT_DIR$/client/assets/images/flags/NL.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/images/flags/NR.svg" beforeDir="false" afterPath="$PROJECT_DIR$/client/assets/images/flags/NR.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/images/flags/US.svg" beforeDir="false" afterPath="$PROJECT_DIR$/client/assets/images/flags/US.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Dropdown/Dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Dropdown/Dropdown.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Dropdown/Dropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Dropdown/Dropdown.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Filters/component/Filters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Filters/component/Filters.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Filters/styles/Filters.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Filters/styles/Filters.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Icon/Icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Icon/Icon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Icon/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Icon/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Input/Input.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/ListTable/ListTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ListTable/ListTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/config/tables.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/config/tables.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Navigation/components/Navigation-Container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Navigation/components/Navigation-Container.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Pagination/Pagination.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Pagination/Pagination.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Pagination/Pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Pagination/Pagination.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Pagination/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Pagination/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/global.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/global.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/modules/filters/filters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/modules/filters/filters.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/routes/EmployeeList/components/EmployeeList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/EmployeeList/components/EmployeeList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/routes/EmployeeList/container/EmployeeList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/EmployeeList/container/EmployeeList.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +118,7 @@
       <workItem from="1600594917011" duration="466000" />
       <workItem from="1600595397917" duration="19163000" />
       <workItem from="1600712628017" duration="9006000" />
+      <workItem from="1600791037411" duration="1537000" />
     </task>
     <servers />
   </component>

@@ -9,6 +9,13 @@
   border-radius: 5px;
   position: relative;
 
+  select {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   &__centre {
     position: absolute;
     left: 50%;
@@ -21,6 +28,9 @@
   &__pages {
     margin: 0 1rem;
     width: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
   }
 
   &__node {
@@ -44,6 +54,7 @@
     &--selected, &--next, &--previous {
       background-color: $primary-color;
       color: white;
+
       i {
         color: white;
       }
