@@ -1,0 +1,43 @@
+@import 'core/vars';
+
+.Employee {
+
+  &__upper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    &__details {
+      width: 100%;
+
+      &__header {
+        border-bottom: $border-color 1px solid;
+        padding-bottom: 1rem;
+        width: 100%;
+
+        h2 {
+          margin: 0;
+        }
+      }
+
+      &__data {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+
+        > * {
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+
+  &__dp {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 2rem;
+    border: $border-color 1px solid;
+  }
+
+}

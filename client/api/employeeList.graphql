@@ -27,6 +27,7 @@ query EmployeeList(
             }
         }
         items {
+            id
             firstName
             lastName
             division

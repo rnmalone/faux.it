@@ -5,13 +5,16 @@ import {Cell, TableRowProps} from "react-table";
 import './EmployeeRow.scss';
 import Flag from "../Flag/Flag";
 import {IEmployeeEntity} from "../../@types/employe";
+import {useNavigate} from "../../lib/hooks";
 
 export interface IEmployeeRowProps {
     rowProps: TableRowProps,
-    cells: Cell<IEmployeeEntity>[]
+    cells: Cell<IEmployeeEntity>[];
+    original: IEmployeeEntity
 }
 
-export default function EmployeeRow({rowProps, cells}: IEmployeeRowProps) {
+export default function EmployeeRow({rowProps, cells, original}: IEmployeeRowProps) {
+    const navigate = useNavigate();
     const rowCellRenderableMap: {
         [key: string]: (cell: Cell<IEmployeeEntity>) => any
     } = {
@@ -30,7 +33,7 @@ export default function EmployeeRow({rowProps, cells}: IEmployeeRowProps) {
     }
 
     return (
-        <tr className="list-row EmployeeRow" {...rowProps}>
+        <tr className="list-row EmployeeRow" {...rowProps} onClick={navigate(`/employee/${original.id}`)}>
             {
                 cells.map((cell: Cell<IEmployeeEntity>) => (
                     <td {...cell.getCellProps()}>

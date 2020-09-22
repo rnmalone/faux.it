@@ -1,0 +1,18 @@
+query Employee($id: Int) {
+    employee(id: $id) {
+        firstName
+        lastName
+        division
+        jobTitle
+        imageUrl
+        email
+        salary
+        commissionRate
+        joinDate
+        location {
+            address
+            countryName
+            countryCode
+        }
+    }
+}

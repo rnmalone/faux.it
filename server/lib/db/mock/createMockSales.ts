@@ -35,7 +35,7 @@ const priceBounds = {
 export default function createMockSales() {
 
     return employees.reduce((a: SaleDTO[], employee) => {
-        const numberOfSales = Math.round(Math.random() * 100)
+        const numberOfSales = Math.round(Math.random() * 1200)
         // @ts-ignore
         const employeeSales: SaleDTO[] = Array(numberOfSales)
             .fill(null)
@@ -46,7 +46,7 @@ export default function createMockSales() {
 
                 const employeeId = employee.id;
                 const item = randomWords({ min: 2, max: 3, join: ' '})
-                const dayOffset = Math.round(Math.random() * 30)
+                const dayOffset = Math.round(Math.random() * 365)
                 const dateOpened = moment().subtract(dayOffset, 'days').toDate()
                 const itemCost = getRandomInt(bounds.min, bounds.max)
                 const agreedPrice = getRandomInt(itemCost, bounds.max)

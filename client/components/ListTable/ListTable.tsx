@@ -40,7 +40,7 @@ export default function ListTable({
                 {rows.map((row, i) => {
                     prepareRow(row)
                     return (
-                        <RowComponent key={`row-${i}`} rowProps={row.getRowProps()} cells={row.cells}/>
+                        <RowComponent key={`row-${i}`} rowProps={row.getRowProps()} cells={row.cells} original={row.original} />
                     )
                 })}
                 </tbody>
