@@ -23,7 +23,7 @@ export default class Sale {
     agreedPrice: number;
 
     @Column()
-    ticketPrice: number;
+    itemCost: number;
 
     @Column()
     customerName: string;
@@ -38,4 +38,4 @@ export default class Sale {
     dateClosed: Date | null;
 }
 
-export type SaleDTO = Pick<Sale, 'id' | 'employeeId' | 'item' | 'agreedPrice' | 'ticketPrice' | 'customerName' | 'status' | 'dateOpened' | 'dateClosed'>
+export type SaleDTO = Pick<Sale, 'id' | 'employeeId' | 'item' | 'agreedPrice' | 'itemCost' | 'customerName' | 'status' | 'dateOpened' | 'dateClosed'>

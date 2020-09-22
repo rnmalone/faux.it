@@ -12,7 +12,7 @@ const employees: EmployeeDTO[] = [
         email: 'Stourton.montgomery@faux.it',
         joinDate: new Date(),
         imageUrl: '/assets/images/1.jpg',
-        locationId: 1
+        locationId: 1,
     },
     {
         id: 2,
@@ -32,7 +32,7 @@ const employees: EmployeeDTO[] = [
         firstName: 'Contstantine',
         lastName: 'Highbury',
         jobTitle: 'Sales Executive',
-        division: 'Aereospace',
+        division: 'Aerospace',
         salary: 300000,
         commissionRate: 1.5,
         email: 'Contstantine.Highbury@faux.it',

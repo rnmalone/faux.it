@@ -2,7 +2,7 @@ import "reflect-metadata";
 import dotenv from 'dotenv';
 import server from './server';
 import {initDb} from "./lib/db";
-import injectMockData from "./lib/db/injectMockData";
+import injectMockData from "./lib/db/mock/injectMockData";
 import {createConnection} from "typeorm";
 import dbConfig from "./config/database.config";
 
