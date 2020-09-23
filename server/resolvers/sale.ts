@@ -4,11 +4,17 @@ import {Sale} from "../entities";
 import {Results} from "../lib";
 import {selectAllSales} from "../lib/queries";
 import {SALE_SEARCHABLE_FIELDS} from "../config/search.config";
+import buildEmployeeSalesStatistics from "./buildEmployeeSalesStatisticsResponse";
+import moment from "moment";
 
 const SALE_FACET_FIELDS: (keyof Partial<Sale>)[] = [
     'status'
 ]
 
+export interface IEmployeeStatisticsInput {
+    id: number;
+    from: string;
+}
 
 const saleResolver = {
     Query: {
@@ -30,6 +36,9 @@ const saleResolver = {
             })
 
             return resultsBuilder.getResponseObject()
+        },
+        employeeStatistics: async (root: any, { id, from }: IEmployeeStatisticsInput , {connection}: IContext) => {
+            return await buildEmployeeSalesStatistics(connection, { id, from: moment(from).toISOString() })
         }
     }
 }

@@ -39,7 +39,7 @@ const employeeResolver = {
             return resultsBuilder.getResponseObject()
         },
 
-        employee: async (root: any, {id}: { id: string }, {connection}: IContext) => {
+        employee: async (root: any, {id}: { id: number }, {connection}: IContext) => {
             const employee = await selectEmployeeById(connection, id)
 
             return employee

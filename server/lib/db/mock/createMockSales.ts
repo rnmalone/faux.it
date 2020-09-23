@@ -68,6 +68,7 @@ export default function createMockSales() {
                     agreedPrice,
                     customerName: 'Keith',
                     status,
+                    division,
                     dateOpened,
                     dateClosed: status === SaleStatus.Complete ? moment().toDate() : null
                 }

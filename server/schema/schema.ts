@@ -126,6 +126,21 @@ const typeDefs = gql`
         count: Int
         items: [SearchSuggestion]
     }
+    
+    type EmployeeSalesStatistics {
+        totalRevenue: Int
+        commissionEarnings: Int
+        salesComplete: Int
+        salesFailed: Int
+        saleConversionPc: Float
+        employeeDivisionProfitRank: Int
+        employeeDivisionSalesRank: Int
+        averageProfit: Int
+        totalProfit: Int
+        revenueContributionPcForDivision: Int
+        averageSaleCloseTimeDays: Int
+        averageDivisionSaleCloseTimeDays: Int
+    }
    
     type Query {
         employee(id: Int): Employee
@@ -147,6 +162,11 @@ const typeDefs = gql`
         searchSuggestions(
             term: String
         ): SearchSuggestionResult
+
+        employeeStatistics(
+            id: Int!
+            from: String!
+        ): EmployeeSalesStatistics
     }
 `
 

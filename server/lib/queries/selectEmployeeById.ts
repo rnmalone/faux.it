@@ -1,7 +1,7 @@
 import {Connection} from "typeorm";
 import Employee from "../../entities/Employee";
 
-export default async function selectEmployeeById(connection: Connection, id: string): Promise<Employee | undefined> {
+export default async function selectEmployeeById(connection: Connection, id: number): Promise<Employee | undefined> {
     return await connection
         .getRepository(Employee)
         .createQueryBuilder("employee")
