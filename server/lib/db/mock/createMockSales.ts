@@ -32,10 +32,34 @@ const priceBounds = {
     }
 }
 
+const saleBounds = {
+    Nautical: {
+        min: 50,
+        max: 100
+    },
+    Motor: {
+        min: 300,
+        max: 400
+    },
+    Watches: {
+        min: 1000,
+        max: 1300
+    },
+    Aerospace: {
+        min: 20,
+        max: 30
+    },
+    'Baked Goods': {
+        min: 1000,
+        max: 1500
+    }
+}
+
 export default function createMockSales() {
 
     return employees.reduce((a: SaleDTO[], employee) => {
-        const numberOfSales = Math.round(Math.random() * 1200)
+        // @ts-ignore
+        const numberOfSales = getRandomInt(saleBounds[employee.division].min, saleBounds[employee.division].max)
         // @ts-ignore
         const employeeSales: SaleDTO[] = Array(numberOfSales)
             .fill(null)
@@ -47,9 +71,9 @@ export default function createMockSales() {
                 const employeeId = employee.id;
                 const item = randomWords({ min: 2, max: 3, join: ' '})
                 const dayOffset = Math.round(Math.random() * 365)
-                const dateOpened = moment().subtract(dayOffset, 'days').toDate()
+                const dateOpened = moment().subtract(dayOffset, 'days').toISOString()
                 const itemCost = getRandomInt(bounds.min, bounds.max)
-                const agreedPrice = getRandomInt(itemCost, bounds.max)
+                const agreedPrice = getRandomInt(itemCost, itemCost * 1.05)
                 let status = SaleStatus.Complete;
                 const statusRn = Math.random()
 
@@ -70,7 +94,7 @@ export default function createMockSales() {
                     status,
                     division,
                     dateOpened,
-                    dateClosed: status === SaleStatus.Complete ? moment().toDate() : null
+                    dateClosed: status === SaleStatus.Complete ? moment(dateOpened).add(getRandomInt(1, 5), 'days').toISOString() : null
                 }
             })
 

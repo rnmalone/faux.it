@@ -59,11 +59,13 @@ export default async function buildEmployeeSalesStatistics(connection: Connectio
     const saleConversionPc = decimalPlaces2((100 / (employeeReducedSalesMetrics.salesComplete + employeeReducedSalesMetrics.salesFailed)) * employeeReducedSalesMetrics.salesComplete);
     const averageProfit = Math.round(employeeReducedSalesMetrics.totalProfit / employeeReducedSalesMetrics.salesComplete);
     const commissionEarnings = Math.round(employeeReducedSalesMetrics.totalProfit * (employee.commissionRate / 100));
+    const averageSaleCloseTimeDays = Math.round(employeeReducedSalesMetrics.totalDaysBetweenOpenAndClosedSales / employeeReducedSalesMetrics.salesComplete)
 
     return {
         saleConversionPc,
         averageProfit,
         commissionEarnings,
+        averageSaleCloseTimeDays,
         employeeDivisionProfitRank,
         employeeDivisionSalesRank,
         revenueContributionPcForDivision,

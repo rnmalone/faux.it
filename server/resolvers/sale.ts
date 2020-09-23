@@ -23,7 +23,7 @@ const saleResolver = {
 
             // TODO add this to query builder
             // @ts-ignore
-            items = items.map((item) => ({...item, employee: `${item.employee.firstName} ${item.employee.lastName}`}))
+            items = items.map((item) => ({ ...item, employee: `${item.employee.firstName} ${item.employee.lastName}`}))
 
             const resultsBuilder = new Results(items, {
                 facetFields: SALE_FACET_FIELDS,
