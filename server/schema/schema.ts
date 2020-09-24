@@ -127,19 +127,24 @@ const typeDefs = gql`
         items: [SearchSuggestion]
     }
     
+    type Delta {
+        current: Float
+        delta: Float
+    }
+    
     type EmployeeSalesStatistics {
-        totalRevenue: Int
-        commissionEarnings: Int
-        salesComplete: Int
-        salesFailed: Int
-        saleConversionPc: Float
-        employeeDivisionProfitRank: Int
-        employeeDivisionSalesRank: Int
-        averageProfit: Int
-        totalProfit: Int
-        revenueContributionPcForDivision: Int
-        averageSaleCloseTimeDays: Int
-        averageDivisionSaleCloseTimeDays: Int
+        totalRevenue: Delta
+        commissionEarnings: Delta
+        salesComplete: Delta
+        salesFailed: Delta
+        saleConversionPc: Delta
+        employeeDivisionProfitRank: Delta
+        employeeDivisionSalesRank: Delta
+        averageProfit: Delta
+        totalProfit: Delta
+        revenueContributionPcForDivision: Delta
+        averageSaleCloseTimeDays: Delta
+        averageDivisionSaleCloseTimeDays: Delta
     }
    
     type Query {
@@ -165,7 +170,8 @@ const typeDefs = gql`
 
         employeeStatistics(
             id: Int!
-            from: String!
+            dateFrom: String!
+            dateTo: String!
         ): EmployeeSalesStatistics
     }
 `

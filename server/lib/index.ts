@@ -5,3 +5,4 @@ export {default as applySearchTermToItems} from './applySearchTermToItems';
 export {default as addBoldMarkupToString} from './addBoldMarkupToString';
 export {default as extractSalesMetrics} from './extractSalesMetrics';
 export {default as Results} from './Results';
+export {default as createDelta} from './createDelta';

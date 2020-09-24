@@ -1,10 +1,10 @@
 import {IContext} from "../server";
 import {IListQueryInput} from "./employee";
 import {Sale} from "../entities";
-import {Results} from "../lib";
+import {createDelta, Results} from "../lib";
 import {selectAllSales} from "../lib/queries";
 import {SALE_SEARCHABLE_FIELDS} from "../config/search.config";
-import buildEmployeeSalesStatistics from "./buildEmployeeSalesStatisticsResponse";
+import buildEmployeeSalesStatistics from "./buildEmployeeSalesStatistics";
 import moment from "moment";
 
 const SALE_FACET_FIELDS: (keyof Partial<Sale>)[] = [
@@ -13,7 +13,8 @@ const SALE_FACET_FIELDS: (keyof Partial<Sale>)[] = [
 
 export interface IEmployeeStatisticsInput {
     id: number;
-    from: string;
+    dateFrom: string;
+    dateTo: string;
 }
 
 const saleResolver = {
@@ -37,8 +38,31 @@ const saleResolver = {
 
             return resultsBuilder.getResponseObject()
         },
-        employeeStatistics: async (root: any, { id, from }: IEmployeeStatisticsInput , {connection}: IContext) => {
-            return await buildEmployeeSalesStatistics(connection, { id, from: moment(from).toISOString() })
+        employeeStatistics: async (root: any, { id, dateFrom, dateTo }: IEmployeeStatisticsInput , {connection}: IContext) => {
+            const dateFromMoment = moment(dateFrom)
+            const dateToMoment = moment(dateTo)
+            const doubleTimeRangeMoment =  moment(dateFrom).subtract(moment(dateTo).diff(moment(dateFrom), 'days'), 'days')
+
+            const [currentTerm, previousTerm] = await Promise.all([
+                await buildEmployeeSalesStatistics(connection, {
+                    id,
+                    dateFrom: dateFromMoment.toISOString(),
+                    dateTo: dateToMoment.toISOString()
+                }),
+                await buildEmployeeSalesStatistics(connection, {
+                    id,
+                    dateFrom: doubleTimeRangeMoment.toISOString(),
+                    dateTo: dateFromMoment.toISOString()
+                })
+            ])
+
+
+
+            if(currentTerm && previousTerm) {
+                return createDelta(currentTerm, previousTerm)
+            }
+
+            return null
         }
     }
 }

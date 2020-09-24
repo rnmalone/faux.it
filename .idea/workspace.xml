@@ -3,10 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/db/mock/createMockSales.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/db/mock/createMockSales.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/extractSalesMetrics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/extractSalesMetrics.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/resolvers/buildEmployeeSalesStatisticsResponse.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/buildEmployeeSalesStatisticsResponse.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectAllSalesForEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectAllSalesForEmployee.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectSumProfitForDivisionGroupByEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectSumProfitForDivisionGroupByEmployee.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectSumSalesForDivisionGroupByEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectSumSalesForDivisionGroupByEmployee.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/resolvers/buildEmployeeSalesStatisticsResponse.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/buildEmployeeSalesStatistics.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/resolvers/sale.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/sale.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/schema/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/schema/schema.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +107,7 @@
       <workItem from="1600712628017" duration="9006000" />
       <workItem from="1600791037411" duration="15210000" />
       <workItem from="1600878586563" duration="16775000" />
+      <workItem from="1600966438888" duration="5588000" />
     </task>
     <servers />
   </component>

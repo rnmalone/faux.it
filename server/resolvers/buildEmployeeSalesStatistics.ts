@@ -13,6 +13,7 @@ import {IReducedSalesMetrics} from "../lib/extractSalesMetrics";
 import {decimalPlaces2} from "../lib/utils";
 
 export interface IEmployeeSalesStatistics {
+    [key: string]: number;
     totalRevenue: number;
     commissionEarnings: number;
     salesComplete: number;
@@ -28,17 +29,17 @@ export interface IEmployeeSalesStatistics {
     averageSaleCloseTimeDays: number;
 }
 
-export default async function buildEmployeeSalesStatistics(connection: Connection, { id: employeeId, from }: IEmployeeStatisticsInput): Promise<IEmployeeSalesStatistics | null> {
+export default async function buildEmployeeSalesStatistics(connection: Connection, { id: employeeId, dateFrom, dateTo }: IEmployeeStatisticsInput): Promise<IEmployeeSalesStatistics | null> {
     const [employee, employeeSales ] = await Promise.all([
         selectEmployeeById(connection, employeeId),
-        selectAllSalesForEmployee(connection, employeeId, from),
+        selectAllSalesForEmployee(connection, employeeId, { dateFrom, dateTo }),
     ]);
 
     if(!employee || !employeeSales) {
         return null;
     }
 
-    const divisionSales: SaleDTO[] = await selectAllSalesForDivision(connection, from, employee.division)
+    const divisionSales: SaleDTO[] = await selectAllSalesForDivision(connection, dateFrom, employee.division)
 
     const divisionSalesMetrics: IReducedSalesMetrics = extractSalesMetrics(divisionSales)
     const employeeReducedSalesMetrics: IReducedSalesMetrics = extractSalesMetrics(employeeSales)
@@ -47,8 +48,8 @@ export default async function buildEmployeeSalesStatistics(connection: Connectio
         divisionProfitsByEmployee,
         divisionSalesByEmployee
     ] = await Promise.all([
-        selectSumProfitForDivisionGroupByEmployee(connection, from, employee.division),
-        selectSumSalesForDivisionGroupByEmployee(connection, from, employee.division)
+        selectSumProfitForDivisionGroupByEmployee(connection, { dateFrom, dateTo }, employee.division),
+        selectSumSalesForDivisionGroupByEmployee(connection, { dateFrom, dateTo }, employee.division)
     ])
 
     const revenueContributionPcForDivision = decimalPlaces2((100 / divisionSalesMetrics.totalProfit) * employeeReducedSalesMetrics.totalProfit)
