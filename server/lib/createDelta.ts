@@ -2,7 +2,7 @@ import {decimalPlaces2} from "./utils";
 
 interface IDeltaValue {
     current: number;
-    delta: number
+    delta: number // percentage
 }
 
 type DeltaObject<T> = Record<keyof T, IDeltaValue>

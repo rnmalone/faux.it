@@ -2,10 +2,11 @@ import {IContext} from "../server";
 import {IListQueryInput} from "./employee";
 import {Sale} from "../entities";
 import {createDelta, Results} from "../lib";
-import {selectAllSales} from "../lib/queries";
+import {selectAllSales, selectEmployeeSaleStatusPie} from "../lib/queries";
 import {SALE_SEARCHABLE_FIELDS} from "../config/search.config";
-import buildEmployeeSalesStatistics from "./buildEmployeeSalesStatistics";
+import buildEmployeeSalesStatistics from "./employeeStatistics/buildEmployeeSalesStatistics";
 import moment from "moment";
+import selectProfitFromSalesByEmployee from "../lib/queries/selectProfitFromSalesByEmployee";
 
 const SALE_FACET_FIELDS: (keyof Partial<Sale>)[] = [
     'status'
@@ -43,23 +44,29 @@ const saleResolver = {
             const dateToMoment = moment(dateTo)
             const doubleTimeRangeMoment =  moment(dateFrom).subtract(moment(dateTo).diff(moment(dateFrom), 'days'), 'days')
 
-            const [currentTerm, previousTerm] = await Promise.all([
-                await buildEmployeeSalesStatistics(connection, {
+            const [currentTerm, previousTerm, profitGraph, salesStatusPieChartData] = await Promise.all([
+                buildEmployeeSalesStatistics(connection, {
                     id,
                     dateFrom: dateFromMoment.toISOString(),
                     dateTo: dateToMoment.toISOString()
                 }),
-                await buildEmployeeSalesStatistics(connection, {
+                buildEmployeeSalesStatistics(connection, {
                     id,
                     dateFrom: doubleTimeRangeMoment.toISOString(),
                     dateTo: dateFromMoment.toISOString()
-                })
+                }),
+                selectProfitFromSalesByEmployee(connection, id, { dateFrom, dateTo }),
+                selectEmployeeSaleStatusPie(connection, id, { dateTo, dateFrom})
             ])
 
-
+            console.log(salesStatusPieChartData)
 
             if(currentTerm && previousTerm) {
-                return createDelta(currentTerm, previousTerm)
+                return {
+                    stats: createDelta(currentTerm, previousTerm),
+                    profitGraph,
+                    salesStatusPieChartData
+                }
             }
 
             return null

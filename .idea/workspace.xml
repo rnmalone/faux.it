@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectAllSalesForEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectAllSalesForEmployee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectSumProfitForDivisionGroupByEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectSumProfitForDivisionGroupByEmployee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectSumSalesForDivisionGroupByEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectSumSalesForDivisionGroupByEmployee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/resolvers/buildEmployeeSalesStatisticsResponse.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/buildEmployeeSalesStatistics.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/entities/Sale.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/entities/Sale.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/createDelta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/createDelta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/queries/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/resolvers/buildEmployeeSalesStatistics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/employeeStatistics/buildEmployeeSalesStatistics.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/resolvers/sale.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/sale.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/schema/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/schema/schema.ts" afterDir="false" />
     </list>
@@ -51,19 +50,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Rory Malone\Documents\faux.it\server\lib\db\mock" />
-      <recent name="C:\Users\Rorym\Documents\faux.it\client\config" />
-      <recent name="C:\Users\Rorym\Documents\faux.it\client\components\Filters\component" />
-      <recent name="C:\Users\Rorym\Documents\faux.it\client\assets\images\flags" />
-      <recent name="C:\Users\Rorym\Documents\faux.it\client\components" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Rorym\Documents\faux.it\client\assets\images\flags" />
       <recent name="C:\Users\Rorym\Documents\faux.it\client\assets\images" />
       <recent name="C:\Users\Rorym\Documents\faux.it\client" />
       <recent name="C:\Users\Rorym\Documents\faux.it\client\routes" />
       <recent name="C:\Users\Rorym\Documents\faux.it\client\lib\hooks" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Rory Malone\Documents\faux.it\server\resolvers\employeeStatistics" />
+      <recent name="C:\Users\Rory Malone\Documents\faux.it\server\lib\db\mock" />
+      <recent name="C:\Users\Rorym\Documents\faux.it\client\config" />
+      <recent name="C:\Users\Rorym\Documents\faux.it\client\components\Filters\component" />
+      <recent name="C:\Users\Rorym\Documents\faux.it\client\assets\images\flags" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -107,7 +106,7 @@
       <workItem from="1600712628017" duration="9006000" />
       <workItem from="1600791037411" duration="15210000" />
       <workItem from="1600878586563" duration="16775000" />
-      <workItem from="1600966438888" duration="5588000" />
+      <workItem from="1600966438888" duration="10337000" />
     </task>
     <servers />
   </component>

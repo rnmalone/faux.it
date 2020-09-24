@@ -62,10 +62,10 @@ const typeDefs = gql`
     }
     
     enum SaleStatus {
-        COMPLETED
+        COMPLETE
         IN_PROGRESS
         CLOSED
-        PENDING_PAYMENT
+        AWAITING_PAYMENT
     }
     
     input FacetFilterInput {
@@ -132,7 +132,12 @@ const typeDefs = gql`
         delta: Float
     }
     
-    type EmployeeSalesStatistics {
+    type SaleStatusPieEntry {
+        status: SaleStatus
+        value: Int
+    }
+    
+    type EmployeePerformanceStatistics {
         totalRevenue: Delta
         commissionEarnings: Delta
         salesComplete: Delta
@@ -145,6 +150,17 @@ const typeDefs = gql`
         revenueContributionPcForDivision: Delta
         averageSaleCloseTimeDays: Delta
         averageDivisionSaleCloseTimeDays: Delta
+    }
+    
+    type ProfitGraphEntry {
+        profit: Float
+        date: String
+    }
+    
+    type EmployeeSalesStatistics {
+        stats: EmployeePerformanceStatistics
+        profitGraph: [ProfitGraphEntry]
+        salesStatusPieChartData: [SaleStatusPieEntry]
     }
    
     type Query {

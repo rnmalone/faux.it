@@ -1,9 +1,9 @@
 import {Column, Entity, PrimaryGeneratedColumn} from 'typeorm';
 
 export enum SaleStatus {
-    InProgress = 'IN PROGRESS',
+    InProgress = 'IN_PROGRESS',
     Complete = 'COMPLETE',
-    AwaitingPayment = 'AWAITING PAYMENT',
+    AwaitingPayment = 'AWAITING_PAYMENT',
     Closed = 'CLOSED'
 }
 

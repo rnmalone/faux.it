@@ -4,13 +4,13 @@ import {
     selectEmployeeById,
     selectSumProfitForDivisionGroupByEmployee,
     selectSumSalesForDivisionGroupByEmployee
-} from "../lib/queries";
-import selectAllSalesForEmployee from "../lib/queries/selectAllSalesForEmployee";
-import {IEmployeeStatisticsInput} from "./sale";
-import {SaleDTO} from "../entities/Sale";
-import {extractSalesMetrics} from "../lib";
-import {IReducedSalesMetrics} from "../lib/extractSalesMetrics";
-import {decimalPlaces2} from "../lib/utils";
+} from "../../lib/queries";
+import selectAllSalesForEmployee from "../../lib/queries/selectAllSalesForEmployee";
+import {IEmployeeStatisticsInput} from "../sale";
+import {SaleDTO} from "../../entities/Sale";
+import {extractSalesMetrics} from "../../lib";
+import {IReducedSalesMetrics} from "../../lib/extractSalesMetrics";
+import {decimalPlaces2} from "../../lib/utils";
 
 export interface IEmployeeSalesStatistics {
     [key: string]: number;
