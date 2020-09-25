@@ -3,12 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/entities/Sale.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/entities/Sale.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/createDelta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/createDelta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/containers/Apollo/Apollo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/containers/Apollo/Apollo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/modules/filters/filters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/modules/filters/filters.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/project.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/project.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/db/mock/injectMockData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/db/mock/injectMockData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/lib/queries/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/resolvers/buildEmployeeSalesStatistics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/employeeStatistics/buildEmployeeSalesStatistics.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectEmployeeSaleStatusPie.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectSaleStatusForEmployee.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/resolvers/employeeStatistics/buildEmployeeSalesStatistics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/employeeStatistics/buildEmployeeSalesStatistics.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/resolvers/sale.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/sale.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/schema/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/schema/schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +48,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/lib/queries" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
@@ -51,11 +57,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Rory Malone\Documents\faux.it\server\lib\queries" />
       <recent name="C:\Users\Rorym\Documents\faux.it\client\assets\images\flags" />
       <recent name="C:\Users\Rorym\Documents\faux.it\client\assets\images" />
       <recent name="C:\Users\Rorym\Documents\faux.it\client" />
       <recent name="C:\Users\Rorym\Documents\faux.it\client\routes" />
-      <recent name="C:\Users\Rorym\Documents\faux.it\client\lib\hooks" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Rory Malone\Documents\faux.it\server\resolvers\employeeStatistics" />
@@ -106,7 +112,8 @@
       <workItem from="1600712628017" duration="9006000" />
       <workItem from="1600791037411" duration="15210000" />
       <workItem from="1600878586563" duration="16775000" />
-      <workItem from="1600966438888" duration="10337000" />
+      <workItem from="1600966438888" duration="13762000" />
+      <workItem from="1601041800763" duration="9131000" />
     </task>
     <servers />
   </component>
@@ -153,10 +160,10 @@
     </state>
     <state x="123" y="124" width="2315" height="1153" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-1920.366.1920.1040/2560.366.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1600597211670" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600275661711" />
-    <state x="861" y="324" width="836" height="840" key="find.popup" timestamp="1600880411992">
+    <state x="861" y="324" width="836" height="840" key="find.popup" timestamp="1601048213166">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="861" y="324" width="836" height="840" key="find.popup/-1920.160.1920.1040/2560.160.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1600880411992" />
+    <state x="861" y="324" width="836" height="840" key="find.popup/-1920.160.1920.1040/2560.160.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1601048213166" />
     <state x="646" y="241" width="627" height="624" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600274308240" />
     <state x="821" y="323" key="run.anything.popup" timestamp="1600631179900">
       <screen x="0" y="0" width="2560" height="1400" />

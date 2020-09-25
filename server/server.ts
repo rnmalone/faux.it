@@ -10,6 +10,7 @@ import schema from './schema/schema'
 import resolvers from './resolvers'
 import {assets, clientRenderer} from "./middleware";
 import {Connection} from "typeorm";
+import {LoggingPlugin} from "./lib/plugins";
 
 const {ApolloServer, gql} = require('apollo-server-express');
 
@@ -21,6 +22,10 @@ export default function startServer(connection: Connection) {
     const server = new ApolloServer({
         typeDefs: schema,
         resolvers,
+        tracing: process.env.NODE_ENV === 'dev',
+        plugins: [
+            LoggingPlugin
+        ],
         context: () => ({connection})
     })
 

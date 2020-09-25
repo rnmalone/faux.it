@@ -4,9 +4,6 @@ import {ApolloClient, ApolloProvider, InMemoryCache} from "@apollo/client";
 import {IComponentProps} from "../../models/generic";
 
 export default function Apollo({children}: IComponentProps) {
-
-    console.log(apiBaseUri)
-
     const apolloClient = new ApolloClient({
         uri: apiBaseUri,
         cache: new InMemoryCache()

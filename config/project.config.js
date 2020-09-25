@@ -18,7 +18,8 @@ const config = {
         client: 'client',
         public: 'public',
         server: 'server',
-        resources: 'resources'
+        resources: 'resources',
+        logs: 'logs',
     },
 
     // -------------------------------------
@@ -72,6 +73,7 @@ config.paths = {
     client: getPath.bind(null, config.dirs.client),
     public: getPath.bind(null, config.dirs.public),
     server: getPath.bind(null, config.dirs.server),
+    logs: getPath.bind(null, config.dirs.logs),
     resources: getPath.bind(null, config.dirs.resources)
 };
 

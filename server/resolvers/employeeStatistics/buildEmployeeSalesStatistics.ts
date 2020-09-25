@@ -11,6 +11,7 @@ import {SaleDTO} from "../../entities/Sale";
 import {extractSalesMetrics} from "../../lib";
 import {IReducedSalesMetrics} from "../../lib/extractSalesMetrics";
 import {decimalPlaces2} from "../../lib/utils";
+import {IDateRange} from "../../@types/Dates";
 
 export interface IEmployeeSalesStatistics {
     [key: string]: number;
@@ -29,7 +30,7 @@ export interface IEmployeeSalesStatistics {
     averageSaleCloseTimeDays: number;
 }
 
-export default async function buildEmployeeSalesStatistics(connection: Connection, { id: employeeId, dateFrom, dateTo }: IEmployeeStatisticsInput): Promise<IEmployeeSalesStatistics | null> {
+export default async function buildEmployeeSalesStatistics(connection: Connection, employeeId: number, { dateFrom, dateTo }: IDateRange): Promise<IEmployeeSalesStatistics | null> {
     const [employee, employeeSales ] = await Promise.all([
         selectEmployeeById(connection, employeeId),
         selectAllSalesForEmployee(connection, employeeId, { dateFrom, dateTo }),

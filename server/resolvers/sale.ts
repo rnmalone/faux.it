@@ -1,12 +1,13 @@
 import {IContext} from "../server";
 import {IListQueryInput} from "./employee";
 import {Sale} from "../entities";
-import {createDelta, Results} from "../lib";
-import {selectAllSales, selectEmployeeSaleStatusPie} from "../lib/queries";
+import {createDelta, logger, Results} from "../lib";
+import {selectAllSales, selectSaleGraphDataForEmployee, selectSaleStatusForEmployee} from "../lib/queries";
 import {SALE_SEARCHABLE_FIELDS} from "../config/search.config";
 import buildEmployeeSalesStatistics from "./employeeStatistics/buildEmployeeSalesStatistics";
 import moment from "moment";
 import selectProfitFromSalesByEmployee from "../lib/queries/selectProfitFromSalesByEmployee";
+import reduceGraphArray from "../lib/reduceGraphArray";
 
 const SALE_FACET_FIELDS: (keyof Partial<Sale>)[] = [
     'status'
@@ -40,31 +41,22 @@ const saleResolver = {
             return resultsBuilder.getResponseObject()
         },
         employeeStatistics: async (root: any, { id, dateFrom, dateTo }: IEmployeeStatisticsInput , {connection}: IContext) => {
-            const dateFromMoment = moment(dateFrom)
-            const dateToMoment = moment(dateTo)
-            const doubleTimeRangeMoment =  moment(dateFrom).subtract(moment(dateTo).diff(moment(dateFrom), 'days'), 'days')
+            logger.info(`Query: employeeStatistics ID: ${id}`)
+            const dayRange = moment(dateTo).diff(moment(dateFrom), 'days')
+            const doubleTimeRangeMoment =  moment(dateFrom).subtract(dayRange, 'days')
 
             const [currentTerm, previousTerm, profitGraph, salesStatusPieChartData] = await Promise.all([
-                buildEmployeeSalesStatistics(connection, {
-                    id,
-                    dateFrom: dateFromMoment.toISOString(),
-                    dateTo: dateToMoment.toISOString()
-                }),
-                buildEmployeeSalesStatistics(connection, {
-                    id,
-                    dateFrom: doubleTimeRangeMoment.toISOString(),
-                    dateTo: dateFromMoment.toISOString()
-                }),
+                buildEmployeeSalesStatistics(connection, id, { dateFrom, dateTo }),
+                buildEmployeeSalesStatistics(connection, id, { dateFrom: doubleTimeRangeMoment.toISOString(), dateTo: dateFrom }),
                 selectProfitFromSalesByEmployee(connection, id, { dateFrom, dateTo }),
-                selectEmployeeSaleStatusPie(connection, id, { dateTo, dateFrom})
+                selectSaleStatusForEmployee(connection, id, { dateTo, dateFrom }),
+                selectSaleGraphDataForEmployee(connection, id, { dateTo, dateFrom })
             ])
-
-            console.log(salesStatusPieChartData)
 
             if(currentTerm && previousTerm) {
                 return {
                     stats: createDelta(currentTerm, previousTerm),
-                    profitGraph,
+                    profitGraph: reduceGraphArray(dayRange, profitGraph, ['profit']),
                     salesStatusPieChartData
                 }
             }

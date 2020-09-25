@@ -6,7 +6,7 @@
   },
   "description": "",
   "scripts": {
-    "start": "nodemon",
+    "start": "cross-env NODE_ENV=dev nodemon",
     "build:server": "rimraf ./dist && tsc --project tsconfig.server.json",
     "build:client": "echo TODO",
     "test": "jest --reporters=default --config ./config/jest.config.js --maxWorkers=4",
@@ -33,7 +33,8 @@
     "react-router-dom": "^5.2.0",
     "sqlite": "^4.0.14",
     "sqlite3": "^5.0.0",
-    "typeorm": "^0.2.26"
+    "typeorm": "^0.2.26",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
     "@apollo/client": "^3.2.0",
@@ -61,8 +62,10 @@
     "@types/webpack": "^4.41.7",
     "@types/webpack-dev-middleware": "^3.7.0",
     "@types/webpack-hot-middleware": "^2.25.0",
+    "@types/winston": "^2.4.4",
     "@typescript-eslint/eslint-plugin": "^4.1.0",
     "@typescript-eslint/parser": "^4.1.0",
+    "apollo-server-plugin-base": "^0.10.1",
     "archiver": "^3.1.1",
     "babel-jest": "^25.1.0",
     "classnames": "^2.2.6",

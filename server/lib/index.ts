@@ -6,3 +6,5 @@ export {default as addBoldMarkupToString} from './addBoldMarkupToString';
 export {default as extractSalesMetrics} from './extractSalesMetrics';
 export {default as Results} from './Results';
 export {default as createDelta} from './createDelta';
+export {default as getGraphXAxisKeyByTimeframeSize} from './getGraphXAxisKeyByTimeframeSize';
+export {default as logger} from './logger';

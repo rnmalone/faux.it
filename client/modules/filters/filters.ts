@@ -112,7 +112,6 @@ export function setTerm(filterType: FilterType) {
     return (dispatch: Dispatch<FilterActionTypes>, getState: () => IAppStore) => {
         return (event: ChangeEvent<HTMLInputElement>) => {
             const {filters: {filter}} = getState();
-            console.log('ss')
 
             const newState = {
                 ...filter,
