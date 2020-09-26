@@ -94,7 +94,7 @@ export default function createMockSales() {
                     status,
                     division,
                     dateOpened,
-                    dateClosed: status === SaleStatus.Complete ? moment(dateOpened).add(getRandomInt(1, 5), 'days').toISOString() : null
+                    dateClosed: (status === SaleStatus.Complete || status === SaleStatus.Closed) ? moment(dateOpened).add(getRandomInt(1, 5), 'days').toISOString() : null
                 }
             })
 

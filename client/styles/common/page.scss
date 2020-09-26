@@ -7,9 +7,11 @@
     background-color: white;
     padding: 1rem 2rem;
     border-bottom: $border-color 1px solid;
+    width: calc(100% - 4rem);
   }
 
   &__body {
+    width: calc(100% - 4rem);
     padding: 1rem 2rem;
   }
 }

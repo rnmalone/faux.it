@@ -1,3 +1,10 @@
 .container {
   display: flex;
+  flex-flow: row;
+  align-items: stretch;
+}
+
+#contents {
+  flex: 1 1 auto;
+  overflow: auto;
 }

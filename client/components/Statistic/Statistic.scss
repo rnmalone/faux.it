@@ -1,0 +1,20 @@
+.Statistic {
+  white-space: nowrap;
+  margin: 1rem 0;
+  > div {
+    display: flex;
+    align-items: center;
+  }
+
+  dd {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 100;
+  }
+
+  &__large {
+    dd {
+      font-size: 3rem;
+    }
+  }
+}

@@ -7,10 +7,10 @@ export default async function selectSaleStatusForEmployee(connection: Connection
     return await connection
         .getRepository(Sale)
         .createQueryBuilder('sale')
-        .select('sale.status as status, COUNT(*) as value')
+        .select('sale.status, COUNT(*) as value')
         .where('sale.employeeId = :employeeId', { employeeId })
-        .andWhere('sale.dateClosed >= :dateFrom', { dateFrom })
-        .andWhere('sale.dateClosed <= :dateTo', { dateTo })
+        .andWhere('sale.dateOpened >= :dateFrom', { dateFrom })
+        .andWhere('sale.dateOpened <= :dateTo', { dateTo })
         .groupBy('sale.status')
         .execute()
 }

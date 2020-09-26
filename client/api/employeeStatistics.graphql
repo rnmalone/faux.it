@@ -1,0 +1,63 @@
+query Employee($id: Int!, $timeframe: Int!) {
+    employeeStatistics(timeframe: $timeframe, id: $id) {
+        stats {
+            salesComplete {
+                delta
+                current
+            }
+            salesFailed {
+                delta
+                current
+            }
+            saleConversionPc  {
+                delta
+                current
+            }
+            averageProfit  {
+                delta
+                current
+            }
+            averageSaleCloseTimeDays  {
+                delta
+                current
+            }
+            totalProfit  {
+                delta
+                current
+            }
+            totalRevenue  {
+                delta
+                current
+            }
+            commissionEarnings  {
+                delta
+                current
+            }
+            averageSaleCloseTimeDays  {
+                delta
+                current
+            }
+            employeeDivisionSalesRank  {
+                delta
+                current
+            }
+            employeeDivisionProfitRank  {
+                delta
+                current
+            }
+        }
+        profitGraph{
+            date
+            profit
+        }
+        salesStatusPieChartData {
+            status
+            value
+        }
+        saleStatusGraph {
+            date
+            closed
+            completed
+        }
+    }
+}

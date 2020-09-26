@@ -10,7 +10,7 @@ const typeDefs = gql`
         jobTitle: String
         division: String
         salary: Int
-        commissionRate: Int
+        commissionRate: Float
         joinDate: String
         imageUrl: String
         email: String
@@ -157,10 +157,17 @@ const typeDefs = gql`
         date: String
     }
     
+    type SaleStatusGraphEntry {
+        closed: Int
+        completed: Int
+        date: String
+    }
+    
     type EmployeeSalesStatistics {
         stats: EmployeePerformanceStatistics
         profitGraph: [ProfitGraphEntry]
         salesStatusPieChartData: [SaleStatusPieEntry]
+        saleStatusGraph: [SaleStatusGraphEntry]
     }
    
     type Query {
@@ -186,8 +193,7 @@ const typeDefs = gql`
 
         employeeStatistics(
             id: Int!
-            dateFrom: String!
-            dateTo: String!
+            timeframe: Int!
         ): EmployeeSalesStatistics
     }
 `

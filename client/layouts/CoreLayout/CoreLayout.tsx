@@ -13,7 +13,9 @@ export default function CoreLayout({children}: IComponentProps) {
             <main role="main">
                 <div className="container">
                     <NavigationContainer isMobile={isMobile}/>
-                    {children}
+                    <div id={"contents"}>
+                        {children}
+                    </div>
                 </div>
             </main>
         </>

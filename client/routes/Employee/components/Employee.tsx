@@ -1,11 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../styles/Employee.scss';
 import {useQuery} from "@apollo/client";
 import {useParams} from "react-router";
 import employeeQuery from '../../../api/employee.graphql'
 import Value from "../../../components/Value";
+import {CSSTransition} from "react-transition-group";
+import Statistic from "../../../components/Statistic";
+import Statistics from "./Statistics";
 
 export default function Employee() {
+    const [viewedTab, setViewedTab] = useState()
     const { id } = useParams()
     const { data } = useQuery(employeeQuery, {
         variables: { id: Number(id) }
@@ -27,6 +31,9 @@ export default function Employee() {
                         <Value label='Commission' value={data?.employee?.commissionRate} />
                     </dl>
                 </div>
+            </div>
+            <div className="page__body">
+                <Statistics id={Number(id)} />
             </div>
         </div>
     )

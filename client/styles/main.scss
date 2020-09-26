@@ -1,14 +1,16 @@
 @import 'core/vars';
 @import 'transitions/slideIn';
-@import 'fonts/Poppins';
+@import 'fonts/BarlowSemiCondensed';
 @import 'common/images.scss';
 @import 'common/table.scss';
+@import 'common/page-item.scss';
+@import 'common/layout.scss';
 @import 'common/typeography.scss';
 @import 'common/page.scss';
 
 #root {
   margin: 0;
-  font-family: "Poppins";
+  font-family: 'Barlow Semi Condensed';
 }
 
 body {

@@ -1,0 +1,14 @@
+.row {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+
+  > * {
+    margin-right: 2rem;
+  }
+}
+
+.fill-remaining {
+  flex: 1 1 auto;
+  overflow: auto;
+}

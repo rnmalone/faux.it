@@ -1,0 +1,30 @@
+@import "core/vars";
+
+.Statistics {
+
+  section {
+    margin: 1rem 0;
+  }
+
+  &__row {
+    width: calc(100% - 4rem);
+    display: flex;
+    flex-flow: row;
+    align-items: stretch;
+  }
+
+  &__pie-container {
+    height: 260px;
+    width: 260px;
+    position: relative;
+
+     > span {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       font-size: 2.5em;
+       font-weight: 100;
+     }
+  }
+}
