@@ -2,28 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/client/styles/fonts/BarlowSemiCondensed.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/assets/fonts/OFL.txt" beforeDir="false" afterPath="$PROJECT_DIR$/client/assets/fonts/OFL.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Icon/Icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Icon/Icon.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Input/Input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Input/Input.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Value/Value.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Value/Value.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/layouts/CoreLayout/CoreLayout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/layouts/CoreLayout/CoreLayout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/layouts/CoreLayout/CoreLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/layouts/CoreLayout/CoreLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/routes/Employee/components/Employee.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/components/Employee.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/styles/common/page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/common/page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Statistic/Statistic.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Statistic/styles/Statistic.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Statistic/Statistic.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Statistic/components/Statistic.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Statistic/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Statistic/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/lib/utils/formatNumber.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/utils/formatters/formatNumber.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/lib/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/utils/formatters/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/lib/utils/price.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/utils/formatters/price.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/routes/Employee/components/Statistics.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/components/Statistics.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/routes/Employee/styles/Statistics.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/styles/Statistics.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/common/page-item.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/common/page-item.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/styles/core/vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/core/vars.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/styles/fonts/Poppins.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/db/mock/createMockSales.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/db/mock/createMockSales.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/queries/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectSaleGraphDataForEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectSaleStatusGraphDataForEmployee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectSaleStatusForEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectSaleStatusForEmployee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/reduceGraphArray.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/reduceGraphArray.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/resolvers/sale.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/sale.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/schema/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/schema/schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,11 +56,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Rory Malone\Documents\faux.it\client\lib\utils\formatters" />
+      <recent name="C:\Users\Rory Malone\Documents\faux.it\client\components\Statistic\components" />
+      <recent name="C:\Users\Rory Malone\Documents\faux.it\client\components\Statistic\styles" />
       <recent name="C:\Users\Rory Malone\Documents\faux.it\client\assets\fonts" />
       <recent name="C:\Users\Rory Malone\Documents\faux.it\server\resolvers\employeeStatistics" />
-      <recent name="C:\Users\Rory Malone\Documents\faux.it\server\lib\db\mock" />
-      <recent name="C:\Users\Rorym\Documents\faux.it\client\config" />
-      <recent name="C:\Users\Rorym\Documents\faux.it\client\components\Filters\component" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Rory Malone\Documents\faux.it\server\lib\queries" />
@@ -123,7 +113,7 @@
       <workItem from="1600878586563" duration="16775000" />
       <workItem from="1600966438888" duration="13762000" />
       <workItem from="1601041800763" duration="18842000" />
-      <workItem from="1601121731679" duration="14626000" />
+      <workItem from="1601121731679" duration="20457000" />
     </task>
     <servers />
   </component>

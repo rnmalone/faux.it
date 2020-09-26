@@ -1,0 +1,18 @@
+@import 'core/vars';
+@import 'mixins/border-color';
+
+.StatisticWidget {
+  @include border-color;
+  margin-right: 2rem;
+  padding: 1rem 2rem !important;
+  border-left: 5px solid !important;
+  border-left-color: $primary-color !important;
+
+  .Statistic {
+    margin: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

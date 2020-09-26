@@ -3,9 +3,17 @@
 .Statistics {
 
   section {
-    margin: 1rem 0;
+    margin: 2rem 0;
   }
 
+  &__small-stats {
+    display: flex;
+    flex-wrap: wrap;
+
+    > div {
+      flex: 1;
+    }
+  }
   &__row {
     width: calc(100% - 4rem);
     display: flex;

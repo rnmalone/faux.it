@@ -1,9 +1,9 @@
 import React from 'react';
 import cx from 'classnames';
-import './Statistic.scss';
-import Delta from "../Delta/Delta";
+import '../styles/Statistic.scss';
+import Delta from "../../Delta/Delta";
 
-interface IStatistic {
+export interface IStatistic {
     value: string;
     label: string;
     delta?: number;

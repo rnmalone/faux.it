@@ -1,0 +1,17 @@
+@import 'core/vars';
+
+@mixin border-color {
+
+  &--gold {
+    border-color: $gold !important;
+  }
+
+  &--silver {
+    border-color: $silver !important;
+  }
+
+  &--bronze {
+    border-color: $bronze !important;
+  }
+
+}
