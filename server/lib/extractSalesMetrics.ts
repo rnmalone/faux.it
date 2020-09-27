@@ -7,6 +7,7 @@ export interface IReducedSalesMetrics {
     salesFailed: number;
     totalProfit: number;
     totalDaysBetweenOpenAndClosedSales: number;
+    totalItemCost: number;
 }
 
 export default function extractSalesMetrics(sales: SaleDTO[]): IReducedSalesMetrics {
@@ -16,6 +17,7 @@ export default function extractSalesMetrics(sales: SaleDTO[]): IReducedSalesMetr
             salesComplete,
             salesFailed,
             totalProfit,
+            totalItemCost,
             totalDaysBetweenOpenAndClosedSales
         } = a
 
@@ -25,6 +27,7 @@ export default function extractSalesMetrics(sales: SaleDTO[]): IReducedSalesMetr
 
             const itemProfit = sale.agreedPrice - sale.itemCost;
             totalProfit = totalProfit + itemProfit;
+            totalItemCost = totalItemCost + sale.itemCost;
 
             totalDaysBetweenOpenAndClosedSales =  totalDaysBetweenOpenAndClosedSales + moment.duration(moment(sale.dateClosed).diff(moment(sale.dateOpened))).asDays();
         }
@@ -38,7 +41,8 @@ export default function extractSalesMetrics(sales: SaleDTO[]): IReducedSalesMetr
             salesComplete,
             totalProfit,
             salesFailed,
-            totalDaysBetweenOpenAndClosedSales
+            totalDaysBetweenOpenAndClosedSales,
+            totalItemCost
         }
 
     }, {
@@ -46,6 +50,7 @@ export default function extractSalesMetrics(sales: SaleDTO[]): IReducedSalesMetr
         salesComplete: 0,
         salesFailed: 0,
         totalProfit: 0,
-        totalDaysBetweenOpenAndClosedSales: 0
+        totalDaysBetweenOpenAndClosedSales: 0,
+        totalItemCost: 0
     })
 }

@@ -24,7 +24,7 @@ export interface IEmployeeSalesStatistics {
     employeeDivisionSalesRank: number;
     averageProfit: number;
     totalProfit: number;
-    // averageProfitMargin: number;
+    grossProfitMargin: number;
     revenueContributionPcForDivision: number;
     targetRevenueContributionPcForDivision: number;
     averageSaleCloseTimeDays: number;
@@ -62,6 +62,7 @@ export default async function buildEmployeeSalesStatistics(connection: Connectio
     const averageProfit = Math.round(employeeReducedSalesMetrics.totalProfit / employeeReducedSalesMetrics.salesComplete);
     const commissionEarnings = Math.round(employeeReducedSalesMetrics.totalProfit * (employee.commissionRate / 100));
     const averageSaleCloseTimeDays = Math.round(employeeReducedSalesMetrics.totalDaysBetweenOpenAndClosedSales / employeeReducedSalesMetrics.salesComplete)
+    const grossProfitMargin = decimalPlaces2((employeeReducedSalesMetrics.totalRevenue - employeeReducedSalesMetrics.totalItemCost) / employeeReducedSalesMetrics.totalRevenue * 100)
 
     return {
         saleConversionPc,
@@ -72,6 +73,7 @@ export default async function buildEmployeeSalesStatistics(connection: Connectio
         employeeDivisionSalesRank,
         revenueContributionPcForDivision,
         targetRevenueContributionPcForDivision,
+        grossProfitMargin,
         ...employeeReducedSalesMetrics
     }
 }

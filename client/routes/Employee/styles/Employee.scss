@@ -38,6 +38,9 @@
     border-radius: 50%;
     margin: 2rem;
     border: $border-color 1px solid;
+    -webkit-box-shadow: $box-shadow;
+    -moz-box-shadow: $box-shadow;
+    box-shadow: $box-shadow;
   }
 
 }

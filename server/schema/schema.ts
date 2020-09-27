@@ -150,6 +150,7 @@ const typeDefs = gql`
         revenueContributionPcForDivision: Delta
         averageSaleCloseTimeDays: Delta
         averageDivisionSaleCloseTimeDays: Delta
+        grossProfitMargin: Delta
     }
     
     type ProfitGraphEntry {

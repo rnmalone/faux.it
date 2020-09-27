@@ -3,20 +3,18 @@ import {Statistic, StatisticWidget} from "../../../components/Statistic";
 import '../styles/Statistics.scss';
 import employeeStatisticsQuery from '../../../api/employeeStatistics.graphql';
 import {useQuery} from "@apollo/client";
-import {formatNumber, price, rank} from "../../../lib/utils/formatters";
+import {formatNumber, pc, price, rank} from "../../../lib/utils/formatters";
 import {
-    LineChart, Line, XAxis, YAxis, PieChart, Tooltip, Pie, ResponsiveContainer, Bar, BarChart
+    LineChart, Line, XAxis, YAxis, PieChart, Tooltip, Pie, ResponsiveContainer, Bar, BarChart, AreaChart, Area, Cell
 } from 'recharts';
-import {rankColorMap} from "../../../config/color.config";
+import {rankColorMap, colors, saleStatusColorMap} from "../../../config/color.config";
 import {Timeframe} from "../../../../server/@types/Stats/Timeframe";
 import SegmentControl from "../../../components/SegmentControl";
-
 
 export default function Statistics({ id }) {
     const [timeframe, setTimeframe] = useState<Timeframe>(Timeframe.Quarter)
     const { data } = useQuery(employeeStatisticsQuery, { variables: { id, timeframe } })
     const toggleSegment = (segment: Timeframe) => () => setTimeframe(segment)
-
 
     return (
         <div className="Statistics">
@@ -90,7 +88,10 @@ export default function Statistics({ id }) {
                         />
                         <Statistic
                             label="Gross Profit Margin"
-                            value={0}
+                            value={pc(data?.employeeStatistics?.stats?.grossProfitMargin?.current)}
+                            delta={data?.employeeStatistics?.stats?.grossProfitMargin?.delta}
+                            isPositive={data?.employeeStatistics?.stats?.grossProfitMargin?.delta > 0}
+
                         />
                 </div>
                 <div className="fill-remaining">
@@ -101,17 +102,17 @@ export default function Statistics({ id }) {
                                 top: 16, left: 40, bottom: 16,
                             }}
                         >
-                            <XAxis dataKey="date" />
-                            <YAxis tickFormatter={price} tickSize={10} />
+                            <XAxis stroke={colors.lightGrey} dataKey="date" />
+                            <YAxis stroke={colors.lightGrey} tickFormatter={price} tickSize={10} />
                             <Tooltip />
-                            <Line type="monotone" dataKey="profit" stroke="#8884d8" strokeWidth={3} />
+                            <Line strokeWidth={3} type="monotone" dataKey="profit" stroke={colors.primary} fillOpacity={1} fill={colors.primary} />
                         </LineChart>
                     </ResponsiveContainer>
                 </div>
             </section>
             <section className="Statistics__row page-item">
                 <div className="Statistics__pie-container">
-                    <span>{data?.employeeStatistics?.stats?.saleConversionPc?.current}</span>
+                    <span>{pc(data?.employeeStatistics?.stats?.saleConversionPc?.current)}</span>
                     <ResponsiveContainer width={250} height={250}>
                         <PieChart>
                             <Pie
@@ -121,8 +122,11 @@ export default function Statistics({ id }) {
                                 cy={126}
                                 outerRadius={120}
                                 innerRadius={105}
-                                fill="#8884d8"
-                            />
+                            >
+                                {
+                                    data?.employeeStatistics?.salesStatusPieChartData?.map((entry, index) => <Cell key={`cell-${index}`} fill={saleStatusColorMap[entry.status]} />)
+                                }
+                            </Pie>
                         </PieChart>
                     </ResponsiveContainer>
                 </div>
@@ -134,10 +138,10 @@ export default function Statistics({ id }) {
                                 top: 16, right: 16, left: 40, bottom: 16,
                             }}
                         >
-                            <XAxis dataKey="date" />
+                            <XAxis stroke={colors.lightGrey} dataKey="date" />
                             <Tooltip />
-                            <Bar width={10} dataKey="completed" fill="#8884d8" />
-                            <Bar width={10} dataKey="closed" fill="#82ca9d" />
+                            <Bar width={10} dataKey="completed" fill={colors.green} />
+                            <Bar width={10} dataKey="closed" fill={colors.red} />
                         </BarChart>
                     </ResponsiveContainer>
                 </div>

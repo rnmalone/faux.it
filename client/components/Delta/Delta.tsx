@@ -3,9 +3,14 @@ import cx from 'classnames';
 import './Delta.scss';
 import Icon from "../Icon";
 import {IconType} from "../Icon/Icon";
+import {pc} from "../../lib/utils/formatters";
 
-export default function Delta({ value, isPositive }) {
-    console.log(isPositive)
+interface IDelta {
+    value: number;
+    isPositive: boolean;
+}
+
+export default function Delta({ value, isPositive }: IDelta) {
     return (
         <div className="Delta">
             <div className={cx('Delta__icon', {
@@ -14,7 +19,7 @@ export default function Delta({ value, isPositive }) {
             })}>
                 <Icon type={IconType.ArrowRight} />
             </div>
-            {value}
+            {pc(value)}
         </div>
     )
 }

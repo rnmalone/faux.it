@@ -9,12 +9,9 @@
 
   &__icon {
     margin-right: .5rem;
-    border: 1px solid;
-    padding: .25rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-color: $red-value;
     transform: rotate(90deg);
     border-radius: 5px;
 
@@ -23,8 +20,6 @@
     }
 
     &--positive {
-      border-color: $green-value;
-
       i {
         color: $green-value !important;
       }

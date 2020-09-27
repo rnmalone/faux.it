@@ -7,6 +7,7 @@ import Value from "../../../components/Value";
 import {CSSTransition} from "react-transition-group";
 import Statistic from "../../../components/Statistic";
 import Statistics from "./Statistics";
+import {pc, price} from "../../../lib/utils/formatters";
 
 export default function Employee() {
     const [viewedTab, setViewedTab] = useState()
@@ -27,8 +28,8 @@ export default function Employee() {
                     <dl className="Employee__upper__details__data">
                         <Value label='Job Title' value={data?.employee?.jobTitle} />
                         <Value label='Division' value={data?.employee?.division} />
-                        <Value label='Salary' value={data?.employee?.salary} />
-                        <Value label='Commission' value={data?.employee?.commissionRate} />
+                        <Value label='Salary' value={price(data?.employee?.salary)} />
+                        <Value label='Commission' value={pc(data?.employee?.commissionRate)} />
                     </dl>
                 </div>
             </div>

@@ -45,6 +45,10 @@ query Employee($id: Int!, $timeframe: Int!) {
                 delta
                 current
             }
+            grossProfitMargin  {
+                delta
+                current
+            }
         }
         profitGraph{
             date

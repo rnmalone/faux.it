@@ -3,17 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Statistic/Statistic.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Statistic/styles/Statistic.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Statistic/Statistic.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Statistic/components/Statistic.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Statistic/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Statistic/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/lib/utils/formatNumber.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/utils/formatters/formatNumber.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/lib/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/utils/formatters/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/lib/utils/price.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/utils/formatters/price.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/api/employeeStatistics.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/employeeStatistics.graphql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Delta/Delta.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Delta/Delta.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Delta/Delta.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Delta/Delta.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Icon/Icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Icon/Icon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Navigation/styles/Navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Navigation/styles/Navigation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/SegmentControl/SegmentControl.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/SegmentControl/SegmentControl.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/config/color.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/config/color.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/routes/Employee/components/Employee.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/components/Employee.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/routes/Employee/components/Statistics.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/components/Statistics.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/routes/Employee/styles/Statistics.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/styles/Statistics.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/routes/Employee/styles/Employee.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/styles/Employee.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/styles/common/page-item.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/common/page-item.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/styles/core/vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/core/vars.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/extractSalesMetrics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/extractSalesMetrics.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/resolvers/employeeStatistics/buildEmployeeProfitGraph.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/resolvers/employeeStatistics/buildEmployeeSalesStatistics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/employeeStatistics/buildEmployeeSalesStatistics.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/resolvers/employeeStatistics/createEmployeeSaleStatusGraph.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/resolvers/employeeStatistics/createEmployeeSaleStatusPie.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/schema/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/schema/schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +122,8 @@
       <workItem from="1600878586563" duration="16775000" />
       <workItem from="1600966438888" duration="13762000" />
       <workItem from="1601041800763" duration="18842000" />
-      <workItem from="1601121731679" duration="20457000" />
+      <workItem from="1601121731679" duration="22528000" />
+      <workItem from="1601201133178" duration="6541000" />
     </task>
     <servers />
   </component>

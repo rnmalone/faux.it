@@ -1,10 +1,13 @@
-$primary-color: #0455bf;
+$primary-color: #1D263B;
 $secondary-color: #20ca7e;
 
-$orange: #ff7d17;
+$dark-theme: #1D263B;
+
 
 $text-color: #696969;
 $text-color-invert: #f2f2f2;
+
+$light-grey: #aeaeae;
 
 $border-color: #f2f2f2;
 $bg-color-accent1: #f9f9f9;
@@ -16,3 +19,18 @@ $green-value: #74ff92;
 $gold: #ffe200;
 $silver: #a4a4a4;
 $bronze: #865c11;
+
+$purple: #6400aa;
+$orange: #ff7d17;
+
+$box-shadow: 0px 0px 20px 3px rgba(189,189,189,0.18);
+
+:export {
+  primary: $primary-color;
+  seconday: $secondary-color;
+  red: $red-value;
+  green: $green-value;
+  orange: $orange;
+  purple: $purple;
+  lightGrey: $light-grey;
+}
