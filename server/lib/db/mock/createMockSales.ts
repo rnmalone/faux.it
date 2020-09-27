@@ -2,6 +2,9 @@ import employees from "../../../data/employees";
 import {SaleDTO, SaleStatus} from "../../../entities/Sale";
 import moment from 'moment';
 import randomWords from 'random-words';
+import Chance from 'chance';
+
+const chance = new Chance()
 
 function getRandomInt(min: number, max: number) {
     min = Math.ceil(min);
@@ -55,6 +58,54 @@ const saleBounds = {
     }
 }
 
+const productCategories = {
+    Nautical: [
+        'Speedboats',
+        'Fishing Trawlers',
+        'Yachts',
+        'Houseboats',
+        'Jet ski',
+        'Catamaran'
+    ],
+    Motor: [
+        'Hatchback',
+        'Motorcycle',
+        'Executive Saloon',
+        'Coupe',
+        'SUV',
+        'Van'
+    ],
+    Aerospace: [
+        'Helicopters',
+        'Gliders',
+        'Plane'
+    ],
+    Watches: [
+        'Analog',
+        'Digital',
+        'Chronograph',
+        'Diving',
+        'Mechanical',
+        'Quartz'
+    ],
+    'Baked Goods': [
+        'Steak Bake',
+        'Sausage Roll',
+        'Cinnamon Roll',
+        'Chicken and mushroom pie'
+    ]
+}
+
+const leadSources = [
+    'Website',
+    'Store',
+    'Magazine',
+    'TV',
+    'Radio',
+    'Newspaper',
+    'Telephone'
+]
+
 export default function createMockSales() {
 
     return employees.reduce((a: SaleDTO[], employee) => {
@@ -90,8 +141,14 @@ export default function createMockSales() {
                     item,
                     itemCost,
                     agreedPrice,
-                    customerName: 'Keith',
+                    customerAge: getRandomInt(18, 80),
+                    daysItemOnSale: getRandomInt(0, 100),
+                    customerName: chance.name(),
                     status,
+                    leadSource: leadSources[getRandomInt(0, leadSources.length - 1)],
+                    customerGender: chance.gender(),
+                    // @ts-ignore
+                    productCategory: productCategories[division][getRandomInt(0, productCategories[division].length -1)],
                     division,
                     dateOpened,
                     dateClosed: (status === SaleStatus.Complete || status === SaleStatus.Closed) ? moment(dateOpened).add(getRandomInt(1, 5), 'days').toISOString() : null

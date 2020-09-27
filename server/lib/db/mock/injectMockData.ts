@@ -1,7 +1,6 @@
 import {employees, locations} from "../../../data";
 import {Employee, Location, Sale} from "../../../entities";
 import {Connection} from "typeorm";
-import sales from "../../../data/sales";
 import createMockSales from "./createMockSales";
 import logger from "../../logger";
 
@@ -25,7 +24,7 @@ export default async function injectMockData(connection: Connection) {
 
         const mockGeneratedSales = createMockSales()
 
-        const saleEntries = [...sales, ...mockGeneratedSales].map((sale) => applyProperties(new Sale(), sale as Partial<Sale>))
+        const saleEntries = mockGeneratedSales.map((sale) => applyProperties(new Sale(), sale as Partial<Sale>))
         await connection.manager.getRepository(Sale).save(saleEntries)
 
         logger.info(`Added ${saleEntries.length} sales`, { task: 'lib/injectMockData' })

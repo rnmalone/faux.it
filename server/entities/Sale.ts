@@ -32,6 +32,21 @@ export default class Sale {
     customerName: string;
 
     @Column()
+    customerGender: string;
+
+    @Column()
+    customerAge: number;
+
+    @Column()
+    productCategory: string;
+
+    @Column()
+    leadSource: string;
+
+    @Column()
+    daysItemOnSale: number;
+
+    @Column()
     status: SaleStatus;
 
     @Column()

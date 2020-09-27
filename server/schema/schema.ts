@@ -164,11 +164,34 @@ const typeDefs = gql`
         date: String
     }
     
+    type ProductCategoryProfit {
+        productCategory: String
+        profit: Float
+    }
+    
+    type SaleSourceProfit {
+        profit: Float
+        leadSource: String
+    }
+    
+    type SaleCustomerStatsByGender {
+        gender: String
+        profit: Float
+        averageProfit: Float
+        averageSpend: Float
+        averageAge: Float
+        revenue: Float
+        saleCount: Float
+    }
+    
     type EmployeeSalesStatistics {
         stats: EmployeePerformanceStatistics
         profitGraph: [ProfitGraphEntry]
         salesStatusPieChartData: [SaleStatusPieEntry]
         saleStatusGraph: [SaleStatusGraphEntry]
+        productCategoryProfit: [ProductCategoryProfit]
+        saleSourceProfit: [SaleSourceProfit]
+        saleCustomerStats: [SaleCustomerStatsByGender]
     }
    
     type Query {

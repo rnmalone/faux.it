@@ -7,3 +7,6 @@ export {default as selectSumProfitForDivisionGroupByEmployee} from './selectSumP
 export {default as selectSumSalesForDivisionGroupByEmployee} from './selectSumSalesForDivisionGroupByEmployee';
 export {default as selectSaleStatusForEmployee} from './selectSaleStatusForEmployee';
 export {default as selectSaleGraphDataForEmployee} from './selectSaleStatusGraphDataForEmployee';
+export {default as selectEmployeeProductCategoryProfit} from './selectEmployeeProductCategoryProfit';
+export {default as selectEmployeeSaleSourceProfit} from './selectEmployeeSaleSourceProfit';
+export {default as selectSaleCustomerStats} from './selectSaleCustomerStats';
