@@ -36,6 +36,12 @@ const locations: LocationDTO[] = [
         address: '22 Steak slice street, Newcastle',
         countryCode: 'EN',
         countryName: 'ENGLAND'
+    },
+    {
+        id: 7,
+        address: 'Afks Centre, Helsinki',
+        countryCode: 'FI',
+        countryName: 'Finland'
     }
 ]
 

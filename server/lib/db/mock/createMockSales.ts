@@ -32,6 +32,10 @@ const priceBounds = {
     'Baked Goods': {
         min: 1,
         max: 2
+    },
+    Electrical: {
+        min: 300,
+        max: 1500
     }
 }
 
@@ -53,6 +57,10 @@ const saleBounds = {
         max: 30
     },
     'Baked Goods': {
+        min: 1000,
+        max: 1500
+    },
+    Electrical: {
         min: 1000,
         max: 1500
     }
@@ -93,6 +101,14 @@ const productCategories = {
         'Sausage Roll',
         'Cinnamon Roll',
         'Chicken and mushroom pie'
+    ],
+    Electrical: [
+        'TVs',
+        'Sound Systems',
+        'Fridges',
+        'Microwaves',
+        'Laptops',
+        'Washing Machines'
     ]
 }
 
@@ -121,7 +137,7 @@ export default function createMockSales() {
 
                 const employeeId = employee.id;
                 const item = randomWords({ min: 2, max: 3, join: ' '})
-                const dayOffset = Math.round(Math.random() * 365)
+                const dayOffset = Math.round(Math.random() * 365 * 2)
                 const dateOpened = moment().subtract(dayOffset, 'days').toISOString()
                 const itemCost = getRandomInt(bounds.min, bounds.max)
                 const agreedPrice = getRandomInt(itemCost, itemCost * 1.05)

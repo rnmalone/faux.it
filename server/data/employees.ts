@@ -347,10 +347,75 @@ const employees: EmployeeDTO[] = [
         division: 'Watches',
         salary: 115000,
         commissionRate: 7,
-        email: 'vladamir.volgrad@faux.it',
+        email: 'helga.windamir@faux.it',
         joinDate: new Date(),
         imageUrl: '/assets/images/27.jpg',
         locationId: 2
+    },
+    {
+        id: 28,
+        firstName: 'Mawberry',
+        lastName: 'St. Michael (GC)',
+        jobTitle: 'Sales Executive',
+        division: 'Electrical',
+        salary: 36000,
+        commissionRate: 10,
+        email: 'vladamir.volgrad@faux.it',
+        joinDate: new Date(),
+        imageUrl: '/assets/images/28.jpg',
+        locationId: 7
+    },
+    {
+        id: 29,
+        firstName: 'Marttila',
+        lastName: 'Ylöjärvi',
+        jobTitle: 'Sales Executive',
+        division: 'Electrical',
+        salary: 36000,
+        commissionRate: 10,
+        email: 'martilla.ykigarvi@faux.it',
+        joinDate: new Date(),
+        imageUrl: '/assets/images/29.jpg',
+        locationId: 7
+    },
+    {
+        id: 30,
+        firstName: 'Nykänen',
+        lastName: 'Hämeenkoski',
+        jobTitle: 'Sales Manager',
+        division: 'Electrical',
+        salary: 45000,
+        commissionRate: 11.5,
+        email: 'nykanen.hameenkoski@faux.it',
+        joinDate: new Date(),
+        imageUrl: '/assets/images/30.jpg',
+        locationId: 7
+    },
+    {
+        id: 31,
+        firstName: 'Ojakangas',
+        lastName: 'Uusikaupunki',
+        jobTitle: 'Senior Sales Manager',
+        division: 'Electrical',
+        salary: 41770,
+        commissionRate: 10.5,
+        email: 'ojankangas.uusikaupunki@faux.it',
+        joinDate: new Date(),
+        imageUrl: '/assets/images/31.jpg',
+        locationId: 7
+    },
+    {
+        id: 32,
+        firstName: 'Schmiegel',
+        lastName: 'Lempäälä',
+        jobTitle: 'Sales Intern',
+        division: 'Electrical',
+        salary: 0,
+        commissionRate: 25.5,
+        email: 'nykanen.hameenkoski@faux.it',
+        joinDate: new Date(),
+        imageUrl: '/assets/images/32.jpg',
+        locationId: 7
     }
 ]
 

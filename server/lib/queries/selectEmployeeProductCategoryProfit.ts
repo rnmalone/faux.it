@@ -13,5 +13,6 @@ export default async function selectEmployeeProductCategoryProfit(connection: Co
         .andWhere('sale.dateOpened <= :dateTo', { dateTo })
         .andWhere('sale.status = :status', { status: SaleStatus.Complete })
         .groupBy('sale.productCategory')
+        .orderBy('SUM(sale.agreedPrice - sale.itemCost)', 'DESC')
         .execute()
 }
