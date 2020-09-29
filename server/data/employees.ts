@@ -416,6 +416,58 @@ const employees: EmployeeDTO[] = [
         joinDate: new Date(),
         imageUrl: '/assets/images/32.jpg',
         locationId: 7
+    },
+    {
+        id: 33,
+        firstName: 'Herleif',
+        lastName: 'Bjørn',
+        jobTitle: 'Sales Intern',
+        division: 'Motor',
+        salary: 18000,
+        commissionRate: 2.5,
+        email: 'herleif.bjorn@faux.it',
+        joinDate: new Date(),
+        imageUrl: '/assets/images/33.jpg',
+        locationId: 7
+    },
+    {
+        id: 35,
+        firstName: 'Ahmose',
+        lastName: 'Menkauhor Kaiu',
+        jobTitle: 'Sales Intern',
+        division: 'Motor',
+        salary: 18000,
+        commissionRate: 2.5,
+        email: 'ahmose.menkauhorkaiu@faux.it',
+        joinDate: new Date(),
+        imageUrl: '/assets/images/35.jpg',
+        locationId: 7
+    },
+    {
+        id: 34,
+        firstName: 'Xerxes',
+        lastName: 'Shepseska',
+        jobTitle: 'Sales Intern',
+        division: 'Watches',
+        salary: 18000,
+        commissionRate: 2.5,
+        email: 'xerxes.shepseska@faux.it',
+        joinDate: new Date(),
+        imageUrl: '/assets/images/34.jpg',
+        locationId: 7
+    },
+    {
+        id: 36,
+        firstName: 'Themistocles',
+        lastName: 'Phrearrhii',
+        jobTitle: 'Sales Manager',
+        division: 'Watches',
+        salary: 70000,
+        commissionRate: 2.5,
+        email: 'themistocles.phrearrhii@faux.it',
+        joinDate: new Date(),
+        imageUrl: '/assets/images/36.jpg',
+        locationId: 7
     }
 ]
 
