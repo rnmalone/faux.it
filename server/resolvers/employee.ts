@@ -1,6 +1,6 @@
 import {EmployeeDTO} from "../entities/Employee";
 import {IContext} from "../server";
-import {Results} from "../lib";
+import {logger, Results} from "../lib";
 import {ISortInput} from "../@types/SortInput";
 import {IPagingInput} from "../@types/Paging";
 import {IFacetInput} from "../@types/Facet";
@@ -26,6 +26,8 @@ const employeeResolver = {
         employeeList: async (root: any, {term, paging, sort: sortInput, facets: facetInput}: IListQueryInput, {connection}: IContext) => {
             const items = await selectAllEmployees(connection)
 
+            logger.info(`Query: employeeList - INPUT: ${JSON.stringify({ term, paging, sortInput, facetInput })}`)
+
             const resultsBuilder = new Results(items, {
                 facetFields: EMPLOYEE_FACET_FIELDS,
                 searchableFields: EMPLOYEE_SEARCHABLE_FIELDS,
@@ -36,7 +38,17 @@ const employeeResolver = {
                 paging
             })
 
-            return resultsBuilder.getResponseObject()
+            const response = resultsBuilder.getResponseObject()
+
+
+            response.items.forEach((item) => {
+                logger.info(`Returning ID ${item.id} [${item.firstName} ${item.lastName}]`)
+            })
+
+            logger.info(`Returned ${response.items.length} employees`)
+
+
+            return response
         },
 
         employee: async (root: any, {id}: { id: number }, {connection}: IContext) => {
