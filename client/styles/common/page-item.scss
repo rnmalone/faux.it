@@ -1,8 +1,23 @@
 @import 'core/vars';
 
+@keyframes _appear {
+  0% {
+    transform: scale(0.9);
+  }
+
+  80% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
 .page-item {
+  animation: _appear .2s linear;
   background-color: white;
-  border-radius: 8px;
   padding: 2rem;
   -webkit-box-shadow: $box-shadow;
   -moz-box-shadow: $box-shadow;

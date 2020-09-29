@@ -14,14 +14,6 @@ export const EMPLOYEE_LIST_TABLE_COLUMNS = [
     {
         Header: 'Division',
         accessor: 'division'
-    },
-    {
-        Header: 'Email',
-        accessor: 'email'
-    },
-    {
-        Header: 'Start Date',
-        accessor: 'joinDate'
     }
 ]
 

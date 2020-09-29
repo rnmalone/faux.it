@@ -2,6 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import '../styles/Statistic.scss';
 import Delta from "../../Delta/Delta";
+import TextPlaceholder from "../../TextPlaceholder";
 
 export interface IStatistic {
     value: string;
@@ -11,14 +12,26 @@ export interface IStatistic {
     large?: boolean;
 }
 
-export default function Statistic({ value, label, delta, large, isPositive }: IStatistic) {
+export default function Statistic( {
+    width= "160",
+    height = "40",
+    loading,
+    className,
+    value,
+    label,
+    delta,
+    large,
+    isPositive
+}: IStatistic) {
     return (
-        <div className={cx('Statistic', { 'Statistic__large': large })}>
+        <div className={cx(`Statistic ${className}`, { 'Statistic__large': large })}>
             <dt>{label}</dt>
-            <div>
-                <dd>{value}</dd>
-                { delta && <Delta value={delta} isPositive={isPositive} />}
-            </div>
+            <TextPlaceholder loading={loading} height={height} width={width}>
+                <div className="Statistic__contents">
+                    <dd>{value}</dd>
+                    { delta && <Delta value={delta} isPositive={isPositive} />}
+                </div>
+            </TextPlaceholder>
         </div>
     )
 }

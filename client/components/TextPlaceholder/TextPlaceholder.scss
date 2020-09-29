@@ -1,0 +1,93 @@
+@import "core/vars";
+
+@keyframes foo {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  50% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.TextPlaceholder {
+
+  > * {
+    white-space: nowrap;
+  }
+
+  &__loader {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+      content: '';
+      top: 50%;
+      transform: translateY(-50%);
+      animation: foo 2s infinite linear;
+      height: 60%;
+      position: absolute;
+      width: 200%;
+      background: rgb(255,255,255);
+      background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(242,242,242,1) 23%, rgba(249,249,249,1) 49%, rgba(242,242,242,1) 74%, rgba(249,249,249,1) 100%);
+      border-radius: 5px;
+    }
+  }
+
+  &--width-50 {
+    width: 50px;
+  }
+
+  &--width-160 {
+    width: 160px;
+  }
+
+  &--width-260 {
+    width: 260px;
+  }
+
+  &--width-300 {
+    width: 300px;
+  }
+
+  &--medium {
+    width: 200px;
+  }
+
+  &--height-16 {
+    height: 16px;
+  }
+
+  &--height-20 {
+    height: 20px;
+  }
+
+  &--height-25 {
+    height: 25px;
+  }
+
+  &--height-30 {
+    height: 30px;
+  }
+
+  &--height-40 {
+    height: 40px;
+  }
+
+  &--height-50 {
+    height: 50px;
+  }
+
+  &--height-60 {
+    height: 60px;
+  }
+
+  &--height-100 {
+    height: 100px;
+  }
+}

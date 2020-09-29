@@ -1,6 +1,8 @@
 @import 'core/vars';
 @import 'transitions/slideIn';
 @import 'fonts/BarlowSemiCondensed';
+@import 'fonts/Exo2';
+@import 'fonts/Barlow';
 @import 'common/images.scss';
 @import 'common/table.scss';
 @import 'common/page-item.scss';
@@ -11,7 +13,7 @@
 
 #root {
   margin: 0;
-  font-family: 'Barlow Semi Condensed';
+  font-family: 'Barlow';
 }
 
 body {

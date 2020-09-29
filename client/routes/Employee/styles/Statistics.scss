@@ -6,12 +6,17 @@
     margin: 2rem 0;
   }
 
-  &__small-stats {
+  &__flex-row {
     display: flex;
     flex-wrap: wrap;
 
     > div {
       flex: 1;
+      margin-right: 2rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
   &__row {

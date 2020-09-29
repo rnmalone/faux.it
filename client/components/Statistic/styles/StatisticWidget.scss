@@ -3,16 +3,13 @@
 
 .StatisticWidget {
   @include border-color;
-  margin-right: 2rem;
   padding: 1rem 2rem !important;
   border-left: 5px solid !important;
   border-left-color: $primary-color !important;
+  transition: border-left-color .2s ease-in-out;
 
   .Statistic {
     margin: 0;
   }
 
-  &:last-child {
-    margin-right: 0;
-  }
 }

@@ -7,3 +7,8 @@
   border: $border-color 1px solid;
   transition: border-color .15s linear;
 }
+
+.lazy-image {
+  background-image: url("../../assets/images/blank-profile.png");
+  background-size: contain;
+}

@@ -1,7 +1,7 @@
 .Statistic {
   white-space: nowrap;
   margin: 1rem 0;
-  > div {
+  &__contents {
     display: flex;
     align-items: center;
   }

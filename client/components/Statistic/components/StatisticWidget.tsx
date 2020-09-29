@@ -11,13 +11,19 @@ interface IStatisticWidget extends IStatistic {
     showIcon?: boolean;
 }
 
-export default function StatisticWidget({ borderColor, value, label, isPositive }: IStatisticWidget) {
+export default function StatisticWidget({ loading, borderColor, value, label, isPositive, height = "40", width = "160" }: IStatisticWidget) {
 
     return (
         <div className={cx('StatisticWidget page-item', {
             [`StatisticWidget--${borderColor}`]: true
         })}>
-            <Statistic value={value} label={label} isPositive={isPositive} />
+            <Statistic
+                width={width}
+                loading={loading}
+                value={value}
+                label={label}
+                isPositive={isPositive}
+            />
         </div>
     )
 }

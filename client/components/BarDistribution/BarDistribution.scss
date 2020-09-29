@@ -1,0 +1,37 @@
+@import 'core/vars';
+
+.BarDistribution {
+
+  &__labels {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__bar {
+    height: calc(5px + 1vh + 0.25vw);
+    border-radius: calc(2.5px + .5vh + .125vw);
+    width: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background-color: $bg-color-accent1;
+    margin-bottom: 1rem;
+
+    &__segment {
+      background-color: #20ca7e;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      transition: transform .3s ease-in-out;
+
+      &:last-child {
+        background-color: #1D263B;
+      }
+    }
+
+
+  }
+}

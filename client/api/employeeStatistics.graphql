@@ -1,5 +1,22 @@
 query Employee($id: Int!, $timeframe: Int!) {
     employeeStatistics(timeframe: $timeframe, id: $id) {
+        productCategoryProfit {
+            profit
+            productCategory
+        }
+        saleSourceProfit {
+            profit
+            leadSource
+        }
+        saleCustomerStats {
+            gender
+            profit
+            averageAge
+            revenue
+            averageSpend
+            averageProfit
+            saleCount
+        }
         stats {
             salesComplete {
                 delta

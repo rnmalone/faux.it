@@ -1,3 +1,5 @@
+@import 'core/vars';
+
 .EmployeeRow {
   &__name {
     text-align: left;
@@ -8,9 +10,10 @@
 
     span {
       margin-top: .3rem;
-      font-weight: 300;
-      font-size: .75em;
+      font-weight: 400;
+      font-size: .8em;
       display: flex;
+      color: $text-color-light;
 
       img {
         margin-left: .5rem;

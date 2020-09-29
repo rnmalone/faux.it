@@ -7,23 +7,22 @@ import {formatNumber, pc, price, rank} from "../../../lib/utils/formatters";
 import {
     LineChart, Line, XAxis, YAxis, PieChart, Tooltip, Pie, ResponsiveContainer, Bar, BarChart, AreaChart, Area, Cell
 } from 'recharts';
-import {rankColorMap, colors, saleStatusColorMap} from "../../../config/color.config";
+import {rankColorMap, colors, saleStatusColorMap, divisionColorsByString} from "../../../config/color.config";
 import {Timeframe} from "../../../../server/@types/Stats/Timeframe";
 import SegmentControl from "../../../components/SegmentControl";
+import BarDistribution from 'client/components/BarDistribution';
+import GenderInsights from "./GenderInsights";
+import SmallStats from "./SmallStats";
 
-export default function Statistics({ id }) {
-    const [timeframe, setTimeframe] = useState<Timeframe>(Timeframe.Quarter)
-    const { data } = useQuery(employeeStatisticsQuery, { variables: { id, timeframe } })
+export default function Statistics({ id, division }) {
+    const [timeframe, setTimeframe] = useState<Timeframe>(Timeframe.Year)
+    const { data, loading } = useQuery(employeeStatisticsQuery, { variables: { id, timeframe } })
     const toggleSegment = (segment: Timeframe) => () => setTimeframe(segment)
 
     return (
         <div className="Statistics">
             <SegmentControl
                 segments={[
-                    {
-                        key: Timeframe.Week,
-                        value: 'Week'
-                    },
                     {
                         key: Timeframe.Month,
                         value: 'Month'
@@ -44,42 +43,21 @@ export default function Statistics({ id }) {
                 onClick={toggleSegment}
                 selected={timeframe}
             />
-            <section className="Statistics__small-stats">
-                <StatisticWidget
-                    label={"Division Sales Rank"}
-                    value={rank(data?.employeeStatistics?.stats?.employeeDivisionSalesRank?.current)}
-                    delta={data?.employeeStatistics?.stats?.employeeDivisionSalesRank?.delta}
-                    borderColor={rankColorMap[data?.employeeStatistics?.stats?.employeeDivisionSalesRank?.current]}
-                />
-                <StatisticWidget
-                    label={"Division Profit Rank"}
-                    value={rank(data?.employeeStatistics?.stats?.employeeDivisionProfitRank?.current)}
-                    delta={data?.employeeStatistics?.stats?.employeeDivisionProfitRank?.delta}
-                    borderColor={rankColorMap[data?.employeeStatistics?.stats?.employeeDivisionProfitRank?.current]}
-                />
-                <StatisticWidget
-                    label="Commission Earnings"
-                    value={price(data?.employeeStatistics?.stats?.commissionEarnings?.current)}
-                    delta={data?.employeeStatistics?.stats?.commissionEarnings?.delta}
-                    isPositive={data?.employeeStatistics?.stats?.commissionEarnings?.delta > 0}
-                />
-                <StatisticWidget
-                    label="Average Sale Profit"
-                    value={price(data?.employeeStatistics?.stats?.averageProfit?.current)}
-                    delta={data?.employeeStatistics?.stats?.averageProfit?.delta}
-                    isPositive={data?.employeeStatistics?.stats?.averageProfit?.delta > 0}
-                />
-            </section>
+            <SmallStats loading={loading} data={data} />
             <section className="Statistics__row page-item">
-                <div className="">
+                <div>
                     <Statistic
+                        loading={loading}
                         label="Sales Revenue"
+                        width="260"
+                        height="60"
                         value={price(data?.employeeStatistics?.stats?.totalRevenue?.current)}
                         delta={data?.employeeStatistics?.stats?.totalRevenue?.delta}
                         isPositive={data?.employeeStatistics?.stats?.totalRevenue?.delta > 0}
                         large
                     />
                         <Statistic
+                            loading={loading}
                             label="Gross Profit"
                             value={price(data?.employeeStatistics?.stats?.totalProfit?.current)}
                             delta={data?.employeeStatistics?.stats?.totalProfit?.delta}
@@ -87,6 +65,7 @@ export default function Statistics({ id }) {
 
                         />
                         <Statistic
+                            loading={loading}
                             label="Gross Profit Margin"
                             value={pc(data?.employeeStatistics?.stats?.grossProfitMargin?.current)}
                             delta={data?.employeeStatistics?.stats?.grossProfitMargin?.delta}
@@ -103,47 +82,86 @@ export default function Statistics({ id }) {
                             }}
                         >
                             <XAxis stroke={colors.lightGrey} dataKey="date" />
-                            <YAxis stroke={colors.lightGrey} tickFormatter={price} tickSize={10} />
+                            <YAxis tickCount={3} stroke={colors.lightGrey} tickFormatter={price} tickSize={10} />
                             <Tooltip />
                             <Line strokeWidth={3} type="monotone" dataKey="profit" stroke={colors.primary} fillOpacity={1} fill={colors.primary} />
                         </LineChart>
                     </ResponsiveContainer>
                 </div>
             </section>
-            <section className="Statistics__row page-item">
-                <div className="Statistics__pie-container">
-                    <span>{pc(data?.employeeStatistics?.stats?.saleConversionPc?.current)}</span>
-                    <ResponsiveContainer width={250} height={250}>
-                        <PieChart>
-                            <Pie
-                                dataKey="value"
-                                data={data?.employeeStatistics?.salesStatusPieChartData}
-                                cx={125}
-                                cy={126}
-                                outerRadius={120}
-                                innerRadius={105}
-                            >
-                                {
-                                    data?.employeeStatistics?.salesStatusPieChartData?.map((entry, index) => <Cell key={`cell-${index}`} fill={saleStatusColorMap[entry.status]} />)
-                                }
-                            </Pie>
-                        </PieChart>
-                    </ResponsiveContainer>
+            <section className="Statistics__flex-row">
+                <div className="page-item">
+                    <h6>Product Category Breakdown</h6>
+                    {
+                        data?.employeeStatistics?.productCategoryProfit?.map((stat, i) => (
+                            <BarDistribution
+                                left={{
+                                    pc: ( 100 / data.employeeStatistics.stats.totalProfit.current) * stat.profit,
+                                    value: stat.profit,
+                                    label: stat.productCategory,
+                                    color: colors[`${divisionColorsByString[division]}${i + 1}`]
+                                }}
+                            />
+                        ))
+                    }
                 </div>
-                <div className="fill-remaining">
-                    <ResponsiveContainer width={'100%'} height={'100%'}>
-                        <BarChart
-                            data={data?.employeeStatistics?.saleStatusGraph}
-                            margin={{
-                                top: 16, right: 16, left: 40, bottom: 16,
-                            }}
-                        >
-                            <XAxis stroke={colors.lightGrey} dataKey="date" />
-                            <Tooltip />
-                            <Bar width={10} dataKey="completed" fill={colors.green} />
-                            <Bar width={10} dataKey="closed" fill={colors.red} />
-                        </BarChart>
-                    </ResponsiveContainer>
+                <div className="page-item">
+                    <h6>Lead source profit contribution</h6>
+                    {
+                        data?.employeeStatistics?.saleSourceProfit?.map((stat) => (
+                            <BarDistribution
+                                left={{
+                                    pc: ( 100 / data.employeeStatistics.stats.totalProfit.current) * stat.profit,
+                                    value: stat.profit,
+                                    label: stat.leadSource
+                                }}
+                            />
+                        ))
+                    }
+                </div>
+                <GenderInsights
+                    data={data?.employeeStatistics?.saleCustomerStats}
+                    totalProfit={data?.employeeStatistics?.stats?.totalProfit.current}
+                    totalRevenue={data?.employeeStatistics?.stats?.totalRevenue.current}
+                />
+            </section>
+            <section className="page-item">
+                <h6>Sale Conversion</h6>
+                <div className="Statistics__row">
+                    <div className="Statistics__pie-container">
+                        <span>{pc(data?.employeeStatistics?.stats?.saleConversionPc?.current)}</span>
+                        <ResponsiveContainer width={250} height={250}>
+                            <PieChart>
+                                <Pie
+                                    dataKey="value"
+                                    data={data?.employeeStatistics?.salesStatusPieChartData}
+                                    cx={125}
+                                    cy={126}
+                                    outerRadius={120}
+                                    innerRadius={105}
+                                >
+                                    {
+                                        data?.employeeStatistics?.salesStatusPieChartData?.map((entry, index) => <Cell key={`cell-${index}`} fill={saleStatusColorMap[entry.status]} />)
+                                    }
+                                </Pie>
+                            </PieChart>
+                        </ResponsiveContainer>
+                    </div>
+                    <div className="fill-remaining">
+                        <ResponsiveContainer width={'100%'} height={'100%'}>
+                            <BarChart
+                                data={data?.employeeStatistics?.saleStatusGraph}
+                                margin={{
+                                    top: 16, right: 16, left: 40, bottom: 16,
+                                }}
+                            >
+                                <XAxis stroke={colors.lightGrey} dataKey="date" />
+                                <Tooltip />
+                                <Bar width={10} dataKey="completed" fill={colors.green} />
+                                <Bar width={10} dataKey="closed" fill={colors.red} />
+                            </BarChart>
+                        </ResponsiveContainer>
+                    </div>
                 </div>
             </section>
 

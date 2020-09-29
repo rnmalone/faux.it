@@ -18,3 +18,16 @@ p {
   margin-block-start: 0;
   margin-block-end: 0;
 }
+
+h6 {
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2em;
+}
+
+.centre-label {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

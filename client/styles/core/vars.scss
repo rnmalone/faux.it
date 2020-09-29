@@ -4,7 +4,9 @@ $secondary-color: #20ca7e;
 $dark-theme: #1D263B;
 
 
-$text-color: #696969;
+$text-color-light: #696969;
+$text-color: #3e3e3e;
+
 $text-color-invert: #f2f2f2;
 
 $light-grey: #aeaeae;
@@ -20,9 +22,30 @@ $gold: #ffe200;
 $silver: #a4a4a4;
 $bronze: #865c11;
 
-$purple: #6400aa;
-$orange: #ff7d17;
+$pink: #ff3f74;
 
+$purple: #6400aa;
+$purple1: $purple;
+$purple2: #6c23a7;
+$purple3: #7636a9;
+$purple4: #8855b3;
+$purple5: #9169b7;
+$purple6: #9e85be;
+$purple7: #ad9fc3;
+$purple8: #bdb6ca;
+
+$blue: #0037ff;
+$blue1: $blue;
+$blue2: #1d4cfc;
+$blue3: #3760f8;
+$blue4: #5075ff;
+$blue5: #6585ff;
+$blue6: #7d99fd;
+$blue7: #95adfd;
+$blue8: #b5c4fd;
+
+
+$orange: #ff7d17;
 $box-shadow: 0px 0px 20px 3px rgba(189,189,189,0.18);
 
 :export {
@@ -33,4 +56,22 @@ $box-shadow: 0px 0px 20px 3px rgba(189,189,189,0.18);
   orange: $orange;
   purple: $purple;
   lightGrey: $light-grey;
+  pink: $pink;
+  blue: $blue;
+  purple1: $purple1;
+  purple2: $purple2;
+  purple3: $purple3;
+  purple4: $purple4;
+  purple5: $purple5;
+  purple6: $purple6;
+  purple7: $purple7;
+  purple8: $purple8;
+  blue1: $blue1;
+  blue2: $blue2;
+  blue3: $blue3;
+  blue4: $blue4;
+  blue5: $blue5;
+  blue6: $blue6;
+  blue7: $blue7;
+  blue8: $blue8;
 }
