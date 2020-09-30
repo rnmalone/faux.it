@@ -1,0 +1,20 @@
+.opacity-enter,
+.opacity-exit {
+  transition: opacity 1000ms ease-out;
+}
+
+.opacity-enter {
+  opacity: 0;
+}
+
+.opacity-enter.opacity-enter-active {
+  opacity: 1;
+}
+
+.opacity-exit {
+  opacity: 1;
+}
+
+.opacity-exit-active {
+  opacity: 0;
+}
