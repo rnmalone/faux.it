@@ -38,7 +38,7 @@ const boilerPlate = {
     term: '',
     paging: {
         offset: 0,
-        limit: 10
+        limit: 12
     },
     sort: {
         direction: Direction.DOWN,
@@ -97,6 +97,7 @@ export function toggleFilterItem(filterType: FilterType) {
 export function setPaging(filterType: FilterType) {
     return (dispatch: Dispatch<FilterActionTypes>) => {
         return (paging: IPaging) => {
+            console.log(paging)
             dispatch({
                 type: FilterActionTypes.SET_PAGING,
                 payload: {

@@ -3,26 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/api/employeeList.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/employeeList.graphql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/api/employeeStatistics.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/employeeStatistics.graphql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/EmployeeRow/EmployeeRow.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/EmployeeRow/EmployeeRow.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/EmployeeRow/EmployeeRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/EmployeeRow/EmployeeRow.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Statistic/components/Statistic.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Statistic/components/Statistic.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Statistic/components/StatisticWidget.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Statistic/components/StatisticWidget.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Statistic/styles/Statistic.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Statistic/styles/Statistic.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Statistic/styles/StatisticWidget.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Statistic/styles/StatisticWidget.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/config/color.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/config/color.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/config/tables.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/config/tables.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/routes/Employee/components/Employee.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/components/Employee.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/routes/Employee/components/Statistics.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/components/Statistics.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/routes/Employee/styles/Statistics.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/styles/Statistics.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/styles/common/images.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/common/images.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/styles/common/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/common/layout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/styles/common/page-item.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/common/page-item.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/styles/common/table.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/common/table.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/styles/common/typeography.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/common/typeography.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/EmployeeCard/EmployeeCard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/EmployeeCard/EmployeeCard.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/EmployeeCard/EmployeeCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/EmployeeCard/EmployeeCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/EmployeeCard/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/EmployeeCard/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/modules/filters/filters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/modules/filters/filters.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/routes/EmployeeList/components/EmployeeList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/EmployeeList/components/EmployeeList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/routes/EmployeeList/styles/EmployeeList.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/EmployeeList/styles/EmployeeList.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/styles/core/vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/core/vars.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
@@ -58,10 +45,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/styles/fonts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../React-Infinite-Scroll-and-Lazy-Loading" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -127,7 +114,8 @@
       <workItem from="1601121731679" duration="22528000" />
       <workItem from="1601201133178" duration="34592000" />
       <workItem from="1601301419578" duration="8701000" />
-      <workItem from="1601400038031" duration="4177000" />
+      <workItem from="1601400038031" duration="16894000" />
+      <workItem from="1601458195522" duration="2238000" />
     </task>
     <servers />
   </component>
@@ -162,25 +150,27 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="92" y="92" width="2376" height="1216" key="DiffContextDialog/-1920.366.1920.1040/2560.366.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1600597211670" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1595453665824">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595453665824" />
-    <state x="941" y="360" key="SettingsEditor" timestamp="1601308236867">
+    <state x="987" y="369" key="FileChooserDialogImpl" timestamp="1601415584877">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="941" y="360" key="SettingsEditor/-1920.160.1920.1040/0.0.2560.1400/2560.160.1920.1040@0.0.2560.1400" timestamp="1601308236867" />
+    <state x="987" y="369" key="FileChooserDialogImpl/-1920.160.1920.1040/0.0.2560.1400/2560.160.1920.1040@0.0.2560.1400" timestamp="1601415584877" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595453665824" />
+    <state x="941" y="360" key="SettingsEditor" timestamp="1601459051829">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="941" y="360" key="SettingsEditor/-1920.160.1920.1040/0.0.2560.1400/2560.160.1920.1040@0.0.2560.1400" timestamp="1601416267866" />
     <state x="941" y="360" key="SettingsEditor/-1920.366.1920.1040/2560.366.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1600595431237" />
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600114912046" />
-    <state x="941" y="360" key="SettingsEditor/0.0.2560.1400/-1920.160.1920.1040/2560.160.1920.1040@0.0.2560.1400" timestamp="1601246057981" />
+    <state x="941" y="360" key="SettingsEditor/0.0.2560.1400/-1920.160.1920.1040/2560.160.1920.1040@0.0.2560.1400" timestamp="1601459051829" />
     <state x="123" y="124" width="2315" height="1153" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600597211670">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="123" y="124" width="2315" height="1153" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-1920.366.1920.1040/2560.366.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1600597211670" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600275661711" />
-    <state x="861" y="324" width="836" height="840" key="find.popup" timestamp="1601132351419">
+    <state x="861" y="324" width="836" height="840" key="find.popup" timestamp="1601412056288">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state x="861" y="324" width="836" height="840" key="find.popup/-1920.160.1920.1040/0.0.2560.1400/2560.160.1920.1040@0.0.2560.1400" timestamp="1601412056288" />
     <state x="861" y="324" width="836" height="840" key="find.popup/-1920.160.1920.1040/2560.160.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1601048213166" />
     <state x="646" y="241" width="627" height="624" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600274308240" />
     <state x="861" y="324" width="836" height="840" key="find.popup/0.0.2560.1400/-1920.160.1920.1040/2560.160.1920.1040@0.0.2560.1400" timestamp="1601132351419" />
@@ -193,5 +183,16 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600201807480" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/client/modules/filters/filters.ts</url>
+          <line>105</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
