@@ -1,8 +1,17 @@
 .Filters {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
 
-  > * {
-    margin-right: 1rem;
+  &__left {
+    display: flex;
+    align-items: flex-end;
+    height: fit-content;
+
+    > * {
+      margin-right: 2rem;
+    }
   }
+
+
 }

@@ -1,20 +1,25 @@
 import React, {useState} from 'react';
-import {Statistic, StatisticWidget} from "../../../components/Statistic";
-import '../styles/Statistics.scss';
-import employeeStatisticsQuery from '../../../api/employeeStatistics.graphql';
+import {Statistic, StatisticWidget} from "../../../../components/Statistic";
+import '../../styles/Statistics.scss';
+import employeeStatisticsQuery from '../../../../api/employeeStatistics.graphql';
 import {useQuery} from "@apollo/client";
-import {formatNumber, pc, price, rank} from "../../../lib/utils/formatters";
+import {formatNumber, pc, price, rank} from "../../../../lib/utils/formatters";
 import {
     LineChart, Line, XAxis, YAxis, PieChart, Tooltip, Pie, ResponsiveContainer, Bar, BarChart, AreaChart, Area, Cell
 } from 'recharts';
-import {rankColorMap, colors, saleStatusColorMap, divisionColorsByString} from "../../../config/color.config";
-import {Timeframe} from "../../../../server/@types/Stats/Timeframe";
-import SegmentControl from "../../../components/SegmentControl";
+import {rankColorMap, colors, saleStatusColorMap, divisionColorsByString} from "../../../../config/color.config";
+import {Timeframe} from "../../../../../server/@types/Stats/Timeframe";
+import SegmentControl from "../../../../components/SegmentControl";
 import BarDistribution from 'client/components/BarDistribution';
 import GenderInsights from "./GenderInsights";
 import SmallStats from "./SmallStats";
 
-export default function Statistics({ id, division }) {
+interface IEmployeeStatistics {
+    id: number;
+    division: string;
+}
+
+export default function EmployeeStatistics({ id, division }: IEmployeeStatistics) {
     const [timeframe, setTimeframe] = useState<Timeframe>(Timeframe.Year)
     const { data, loading } = useQuery(employeeStatisticsQuery, { variables: { id, timeframe } })
     const toggleSegment = (segment: Timeframe) => () => setTimeframe(segment)

@@ -17,8 +17,6 @@ interface IBarDistribution {
 
 export default function BarDistribution({ left, right }: IBarDistribution) {
 
-    console.log(left.color)
-
     return (
         <div className="BarDistribution">
             <div className="BarDistribution__labels">

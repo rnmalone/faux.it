@@ -9,10 +9,13 @@ function extractUniqueValues<T>(items: T[], key: keyof T): IFacet[] {
                 ...existing,
                 count: existing.count + 1
             } : existing) :
-            [...a, {
-                value: String(item[key]),
-                count: 1
-            }]
+            [
+                ...a,
+                {
+                    value: String(item[key]),
+                    count: 1
+                }
+            ]
     }, [])
 }
 

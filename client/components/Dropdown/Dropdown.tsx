@@ -1,20 +1,21 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import cx from 'classnames';
 import './Dropdown.scss'
 import {IFacet} from "../../../server/@types/Facet";
 import {useOutsideClicks, useOverlay} from "../../lib/hooks";
 import Icon, {IconType} from "../Icon/Icon";
+import useQueryResultHydration from "../../lib/hooks/useQueryResultHydration";
 
 interface IDropdownProps {
     filterKey: string;
     label: string;
     itemList: IFacet[],
     selectedList: string[],
-
     onSelect(filterKey: string, value: string): () => void
 }
 
 export default function Dropdown({filterKey, label, itemList = [], selectedList, onSelect}: IDropdownProps) {
+    const dropdownItems = useQueryResultHydration(itemList)
     const dropdownRef = useRef(null)
     const {overlayOpen, openOverlay, closeOverlay} = useOverlay()
     useOutsideClicks(dropdownRef, closeOverlay)
@@ -30,10 +31,14 @@ export default function Dropdown({filterKey, label, itemList = [], selectedList,
 
             return value
         }
+        if(selectedList.length > 1) {
+            return `${selectedList.length} selected`
+        }
     }
 
     return (
         <div className="Dropdown">
+            <span className="Dropdown__label">{label}</span>
             <div
                 role="button"
                 tabIndex={0}
@@ -41,14 +46,13 @@ export default function Dropdown({filterKey, label, itemList = [], selectedList,
                 className={cx('Dropdown__widget', {'Dropdown__widget--open': overlayOpen})}
             >
                 <div>
-                    <p>{label}</p>
-                    {/*<span>{getNote()}</span>*/}
+                    <p>{getNote()}</p>
                 </div>
                 <Icon type={IconType.Chevron}/>
             </div>
             {overlayOpen ? <div ref={dropdownRef} className={'Dropdown__overlay'}>
                 {
-                    itemList.map((item: IFacet) => (
+                    dropdownItems.map((item: IFacet) => (
                         <div
                             key={`${filterKey}-${item.value}`}
                             tabIndex={0}
@@ -59,7 +63,6 @@ export default function Dropdown({filterKey, label, itemList = [], selectedList,
                             })}
                         >
                             <span>{item.value}</span>
-                            <span>{item.count}</span>
                         </div>
                     ))
                 }

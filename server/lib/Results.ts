@@ -42,7 +42,7 @@ export default class Results<T> {
             this.applyRequestFacets()
         }
 
-        const facets = facetExtractor(this.items, this.config.facetFields)
+        const facets = facetExtractor(this.rawItems, this.config.facetFields)
 
         if (this.config.searchTerm) {
             this.applySearchTerm()

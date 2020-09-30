@@ -3,10 +3,9 @@ import debounce from "lodash.debounce";
 
 import './ScrollBoundary.scss';
 
-
-export default function ScrollBoundary({ onEnterViewport }) {
+export default function ScrollBoundary({ onEnterViewport }: { onEnterViewport(): void }) {
     const [isVisible, setIsVisible] = useState(false);
-    const currentElement = useRef(null);
+    const currentElement: RefObject<HTMLDivElement> = useRef(null);
 
     const onScroll = debounce(() => {
         if (!currentElement.current) {
@@ -27,7 +26,6 @@ export default function ScrollBoundary({ onEnterViewport }) {
             onEnterViewport()
         }
     }, [isVisible])
-
 
     return (
         <div className="ScrollBoundary" ref={currentElement} />

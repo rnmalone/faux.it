@@ -1,15 +1,18 @@
-import BarDistribution from "../../../components/BarDistribution";
+import BarDistribution from "../../../../components/BarDistribution";
 import React from "react";
-import {Statistic} from "../../../components/Statistic";
-import {price} from "../../../lib/utils/formatters";
-import {colors} from "../../../config/color.config";
+import {Statistic} from "../../../../components/Statistic";
+import {price} from "../../../../lib/utils/formatters";
+import {colors} from "../../../../config/color.config";
 
-export default function GenderInsights({ data, totalProfit, totalRevenue }) {
-    const male = data?.find(({ gender }) => gender === 'Male')
-    const female = data?.find(({ gender }) => gender === 'Female')
+interface IGenderInsights {
+    totalProfit: number;
+    totalRevenue: number;
+}
+
+export default function GenderInsights({data, totalProfit, totalRevenue}: IGenderInsights) {
+    const male = data?.find(({gender}) => gender === 'Male')
+    const female = data?.find(({gender}) => gender === 'Female')
     const totalSales = female?.saleCount + male?.saleCount
-
-    console.log(totalSales)
 
     return (
         <div className="page-item">
@@ -20,13 +23,13 @@ export default function GenderInsights({ data, totalProfit, totalRevenue }) {
                     label: 'Male',
                     color: colors.blue,
                     value: male?.saleCount,
-                    pc: ( 100 / totalSales) * male?.saleCount
+                    pc: (100 / totalSales) * male?.saleCount
                 }}
                 right={{
                     label: 'Female',
                     color: colors.pink,
                     value: female?.saleCount,
-                    pc: ( 100 / totalSales) * female?.saleCount
+                    pc: (100 / totalSales) * female?.saleCount
                 }}
             />
             <span className="centre-label">Profit contribution</span>
@@ -35,13 +38,13 @@ export default function GenderInsights({ data, totalProfit, totalRevenue }) {
                     label: 'Male',
                     color: colors.blue,
                     value: male?.saleCount,
-                    pc: ( 100 / totalProfit) * male?.profit
+                    pc: (100 / totalProfit) * male?.profit
                 }}
                 right={{
                     label: 'Female',
                     color: colors.pink,
                     value: female?.saleCount,
-                    pc: ( 100 / totalProfit) * female?.profit
+                    pc: (100 / totalProfit) * female?.profit
                 }}
             />
             <span className="centre-label">Total revenue</span>
@@ -50,13 +53,13 @@ export default function GenderInsights({ data, totalProfit, totalRevenue }) {
                     label: 'Male',
                     color: colors.blue,
                     value: male?.revenue,
-                    pc: ( 100 / totalRevenue) * male?.revenue
+                    pc: (100 / totalRevenue) * male?.revenue
                 }}
                 right={{
                     label: 'Female',
                     color: colors.pink,
                     value: female?.revenue,
-                    pc: ( 100 / totalRevenue) * female?.revenue
+                    pc: (100 / totalRevenue) * female?.revenue
                 }}
             />
             <span className="centre-label">Average Spend</span>

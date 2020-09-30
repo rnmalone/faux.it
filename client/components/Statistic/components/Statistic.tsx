@@ -10,6 +10,10 @@ export interface IStatistic {
     delta?: number;
     isPositive?: boolean;
     large?: boolean;
+    loading: boolean;
+    className?: string;
+    height?: string;
+    width?: string;
 }
 
 export default function Statistic( {
@@ -29,7 +33,7 @@ export default function Statistic( {
             <TextPlaceholder loading={loading} height={height} width={width}>
                 <div className="Statistic__contents">
                     <dd>{value}</dd>
-                    { delta && <Delta value={delta} isPositive={isPositive} />}
+                    { delta && <Delta value={delta} isPositive={!!isPositive} />}
                 </div>
             </TextPlaceholder>
         </div>

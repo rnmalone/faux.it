@@ -4,20 +4,22 @@ import {useQuery} from "@apollo/client";
 import {useParams} from "react-router";
 import employeeQuery from '../../../api/employee.graphql'
 import Value from "../../../components/Value";
-import Statistics from "./Statistics";
+import EmployeeStatistics from "./EmployeeStatistics/EmployeeStatistics";
 import {pc, price} from "../../../lib/utils/formatters";
 import TextPlaceholder from "../../../components/TextPlaceholder";
+import {useScrollTo} from "../../../lib/hooks";
 
 export default function Employee() {
-    const { id } = useParams()
-    const { data, loading } = useQuery(employeeQuery, {
-        variables: { id: Number(id) }
+    useScrollTo(false)(0)
+    const {id} = useParams()
+    const {data, loading} = useQuery(employeeQuery, {
+        variables: {id: Number(id)}
     })
 
     return (
         <div className="page">
             <div className="page__upper Employee__upper">
-                <img alt={id} className="lazy-image Employee__dp" src={data?.employee?.imageUrl} />
+                <img alt={id} className="lazy-image Employee__dp" src={data?.employee?.imageUrl}/>
                 <div className="Employee__upper__details">
                     <div className="Employee__upper__details__header">
                         <TextPlaceholder
@@ -32,15 +34,15 @@ export default function Employee() {
                         </TextPlaceholder>
                     </div>
                     <dl className="Employee__upper__details__data">
-                        <Value label='Job Title' value={data?.employee?.jobTitle} />
-                        <Value label='Division' value={data?.employee?.division} />
-                        <Value label='Salary' value={price(data?.employee?.salary)} />
-                        <Value label='Commission' value={pc(data?.employee?.commissionRate)} />
+                        <Value label='Job Title' value={data?.employee?.jobTitle}/>
+                        <Value label='Division' value={data?.employee?.division}/>
+                        <Value label='Salary' value={price(data?.employee?.salary)}/>
+                        <Value label='Commission' value={pc(data?.employee?.commissionRate)}/>
                     </dl>
                 </div>
             </div>
             <div className="page__body">
-                <Statistics division={data?.employee?.division} id={Number(id)} />
+                <EmployeeStatistics division={data?.employee?.division} id={Number(id)}/>
             </div>
         </div>
     )

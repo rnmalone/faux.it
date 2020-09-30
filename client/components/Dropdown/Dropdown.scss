@@ -4,8 +4,13 @@ $widget-height: 40px;
 
 .Dropdown {
   position: relative;
-  height: $widget-height;
   width: 180px;
+
+  &__label {
+    font-size: .8em;
+    color: $light-grey;
+    margin-bottom: .25rem;
+  }
 
   &__widget {
     width: calc(100% - 2rem);
@@ -17,8 +22,10 @@ $widget-height: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: .5rem 1rem;
+    padding: 0 1rem;
     transition: all .2s linear;
+    max-height: $widget-height;
+    min-height: $widget-height;
 
     i {
       transform: rotate(-90deg);
@@ -53,7 +60,7 @@ $widget-height: 40px;
     border-radius: 5px;
     border: $border-color 1px solid;
     position: absolute;
-    top: calc(#{$widget-height} + 1rem);
+    top: calc(#{$widget-height} + 2rem);
     width: 260px;
     max-height: 400px;
     z-index: 100;
@@ -63,28 +70,27 @@ $widget-height: 40px;
     -moz-box-shadow: 0px 0px 36px 5px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 0px 36px 5px rgba(0, 0, 0, 0.25);
     background-color: $bg-color-accent1;
-
   }
 
   &__item {
     cursor: pointer;
-    font-size: .9em;
-    height: 30px;
+    height: 40px;
     border-radius: 5px;
-    width: calc(100% - 2rem);
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-    padding: .3rem 1rem;
+    width: 100%;
     background-color: white;
     margin: .5rem 0;
     border: $border-color 1px solid;
     font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color .2s linear;
 
     span {
-      &:last-child {
-        font-size: .85em;
-      }
+      font-weight: 400;
+      font-size: 1em;
+      margin: 0;
+      transition: color .2s linear;
     }
 
     &--selected {

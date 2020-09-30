@@ -1,5 +1,6 @@
 import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from 'typeorm';
 import Sale from "./Sale";
+import {LocationDTO} from "./Location";
 
 @Entity()
 export default class Employee {

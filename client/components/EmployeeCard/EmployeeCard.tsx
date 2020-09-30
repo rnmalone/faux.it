@@ -1,8 +1,19 @@
-import React, {useCallback, useEffect, useRef, useState} from 'react';
-import cx from 'classnames';
+import React from 'react';
 import './EmployeeCard.scss'
 import Division from "../Division/Division";
 import {useNavigate} from "../../lib/hooks";
+import Location from "../Location";
+import {LocationDTO} from "../../../server/entities/Location";
+
+interface IEmployeeCard {
+    id: number;
+    name: string;
+    imageUrl: string;
+    jobTitle: string;
+    division: string;
+    index: number;
+    location: LocationDTO
+}
 
 export default function EmployeeCard({
     id,
@@ -10,18 +21,31 @@ export default function EmployeeCard({
     imageUrl,
     jobTitle,
     division,
-    loading
-                                     }) {
-    const [fetched, setFetched] = useState<boolean>(false)
+    index,
+    location
+                                     }: IEmployeeCard) {
     const navigate = useNavigate()
 
+    const handleClick = () => {
+        history.replaceState(null, '', `${window.location.pathname}?scrollTo=${window.scrollY}&limit=${index}`);
+        navigate(`/employee/${id}`)()
+    }
 
     return (
-        <article className="page-item EmployeeCard" onClick={navigate(`/employee/${id}`)}>
-            <img className="thumbnail" src={imageUrl}/>
-            <h6>{name}</h6>
-            <span>{jobTitle}</span>
-            <Division type={division} />
-        </article>
+        <div className="page-item EmployeeCard" onClick={handleClick}>
+            <div className="EmployeeCard__body">
+                <img className="EmployeeCard__img thumbnail" src={imageUrl}/>
+                <h6>{name}</h6>
+                <span>{jobTitle}</span>
+            </div>
+            <div className="EmployeeCard__footer">
+                <Location
+                    countryCode={location.countryCode}
+                    address={location.address}
+                    countryName={location.countryName}
+                />
+                <Division type={division} />
+            </div>
+        </div>
     )
 }

@@ -3,44 +3,44 @@ import {LocationDTO} from "../entities/Location";
 const locations: LocationDTO[] = [
     {
         id: 1,
-        address: '1 Friday Street, London',
+        address: 'London',
         countryCode: 'GB',
         countryName: 'United Kingdom'
     },
     {
         id: 2,
-        address: '2a Trance Square, Frankfurt',
+        address: 'Frankfurt',
         countryCode: 'DE',
         countryName: 'Germany'
     },
     {
         id: 3,
-        address: '101 Aura Street, Chicago',
+        address: 'Chicago',
         countryCode: 'US',
         countryName: 'United States'
     },
     {
         id: 4,
-        address: '404 Ieiks Tower, Eindhoven',
+        address: 'Eindhoven',
         countryCode: 'NL',
         countryName: 'Netherlands'
     },
     {
         id: 5,
-        address: 'Snow, Oslo',
+        address: 'Oslo',
         countryCode: 'NR',
         countryName: 'Norway'
     },
     {
         id: 6,
-        address: '22 Steak slice street, Newcastle',
+        address: 'Newcastle',
         countryCode: 'EN',
         countryName: 'ENGLAND'
     },
     {
         id: 7,
-        address: 'Afks Centre, Helsinki',
-        countryCode: 'FI',
+        address: 'Helsinki',
+        countryCode: 'FL',
         countryName: 'Finland'
     }
 ]

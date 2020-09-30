@@ -1,13 +1,18 @@
 import React, {useEffect, useState} from 'react';
 import employeeListQuery from '../../../api/employeeList.graphql'
 import '../styles/EmployeeList.scss';
-import {useLazyQuery, useQuery} from "@apollo/client";
+import {useQuery} from "@apollo/client";
 import Filters from "../../../components/Filters";
 import {FilterType, StoredFilters} from "../../../modules/filters/filters";
 import {IPaging} from "../../../@types/tables";
 import EmployeeCard from "../../../components/EmployeeCard";
 import ScrollBoundary from "../../../components/ScrollBoundary";
-import {useSpring} from "react-spring";
+import {useQueryString, useScrollTo} from "../../../lib/hooks";
+import Grid from "../../../components/Grid";
+import {EmployeeDTO} from "../../../../server/entities/Employee";
+import {IFacetResult} from "../../../../server/@types/Facet";
+import useQueryResultHydration from "../../../lib/hooks/useQueryResultHydration";
+import {LocationDTO} from "../../../../server/entities/Location";
 
 interface IEmployeeList {
     filters: StoredFilters;
@@ -17,23 +22,43 @@ interface IEmployeeList {
 }
 
 const LIMIT_DELTA = 9;
+const MIN_LIMIT = 12;
 
-export default function EmployeeList({ filters, term, paging, setPaging }: IEmployeeList) {
-    const [viewedItems, setViewedItems] = useState([])
+interface IEmployeeResult extends EmployeeDTO { location: LocationDTO }
+
+export interface IEmployeeListQueryResponse {
+    employeeList: {
+        count: number;
+        facets: IFacetResult[];
+        items: IEmployeeResult[];
+    }
+}
+
+export default function EmployeeList({ filters, term, paging }: IEmployeeList) {
+    const [hasScrolled, setHasScrolled] = useState<boolean>(false)
+    const { scrollTo, limit } = useQueryString();
+    const handlePageScroll = useScrollTo();
     const { data, fetchMore, loading } = useQuery(employeeListQuery, {
         notifyOnNetworkStatusChange: true,
-        fetchPolicy: "cache-and-network",
         variables: {
             sortType: 'ALPHANUMERIC',
             sortDirection: 'DOWN',
             term,
             facets: filters,
-            ...paging
-        },
-        onCompleted: () => {
-            setViewedItems(data?.employeeList?.items || [])
+            ...paging,
+            limit: limit ? Math.max(Number(limit), MIN_LIMIT) : paging.limit
         }
     })
+
+    const viewedItems = useQueryResultHydration<IEmployeeResult>(data?.employeeList?.items)
+
+    useEffect(() => {
+        if(!hasScrolled && viewedItems.length && scrollTo) {
+            handlePageScroll(Number(scrollTo))
+            history.replaceState(null, '', window.location.pathname);
+            setHasScrolled(true)
+        }
+    }, [viewedItems, scrollTo])
 
     const handleFetchMore = async() => {
 
@@ -48,7 +73,7 @@ export default function EmployeeList({ filters, term, paging, setPaging }: IEmpl
                 offset: data.employeeList.items.length,
                 limit: data.employeeList.items.length + LIMIT_DELTA,
             },
-            updateQuery: (prev, { fetchMoreResult }) => {
+            updateQuery: (prev: IEmployeeListQueryResponse, { fetchMoreResult }) => {
                 if (!fetchMoreResult) {
                     return prev;
                 }
@@ -76,21 +101,23 @@ export default function EmployeeList({ filters, term, paging, setPaging }: IEmpl
                     stateKey={FilterType.Employee}
                     facets={data?.employeeList?.facets}
                 />
-               <div className="EmployeeList__wrapper">
+               <Grid>
                    {
-                       viewedItems?.map((employee) => (
+                       viewedItems?.map((employee, i) => (
                            <EmployeeCard
                                key={`card-${employee.id}`}
                                id={employee.id}
+                               index={i}
                                name={`${employee.firstName} ${employee.lastName}`}
                                jobTitle={employee.jobTitle}
                                imageUrl={employee.imageUrl}
                                division={employee.division}
+                               location={employee.location}
                            />
                        ))
                    }
                    <ScrollBoundary onEnterViewport={handleFetchMore} />
-               </div>
+               </Grid>
             </div>
         </div>
     )

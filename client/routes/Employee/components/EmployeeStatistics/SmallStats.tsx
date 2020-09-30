@@ -1,10 +1,10 @@
-import {StatisticWidget} from "../../../components/Statistic";
-import {price, rank} from "../../../lib/utils/formatters";
-import {rankColorMap} from "../../../config/color.config";
+import {StatisticWidget} from "../../../../components/Statistic";
+import {price, rank} from "../../../../lib/utils/formatters";
+import {rankColorMap} from "../../../../config/color.config";
 import React from "react";
 
 
-export default function SmallStats({ data, loading }) {
+export default function SmallStats({data, loading}) {
     return (
         <section className="Statistics__flex-row">
             <StatisticWidget
