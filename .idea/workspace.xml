@@ -3,54 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/api/employee.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/employee.graphql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/api/employeeList.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/employeeList.graphql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/EmployeeCard/EmployeeCard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/EmployeeCard/EmployeeCard.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/EmployeeCard/EmployeeCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/EmployeeCard/EmployeeCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/EmployeeRow/EmployeeRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/EmployeeRow/EmployeeRow.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/config/tables.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/config/tables.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/routes/Employee/components/Employee.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/components/Employee.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Icon/Icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Icon/Icon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Navigation/components/Navigation-Desktop.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Navigation/components/Navigation-Desktop.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Navigation/styles/Navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Navigation/styles/Navigation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ScrollBoundary/ScrollBoundary.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ScrollBoundary/ScrollBoundary.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/config/navigation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/config/navigation.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/routes/EmployeeList/components/EmployeeList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/EmployeeList/components/EmployeeList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/10.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/11.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/12.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/13.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/14.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/14.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/15.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/15.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/16.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/16.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/17.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/17.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/18.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/18.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/19.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/19.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/20.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/20.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/21.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/21.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/22.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/22.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/23.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/23.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/24.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/24.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/25.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/25.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/26.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/26.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/27.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/27.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/28.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/28.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/29.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/29.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/30.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/30.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/31.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/31.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/32.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/32.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/33.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/33.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/34.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/34.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/35.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/35.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/36.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/36.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/9.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/data/employees.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/data/employees.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/entities/Employee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/entities/Employee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/searchSuggestors/createEmployeeSuggestions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/searchSuggestors/createEmployeeSuggestions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/searchSuggestors/createSaleSuggestions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/searchSuggestors/createSaleSuggestions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/schema/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/schema/schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/core/vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/core/vars.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +113,7 @@
       <workItem from="1601201133178" duration="34592000" />
       <workItem from="1601301419578" duration="8701000" />
       <workItem from="1601400038031" duration="16894000" />
-      <workItem from="1601458195522" duration="23262000" />
+      <workItem from="1601458195522" duration="32306000" />
     </task>
     <servers />
   </component>

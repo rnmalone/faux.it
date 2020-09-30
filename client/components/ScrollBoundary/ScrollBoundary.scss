@@ -1,4 +1,7 @@
 .ScrollBoundary {
+  position: relative;
   width: 100vw;
   height: 10px;
+  transform: translateY(-5px);
+  bottom: 0;
 }

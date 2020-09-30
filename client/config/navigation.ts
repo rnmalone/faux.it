@@ -1,3 +1,5 @@
+import {IconType} from "../components/Icon/Icon";
+
 export interface INavigationRoute {
     displayName: string;
     route: string;
@@ -6,10 +8,12 @@ export interface INavigationRoute {
 export const NAVIGATION_ROUTES = [
     {
         displayName: 'Employees',
-        route: '/employees'
+        route: '/employees',
+        icon: IconType.Employee
     },
     {
         displayName: 'Sales',
-        route: '/sales'
+        route: '/sales',
+        icon: IconType.Graph
     }
 ]

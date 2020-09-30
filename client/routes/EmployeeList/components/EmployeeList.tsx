@@ -117,8 +117,8 @@ export default function EmployeeList({ filters, term, paging }: IEmployeeList) {
                            />
                        ))
                    }
-                   <ScrollBoundary onEnterViewport={handleFetchMore} />
                </Grid>
+                <ScrollBoundary onEnterViewport={handleFetchMore} />
             </div>
         </div>
     )
