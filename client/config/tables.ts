@@ -1,7 +1,7 @@
 export const EMPLOYEE_LIST_TABLE_COLUMNS = [
     {
         Header: '',
-        accessor: 'imageUrl'
+        accessor: 'profileImageUrl'
     },
     {
         Header: 'Name',

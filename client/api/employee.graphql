@@ -4,7 +4,7 @@ query Employee($id: Int) {
         lastName
         division
         jobTitle
-        imageUrl
+        profileImageUrl
         email
         salary
         commissionRate

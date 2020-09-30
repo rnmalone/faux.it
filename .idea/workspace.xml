@@ -3,33 +3,54 @@
   <component name="ChangeListManager">
     <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Division/Division.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Division/Division.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Division/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Division/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Dropdown/Dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Dropdown/Dropdown.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Dropdown/Dropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Dropdown/Dropdown.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/api/employee.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/employee.graphql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/api/employeeList.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/employeeList.graphql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/EmployeeCard/EmployeeCard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/EmployeeCard/EmployeeCard.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/EmployeeCard/EmployeeCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/EmployeeCard/EmployeeCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Filters/component/Filters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Filters/component/Filters.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Filters/styles/Filters.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Filters/styles/Filters.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Flag/Flag.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Flag/Flag.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Flag/Flag.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Flag/Flag.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ScrollBoundary/ScrollBoundary.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ScrollBoundary/ScrollBoundary.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ScrollBoundary/ScrollBoundary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ScrollBoundary/ScrollBoundary.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Statistic/components/Statistic.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Statistic/components/Statistic.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/lib/hooks/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/hooks/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/EmployeeRow/EmployeeRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/EmployeeRow/EmployeeRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/config/tables.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/config/tables.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/routes/Employee/components/Employee.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/components/Employee.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/routes/Employee/components/GenderInsights.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/components/EmployeeStatistics/GenderInsights.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/routes/Employee/components/SmallStats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/components/EmployeeStatistics/SmallStats.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/routes/Employee/components/Statistics.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/components/EmployeeStatistics/EmployeeStatistics.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/routes/EmployeeList/components/EmployeeList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/EmployeeList/components/EmployeeList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/routes/EmployeeList/styles/EmployeeList.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/EmployeeList/styles/EmployeeList.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/data/locations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/data/locations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/11.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/12.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/13.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/14.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/14.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/15.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/15.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/16.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/16.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/17.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/17.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/18.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/18.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/19.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/19.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/20.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/20.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/21.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/21.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/22.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/22.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/23.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/23.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/24.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/24.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/25.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/25.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/26.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/26.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/27.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/27.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/28.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/28.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/29.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/29.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/30.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/30.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/31.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/31.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/32.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/32.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/33.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/33.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/34.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/34.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/35.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/35.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/36.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/36.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/data/employees.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/data/employees.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/entities/Employee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/entities/Employee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/Results.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/Results.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/facetExtractor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/facetExtractor.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/searchSuggestors/createEmployeeSuggestions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/searchSuggestors/createEmployeeSuggestions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/searchSuggestors/createSaleSuggestions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/searchSuggestors/createSaleSuggestions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/schema/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/schema/schema.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,11 +100,11 @@
       <recent name="C:\Users\Rorym\Documents\faux.it\client\assets\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Rory Malone\Documents\faux.it\server\assets\images\banner" />
+      <recent name="C:\Users\Rory Malone\Documents\faux.it\server\assets\images\profile" />
       <recent name="C:\Users\Rory Malone\Documents\faux.it\client\routes\Employee\components\EmployeeStatistics" />
       <recent name="C:\Users\Rory Malone\Documents\faux.it\client\assets\images\flags" />
       <recent name="C:\Users\Rory Malone\Documents\faux.it\client\components" />
-      <recent name="C:\Users\Rory Malone\Documents\faux.it\client\lib\utils\formatters" />
-      <recent name="C:\Users\Rory Malone\Documents\faux.it\client\components\Statistic\components" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -133,7 +154,7 @@
       <workItem from="1601201133178" duration="34592000" />
       <workItem from="1601301419578" duration="8701000" />
       <workItem from="1601400038031" duration="16894000" />
-      <workItem from="1601458195522" duration="19054000" />
+      <workItem from="1601458195522" duration="23262000" />
     </task>
     <servers />
   </component>
@@ -185,13 +206,13 @@
     </state>
     <state x="123" y="124" width="2315" height="1153" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-1920.366.1920.1040/2560.366.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1600597211670" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600275661711" />
-    <state x="861" y="324" width="836" height="840" key="find.popup" timestamp="1601412056288">
+    <state x="861" y="324" width="836" height="840" key="find.popup" timestamp="1601483196846">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="861" y="324" width="836" height="840" key="find.popup/-1920.160.1920.1040/0.0.2560.1400/2560.160.1920.1040@0.0.2560.1400" timestamp="1601412056288" />
     <state x="861" y="324" width="836" height="840" key="find.popup/-1920.160.1920.1040/2560.160.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1601048213166" />
     <state x="646" y="241" width="627" height="624" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600274308240" />
-    <state x="861" y="324" width="836" height="840" key="find.popup/0.0.2560.1400/-1920.160.1920.1040/2560.160.1920.1040@0.0.2560.1400" timestamp="1601132351419" />
+    <state x="861" y="324" width="836" height="840" key="find.popup/0.0.2560.1400/-1920.160.1920.1040/2560.160.1920.1040@0.0.2560.1400" timestamp="1601483196846" />
     <state x="821" y="323" key="run.anything.popup" timestamp="1601211806895">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

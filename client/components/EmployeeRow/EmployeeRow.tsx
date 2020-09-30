@@ -18,7 +18,7 @@ export default function EmployeeRow({rowProps, cells, original}: IEmployeeRowPro
     const rowCellRenderableMap: {
         [key: string]: (cell: Cell<IEmployeeEntity>) => any
     } = {
-        imageUrl: (cell) => <img className="lazy-image thumbnail" src={cell.value}/>,
+        profileImageUrl: (cell) => <img className="lazy-image thumbnail" src={cell.value}/>,
         name: (cell) => (<div className="EmployeeRow__name">
             {`${cell.row.original.firstName} ${cell.row.original.lastName}`}
             <span>{cell.row.original.jobTitle}</span>

@@ -30,7 +30,10 @@ export default class Employee {
     joinDate: Date;
 
     @Column()
-    imageUrl: string;
+    bannerImageUrl: string;
+
+    @Column()
+    profileImageUrl: string;
 
     @Column()
     email: string;
@@ -42,4 +45,4 @@ export default class Employee {
     sales: Sale[];
 }
 
-export type EmployeeDTO = Pick<Employee, 'id' | 'firstName' | 'lastName' | 'jobTitle' | 'division' | 'salary' | 'commissionRate' | 'joinDate' | 'imageUrl' | 'email' | 'locationId'>
+export type EmployeeDTO = Pick<Employee, 'id' | 'firstName' | 'lastName' | 'jobTitle' | 'division' | 'salary' | 'commissionRate' | 'joinDate' | 'profileImageUrl' | 'bannerImageUrl' |  'email' | 'locationId'>

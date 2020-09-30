@@ -10,11 +10,45 @@
   transition: transform .2s ease-in-out;
   padding: 0 !important;
 
-  > div {
-    width: calc(100% - 4rem);
+  //> div {
+  //  width: calc(100% - 4rem);
+  //}
+
+  &__img-container {
+    height: 80px;
+    width: 100%;
+    position: relative;
+
+    &__inner {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    &__banner {
+      opacity: .5;
+      position: absolute;
+      display: block;
+      width: 100%;
+      transform: translateY(-30%);
+      transition: opacity .3s ease-in-out;
+      top: 0;
+      left: 0;
+    }
+
+    &__profile {
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      height: 80px !important;
+      width: 80px !important;
+      transform: translateX(-50%);
+    }
   }
 
   &__body {
+    margin-top: 1rem;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -23,6 +57,10 @@
 
   &:hover {
     transform: scale(1.02);
+
+    .EmployeeCard__img-container__banner {
+      opacity: 1;
+    }
 
     &:after {
       opacity: 1;
@@ -43,11 +81,6 @@
     transition: opacity .2s ease-in-out;
   }
 
-  &__img {
-    height: 80px !important;
-    width: 80px !important;
-  }
-
   h6 {
     margin: .5rem 0;
   }
@@ -64,5 +97,6 @@
     justify-content: space-between;
     padding: 1rem 2rem;
     border-top: $border-color 1px solid;
+      width: calc(100% - 4rem);
   }
 }

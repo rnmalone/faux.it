@@ -10,7 +10,7 @@ export default function createEmployeeSuggestions(items: Fuse.FuseResult<Employe
             entity: 'EMPLOYEE',
             primaryText: `${matchedProperties?.firstName || employee.firstName} ${matchedProperties?.lastName || employee.lastName}`,
             secondaryText: matchedProperties?.email || matchedProperties?.jobTitle || matchedProperties?.division,
-            imageUrl: employee.imageUrl,
+            profileImageUrl: employee.profileImageUrl,
             score
         }
     })

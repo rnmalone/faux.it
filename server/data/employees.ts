@@ -11,7 +11,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 2,
         email: 'Stourton.montgomery@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/1.jpg',
+        profileImageUrl: '/assets/images/profile/1.jpg',
+        bannerImageUrl: '/assets/images/banner/1.jpeg',
         locationId: 1,
     },
     {
@@ -24,7 +25,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 2,
         email: 'Ophelia.draytonclerk@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/2.jpg',
+        profileImageUrl: '/assets/images/profile/2.jpg',
+        bannerImageUrl: '/assets/images/banner/2.jpeg',
         locationId: 1
     },
     {
@@ -37,7 +39,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 1.5,
         email: 'Contstantine.Highbury@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/3.jpg',
+        profileImageUrl: '/assets/images/profile/3.jpg',
+        bannerImageUrl: '/assets/images/banner/3.jpeg',
         locationId: 1
     },
     {
@@ -50,7 +53,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 5.5,
         email: 'Maximillian.devolle@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/4.jpg',
+        profileImageUrl: '/assets/images/profile/4.jpg',
+        bannerImageUrl: '/assets/images/banner/4.jpeg',
         locationId: 2
     },
     {
@@ -63,7 +67,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 5.67,
         email: 'Elijah.HargreaveBrewer@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/5.jpg',
+        profileImageUrl: '/assets/images/profile/5.jpg',
+        bannerImageUrl: '/assets/images/banner/5.jpeg',
         locationId: 2
     },
     {
@@ -76,7 +81,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 1,
         email: 'bazza@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/6.jpg',
+        profileImageUrl: '/assets/images/profile/6.jpg',
+        bannerImageUrl: '/assets/images/banner/6.jpg',
         locationId: 6
     },
     {
@@ -89,7 +95,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 6,
         email: 'edwina.chinsranton@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/7.jpg',
+        profileImageUrl: '/assets/images/profile/7.jpg',
+        bannerImageUrl: '/assets/images/banner/7.jpeg',
         locationId: 3
     },
     {
@@ -102,7 +109,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 6,
         email: 'prudence.whitehall@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/8.jpg',
+        profileImageUrl: '/assets/images/profile/8.jpg',
+        bannerImageUrl: '/assets/images/banner/8.jpeg',
         locationId: 3
     },
     {
@@ -115,7 +123,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 6.1,
         email: 'claudette.winthrope@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/9.jpg',
+        profileImageUrl: '/assets/images/profile/9.jpg',
+        bannerImageUrl: '/assets/images/banner/9.jpeg',
         locationId: 3
     },
     {
@@ -128,7 +137,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 2,
         email: 'miles.izzardcrew@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/10.jpg',
+        profileImageUrl: '/assets/images/profile/10.jpg',
+        bannerImageUrl: '/assets/images/banner/10.jpeg',
         locationId: 2
     },
     {
@@ -141,7 +151,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 0,
         email: 'tobias.forbes@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/11.jpg',
+        profileImageUrl: '/assets/images/profile/11.jpg',
+        bannerImageUrl: '/assets/images/banner/11.jpeg',
         locationId: 2
     },
     {
@@ -154,7 +165,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 3.56,
         email: 'antoinette.stclaire@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/12.jpg',
+        profileImageUrl: '/assets/images/profile/12.jpg',
+        bannerImageUrl: '/assets/images/banner/12.jpeg',
         locationId: 5
     },
     {
@@ -167,7 +179,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 4.70,
         email: 'sterling.hillingham@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/13.jpg',
+        profileImageUrl: '/assets/images/profile/13.jpg',
+        bannerImageUrl: '/assets/images/banner/13.jpeg',
         locationId: 5
     },
     {
@@ -180,7 +193,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 4.70,
         email: 'arthur.garrington@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/14.jpg',
+        profileImageUrl: '/assets/images/profile/14.jpg',
+        bannerImageUrl: '/assets/images/banner/14.jpeg',
         locationId: 5
     },
     {
@@ -193,7 +207,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 4.70,
         email: 'claudette.montcroix@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/15.jpg',
+        profileImageUrl: '/assets/images/profile/15.jpg',
+        bannerImageUrl: '/assets/images/banner/15.jpeg',
         locationId: 5
     },
     {
@@ -206,7 +221,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 4.70,
         email: 'mirabelee.musgrave@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/16.jpg',
+        profileImageUrl: '/assets/images/profile/16.jpg',
+        bannerImageUrl: '/assets/images/banner/16.jpeg',
         locationId: 5
     },
     {
@@ -219,7 +235,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 4.70,
         email: 'lucretia.breckenridge@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/17.jpg',
+        profileImageUrl: '/assets/images/profile/17.jpg',
+        bannerImageUrl: '/assets/images/banner/17.jpeg',
         locationId: 4
     },
     {
@@ -232,7 +249,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 4.70,
         email: 'mattias.charmant@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/18.jpg',
+        profileImageUrl: '/assets/images/profile/18.jpg',
+        bannerImageUrl: '/assets/images/banner/18.jpeg',
         locationId: 4
     },
     {
@@ -245,7 +263,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 7.70,
         email: 'terrence.duclare@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/19.jpg',
+        profileImageUrl: '/assets/images/profile/19.jpg',
+        bannerImageUrl: '/assets/images/banner/19.jpeg',
         locationId: 1
     },
     {
@@ -258,7 +277,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 6.40,
         email: 'mattias.charmant@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/20.jpg',
+        profileImageUrl: '/assets/images/profile/20.jpg',
+        bannerImageUrl: '/assets/images/banner/20.jpeg',
         locationId: 2
     },
     {
@@ -271,7 +291,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 4.40,
         email: 'lothurr.kvasir@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/21.jpg',
+        profileImageUrl: '/assets/images/profile/21.jpg',
+        bannerImageUrl: '/assets/images/banner/21.jpeg',
         locationId: 2
     },
     {
@@ -284,7 +305,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 4.40,
         email: 'bridgette.conwyn@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/22.jpg',
+        profileImageUrl: '/assets/images/profile/22.jpg',
+        bannerImageUrl: '/assets/images/banner/22.jpeg',
         locationId: 2
     },
     {
@@ -297,7 +319,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 4.40,
         email: 'olivette.forrest@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/23.jpg',
+        profileImageUrl: '/assets/images/profile/23.jpg',
+        bannerImageUrl: '/assets/images/banner/23.jpg',
         locationId: 2
     },
     {
@@ -310,7 +333,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 1.40,
         email: 'donald.donaldson@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/24.jpg',
+        profileImageUrl: '/assets/images/profile/24.jpg',
+        bannerImageUrl: '/assets/images/banner/24.jpeg',
         locationId: 2
     },
     {
@@ -323,7 +347,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 2,
         email: 'enrique.boleslaowic@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/25.jpg',
+        profileImageUrl: '/assets/images/profile/25.jpg',
+        bannerImageUrl: '/assets/images/banner/25.jpeg',
         locationId: 2
     },
     {
@@ -336,7 +361,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 7,
         email: 'vladamir.volgrad@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/26.jpg',
+        profileImageUrl: '/assets/images/profile/26.jpg',
+        bannerImageUrl: '/assets/images/banner/26.jpg',
         locationId: 2
     },
     {
@@ -349,7 +375,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 7,
         email: 'helga.windamir@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/27.jpg',
+        profileImageUrl: '/assets/images/profile/27.jpg',
+        bannerImageUrl: '/assets/images/banner/27.jpeg',
         locationId: 2
     },
     {
@@ -362,7 +389,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 10,
         email: 'vladamir.volgrad@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/28.jpg',
+        profileImageUrl: '/assets/images/profile/28.jpg',
+        bannerImageUrl: '/assets/images/banner/28.jpeg',
         locationId: 7
     },
     {
@@ -375,7 +403,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 10,
         email: 'martilla.ykigarvi@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/29.jpg',
+        profileImageUrl: '/assets/images/profile/29.jpg',
+        bannerImageUrl: '/assets/images/banner/29.jpeg',
         locationId: 7
     },
     {
@@ -388,7 +417,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 11.5,
         email: 'nykanen.hameenkoski@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/30.jpg',
+        profileImageUrl: '/assets/images/profile/30.jpg',
+        bannerImageUrl: '/assets/images/banner/30.jpeg',
         locationId: 7
     },
     {
@@ -401,7 +431,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 10.5,
         email: 'ojankangas.uusikaupunki@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/31.jpg',
+        profileImageUrl: '/assets/images/profile/31.jpg',
+        bannerImageUrl: '/assets/images/banner/31.jpeg',
         locationId: 7
     },
     {
@@ -414,7 +445,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 25.5,
         email: 'nykanen.hameenkoski@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/32.jpg',
+        profileImageUrl: '/assets/images/profile/32.jpg',
+        bannerImageUrl: '/assets/images/banner/32.jpeg',
         locationId: 7
     },
     {
@@ -427,11 +459,12 @@ const employees: EmployeeDTO[] = [
         commissionRate: 2.5,
         email: 'herleif.bjorn@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/33.jpg',
+        profileImageUrl: '/assets/images/profile/33.jpg',
+        bannerImageUrl: '/assets/images/banner/33.jpeg',
         locationId: 7
     },
     {
-        id: 35,
+        id: 34,
         firstName: 'Ahmose',
         lastName: 'Menkauhor Kaiu',
         jobTitle: 'Sales Intern',
@@ -440,11 +473,12 @@ const employees: EmployeeDTO[] = [
         commissionRate: 2.5,
         email: 'ahmose.menkauhorkaiu@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/35.jpg',
+        profileImageUrl: '/assets/images/profile/35.jpg',
+        bannerImageUrl: '/assets/images/banner/34.jpeg',
         locationId: 7
     },
     {
-        id: 34,
+        id: 35,
         firstName: 'Xerxes',
         lastName: 'Shepseska',
         jobTitle: 'Sales Intern',
@@ -453,7 +487,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 2.5,
         email: 'xerxes.shepseska@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/34.jpg',
+        profileImageUrl: '/assets/images/profile/34.jpg',
+        bannerImageUrl: '/assets/images/banner/35.jpeg',
         locationId: 7
     },
     {
@@ -466,7 +501,8 @@ const employees: EmployeeDTO[] = [
         commissionRate: 2.5,
         email: 'themistocles.phrearrhii@faux.it',
         joinDate: new Date(),
-        imageUrl: '/assets/images/36.jpg',
+        profileImageUrl: '/assets/images/profile/36.jpg',
+        bannerImageUrl: '/assets/images/banner/36.jpeg',
         locationId: 7
     }
 ]

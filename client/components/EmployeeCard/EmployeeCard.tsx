@@ -8,7 +8,8 @@ import {LocationDTO} from "../../../server/entities/Location";
 interface IEmployeeCard {
     id: number;
     name: string;
-    imageUrl: string;
+    profileImageUrl: string;
+    bannerImageUrl: string;
     jobTitle: string;
     division: string;
     index: number;
@@ -18,7 +19,8 @@ interface IEmployeeCard {
 export default function EmployeeCard({
     id,
     name,
-    imageUrl,
+    profileImageUrl,
+                                         bannerImageUrl,
     jobTitle,
     division,
     index,
@@ -33,8 +35,13 @@ export default function EmployeeCard({
 
     return (
         <div className="page-item EmployeeCard" onClick={handleClick}>
+            <div className="EmployeeCard__img-container">
+                <div className="EmployeeCard__img-container__inner">
+                    <img className="EmployeeCard__img-container__banner" src={bannerImageUrl} />
+                </div>
+                <img className="EmployeeCard__img-container__profile thumbnail" src={profileImageUrl}/>
+            </div>
             <div className="EmployeeCard__body">
-                <img className="EmployeeCard__img thumbnail" src={imageUrl}/>
                 <h6>{name}</h6>
                 <span>{jobTitle}</span>
             </div>

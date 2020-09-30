@@ -110,7 +110,8 @@ export default function EmployeeList({ filters, term, paging }: IEmployeeList) {
                                index={i}
                                name={`${employee.firstName} ${employee.lastName}`}
                                jobTitle={employee.jobTitle}
-                               imageUrl={employee.imageUrl}
+                               profileImageUrl={employee.profileImageUrl}
+                               bannerImageUrl={employee.bannerImageUrl}
                                division={employee.division}
                                location={employee.location}
                            />

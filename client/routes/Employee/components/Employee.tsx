@@ -19,7 +19,7 @@ export default function Employee() {
     return (
         <div className="page">
             <div className="page__upper Employee__upper">
-                <img alt={id} className="lazy-image Employee__dp" src={data?.employee?.imageUrl}/>
+                <img alt={id} className="lazy-image Employee__dp" src={data?.employee?.profileImageUrl}/>
                 <div className="Employee__upper__details">
                     <div className="Employee__upper__details__header">
                         <TextPlaceholder

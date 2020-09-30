@@ -32,7 +32,8 @@ query EmployeeList(
             lastName
             division
             jobTitle
-            imageUrl
+            profileImageUrl
+            bannerImageUrl
             location {
                 address
                 countryName

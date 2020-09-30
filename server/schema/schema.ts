@@ -12,7 +12,8 @@ const typeDefs = gql`
         salary: Int
         commissionRate: Float
         joinDate: String
-        imageUrl: String
+        profileImageUrl: String
+        bannerImageUrl: String
         email: String
         location: Location
         sales: [Sale]
@@ -118,7 +119,7 @@ const typeDefs = gql`
         entity: Entity!
         primaryText: String
         secondaryText: String
-        imageUrl: String
+        profileImageUrl: String
         score: Int
     }
     
