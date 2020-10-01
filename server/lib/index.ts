@@ -8,3 +8,4 @@ export {default as Results} from './Results';
 export {default as createDelta} from './createDelta';
 export {default as getGraphXAxisKeyByTimeframeSize} from './getGraphXAxisKeyByTimeframeSize';
 export {default as logger} from './logger';
+export {default as createDatesFromTimeframe} from './createDatesFromTimeframe';

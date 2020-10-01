@@ -81,7 +81,7 @@ export default function EmployeeStatistics({ id, division }: IEmployeeStatistics
                 <div className="fill-remaining">
                     <ResponsiveContainer width={'100%'} height={'100%'}>
                         <LineChart
-                            data={data?.employeeStatistics?.profitGraph}
+                            data={data?.employeeStatistics?.revenueGraph}
                             margin={{
                                 top: 16, left: 40, bottom: 16,
                             }}
@@ -89,7 +89,7 @@ export default function EmployeeStatistics({ id, division }: IEmployeeStatistics
                             <XAxis stroke={colors.lightGrey} dataKey="date" />
                             <YAxis tickCount={3} stroke={colors.lightGrey} tickFormatter={price} tickSize={10} />
                             <Tooltip />
-                            <Line strokeWidth={3} type="monotone" dataKey="profit" stroke={colors.primary} fillOpacity={1} fill={colors.primary} />
+                            <Line strokeWidth={3} type="monotone" dataKey="revenue" stroke={colors.primary} fillOpacity={1} fill={colors.primary} />
                         </LineChart>
                     </ResponsiveContainer>
                 </div>

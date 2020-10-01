@@ -154,9 +154,16 @@ const typeDefs = gql`
         grossProfitMargin: Delta
     }
     
-    type ProfitGraphEntry {
-        profit: Float
+    type RevenueGraphEntry {
+        revenue: Float
         date: String
+    }
+    
+    type GenericSalesGraphEntry {
+       revenue: Float
+        profit: Float
+        sales: Float
+        label: String
     }
     
     type SaleStatusGraphEntry {
@@ -187,12 +194,34 @@ const typeDefs = gql`
     
     type EmployeeSalesStatistics {
         stats: EmployeePerformanceStatistics
-        profitGraph: [ProfitGraphEntry]
+        revenueGraph: [RevenueGraphEntry]
         salesStatusPieChartData: [SaleStatusPieEntry]
         saleStatusGraph: [SaleStatusGraphEntry]
         productCategoryProfit: [ProductCategoryProfit]
         saleSourceProfit: [SaleSourceProfit]
         saleCustomerStats: [SaleCustomerStatsByGender]
+    }
+    
+    type SalesOverviewPerformanceStatistics {
+        revenue: Delta
+        grossSalesProfit: Delta
+        uniqueCustomers: Delta
+        sales: Delta
+
+#        saleConversion: Delta
+#        revenuePcFromRepeatCustomers: Delta
+#        salesCostPcOfRevenue: Delta
+#        saleConversionDays: Delta
+#        totalComissionPaid: Delta
+#        totalEmployeeSalaries: Delta
+#        totalEmployeeExpenditure: Delta
+    }
+    
+    type SalesOverviewStatistics {
+        stats: SalesOverviewPerformanceStatistics
+        revenueGraph: [RevenueGraphEntry]
+        divisionRevenueGraph: [GenericSalesGraphEntry]
+        salesLeadRevenueGraph: [GenericSalesGraphEntry]
     }
    
     type Query {
@@ -220,6 +249,10 @@ const typeDefs = gql`
             id: Int!
             timeframe: Int!
         ): EmployeeSalesStatistics
+        
+        salesOverviewStatistics(
+            timeframe: Int!
+        ): SalesOverviewStatistics
     }
 `
 

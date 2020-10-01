@@ -1,20 +1,20 @@
 import {IContext} from "../server";
 import {IListQueryInput} from "./employee";
 import {Sale} from "../entities";
-import {createDelta, logger, Results} from "../lib";
+import {createDatesFromTimeframe, createDelta, logger, Results} from "../lib";
 import {
     selectAllSales,
-    selectEmployeeProductCategoryProfit, selectEmployeeSaleSourceProfit, selectSaleCustomerStats,
-    selectSaleGraphDataForEmployee,
+    selectEmployeeProductCategoryProfit,
+    selectEmployeeSaleSourceProfit,
+    selectReducibleStatsForAllSales, selectRevenueFromSales, selectRevenueFromSalesByEmployee,
+    selectSaleCustomerStats,
+    selectSaleGraphDataForEmployee, selectSalesStatsForDivisions, selectSalesStatsForSalesChannels,
     selectSaleStatusForEmployee
 } from "../lib/queries";
 import {SALE_SEARCHABLE_FIELDS} from "../config/search.config";
 import buildEmployeeSalesStatistics from "./employeeStatistics/buildEmployeeSalesStatistics";
-import moment from "moment";
-import selectProfitFromSalesByEmployee from "../lib/queries/selectProfitFromSalesByEmployee";
 import reduceGraphArray from "../lib/reduceGraphArray";
 import {Timeframe} from "../@types/Stats/Timeframe";
-import {dataPointsByTimeFrame, dateIteratorSubtractByTimeFrame} from "../config/timeframe.config";
 
 const SALE_FACET_FIELDS: (keyof Partial<Sale>)[] = [
     'status'
@@ -47,17 +47,14 @@ const saleResolver = {
             return resultsBuilder.getResponseObject()
         },
         employeeStatistics: async (root: any, { id, timeframe }: IEmployeeStatisticsInput , {connection}: IContext) => {
-            const dateTo = moment().toISOString()
-            // @ts-ignore
-            const dateFrom = moment().subtract(dataPointsByTimeFrame[timeframe], dateIteratorSubtractByTimeFrame[timeframe]).toISOString()
-            logger.info(`Query: employeeStatistics ID: ${id}, TIMEFRAME: ${timeframe}`)
-            const dayRange = moment(dateTo).diff(moment(dateFrom), 'days')
-            const doubleTimeRangeMoment = moment(dateFrom).subtract(dayRange, 'days')
+            const { dateFrom, dateTo, doubleTimeRangeMoment } = createDatesFromTimeframe(timeframe)
 
-            const [currentTerm, previousTerm, profitGraphEntries, salesStatusPieChartData, salesStatusGraphEntries, productCategoryProfit, saleSourceProfit, saleCustomerStats] = await Promise.all([
+            logger.info(`Query: employeeStatistics ID: ${id}, TIMEFRAME: ${timeframe}`)
+
+            const [currentTerm, previousTerm, revenueGraphEntries, salesStatusPieChartData, salesStatusGraphEntries, productCategoryProfit, saleSourceProfit, saleCustomerStats] = await Promise.all([
                 buildEmployeeSalesStatistics(connection, id, { dateFrom, dateTo }),
-                buildEmployeeSalesStatistics(connection, id, { dateFrom: doubleTimeRangeMoment.toISOString(), dateTo: dateFrom }),
-                selectProfitFromSalesByEmployee(connection, id, { dateFrom, dateTo }),
+                buildEmployeeSalesStatistics(connection, id, { dateFrom: doubleTimeRangeMoment, dateTo: dateFrom }),
+                selectRevenueFromSalesByEmployee(connection, id, { dateFrom, dateTo }),
                 selectSaleStatusForEmployee(connection, id, { dateFrom, dateTo }),
                 selectSaleGraphDataForEmployee(connection, id, { dateFrom, dateTo }),
                 selectEmployeeProductCategoryProfit(connection, id, { dateFrom, dateTo }),
@@ -68,7 +65,7 @@ const saleResolver = {
             if(currentTerm && previousTerm) {
                 return {
                     stats: createDelta(currentTerm, previousTerm),
-                    profitGraph: reduceGraphArray(timeframe, profitGraphEntries, ['profit']),
+                    revenueGraph: reduceGraphArray(timeframe, revenueGraphEntries, ['revenue']),
                     salesStatusPieChartData,
                     saleStatusGraph: reduceGraphArray(timeframe,salesStatusGraphEntries, ['closed', 'completed']),
                     productCategoryProfit,
@@ -78,6 +75,32 @@ const saleResolver = {
             }
 
             return null
+        },
+        salesOverviewStatistics: async (root: any, { timeframe }: { timeframe: number } , { connection }: IContext) => {
+            const { dateFrom, dateTo, doubleTimeRangeMoment } = createDatesFromTimeframe(timeframe);
+
+            const [
+                reducedStatsForSalesCurrentTerm,
+                reducedStatsForSalesPreviousTerm,
+                revenueGraphEntries,
+                divisionSalesStats,
+                salesLeadSalesStats
+            ] = await Promise.all([
+                selectReducibleStatsForAllSales(connection, { dateFrom, dateTo }),
+                selectReducibleStatsForAllSales(connection, { dateFrom: doubleTimeRangeMoment, dateTo: dateFrom }),
+                selectRevenueFromSales(connection, { dateFrom, dateTo }),
+                selectSalesStatsForDivisions(connection, { dateFrom, dateTo }),
+                selectSalesStatsForSalesChannels(connection, { dateFrom, dateTo })
+            ])
+
+            const delta = createDelta(reducedStatsForSalesCurrentTerm[0], reducedStatsForSalesPreviousTerm[0])
+
+            return {
+                stats: delta,
+                revenueGraph: reduceGraphArray(timeframe, revenueGraphEntries, ['revenue']),
+                salesLeadRevenueGraph: salesLeadSalesStats,
+                divisionRevenueGraph: divisionSalesStats,
+            }
         }
     }
 }

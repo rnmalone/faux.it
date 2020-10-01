@@ -10,3 +10,8 @@ export {default as selectSaleGraphDataForEmployee} from './selectSaleStatusGraph
 export {default as selectEmployeeProductCategoryProfit} from './selectEmployeeProductCategoryProfit';
 export {default as selectEmployeeSaleSourceProfit} from './selectEmployeeSaleSourceProfit';
 export {default as selectSaleCustomerStats} from './selectSaleCustomerStats';
+export {default as selectReducibleStatsForAllSales} from './selectReducibleStatsForAllSales';
+export {default as selectRevenueFromSalesByEmployee} from './selectRevenueFromSalesByEmployee';
+export {default as selectRevenueFromSales} from './selectRevenueFromSales';
+export {default as selectSalesStatsForDivisions} from './selectSalesStatsForDivisions';
+export {default as selectSalesStatsForSalesChannels} from './selectSalesStatsForSalesChannels';

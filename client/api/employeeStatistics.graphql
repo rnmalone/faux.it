@@ -67,9 +67,9 @@ query Employee($id: Int!, $timeframe: Int!) {
                 current
             }
         }
-        profitGraph{
+        revenueGraph{
             date
-            profit
+            revenue
         }
         salesStatusPieChartData {
             status

@@ -136,6 +136,8 @@ const leadSources = [
     'Telephone'
 ]
 
+const repeatCustomerBuffer: string[] = []
+
 export default function createMockSales() {
 
     return employees.reduce((a: SaleDTO[], employee) => {
@@ -144,7 +146,7 @@ export default function createMockSales() {
         // @ts-ignore
         const employeeSales: SaleDTO[] = Array(numberOfSales)
             .fill(null)
-            .map((_: any, i) => {
+            .map((_: null, i) => {
                 const { division } = employee
                 // @ts-ignore
                 const bounds = priceBounds[division]
@@ -166,6 +168,12 @@ export default function createMockSales() {
                     status = SaleStatus.AwaitingPayment
                 }
 
+                const repeatCustomer: boolean = Math.random() > .15
+                let customerName = chance.name()
+                if(Math.random() > .15 && repeatCustomerBuffer.length) {
+                    customerName = repeatCustomerBuffer[getRandomInt(0, repeatCustomerBuffer.length -1)]
+                } else if(repeatCustomer) repeatCustomerBuffer.push(customerName)
+
                 return {
                     employeeId,
                     item,
@@ -173,7 +181,7 @@ export default function createMockSales() {
                     agreedPrice,
                     customerAge: getRandomInt(18, 80),
                     daysItemOnSale: getRandomInt(0, 100),
-                    customerName: chance.name(),
+                    customerName,
                     status,
                     leadSource: leadSources[getRandomInt(0, leadSources.length - 1)],
                     customerGender: chance.gender(),

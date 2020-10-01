@@ -3,15 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Flag/Flag.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Flag/Flag.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Value/Value.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Value/Value.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/api/employeeStatistics.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/employeeStatistics.graphql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/routes/Employee/components/EmployeeStatistics/EmployeeStatistics.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/components/EmployeeStatistics/EmployeeStatistics.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/profile/12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/12.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/profile/20.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/20.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/profile/8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/data/employees.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/data/employees.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/data/locations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/data/locations.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/lib/db/mock/createMockSales.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/db/mock/createMockSales.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/queries/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectProfitFromSalesByEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectRevenueFromSalesByEmployee.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/resolvers/sale.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/sale.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/schema/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/schema/schema.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +115,7 @@
       <workItem from="1601301419578" duration="8701000" />
       <workItem from="1601400038031" duration="16894000" />
       <workItem from="1601458195522" duration="38259000" />
+      <workItem from="1601553749515" duration="10215000" />
     </task>
     <servers />
   </component>
@@ -150,18 +150,19 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="92" y="92" width="2376" height="1216" key="DiffContextDialog/-1920.366.1920.1040/2560.366.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1600597211670" />
-    <state x="987" y="369" key="FileChooserDialogImpl" timestamp="1601415584877">
+    <state x="987" y="369" key="FileChooserDialogImpl" timestamp="1601555535046">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="987" y="369" key="FileChooserDialogImpl/-1920.160.1920.1040/0.0.2560.1400/2560.160.1920.1040@0.0.2560.1400" timestamp="1601415584877" />
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595453665824" />
-    <state x="941" y="360" key="SettingsEditor" timestamp="1601459051829">
+    <state x="987" y="369" key="FileChooserDialogImpl/0.0.2560.1400/-1920.160.1920.1040/2560.160.1920.1040@0.0.2560.1400" timestamp="1601555535046" />
+    <state x="941" y="360" key="SettingsEditor" timestamp="1601555721579">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="941" y="360" key="SettingsEditor/-1920.160.1920.1040/0.0.2560.1400/2560.160.1920.1040@0.0.2560.1400" timestamp="1601416267866" />
     <state x="941" y="360" key="SettingsEditor/-1920.366.1920.1040/2560.366.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1600595431237" />
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600114912046" />
-    <state x="941" y="360" key="SettingsEditor/0.0.2560.1400/-1920.160.1920.1040/2560.160.1920.1040@0.0.2560.1400" timestamp="1601459051829" />
+    <state x="941" y="360" key="SettingsEditor/0.0.2560.1400/-1920.160.1920.1040/2560.160.1920.1040@0.0.2560.1400" timestamp="1601555721579" />
     <state x="123" y="124" width="2315" height="1153" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600597211670">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -183,5 +184,16 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600201807480" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/lib/queries/selectRevenueFromSales.ts</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
