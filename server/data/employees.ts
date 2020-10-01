@@ -269,17 +269,17 @@ const employees: EmployeeDTO[] = [
     },
     {
         id: 20,
-        firstName: 'Orson',
-        lastName: 'May-Porter',
+        firstName: 'Kaalinpää',
+        lastName: 'Nälkäinen The Mighty',
         jobTitle: 'Sales Executive',
-        division: 'Watches',
+        division: 'Motor',
         salary: 80000,
         commissionRate: 6.40,
         email: 'mattias.charmant@faux.it',
         joinDate: new Date(),
         profileImageUrl: '/assets/images/profile/20.jpg',
         bannerImageUrl: '/assets/images/banner/20.jpeg',
-        locationId: 2
+        locationId: 4
     },
     {
         id: 21,
@@ -504,6 +504,90 @@ const employees: EmployeeDTO[] = [
         profileImageUrl: '/assets/images/profile/36.jpg',
         bannerImageUrl: '/assets/images/banner/36.jpeg',
         locationId: 7
+    },
+    {
+        id: 37,
+        firstName: 'Æthelwulf',
+        lastName: 'Pruitt',
+        jobTitle: 'Sales Manager',
+        division: 'Real Estate',
+        salary: 70000,
+        commissionRate: 10,
+        email: 'aethelwulf.pruitt@faux.it',
+        joinDate: new Date(),
+        profileImageUrl: '/assets/images/profile/37.jpg',
+        bannerImageUrl: '/assets/images/banner/37.jpeg',
+        locationId: 8
+    },
+    {
+        id: 38,
+        firstName: 'Kerberos',
+        lastName: 'Tryphaina',
+        jobTitle: 'Sales Executive',
+        division: 'Real Estate',
+        salary: 46000,
+        commissionRate: 8,
+        email: 'kerberos.tryphania@faux.it',
+        joinDate: new Date(),
+        profileImageUrl: '/assets/images/profile/38.jpg',
+        bannerImageUrl: '/assets/images/banner/38.jpeg',
+        locationId: 8
+    },
+    {
+        id: 39,
+        firstName: 'Matilda',
+        lastName: 'Ætheling',
+        jobTitle: 'Sales Executive',
+        division: 'Real Estate',
+        salary: 46000,
+        commissionRate: 8,
+        email: 'matilda.aetheling@faux.it',
+        joinDate: new Date(),
+        profileImageUrl: '/assets/images/profile/39.jpg',
+        bannerImageUrl: '/assets/images/banner/39.jpeg',
+        locationId: 8
+    },
+    {
+        id: 40,
+        firstName: 'Arglwyddes',
+        lastName: 'Myfanwy',
+        jobTitle: 'Sales Executive',
+        division: 'Real Estate',
+        salary: 46000,
+        commissionRate: 8,
+        email: 'arglwyddes.myfanwy@faux.it',
+        joinDate: new Date(),
+        profileImageUrl: '/assets/images/profile/40.jpg',
+        bannerImageUrl: '/assets/images/banner/40.jpeg',
+        locationId: 8
+    },
+    {
+        id: 41,
+        firstName: 'Maddox',
+        lastName: 'Vesistriphios',
+        jobTitle: 'Sales Executive',
+        division: 'Real Estate',
+        salary: 46000,
+        commissionRate: 8,
+        email: 'maddox.vestriphios@faux.it',
+        joinDate: new Date(),
+        profileImageUrl: '/assets/images/profile/41.jpg',
+        bannerImageUrl: '/assets/images/banner/41.jpeg',
+        locationId: 8
+    },
+    {
+        id: 42,
+        firstName: 'Vasiliki',
+        lastName: 'Zotikos',
+        jobTitle: 'Sales Executive',
+        division: 'Real Estate',
+        salary: 46000,
+        commissionRate: 8,
+        email: 'vasiliki.zotikos@faux.it',
+        joinDate: new Date(),
+        profileImageUrl: '/assets/images/profile/42.jpg',
+        bannerImageUrl: '/assets/images/banner/42.jpeg',
+        locationId: 8
     }
 ]
 

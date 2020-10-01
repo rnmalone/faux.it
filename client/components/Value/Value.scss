@@ -1,7 +1,11 @@
+@import 'core/vars';
+
 .Value {
 
   dt {
-    font-size: .9em;
+    color: $light-grey;
+    font-size: .85em;
+    font-weight: 500;
   }
 
   dd {

@@ -42,6 +42,12 @@ const locations: LocationDTO[] = [
         address: 'Helsinki',
         countryCode: 'FL',
         countryName: 'Finland'
+    },
+    {
+        id: 8,
+        address: 'Lyon',
+        countryCode: 'FR',
+        countryName: 'France'
     }
 ]
 

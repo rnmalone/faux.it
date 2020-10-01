@@ -49,18 +49,18 @@ export default function EmployeeStatistics({ id, division }: IEmployeeStatistics
                 selected={timeframe}
             />
             <SmallStats loading={loading} data={data} />
-            <section className="Statistics__row page-item">
-                <div>
-                    <Statistic
-                        loading={loading}
-                        label="Sales Revenue"
-                        width="260"
-                        height="60"
-                        value={price(data?.employeeStatistics?.stats?.totalRevenue?.current)}
-                        delta={data?.employeeStatistics?.stats?.totalRevenue?.delta}
-                        isPositive={data?.employeeStatistics?.stats?.totalRevenue?.delta > 0}
-                        large
-                    />
+            <section className="Statistics__row Statistics__revenue page-item">
+                <div className="Statistics__revenue__left">
+                        <Statistic
+                            loading={loading}
+                            label="Sales Revenue"
+                            width="260"
+                            height="60"
+                            value={price(data?.employeeStatistics?.stats?.totalRevenue?.current)}
+                            delta={data?.employeeStatistics?.stats?.totalRevenue?.delta}
+                            isPositive={data?.employeeStatistics?.stats?.totalRevenue?.delta > 0}
+                            large
+                        />
                         <Statistic
                             loading={loading}
                             label="Gross Profit"

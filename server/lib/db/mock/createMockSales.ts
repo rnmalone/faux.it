@@ -36,6 +36,10 @@ const priceBounds = {
     Electrical: {
         min: 300,
         max: 1500
+    },
+    'Real Estate': {
+        min: 100000,
+        max: 1100000
     }
 }
 
@@ -63,6 +67,10 @@ const saleBounds = {
     Electrical: {
         min: 1000,
         max: 1500
+    },
+    'Real Estate': {
+        min: 50,
+        max: 100
     }
 }
 
@@ -109,6 +117,12 @@ const productCategories = {
         'Microwaves',
         'Laptops',
         'Washing Machines'
+    ],
+    'Real Estate': [
+        'Bungalow',
+        'Terrace',
+        'Apartment',
+        'Mansion'
     ]
 }
 

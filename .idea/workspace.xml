@@ -3,8 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Flag/Flag.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Flag/Flag.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Value/Value.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Value/Value.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/routes/Employee/components/EmployeeStatistics/EmployeeStatistics.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/components/EmployeeStatistics/EmployeeStatistics.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/profile/12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/12.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/profile/20.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/20.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/assets/images/profile/8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/data/employees.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/data/employees.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/data/locations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/data/locations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/db/mock/createMockSales.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/db/mock/createMockSales.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +45,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/assets/images/flags" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
@@ -47,11 +54,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Rory Malone\Documents\faux.it\client\assets\images\flags" />
       <recent name="C:\Users\Rory Malone\Documents\faux.it\client" />
       <recent name="C:\Users\Rory Malone\Documents\faux.it\client\styles\fonts" />
       <recent name="C:\Users\Rory Malone\Documents\faux.it\server\lib\queries" />
       <recent name="C:\Users\Rorym\Documents\faux.it\client\assets\images\flags" />
-      <recent name="C:\Users\Rorym\Documents\faux.it\client\assets\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Rory Malone\Documents\faux.it\server\assets\images\banner" />
@@ -108,7 +115,7 @@
       <workItem from="1601201133178" duration="34592000" />
       <workItem from="1601301419578" duration="8701000" />
       <workItem from="1601400038031" duration="16894000" />
-      <workItem from="1601458195522" duration="33342000" />
+      <workItem from="1601458195522" duration="38259000" />
     </task>
     <servers />
   </component>
