@@ -1,6 +1,6 @@
 import {Connection} from "typeorm";
 import {Sale} from "../../entities";
-import {IDateRange} from "../../@types/Dates";
+import {IDateRange} from "../../../@types/Dates";
 
 export default async function selectSumProfitForDivisionGroupByEmployee(connection: Connection, { dateFrom, dateTo }: IDateRange, division: string): Promise<Sale[]> {
     return await connection

@@ -1,5 +1,5 @@
-import {EmployeeSaleStatusPie} from "../../@types/Stats/Employee";
-import {IDateRange} from "../../@types/Dates";
+import {EmployeeSaleStatusPie} from "../../../@types/Stats/Employee";
+import {IDateRange} from "../../../@types/Dates";
 import {Connection} from "typeorm";
 import {Sale} from "../../entities";
 

@@ -1,20 +1,24 @@
 import {IContext} from "../server";
-import {IListQueryInput} from "./employee";
 import {Sale} from "../entities";
 import {createDatesFromTimeframe, createDelta, logger, Results} from "../lib";
 import {
     selectAllSales,
     selectEmployeeProductCategoryProfit,
     selectEmployeeSaleSourceProfit,
-    selectReducibleStatsForAllSales, selectRevenueFromSales, selectRevenueFromSalesByEmployee,
+    selectReducibleStatsForAllSales,
+    selectRevenueFromSales,
+    selectRevenueFromSalesByEmployee,
     selectSaleCustomerStats,
-    selectSaleGraphDataForEmployee, selectSalesStatsForDivisions, selectSalesStatsForSalesChannels,
+    selectSaleGraphDataForEmployee,
+    selectSalesStatsForDivisions,
+    selectSalesStatsForSalesChannels,
     selectSaleStatusForEmployee
 } from "../lib/queries";
 import {SALE_SEARCHABLE_FIELDS} from "../config/search.config";
 import buildEmployeeSalesStatistics from "./employeeStatistics/buildEmployeeSalesStatistics";
 import reduceGraphArray from "../lib/reduceGraphArray";
-import {Timeframe} from "../@types/Stats/Timeframe";
+import {Timeframe} from "../../@types/Stats/Timeframe";
+import {IEmployeeStatisticsResponse, IListQueryInput, ISalesOverviewStatisticsResponse} from "../../@types";
 
 const SALE_FACET_FIELDS: (keyof Partial<Sale>)[] = [
     'status'
@@ -46,7 +50,7 @@ const saleResolver = {
 
             return resultsBuilder.getResponseObject()
         },
-        employeeStatistics: async (root: any, { id, timeframe }: IEmployeeStatisticsInput , {connection}: IContext) => {
+        employeeStatistics: async (root: any, { id, timeframe }: IEmployeeStatisticsInput , {connection}: IContext): Promise<IEmployeeStatisticsResponse['employeeStatistics']> => {
             const { dateFrom, dateTo, doubleTimeRangeMoment } = createDatesFromTimeframe(timeframe)
 
             logger.info(`Query: employeeStatistics ID: ${id}, TIMEFRAME: ${timeframe}`)
@@ -76,7 +80,7 @@ const saleResolver = {
 
             return null
         },
-        salesOverviewStatistics: async (root: any, { timeframe }: { timeframe: number } , { connection }: IContext) => {
+        salesOverviewStatistics: async (root: any, { timeframe }: { timeframe: number } , { connection }: IContext): Promise<ISalesOverviewStatisticsResponse['salesOverviewStatistics']> => {
             const { dateFrom, dateTo, doubleTimeRangeMoment } = createDatesFromTimeframe(timeframe);
 
             const [

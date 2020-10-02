@@ -1,4 +1,4 @@
-import {Timeframe} from "../@types/Stats/Timeframe";
+import {Timeframe} from "../../@types/Stats/Timeframe";
 
 export const dataPointsByTimeFrame = {
     [Timeframe.Week]: 7,

@@ -6,12 +6,11 @@ import {
     selectSumSalesForDivisionGroupByEmployee
 } from "../../lib/queries";
 import selectAllSalesForEmployee from "../../lib/queries/selectAllSalesForEmployee";
-import {IEmployeeStatisticsInput} from "../sale";
 import {SaleDTO} from "../../entities/Sale";
 import {extractSalesMetrics} from "../../lib";
 import {IReducedSalesMetrics} from "../../lib/extractSalesMetrics";
 import {decimalPlaces2} from "../../lib/utils";
-import {IDateRange} from "../../@types/Dates";
+import {IDateRange} from "../../../@types/Dates";
 
 export interface IEmployeeSalesStatistics {
     [key: string]: number;

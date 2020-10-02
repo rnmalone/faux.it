@@ -7,37 +7,10 @@ import {Statistic} from "../../../components/Statistic";
 import {price} from "../../../lib/utils/formatters";
 import RevenueGraph from "../../../components/RevenueGraph";
 import LabelledPieChart from 'client/components/Piechart';
-import {Bar, Cell, Pie, PieChart, ResponsiveContainer, Tooltip} from "recharts";
+import {Cell} from "recharts";
 import {colors, divisionHexColorMap, divisionHexColorMapLighten} from "../../../config/color.config";
 import SegmentControl from "../../../components/SegmentControl";
-
-export interface IDelta {
-    current: number;
-    delta: number;
-}
-
-export interface IGenericGraphEntry {
-    sales: number;
-    profit: number;
-    label: string;
-    revenue: string;
-}
-
-export interface IRevenueGraphEntry {
-    revenue: number;
-    date: string;
-}
-
-export type Statistics<K extends string> = Record<K, IDelta>
-
-export interface ISalesOverviewStatisticsResponse {
-    salesOverviewStatistics: {
-        stats: Statistics<'revenue' | 'grossSalesProfit' | 'uniqueCustomers' | 'sales'>
-        divisionRevenueGraph: IGenericGraphEntry[]
-        salesLeadRevenueGraph: IGenericGraphEntry[]
-        revenueGraph: IRevenueGraphEntry[]
-    }
-}
+import {ISalesOverviewStatisticsResponse} from "../../../../@types";
 
 export default function SalesOverview() {
     const {timeframe, toggleTimeframe, options} = useTimeframe()

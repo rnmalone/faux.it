@@ -1,5 +1,5 @@
 import {Connection} from "typeorm";
-import {IDateRange} from "../../@types/Dates";
+import {IDateRange} from "../../../@types/Dates";
 import {Sale} from "../../entities";
 import {SaleStatus} from "../../entities/Sale";
 

@@ -2,8 +2,13 @@ import React from 'react';
 import {Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
 import {colors} from "../../config/color.config";
 import {price} from "../../lib/utils/formatters";
+import {IRevenueGraphEntry} from "../../../@types";
 
-export default function RevenueGraph({ data }) {
+interface IRevenueGraph {
+    data: IRevenueGraphEntry[]
+}
+
+export default function RevenueGraph({ data }: IRevenueGraph) {
 
     return (
         <ResponsiveContainer width={'100%'} height={'100%'}>

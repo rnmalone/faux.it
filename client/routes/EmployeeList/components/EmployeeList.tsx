@@ -9,40 +9,27 @@ import EmployeeCard from "../../../components/EmployeeCard";
 import ScrollBoundary from "../../../components/ScrollBoundary";
 import {useQueryString, useScrollTo} from "../../../lib/hooks";
 import Grid from "../../../components/Grid";
-import {EmployeeDTO} from "../../../../server/entities/Employee";
-import {IFacetResult} from "../../../../server/@types/Facet";
 import useQueryResultHydration from "../../../lib/hooks/useQueryResultHydration";
-import {LocationDTO} from "../../../../server/entities/Location";
+import {IEmployeeListQueryResponse, IEmployeeResult, IListQueryInput} from '@types';
 
-interface IEmployeeList {
+const LIMIT_DELTA = 9;
+const MIN_LIMIT = 12;
+
+
+export interface IEmployeeList {
     filters: StoredFilters;
     term: string;
     paging: IPaging;
     setPaging(filterType: FilterType): (paging: IPaging) => void;
 }
 
-const LIMIT_DELTA = 9;
-const MIN_LIMIT = 12;
-
-interface IEmployeeResult extends EmployeeDTO { location: LocationDTO }
-
-export interface IEmployeeListQueryResponse {
-    employeeList: {
-        count: number;
-        facets: IFacetResult[];
-        items: IEmployeeResult[];
-    }
-}
-
 export default function EmployeeList({ filters, term, paging }: IEmployeeList) {
     const [hasScrolled, setHasScrolled] = useState<boolean>(false)
     const { scrollTo, limit } = useQueryString();
     const handlePageScroll = useScrollTo();
-    const { data, fetchMore, loading } = useQuery(employeeListQuery, {
+    const { data, fetchMore, loading } = useQuery<IEmployeeListQueryResponse, IListQueryInput>(employeeListQuery, {
         notifyOnNetworkStatusChange: true,
         variables: {
-            sortType: 'ALPHANUMERIC',
-            sortDirection: 'DOWN',
             term,
             facets: filters,
             ...paging,
@@ -66,8 +53,6 @@ export default function EmployeeList({ filters, term, paging }: IEmployeeList) {
 
         await fetchMore({
             variables: {
-                sortType: 'ALPHANUMERIC',
-                sortDirection: 'DOWN',
                 term,
                 facets: filters,
                 offset: data.employeeList.items.length,

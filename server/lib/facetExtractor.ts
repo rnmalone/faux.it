@@ -1,4 +1,4 @@
-import {IFacet, ResultFacets} from "../@types/Facet";
+import {IFacet, ResultFacets} from "../../@types/Facet";
 
 function extractUniqueValues<T>(items: T[], key: keyof T): IFacet[] {
     return items.reduce((a: IFacet[], item: T) => {

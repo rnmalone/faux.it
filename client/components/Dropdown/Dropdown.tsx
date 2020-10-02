@@ -1,7 +1,7 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef} from 'react';
 import cx from 'classnames';
 import './Dropdown.scss'
-import {IFacet} from "../../../server/@types/Facet";
+import {IFacet} from "../../../@types/Facet";
 import {useOutsideClicks, useOverlay} from "../../lib/hooks";
 import Icon, {IconType} from "../Icon/Icon";
 import useQueryResultHydration from "../../lib/hooks/useQueryResultHydration";

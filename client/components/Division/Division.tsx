@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import {Division as DivisionType} from "../../../server/@types/Division";
+import {Division as DivisionType} from "../../../@types/Division";
 
 import './Division.scss';
 

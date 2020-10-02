@@ -1,20 +1,23 @@
-import React, {useState} from 'react';
-import {Statistic, StatisticWidget} from "../../../../components/Statistic";
+import React from 'react';
+import {Statistic} from "../../../../components/Statistic";
 import '../../styles/Statistics.scss';
 import employeeStatisticsQuery from '../../../../api/employeeStatistics.graphql';
 import {useQuery} from "@apollo/client";
-import {formatNumber, pc, price, rank} from "../../../../lib/utils/formatters";
-import {
-    LineChart, Line, XAxis, YAxis, PieChart, Tooltip, Pie, ResponsiveContainer, Bar, BarChart, AreaChart, Area, Cell
-} from 'recharts';
-import {rankColorMap, colors, saleStatusColorMap, divisionColorsByString} from "../../../../config/color.config";
-import {Timeframe} from "../../../../../server/@types/Stats/Timeframe";
+import {pc, price} from "../../../../lib/utils/formatters";
+import {Bar, BarChart, Cell, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis} from 'recharts';
+import {colors, divisionColorsByString, saleStatusColorMap} from "../../../../config/color.config";
 import SegmentControl from "../../../../components/SegmentControl";
 import BarDistribution from 'client/components/BarDistribution';
 import GenderInsights from "./GenderInsights";
 import SmallStats from "./SmallStats";
 import {useTimeframe} from "../../../../lib/hooks";
 import RevenueGraph from "../../../../components/RevenueGraph";
+import {
+    IEmployeeStatisticsResponse,
+    IProductCategoryProfit,
+    ISaleSourceProfit,
+    ISalesStatusPieSegment
+} from "../../../../../@types";
 
 interface IEmployeeStatistics {
     id: number;
@@ -23,7 +26,7 @@ interface IEmployeeStatistics {
 
 export default function EmployeeStatistics({ id, division }: IEmployeeStatistics) {
     const { timeframe, toggleTimeframe, options: timeframeOptions } = useTimeframe()
-    const { data, loading } = useQuery(employeeStatisticsQuery, { variables: { id, timeframe } })
+    const { data, loading } = useQuery<IEmployeeStatisticsResponse, { timeframe: number, id: number }>(employeeStatisticsQuery, { variables: { id, timeframe } })
 
     return (
         <div className="Statistics">
@@ -32,7 +35,7 @@ export default function EmployeeStatistics({ id, division }: IEmployeeStatistics
                 onClick={toggleTimeframe}
                 selected={timeframe}
             />
-            <SmallStats loading={loading} data={data} />
+            <SmallStats loading={loading} data={data?.employeeStatistics?.stats} />
             <section className="Statistics__row Statistics__revenue page-item">
                 <div className="Statistics__revenue__left">
                         <Statistic
@@ -70,7 +73,7 @@ export default function EmployeeStatistics({ id, division }: IEmployeeStatistics
                 <div className="page-item">
                     <h6>Product Category Breakdown</h6>
                     {
-                        data?.employeeStatistics?.productCategoryProfit?.map((stat, i) => (
+                        data?.employeeStatistics.productCategoryProfit.map((stat: IProductCategoryProfit, i: number) => (
                             <BarDistribution
                                 left={{
                                     pc: ( 100 / data.employeeStatistics.stats.totalProfit.current) * stat.profit,
@@ -85,7 +88,7 @@ export default function EmployeeStatistics({ id, division }: IEmployeeStatistics
                 <div className="page-item">
                     <h6>Lead source profit contribution</h6>
                     {
-                        data?.employeeStatistics?.saleSourceProfit?.map((stat) => (
+                        data?.employeeStatistics.saleSourceProfit.map((stat: ISaleSourceProfit) => (
                             <BarDistribution
                                 left={{
                                     pc: ( 100 / data.employeeStatistics.stats.totalProfit.current) * stat.profit,
@@ -97,7 +100,7 @@ export default function EmployeeStatistics({ id, division }: IEmployeeStatistics
                     }
                 </div>
                 <GenderInsights
-                    data={data?.employeeStatistics?.saleCustomerStats}
+                    data={data?.employeeStatistics.saleCustomerStats}
                     totalProfit={data?.employeeStatistics?.stats?.totalProfit.current}
                     totalRevenue={data?.employeeStatistics?.stats?.totalRevenue.current}
                 />
@@ -118,7 +121,7 @@ export default function EmployeeStatistics({ id, division }: IEmployeeStatistics
                                     innerRadius={105}
                                 >
                                     {
-                                        data?.employeeStatistics?.salesStatusPieChartData?.map((entry, index) => <Cell key={`cell-${index}`} fill={saleStatusColorMap[entry.status]} />)
+                                        data?.employeeStatistics?.salesStatusPieChartData?.map((entry: ISalesStatusPieSegment, index: number) => <Cell key={`cell-${index}`} fill={saleStatusColorMap[entry.status]} />)
                                     }
                                 </Pie>
                             </PieChart>

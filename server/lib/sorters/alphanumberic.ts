@@ -1,4 +1,4 @@
-import {Direction} from "../../@types/Direction";
+import {Direction} from "../../../@types/Direction";
 
 export default function sortByAlphanumeric<T>(items: T[], keyToSortOn: keyof T, direction: Direction): T[] {
     return items.sort((itemA, itemB) => {

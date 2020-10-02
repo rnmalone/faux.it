@@ -1,5 +1,5 @@
 import moment from 'moment';
-import {Timeframe} from "../@types/Stats/Timeframe";
+import {Timeframe} from "../../@types/Stats/Timeframe";
 import {
     dataPointsByTimeFrame,
     dateFormatByTimeFrame,

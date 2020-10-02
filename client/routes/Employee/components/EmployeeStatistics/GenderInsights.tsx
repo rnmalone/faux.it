@@ -1,17 +1,18 @@
 import BarDistribution from "../../../../components/BarDistribution";
 import React from "react";
-import {Statistic} from "../../../../components/Statistic";
 import {price} from "../../../../lib/utils/formatters";
 import {colors} from "../../../../config/color.config";
+import {ICustomerStats} from "../../../../../@types";
 
 interface IGenderInsights {
+    data: ICustomerStats[]
     totalProfit: number;
     totalRevenue: number;
 }
 
 export default function GenderInsights({data, totalProfit, totalRevenue}: IGenderInsights) {
-    const male = data?.find(({gender}) => gender === 'Male')
-    const female = data?.find(({gender}) => gender === 'Female')
+    const male = data?.find(({gender}) => gender === 'Male')!
+    const female = data?.find(({gender}) => gender === 'Female')!
     const totalSales = female?.saleCount + male?.saleCount
 
     return (

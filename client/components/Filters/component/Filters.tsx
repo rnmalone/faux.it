@@ -1,11 +1,11 @@
 import React from "react";
 import Dropdown from "../../Dropdown";
-import {IFacet, IFacetResult} from "../../../../server/@types/Facet";
+import {IFacetResult} from "../../../../@types/Facet";
 import {EMPLOYEE_KEY_STRING_MAP} from "../../../../server/config/strings.config";
 import {IEmployeeEntity} from "../../../@types/employe";
 import Input from "../../Input/Input";
-import { FilterType, IFilterState } from "../../../modules/filters/filters";
-import { SortType } from "../../../../server/@types/SortType";
+import {FilterType, IFilterState} from "../../../modules/filters/filters";
+import {SortType} from "../../../../@types/SortType";
 
 import '../styles/Filters.scss'
 

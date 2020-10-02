@@ -1,5 +1,5 @@
-import {Direction} from "../../../server/@types/Direction";
-import {SortType} from "../../../server/@types/SortType";
+import {Direction} from "../../../@types/Direction";
+import {SortType} from "../../../@types/SortType";
 import {ActionHandler, Dispatch, IAction, IAppStore} from "../../@types/store";
 import {ChangeEvent} from "react";
 import {IPaging} from "../../@types/tables";

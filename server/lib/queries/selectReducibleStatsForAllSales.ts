@@ -1,7 +1,7 @@
 import {Sale} from "../../entities";
 import {SaleStatus} from "../../entities/Sale";
 import {Connection} from "typeorm";
-import {IDateRange} from "../../@types/Dates";
+import {IDateRange} from "../../../@types/Dates";
 
 
 export default async function selectReducibleStatsForAllSales(connection: Connection, { dateFrom, dateTo }: IDateRange) {

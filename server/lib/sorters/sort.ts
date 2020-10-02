@@ -1,5 +1,5 @@
-import {Direction} from "../../@types/Direction";
-import {SortType} from "../../@types/SortType";
+import {Direction} from "../../../@types/Direction";
+import {SortType} from "../../../@types/SortType";
 import alphanumeric from "./alphanumberic";
 
 export default function sort<T>(items: T[], keyToSortOn: keyof T, sortType: SortType = SortType.ALPHANUMERIC, direction: Direction = Direction.DOWN) {

@@ -1,4 +1,5 @@
-import  {Request, Response} from 'express';
+import {Request, Response} from 'express';
+
 const config = require('../../config/project.config')
 
 

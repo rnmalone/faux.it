@@ -1,9 +1,9 @@
-import {ISortInput} from "../@types/SortInput";
-import {IFacetInput, ResultFacets} from "../@types/Facet";
+import {ISortInput} from "../../@types/SortInput";
+import {IFacetInput, ResultFacets} from "../../@types/Facet";
 import {filterResults} from "./index";
 import applySearchTermToItems from "./applySearchTermToItems";
 import facetExtractor from "./facetExtractor";
-import {IPagingInput} from "../@types/Paging";
+import {IPagingInput} from "../../@types";
 import paginateResults from "./paginateResults";
 import {sort} from "./sorters";
 

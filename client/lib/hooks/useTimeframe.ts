@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {Timeframe} from "../../../server/@types/Stats/Timeframe";
+import {Timeframe} from "../../../@types/Stats/Timeframe";
 
 const TIMEFRAME_OPTIONS = [
     {

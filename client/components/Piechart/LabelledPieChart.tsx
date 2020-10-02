@@ -1,5 +1,5 @@
 import React from 'react';
-import {Pie, PieChart, ResponsiveContainer, Sector, Tooltip, XAxis, YAxis} from "recharts";
+import {Pie, PieChart, ResponsiveContainer} from "recharts";
 import {price} from "../../lib/utils/formatters";
 
 const RADIAN = Math.PI / 180;

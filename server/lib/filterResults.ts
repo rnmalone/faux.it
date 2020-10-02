@@ -1,4 +1,4 @@
-import {IFacetInput} from "../@types/Facet";
+import {IFacetInput} from "../../@types/Facet";
 
 export default function filterResults<T>(items: T[], facets: IFacetInput[],): T[] {
 

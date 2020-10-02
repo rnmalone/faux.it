@@ -2,7 +2,7 @@ import React from 'react';
 import {Route, Switch, useLocation} from "react-router";
 import EmployeeList from "./EmployeeList";
 import Employee from "./Employee";
-import {TransitionGroup, CSSTransition} from "react-transition-group";
+import {CSSTransition, TransitionGroup} from "react-transition-group";
 import SalesOverview from "./SalesOverview";
 
 export default () => {

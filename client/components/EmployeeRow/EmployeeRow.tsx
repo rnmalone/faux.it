@@ -1,9 +1,7 @@
 import React from 'react';
-import moment from 'moment';
 import {Cell, TableRowProps} from "react-table";
 
 import './EmployeeRow.scss';
-import Flag from "../Flag/Flag";
 import {IEmployeeEntity} from "../../@types/employe";
 import {useNavigate} from "../../lib/hooks";
 

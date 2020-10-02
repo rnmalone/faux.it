@@ -8,11 +8,12 @@ import EmployeeStatistics from "./EmployeeStatistics/EmployeeStatistics";
 import {pc, price} from "../../../lib/utils/formatters";
 import TextPlaceholder from "../../../components/TextPlaceholder";
 import {useScrollTo} from "../../../lib/hooks";
+import {IEmployeeResult} from "../../../../@types";
 
 export default function Employee() {
     useScrollTo(false)(0)
     const {id} = useParams()
-    const {data, loading} = useQuery(employeeQuery, {
+    const {data, loading} = useQuery<IEmployeeResult, { id: number }>(employeeQuery, {
         variables: {id: Number(id)}
     })
 

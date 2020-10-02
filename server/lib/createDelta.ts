@@ -1,13 +1,10 @@
 import {decimalPlaces2} from "./utils";
+import {IDelta} from "../../@types";
 
-interface IDeltaValue {
-    current: number;
-    delta: number // percentage
-}
 
-type DeltaObject<T> = Record<keyof T, IDeltaValue>
+type DeltaObject<T extends string> = Record<T, IDelta>
 
-export default function createDelta<T extends { [key: string]: number }>(input: T, compareTo: T): DeltaObject<T> {
+export default function createDelta<T extends { [key: string]: number }>(input: T, compareTo: T): DeltaObject<string> {
 
     return Object.entries(input).reduce((a, [key, current]) => ({
         ...a,

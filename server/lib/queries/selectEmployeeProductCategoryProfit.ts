@@ -1,7 +1,7 @@
 import {Connection} from "typeorm";
 import {Sale} from "../../entities";
 import {SaleStatus} from "../../entities/Sale";
-import {IDateRange} from "../../@types/Dates";
+import {IDateRange} from "../../../@types/Dates";
 
 export default async function selectEmployeeProductCategoryProfit(connection: Connection, employeeId: number, { dateFrom, dateTo }: IDateRange) {
     return await connection

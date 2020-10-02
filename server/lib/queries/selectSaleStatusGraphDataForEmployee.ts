@@ -1,4 +1,4 @@
-import {IDateRange} from "../../@types/Dates";
+import {IDateRange} from "../../../@types/Dates";
 import {Connection} from "typeorm";
 import {Sale} from "../../entities";
 
