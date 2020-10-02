@@ -1,0 +1,18 @@
+@import 'core/vars';
+
+$bar-height: 50px;
+
+.TopBar {
+  height: $bar-height;
+
+  &__fixed {
+    height: $bar-height;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 1000;
+    border-bottom: $border-color 1px solid;
+  }
+}

@@ -1,25 +1,40 @@
 import core from '../styles/core/vars.scss';
 
-export const rankColorMap = {
+export const rankColorMap: { [key: number]: string } = {
     1: 'gold',
     2: 'silver',
     3: 'bronze'
 }
 
-export const divisionColorsByString = {
+export const divisionColorsByString: { [key: string]: string } = {
     Nautical: 'blue',
     Motor: 'purple',
     Watches: 'yellow',
-    'Baked Goods': 'brown',
     Aerospace: 'green'
 }
 
-export const saleStatusColorMap = {
+export const divisionHexColorMap: { [key:string]: string } = {
+    Nautical: core.blue,
+    Motor: core.purple,
+    Watches: core.yellow,
+    Aerospace: core.green,
+    Electrical: core.orange
+}
+
+export const divisionHexColorMapLighten: { [key:string]: string } = {
+    Nautical: core.blue7,
+    Motor: core.purple7,
+    Watches: core.yellow7,
+    Aerospace: core.green7,
+    Electrical: core.orange7
+}
+
+export const saleStatusColorMap: { [key: string]: string } = {
     COMPLETE: core.green,
     CLOSED: core.red
 }
 
-export const colors = {
+export const colors: { [key: string]: string } = {
     purple: core.purple,
     green: core.green,
     red: core.red,
@@ -36,4 +51,12 @@ export const colors = {
     purple6: core.purple6,
     purple7: core.purple7,
     purple8: core.purple8,
+    blue1: core.blue1,
+    blue2: core.blue2,
+    blue3: core.blue3,
+    blue4: core.blue4,
+    blue5: core.blue5,
+    blue6: core.blue6,
+    blue7: core.blue7,
+    blue8: core.blue8,
 }

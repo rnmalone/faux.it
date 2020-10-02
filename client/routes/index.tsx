@@ -1,10 +1,9 @@
 import React from 'react';
 import {Route, Switch, useLocation} from "react-router";
-import SaleList from "./SaleList";
 import EmployeeList from "./EmployeeList";
-import Sale from "./Sale";
 import Employee from "./Employee";
 import {TransitionGroup, CSSTransition} from "react-transition-group";
+import SalesOverview from "./SalesOverview";
 
 export default () => {
     const location = useLocation();
@@ -16,10 +15,10 @@ export default () => {
                 timeout={1000}
             >
                 <Switch>
-                    <Route exact path="/employees" component={EmployeeList}/>
-                    <Route path="/sales" coponent={SaleList}/>
-                    <Route path="/sale/:sale" component={Sale}/>
+                    <Route exact path="/" component={() => null} />
+                    <Route path="/employees" component={EmployeeList}/>
                     <Route path="/employee/:id" component={Employee}/>
+                    <Route path="/sales" component={SalesOverview} />
                 </Switch>
             </CSSTransition>
         </TransitionGroup>

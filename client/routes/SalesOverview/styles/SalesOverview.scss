@@ -1,0 +1,48 @@
+@import 'core/vars';
+
+$overflow-height: 300px;
+
+.SalesOverview {
+  &__upper {
+    position: relative;
+
+    &__inner {
+      padding: 2rem;
+      //background-color: $primary-color;
+      padding-bottom: calc((#{$overflow-height} *.5) + 4rem);
+      background-color: white;
+
+      span, p, dd, h2, dt, div {
+        //color: white !important;
+      }
+    }
+
+    &__overflow {
+      height: $overflow-height;
+      position: absolute;
+      top: 100%;
+      left: 10%;
+      background-color: white;
+      width: calc(80% - 4rem);
+      transform: translate(0, calc(-50%));
+    }
+  }
+
+  &__body {
+    padding-top: calc((#{$overflow-height} *.5) + 4rem) !important;
+  }
+
+  &__row-2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+
+    > div {
+      flex: 1;
+      width: calc(50% - 6rem);
+      height: 380px;
+      margin-right: 2rem;
+    }
+  }
+}

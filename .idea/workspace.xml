@@ -3,14 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/api/employeeStatistics.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/employeeStatistics.graphql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Navigation/styles/Navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Navigation/styles/Navigation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/config/color.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/config/color.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/layouts/CoreLayout/CoreLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/layouts/CoreLayout/CoreLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/lib/hooks/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/hooks/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/lib/utils/formatters/formatNumber.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/utils/formatters/formatNumber.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/routes/Employee/components/EmployeeStatistics/EmployeeStatistics.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/components/EmployeeStatistics/EmployeeStatistics.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/core/vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/core/vars.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/data/employees.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/data/employees.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/lib/db/mock/createMockSales.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/db/mock/createMockSales.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/queries/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectProfitFromSalesByEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectRevenueFromSalesByEmployee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/resolvers/sale.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/sale.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/schema/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/schema/schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,11 +64,11 @@
       <recent name="C:\Users\Rorym\Documents\faux.it\client\assets\images\flags" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Rory Malone\Documents\faux.it\@types" />
+      <recent name="C:\Users\Rory Malone\Documents\faux.it\client\routes\SalesOverview\components" />
       <recent name="C:\Users\Rory Malone\Documents\faux.it\server\assets\images\banner" />
       <recent name="C:\Users\Rory Malone\Documents\faux.it\server\assets\images\profile" />
       <recent name="C:\Users\Rory Malone\Documents\faux.it\client\routes\Employee\components\EmployeeStatistics" />
-      <recent name="C:\Users\Rory Malone\Documents\faux.it\client\assets\images\flags" />
-      <recent name="C:\Users\Rory Malone\Documents\faux.it\client\components" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -115,7 +119,8 @@
       <workItem from="1601301419578" duration="8701000" />
       <workItem from="1601400038031" duration="16894000" />
       <workItem from="1601458195522" duration="38259000" />
-      <workItem from="1601553749515" duration="10215000" />
+      <workItem from="1601553749515" duration="21707000" />
+      <workItem from="1601629907999" duration="11603000" />
     </task>
     <servers />
   </component>
@@ -190,7 +195,6 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/lib/queries/selectRevenueFromSales.ts</url>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

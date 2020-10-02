@@ -1,0 +1,38 @@
+query SalesOverviewStatistics($timeframe: Int!) {
+    salesOverviewStatistics(timeframe: $timeframe) {
+        stats {
+            revenue {
+                current
+                delta
+            }
+            grossSalesProfit {
+                current
+                delta
+            }
+            sales {
+                current
+                delta
+            }
+            uniqueCustomers {
+                current
+                delta
+            }
+        }
+        revenueGraph {
+            revenue
+            date
+        }
+        divisionRevenueGraph {
+            sales
+            profit
+            label
+            revenue
+        }
+        salesLeadRevenueGraph {
+            sales
+            profit
+            label
+            revenue
+        }
+    }
+}

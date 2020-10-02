@@ -13,6 +13,8 @@ import SegmentControl from "../../../../components/SegmentControl";
 import BarDistribution from 'client/components/BarDistribution';
 import GenderInsights from "./GenderInsights";
 import SmallStats from "./SmallStats";
+import {useTimeframe} from "../../../../lib/hooks";
+import RevenueGraph from "../../../../components/RevenueGraph";
 
 interface IEmployeeStatistics {
     id: number;
@@ -20,32 +22,14 @@ interface IEmployeeStatistics {
 }
 
 export default function EmployeeStatistics({ id, division }: IEmployeeStatistics) {
-    const [timeframe, setTimeframe] = useState<Timeframe>(Timeframe.Year)
+    const { timeframe, toggleTimeframe, options: timeframeOptions } = useTimeframe()
     const { data, loading } = useQuery(employeeStatisticsQuery, { variables: { id, timeframe } })
-    const toggleSegment = (segment: Timeframe) => () => setTimeframe(segment)
 
     return (
         <div className="Statistics">
             <SegmentControl
-                segments={[
-                    {
-                        key: Timeframe.Month,
-                        value: 'Month'
-                    },
-                    {
-                        key: Timeframe.Quarter,
-                        value: 'Quarter'
-                    },
-                    {
-                        key: Timeframe.Half,
-                        value: '6 Months'
-                    },
-                    {
-                        key: Timeframe.Year,
-                        value: 'Year'
-                    }
-                ]}
-                onClick={toggleSegment}
+                segments={timeframeOptions}
+                onClick={toggleTimeframe}
                 selected={timeframe}
             />
             <SmallStats loading={loading} data={data} />
@@ -79,19 +63,7 @@ export default function EmployeeStatistics({ id, division }: IEmployeeStatistics
                         />
                 </div>
                 <div className="fill-remaining">
-                    <ResponsiveContainer width={'100%'} height={'100%'}>
-                        <LineChart
-                            data={data?.employeeStatistics?.revenueGraph}
-                            margin={{
-                                top: 16, left: 40, bottom: 16,
-                            }}
-                        >
-                            <XAxis stroke={colors.lightGrey} dataKey="date" />
-                            <YAxis tickCount={3} stroke={colors.lightGrey} tickFormatter={price} tickSize={10} />
-                            <Tooltip />
-                            <Line strokeWidth={3} type="monotone" dataKey="revenue" stroke={colors.primary} fillOpacity={1} fill={colors.primary} />
-                        </LineChart>
-                    </ResponsiveContainer>
+                    <RevenueGraph data={data?.employeeStatistics?.revenueGraph} />
                 </div>
             </section>
             <section className="Statistics__flex-row">
@@ -169,7 +141,6 @@ export default function EmployeeStatistics({ id, division }: IEmployeeStatistics
                     </div>
                 </div>
             </section>
-
         </div>
     )
 }
