@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import EmployeeList from '../components/EmployeeList'
 import {IAppStore} from "../../../@types/store";
-import {FilterType, setPaging} from "../../../modules/filters/filters";
+import {FilterType, setPaging} from "../../../modules/filters";
 import {buildFacetInputFromFilters} from "../../../lib";
 
 const mapStateToProps = (state: IAppStore) => ({

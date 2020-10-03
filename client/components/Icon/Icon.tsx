@@ -8,7 +8,7 @@ export enum IconType {
     Graph = 'fas fa-chart-line'
 }
 
-export default function Icon({ type }: { type: IconType }) {
+export default function Icon({type}: { type: IconType }) {
     return (
         <i className={type}/>
     )

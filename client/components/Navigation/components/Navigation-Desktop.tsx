@@ -4,6 +4,7 @@ import cx from 'classnames';
 import {INavigationTools} from "./Navigation-Container";
 import {NAVIGATION_ROUTES} from "../../../config/navigation";
 import Icon from "../../Icon";
+import {str} from "../../../lib";
 
 export default function DesktopOptions({onSelectRoute, selectedRoute}: INavigationTools) {
     return (
@@ -18,8 +19,8 @@ export default function DesktopOptions({onSelectRoute, selectedRoute}: INavigati
                         role="button"
                         onClick={onSelectRoute(route)}
                     >
-                        {displayName}
-                        <Icon type={icon} />
+                        {str(displayName)}
+                        <Icon type={icon}/>
                     </div>
                 ))
             }

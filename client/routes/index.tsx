@@ -15,10 +15,10 @@ export default () => {
                 timeout={1000}
             >
                 <Switch>
-                    <Route exact path="/" component={() => null} />
+                    <Route exact path="/" component={() => null}/>
                     <Route path="/employees" component={EmployeeList}/>
                     <Route path="/employee/:id" component={Employee}/>
-                    <Route path="/sales" component={SalesOverview} />
+                    <Route path="/sales" component={SalesOverview}/>
                 </Switch>
             </CSSTransition>
         </TransitionGroup>

@@ -1,1 +1,1 @@
-export { default as LoggingPlugin } from './LoggingPlugin'
+export {default as LoggingPlugin} from './LoggingPlugin'

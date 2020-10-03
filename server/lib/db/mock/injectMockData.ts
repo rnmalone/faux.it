@@ -15,19 +15,19 @@ export default async function injectMockData(connection: Connection) {
     try {
         const employeeEntries = employees.map((employeeProperties) => applyProperties(new Employee(), employeeProperties))
         await connection.getRepository(Employee).save(employeeEntries)
-        logger.info(`Added ${employeeEntries.length} Employees`, { task: 'lib/injectMockData' })
+        logger.info(`Added ${employeeEntries.length} Employees`, {task: 'lib/injectMockData'})
 
         const locationEntries = locations.map((locationProperties) => applyProperties(new Location(), locationProperties as Partial<Location>))
         await connection.getRepository(Location).save(locationEntries)
 
-        logger.info(`Added ${locationEntries.length} Locations`, { task: 'lib/injectMockData' })
+        logger.info(`Added ${locationEntries.length} Locations`, {task: 'lib/injectMockData'})
 
         const mockGeneratedSales = createMockSales()
 
         const saleEntries = mockGeneratedSales.map((sale) => applyProperties(new Sale(), sale as Partial<Sale>))
         await connection.manager.getRepository(Sale).save(saleEntries)
 
-        logger.info(`Added ${saleEntries.length} sales`, { task: 'lib/injectMockData' })
+        logger.info(`Added ${saleEntries.length} sales`, {task: 'lib/injectMockData'})
     } catch (e) {
         console.error(`Failed to load test data: ${e}`)
     }

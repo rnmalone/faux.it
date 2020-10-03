@@ -9,10 +9,10 @@ interface ILocation {
     countryName: string;
 }
 
-export default function Location({ address, countryCode, countryName }: ILocation) {
+export default function Location({address, countryCode, countryName}: ILocation) {
     return (
         <div className="Location">
-            <Flag countryCode={countryCode} />
+            <Flag countryCode={countryCode}/>
             <div className="Location__details">
                 <p className="Location__address">{address}</p>
                 <span className="Location__country">{countryName}</span>

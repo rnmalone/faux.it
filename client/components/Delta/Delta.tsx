@@ -10,14 +10,14 @@ interface IDelta {
     isPositive: boolean;
 }
 
-export default function Delta({ value, isPositive }: IDelta) {
+export default function Delta({value, isPositive}: IDelta) {
     return (
         <div className="Delta">
             <div className={cx('Delta__icon', {
                 'Delta__icon--positive': isPositive,
                 'Delta__icon--up': value > 0
             })}>
-                <Icon type={IconType.ArrowRight} />
+                <Icon type={IconType.ArrowRight}/>
             </div>
             {pc(value)}
         </div>

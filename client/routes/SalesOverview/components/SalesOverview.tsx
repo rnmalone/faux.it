@@ -11,6 +11,7 @@ import {Cell} from "recharts";
 import {colors, divisionHexColorMap, divisionHexColorMapLighten} from "../../../config/color.config";
 import SegmentControl from "../../../components/SegmentControl";
 import {ISalesOverviewStatisticsResponse} from "../../../../@types";
+import {str} from "../../../lib";
 
 export default function SalesOverview() {
     const {timeframe, toggleTimeframe, options} = useTimeframe()
@@ -20,67 +21,74 @@ export default function SalesOverview() {
         <div className="SalesOverview">
             <div className="SalesOverview__upper">
                 <div className="SalesOverview__upper__inner">
-                    <h2>Sales Overview</h2>
-                    <SegmentControl segments={options} onClick={toggleTimeframe} selected={timeframe} />
+                    <h2>{str('pages.sales.overview.title')}</h2>
+                    <SegmentControl segments={options} onClick={toggleTimeframe} selected={timeframe}/>
                     <div className="row-spaced">
                         <Statistic
                             value={price(data?.salesOverviewStatistics.stats.revenue.current!)}
                             delta={data?.salesOverviewStatistics.stats.revenue.delta}
-                            label="Revenue"
+                            label={str('statistic.revenue')}
                             loading={loading}
                         />
                         <Statistic
                             value={price(data?.salesOverviewStatistics.stats.grossSalesProfit.current!)}
                             delta={data?.salesOverviewStatistics.stats.grossSalesProfit.delta}
-                            label="Profit from sales"
+                            label={str('statistic.salesProfit')}
                             loading={loading}
                         />
                         <Statistic
                             value={String(data?.salesOverviewStatistics.stats.uniqueCustomers.current)}
                             delta={data?.salesOverviewStatistics.stats.uniqueCustomers.delta}
-                            label="Unique Customers"
+                            label={str('statistic.uniqueCustomers')}
                             loading={loading}
                         />
                         <Statistic
                             value={String(data?.salesOverviewStatistics.stats.sales.current)}
                             delta={data?.salesOverviewStatistics.stats.sales.delta}
-                            label="Sales"
+                            label={str('statistic.sales')}
                             loading={loading}
                         />
                     </div>
                 </div>
                 <div className="SalesOverview__upper__overflow page-item">
-                    <RevenueGraph data={data?.salesOverviewStatistics.revenueGraph} />
+                    <RevenueGraph data={data?.salesOverviewStatistics.revenueGraph}/>
                 </div>
             </div>
             <div className="SalesOverview__body page__body">
                 <div className="SalesOverview__row-2">
                     <div className="page-item">
-                        <h6>Revenue by division</h6>
-                        <LabelledPieChart data={data?.salesOverviewStatistics.divisionRevenueGraph} dataKey="revenue">
-
-                                {
-                                    data?.salesOverviewStatistics.divisionRevenueGraph.map((entry) => (
-                                        <Cell
+                        <h6>{str('pages.sales.overview.divisionRevenue')}</h6>
+                        <LabelledPieChart
+                            data={data?.salesOverviewStatistics.divisionRevenueGraph}
+                            dataKey="revenue"
+                            labelIntlPrefix="division"
+                        >
+                            {
+                                data?.salesOverviewStatistics.divisionRevenueGraph.map((entry) => (
+                                    <Cell
                                         key={`segment-${entry.label}`}
                                         fill={divisionHexColorMapLighten[entry.label]}
                                         stroke={divisionHexColorMap[entry.label]}
                                         strokeWidth={1}
                                     />))
-                                }
+                            }
                         </LabelledPieChart>
                     </div>
                     <div className="page-item">
-                        <h6>Revenue by lead source</h6>
-                        <LabelledPieChart data={data?.salesOverviewStatistics.salesLeadRevenueGraph} dataKey="revenue">
-                        {
-                                        data?.salesOverviewStatistics.salesLeadRevenueGraph.map((entry,i) => (
-                                            <Cell
-                                                key={`segment-${entry.label}`}
-                                                fill={colors[`blue${i+1}`]}
-                                            />)
-                                        )
-                                    }
+                        <h6>{str('pages.sales.overview.leadSource')}</h6>
+                        <LabelledPieChart
+                            data={data?.salesOverviewStatistics.salesLeadRevenueGraph}
+                            dataKey="revenue"
+                            labelIntlPrefix="lead.source"
+                        >
+                            {
+                                data?.salesOverviewStatistics.salesLeadRevenueGraph.map((entry, i) => (
+                                    <Cell
+                                        key={`segment-${entry.label}`}
+                                        fill={colors[`blue${i + 1}`]}
+                                    />)
+                                )
+                            }
                         </LabelledPieChart>
                     </div>
                 </div>

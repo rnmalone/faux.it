@@ -8,11 +8,11 @@ interface IValue {
     children?: React.ReactElement
 }
 
-export default function Value({ label, value, children }: IValue) {
+export default function Value({label, value, children}: IValue) {
     return (
         <div className="Value">
             <dt>{label}</dt>
-            { children || <dd>{value}</dd> }
+            {children || <dd>{value}</dd>}
         </div>
     )
 }

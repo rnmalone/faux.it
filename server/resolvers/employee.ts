@@ -16,7 +16,7 @@ const employeeResolver = {
         employeeList: async (root: any, {term, paging, sort: sortInput, facets: facetInput}: IListQueryInput, {connection}: IContext) => {
             const items = await selectAllEmployees(connection)
 
-            logger.info(`Query: employeeList - INPUT: ${JSON.stringify({ term, paging, sortInput, facetInput })}`)
+            logger.info(`Query: employeeList - INPUT: ${JSON.stringify({term, paging, sortInput, facetInput})}`)
 
             const resultsBuilder = new Results(items, {
                 facetFields: EMPLOYEE_FACET_FIELDS,

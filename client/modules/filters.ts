@@ -1,8 +1,8 @@
-import {Direction} from "../../../@types/Direction";
-import {SortType} from "../../../@types/SortType";
-import {ActionHandler, Dispatch, IAction, IAppStore} from "../../@types/store";
+import {Direction} from "../../@types/Direction";
+import {SortType} from "../../@types/SortType";
+import {ActionHandler, Dispatch, IAction, IAppStore} from "../@types/store";
 import {ChangeEvent} from "react";
-import {IPaging} from "../../@types/tables";
+import {IPaging} from "../@types/tables";
 
 export enum FilterActionTypes {
     SET_FILTER = 'app/modules/filters/SET_FILTER',

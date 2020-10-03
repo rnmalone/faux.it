@@ -7,11 +7,13 @@
 
   &__details {
     margin-left: .75rem;
+
     span {
-      color:$text-color-light;
+      color: $text-color-light;
       font-weight: 400;
       font-size: .75em;
     }
+
     * {
       font-size: .8em;
       margin: 0;

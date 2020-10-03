@@ -1,1 +1,1 @@
-export { default } from './Division';
+export {default} from './Division';

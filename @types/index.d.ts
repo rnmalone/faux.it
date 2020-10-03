@@ -1,5 +1,6 @@
 import {IDateRange} from './Dates'
 import {IPagingInput} from './Paging'
+import {ILocaleMessages, ILanguageMeta} from './Intl'
 
 import {
     ICustomerStats,
@@ -29,5 +30,7 @@ export {
     IProductCategoryProfit,
     ICustomerStats,
     IDateRange,
-    IPagingInput
+    IPagingInput,
+    ILocaleMessages,
+    ILanguageMeta
 }

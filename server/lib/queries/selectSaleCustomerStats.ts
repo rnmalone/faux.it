@@ -3,7 +3,7 @@ import {Sale} from "../../entities";
 import {SaleStatus} from "../../entities/Sale";
 import {IDateRange} from "../../../@types/Dates";
 
-export default async function selectSaleCustomerStats(connection: Connection, employeeId: number, { dateFrom, dateTo }: IDateRange) {
+export default async function selectSaleCustomerStats(connection: Connection, employeeId: number, {dateFrom, dateTo}: IDateRange) {
     return await connection
         .getRepository(Sale)
         .createQueryBuilder('sale')
@@ -13,10 +13,10 @@ export default async function selectSaleCustomerStats(connection: Connection, em
             ' ROUND(AVG(sale.customerAge), 2) as averageAge, ' +
             ' SUM(sale.agreedPrice) as revenue,' +
             ' COUNT(*) as saleCount, sale.customerGender as gender')
-        .where('sale.employeeId = :employeeId', { employeeId })
-        .andWhere('sale.dateOpened >= :dateFrom', { dateFrom })
-        .andWhere('sale.dateOpened <= :dateTo', { dateTo })
-        .andWhere('sale.status = :status', { status: SaleStatus.Complete })
+        .where('sale.employeeId = :employeeId', {employeeId})
+        .andWhere('sale.dateOpened >= :dateFrom', {dateFrom})
+        .andWhere('sale.dateOpened <= :dateTo', {dateTo})
+        .andWhere('sale.status = :status', {status: SaleStatus.Complete})
         .groupBy('sale.customerGender')
         .execute()
 }

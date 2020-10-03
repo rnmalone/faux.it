@@ -1,7 +1,7 @@
 import React from "react";
-import {apiBaseUri} from '../../config/client.config';
+import {apiBaseUri} from '../config/client.config';
 import {ApolloClient, ApolloProvider, InMemoryCache} from "@apollo/client";
-import {IComponentProps} from "../../models/generic";
+import {IComponentProps} from "../models/generic";
 
 export default function Apollo({children}: IComponentProps) {
     const apolloClient = new ApolloClient({

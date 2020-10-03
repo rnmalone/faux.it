@@ -72,8 +72,7 @@ export interface IProductCategoryProfit {
 
 export interface IEmployeeStatisticsResponse {
     employeeStatistics: {
-        stats: Statistics<
-            'salesComplete' |
+        stats: Statistics<'salesComplete' |
             'salesFailed' |
             'saleConversionPc' |
             'averageProfit' |
@@ -82,8 +81,7 @@ export interface IEmployeeStatisticsResponse {
             'totalRevenue' |
             'commissionEarnings' |
             'employeeDivisionSalesRank' |
-            'employeeDivisionProfitRank'
-            >;
+            'employeeDivisionProfitRank'>;
         revenueGraph: IRevenueGraphEntry[];
         salesStatusPieChartData: ISalesStatusPieSegment[];
         saleStatusGraph: ISalesStatusGraph[];
@@ -93,7 +91,9 @@ export interface IEmployeeStatisticsResponse {
     }
 }
 
-interface IEmployeeResult extends EmployeeDTO { location: LocationDTO }
+interface IEmployeeResult extends EmployeeDTO {
+    location: LocationDTO
+}
 
 export interface IEmployeeListQueryResponse {
     employeeList: {

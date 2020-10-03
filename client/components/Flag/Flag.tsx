@@ -8,6 +8,7 @@ import NR from '../../assets/images/flags/NR.svg'
 import US from '../../assets/images/flags/US.svg'
 import FL from '../../assets/images/flags/FL.svg'
 import FR from '../../assets/images/flags/FR.svg'
+import ES from '../../assets/images/flags/ES.svg'
 
 const countryCodeMap: { [key: string]: string } = {
     DE,
@@ -17,7 +18,8 @@ const countryCodeMap: { [key: string]: string } = {
     NR,
     US,
     FL,
-    FR
+    FR,
+    ES
 }
 
 export default function Flag({countryCode}: { countryCode: string }) {

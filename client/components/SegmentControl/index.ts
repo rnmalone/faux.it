@@ -1,1 +1,1 @@
-export { default } from './SegmentControl';
+export {default} from './SegmentControl';

@@ -5,7 +5,7 @@ export default async function selectAllSalesForEmployee(connection: Connection, 
     return await connection
         .getRepository(Sale)
         .createQueryBuilder('sale')
-        .where('sale.dateOpened >= :from', { from })
-        .andWhere('sale.division = :division', { division })
+        .where('sale.dateOpened >= :from', {from})
+        .andWhere('sale.division = :division', {division})
         .getMany()
 }

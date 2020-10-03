@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import Filters from '../component/Filters'
 import {IAppStore} from "../../../@types/store";
-import {setTerm, toggleFilterItem} from "../../../modules/filters/filters";
+import {setTerm, toggleFilterItem} from "../../../modules/filters";
 
 const mapStateToProps = (state: IAppStore) => ({
     filters: state.filters.filter

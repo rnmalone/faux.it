@@ -1,1 +1,1 @@
-export { default as decimalPlaces2 } from './decimalPlaces2';
+export {default as decimalPlaces2} from './decimalPlaces2';

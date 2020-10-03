@@ -13,7 +13,6 @@ import {decimalPlaces2} from "../../lib/utils";
 import {IDateRange} from "../../../@types/Dates";
 
 export interface IEmployeeSalesStatistics {
-    [key: string]: number;
     totalRevenue: number;
     commissionEarnings: number;
     salesComplete: number;
@@ -27,15 +26,17 @@ export interface IEmployeeSalesStatistics {
     revenueContributionPcForDivision: number;
     targetRevenueContributionPcForDivision: number;
     averageSaleCloseTimeDays: number;
+
+    [key: string]: number;
 }
 
-export default async function buildEmployeeSalesStatistics(connection: Connection, employeeId: number, { dateFrom, dateTo }: IDateRange): Promise<IEmployeeSalesStatistics | null> {
-    const [employee, employeeSales ] = await Promise.all([
+export default async function buildEmployeeSalesStatistics(connection: Connection, employeeId: number, {dateFrom, dateTo}: IDateRange): Promise<IEmployeeSalesStatistics | null> {
+    const [employee, employeeSales] = await Promise.all([
         selectEmployeeById(connection, employeeId),
-        selectAllSalesForEmployee(connection, employeeId, { dateFrom, dateTo }),
+        selectAllSalesForEmployee(connection, employeeId, {dateFrom, dateTo}),
     ]);
 
-    if(!employee || !employeeSales) {
+    if (!employee || !employeeSales) {
         return null;
     }
 
@@ -48,14 +49,14 @@ export default async function buildEmployeeSalesStatistics(connection: Connectio
         divisionProfitsByEmployee,
         divisionSalesByEmployee
     ] = await Promise.all([
-        selectSumProfitForDivisionGroupByEmployee(connection, { dateFrom, dateTo }, employee.division),
-        selectSumSalesForDivisionGroupByEmployee(connection, { dateFrom, dateTo }, employee.division)
+        selectSumProfitForDivisionGroupByEmployee(connection, {dateFrom, dateTo}, employee.division),
+        selectSumSalesForDivisionGroupByEmployee(connection, {dateFrom, dateTo}, employee.division)
     ])
 
     const revenueContributionPcForDivision = decimalPlaces2((100 / divisionSalesMetrics.totalProfit) * employeeReducedSalesMetrics.totalProfit)
     const targetRevenueContributionPcForDivision = decimalPlaces2(100 / divisionProfitsByEmployee.length)
-    const employeeDivisionProfitRank = divisionProfitsByEmployee.findIndex(({ employeeId: id }) => id === employeeId) + 1
-    const employeeDivisionSalesRank = divisionSalesByEmployee.findIndex(({ employeeId: id }) => id === employeeId) + 1
+    const employeeDivisionProfitRank = divisionProfitsByEmployee.findIndex(({employeeId: id}) => id === employeeId) + 1
+    const employeeDivisionSalesRank = divisionSalesByEmployee.findIndex(({employeeId: id}) => id === employeeId) + 1
 
     const saleConversionPc = decimalPlaces2((100 / (employeeReducedSalesMetrics.salesComplete + employeeReducedSalesMetrics.salesFailed)) * employeeReducedSalesMetrics.salesComplete);
     const averageProfit = Math.round(employeeReducedSalesMetrics.totalProfit / employeeReducedSalesMetrics.salesComplete);

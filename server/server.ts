@@ -8,11 +8,12 @@ import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import schema from './schema/schema'
 import resolvers from './resolvers'
-import {assets, clientRenderer} from "./middleware";
+import {assets, clientRenderer, localeMiddleware} from "./middleware";
 import {Connection} from "typeorm";
 import {LoggingPlugin} from "./lib/plugins";
+import {locale} from './routes';
 
-const {ApolloServer, gql} = require('apollo-server-express');
+const {ApolloServer} = require('apollo-server-express');
 
 export interface IContext {
     connection: Connection
@@ -67,7 +68,10 @@ export default function startServer(connection: Connection) {
 
     app.use(express.static(config.paths.public()));
     app.use('/assets', express.static(config.paths.server('assets')))
+    app.get('/locale', locale)
 
+    // @ts-ignore
+    app.use('*', localeMiddleware)
     app.use('*', clientRenderer);
 
     app.listen(config.server.port)

@@ -9,6 +9,7 @@ import {pc, price} from "../../../lib/utils/formatters";
 import TextPlaceholder from "../../../components/TextPlaceholder";
 import {useScrollTo} from "../../../lib/hooks";
 import {IEmployeeResult} from "../../../../@types";
+import {str} from "../../../lib";
 
 export default function Employee() {
     useScrollTo(false)(0)
@@ -35,10 +36,11 @@ export default function Employee() {
                         </TextPlaceholder>
                     </div>
                     <dl className="Employee__upper__details__data">
-                        <Value label='Job Title' value={data?.employee?.jobTitle}/>
-                        <Value label='Division' value={data?.employee?.division}/>
-                        <Value label='Salary' value={price(data?.employee?.salary)}/>
-                        <Value label='Commission' value={pc(data?.employee?.commissionRate)}/>
+                        <Value label={str('attribute.jobTitle')} value={data?.employee?.jobTitle}/>
+                        <Value label={str('attribute.division')}
+                               value={str(`division.${data?.employee?.division.toLowerCase()}`)}/>
+                        <Value label={str('attribute.salary')} value={price(data?.employee?.salary)}/>
+                        <Value label={str('attribute.commissionRate')} value={pc(data?.employee?.commissionRate)}/>
                     </dl>
                 </div>
             </div>

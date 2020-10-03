@@ -3,6 +3,7 @@ import {price, rank} from "../../../../lib/utils/formatters";
 import {rankColorMap} from "../../../../config/color.config";
 import React from "react";
 import {IEmployeeStatisticsResponse} from "../../../../../@types";
+import {str} from "../../../../lib";
 
 export interface ISmallStats {
     data: IEmployeeStatisticsResponse['employeeStatistics.stats']
@@ -14,7 +15,7 @@ export default function SmallStats({data, loading}: ISmallStats) {
         <section className="Statistics__flex-row">
             <StatisticWidget
                 loading={loading}
-                label={"Division Sales Rank"}
+                label={str('statistic.divisionSalesRank')}
                 width="50"
                 value={rank(data?.employeeDivisionSalesRank?.current)}
                 delta={data?.employeeDivisionSalesRank?.delta}
@@ -23,7 +24,7 @@ export default function SmallStats({data, loading}: ISmallStats) {
             <StatisticWidget
                 loading={loading}
                 width="50"
-                label={"Division Profit Rank"}
+                label={str('statistic.divisionProfitRank')}
                 value={rank(data?.employeeDivisionProfitRank?.current)}
                 delta={data?.employeeDivisionProfitRank?.delta}
                 borderColor={rankColorMap[data?.employeeDivisionProfitRank?.current]}
@@ -31,7 +32,7 @@ export default function SmallStats({data, loading}: ISmallStats) {
             <StatisticWidget
                 loading={loading}
                 width="160"
-                label="Commission Earnings"
+                label={str('statistic.commissionEarnings')}
                 value={price(data?.commissionEarnings?.current)}
                 delta={data?.commissionEarnings?.delta}
                 isPositive={data?.commissionEarnings?.delta > 0}
@@ -39,7 +40,7 @@ export default function SmallStats({data, loading}: ISmallStats) {
             <StatisticWidget
                 loading={loading}
                 width="160"
-                label="Average Sale Profit"
+                label={str('statistic.averageSaleProfit')}
                 value={price(data?.averageProfit?.current)}
                 delta={data?.averageProfit?.delta}
                 isPositive={data?.averageProfit?.delta > 0}

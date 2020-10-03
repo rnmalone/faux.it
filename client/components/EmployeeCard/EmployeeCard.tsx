@@ -17,14 +17,14 @@ interface IEmployeeCard {
 }
 
 export default function EmployeeCard({
-    id,
-    name,
-    profileImageUrl,
+                                         id,
+                                         name,
+                                         profileImageUrl,
                                          bannerImageUrl,
-    jobTitle,
-    division,
-    index,
-    location
+                                         jobTitle,
+                                         division,
+                                         index,
+                                         location
                                      }: IEmployeeCard) {
     const navigate = useNavigate()
 
@@ -37,7 +37,7 @@ export default function EmployeeCard({
         <div className="page-item EmployeeCard" onClick={handleClick}>
             <div className="EmployeeCard__img-container">
                 <div className="EmployeeCard__img-container__inner">
-                    <img className="EmployeeCard__img-container__banner" src={bannerImageUrl} />
+                    <img className="EmployeeCard__img-container__banner" src={bannerImageUrl}/>
                 </div>
                 <img className="EmployeeCard__img-container__profile thumbnail" src={profileImageUrl}/>
             </div>
@@ -51,7 +51,7 @@ export default function EmployeeCard({
                     address={location.address}
                     countryName={location.countryName}
                 />
-                <Division type={division} />
+                <Division type={division}/>
             </div>
         </div>
     )

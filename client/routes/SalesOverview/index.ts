@@ -1,1 +1,1 @@
-export { default } from './components/SalesOverview';
+export {default} from './components/SalesOverview';

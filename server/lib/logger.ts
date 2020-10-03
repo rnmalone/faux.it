@@ -1,10 +1,10 @@
 import winston from 'winston';
 
-const { combine, timestamp, printf } = winston.format;
+const {combine, timestamp, printf} = winston.format;
 
 const project = require('../../config/project.config')
 
-const myFormat = printf(({ level, message, timestamp }) => {
+const myFormat = printf(({level, message, timestamp}) => {
     return `${timestamp} ${level.toUpperCase()}: ${message}`;
 });
 
@@ -15,9 +15,9 @@ const logger = winston.createLogger({
         myFormat
     ),
     transports: [
-        new winston.transports.File({ filename: project.paths.logs('error.log'), level: 'error' }),
-        new winston.transports.File({ filename: project.paths.logs('info.log'), level: 'info' }),
-        new winston.transports.File({ filename: project.paths.logs('combined.log') }),
+        new winston.transports.File({filename: project.paths.logs('error.log'), level: 'error'}),
+        new winston.transports.File({filename: project.paths.logs('info.log'), level: 'info'}),
+        new winston.transports.File({filename: project.paths.logs('combined.log')}),
     ]
 })
 

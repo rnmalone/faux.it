@@ -18,15 +18,21 @@ import {
     ISaleSourceProfit,
     ISalesStatusPieSegment
 } from "../../../../../@types";
+import {str} from "../../../../lib";
 
 interface IEmployeeStatistics {
     id: number;
     division: string;
 }
 
-export default function EmployeeStatistics({ id, division }: IEmployeeStatistics) {
-    const { timeframe, toggleTimeframe, options: timeframeOptions } = useTimeframe()
-    const { data, loading } = useQuery<IEmployeeStatisticsResponse, { timeframe: number, id: number }>(employeeStatisticsQuery, { variables: { id, timeframe } })
+export default function EmployeeStatistics({id, division}: IEmployeeStatistics) {
+    const {timeframe, toggleTimeframe, options: timeframeOptions} = useTimeframe()
+    const {data, loading} = useQuery<IEmployeeStatisticsResponse, { timeframe: number, id: number }>(employeeStatisticsQuery, {
+        variables: {
+            id,
+            timeframe
+        }
+    })
 
     return (
         <div className="Statistics">
@@ -35,48 +41,47 @@ export default function EmployeeStatistics({ id, division }: IEmployeeStatistics
                 onClick={toggleTimeframe}
                 selected={timeframe}
             />
-            <SmallStats loading={loading} data={data?.employeeStatistics?.stats} />
+            <SmallStats loading={loading} data={data?.employeeStatistics?.stats}/>
             <section className="Statistics__row Statistics__revenue page-item">
                 <div className="Statistics__revenue__left">
-                        <Statistic
-                            loading={loading}
-                            label="Sales Revenue"
-                            width="260"
-                            height="60"
-                            value={price(data?.employeeStatistics?.stats?.totalRevenue?.current)}
-                            delta={data?.employeeStatistics?.stats?.totalRevenue?.delta}
-                            isPositive={data?.employeeStatistics?.stats?.totalRevenue?.delta > 0}
-                            large
-                        />
-                        <Statistic
-                            loading={loading}
-                            label="Gross Profit"
-                            value={price(data?.employeeStatistics?.stats?.totalProfit?.current)}
-                            delta={data?.employeeStatistics?.stats?.totalProfit?.delta}
-                            isPositive={data?.employeeStatistics?.stats?.totalProfit?.delta > 0}
+                    <Statistic
+                        loading={loading}
+                        label={str('statistic.revenue')}
+                        width="260"
+                        height="60"
+                        value={price(data?.employeeStatistics?.stats?.totalRevenue?.current)}
+                        delta={data?.employeeStatistics?.stats?.totalRevenue?.delta}
+                        isPositive={data?.employeeStatistics?.stats?.totalRevenue?.delta > 0}
+                        large
+                    />
+                    <Statistic
+                        loading={loading}
+                        label={str('statistic.salesProfit')}
+                        value={price(data?.employeeStatistics?.stats?.totalProfit?.current)}
+                        delta={data?.employeeStatistics?.stats?.totalProfit?.delta}
+                        isPositive={data?.employeeStatistics?.stats?.totalProfit?.delta > 0}
+                    />
+                    <Statistic
+                        loading={loading}
+                        label={str('statistic.grossProfitMargin')}
+                        value={pc(data?.employeeStatistics?.stats?.grossProfitMargin?.current)}
+                        delta={data?.employeeStatistics?.stats?.grossProfitMargin?.delta}
+                        isPositive={data?.employeeStatistics?.stats?.grossProfitMargin?.delta > 0}
 
-                        />
-                        <Statistic
-                            loading={loading}
-                            label="Gross Profit Margin"
-                            value={pc(data?.employeeStatistics?.stats?.grossProfitMargin?.current)}
-                            delta={data?.employeeStatistics?.stats?.grossProfitMargin?.delta}
-                            isPositive={data?.employeeStatistics?.stats?.grossProfitMargin?.delta > 0}
-
-                        />
+                    />
                 </div>
                 <div className="fill-remaining">
-                    <RevenueGraph data={data?.employeeStatistics?.revenueGraph} />
+                    <RevenueGraph data={data?.employeeStatistics?.revenueGraph}/>
                 </div>
             </section>
             <section className="Statistics__flex-row">
                 <div className="page-item">
-                    <h6>Product Category Breakdown</h6>
+                    <h6>{str('pages.employee.stats.productCategory')}</h6>
                     {
                         data?.employeeStatistics.productCategoryProfit.map((stat: IProductCategoryProfit, i: number) => (
                             <BarDistribution
                                 left={{
-                                    pc: ( 100 / data.employeeStatistics.stats.totalProfit.current) * stat.profit,
+                                    pc: (100 / data.employeeStatistics.stats.totalProfit.current) * stat.profit,
                                     value: stat.profit,
                                     label: stat.productCategory,
                                     color: colors[`${divisionColorsByString[division]}${i + 1}`]
@@ -91,7 +96,7 @@ export default function EmployeeStatistics({ id, division }: IEmployeeStatistics
                         data?.employeeStatistics.saleSourceProfit.map((stat: ISaleSourceProfit) => (
                             <BarDistribution
                                 left={{
-                                    pc: ( 100 / data.employeeStatistics.stats.totalProfit.current) * stat.profit,
+                                    pc: (100 / data.employeeStatistics.stats.totalProfit.current) * stat.profit,
                                     value: stat.profit,
                                     label: stat.leadSource
                                 }}
@@ -106,7 +111,7 @@ export default function EmployeeStatistics({ id, division }: IEmployeeStatistics
                 />
             </section>
             <section className="page-item">
-                <h6>Sale Conversion</h6>
+                <h6>{str('statistic.saleConversionRate')}</h6>
                 <div className="Statistics__row">
                     <div className="Statistics__pie-container">
                         <span>{pc(data?.employeeStatistics?.stats?.saleConversionPc?.current)}</span>
@@ -121,7 +126,8 @@ export default function EmployeeStatistics({ id, division }: IEmployeeStatistics
                                     innerRadius={105}
                                 >
                                     {
-                                        data?.employeeStatistics?.salesStatusPieChartData?.map((entry: ISalesStatusPieSegment, index: number) => <Cell key={`cell-${index}`} fill={saleStatusColorMap[entry.status]} />)
+                                        data?.employeeStatistics?.salesStatusPieChartData?.map((entry: ISalesStatusPieSegment, index: number) =>
+                                            <Cell key={`cell-${index}`} fill={saleStatusColorMap[entry.status]}/>)
                                     }
                                 </Pie>
                             </PieChart>
@@ -135,10 +141,10 @@ export default function EmployeeStatistics({ id, division }: IEmployeeStatistics
                                     top: 16, right: 16, left: 40, bottom: 16,
                                 }}
                             >
-                                <XAxis stroke={colors.lightGrey} dataKey="date" />
-                                <Tooltip />
-                                <Bar width={10} dataKey="completed" fill={colors.green} />
-                                <Bar width={10} dataKey="closed" fill={colors.red} />
+                                <XAxis stroke={colors.lightGrey} dataKey="date"/>
+                                <Tooltip/>
+                                <Bar width={10} dataKey="completed" fill={colors.green}/>
+                                <Bar width={10} dataKey="closed" fill={colors.red}/>
                             </BarChart>
                         </ResponsiveContainer>
                     </div>

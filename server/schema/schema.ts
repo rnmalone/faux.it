@@ -18,20 +18,20 @@ const typeDefs = gql`
         location: Location
         sales: [Sale]
     }
-    
-    type Sale { 
-        id: Int 
-        employeeId: Int 
+
+    type Sale {
+        id: Int
+        employeeId: Int
         employee: String
-        item: String   
-        agreedPrice: Int    
-        ticketPrice: Int    
-        customerName: String   
-        status: SaleStatus 
+        item: String
+        agreedPrice: Int
+        ticketPrice: Int
+        customerName: String
+        status: SaleStatus
         dateOpened: String
         dateClosed: String
     }
-    
+
     type Location {
         id: Int
         address: String
@@ -39,82 +39,82 @@ const typeDefs = gql`
         countryCode: String
         employees: [Employee]
     }
-    
+
     type EmployeeResult {
         count: Int
         items: [Employee]
         facets: [FacetResult]
     }
-    
+
     type SaleResult {
         count: Int
         items: [Sale]
         facets: [FacetResult]
     }
-    
+
     type Facet {
         value: String!
         count: Int!
     }
-    
+
     type FacetResult {
         category: String!
         items: [Facet]!
     }
-    
+
     enum SaleStatus {
         COMPLETE
         IN_PROGRESS
         CLOSED
         AWAITING_PAYMENT
     }
-    
+
     input FacetFilterInput {
         category: String!
         selected: [String]!
         maxSelected: Int = 50
         limit: Int
     }
-    
+
     type Paging {
         offset: Int
         limit: Int
         sort: Sort
     }
-    
+
     input PagingInput {
         offset: Int = 0
         limit: Int = 10
         sort: SortInput
     }
-    
+
     enum SortType {
         ALPHANUMERIC
         VALUE
         STATUS
     }
-    
+
     enum Direction {
         DOWN
         UP
     }
-    
+
     type Sort {
         type: SortType!
         direction: Direction
     }
-    
+
     input SortInput {
         type: SortType!
         direction: Direction
     }
-    
+
     enum Entity {
         EMPLOYEE
         SALE
         LOCATION
     }
-    
+
     type SearchSuggestion {
         entity: Entity!
         primaryText: String
@@ -122,22 +122,22 @@ const typeDefs = gql`
         profileImageUrl: String
         score: Int
     }
-    
+
     type SearchSuggestionResult {
         count: Int
         items: [SearchSuggestion]
     }
-    
+
     type Delta {
         current: Float
         delta: Float
     }
-    
+
     type SaleStatusPieEntry {
         status: SaleStatus
         value: Int
     }
-    
+
     type EmployeePerformanceStatistics {
         totalRevenue: Delta
         commissionEarnings: Delta
@@ -153,35 +153,35 @@ const typeDefs = gql`
         averageDivisionSaleCloseTimeDays: Delta
         grossProfitMargin: Delta
     }
-    
+
     type RevenueGraphEntry {
         revenue: Float
         date: String
     }
-    
+
     type GenericSalesGraphEntry {
-       revenue: Float
+        revenue: Float
         profit: Float
         sales: Float
         label: String
     }
-    
+
     type SaleStatusGraphEntry {
         closed: Int
         completed: Int
         date: String
     }
-    
+
     type ProductCategoryProfit {
         productCategory: String
         profit: Float
     }
-    
+
     type SaleSourceProfit {
         profit: Float
         leadSource: String
     }
-    
+
     type SaleCustomerStatsByGender {
         gender: String
         profit: Float
@@ -191,7 +191,7 @@ const typeDefs = gql`
         revenue: Float
         saleCount: Float
     }
-    
+
     type EmployeeSalesStatistics {
         stats: EmployeePerformanceStatistics
         revenueGraph: [RevenueGraphEntry]
@@ -201,46 +201,46 @@ const typeDefs = gql`
         saleSourceProfit: [SaleSourceProfit]
         saleCustomerStats: [SaleCustomerStatsByGender]
     }
-    
+
     type SalesOverviewPerformanceStatistics {
         revenue: Delta
         grossSalesProfit: Delta
         uniqueCustomers: Delta
         sales: Delta
 
-#        saleConversion: Delta
-#        revenuePcFromRepeatCustomers: Delta
-#        salesCostPcOfRevenue: Delta
-#        saleConversionDays: Delta
-#        totalComissionPaid: Delta
-#        totalEmployeeSalaries: Delta
-#        totalEmployeeExpenditure: Delta
+        #        saleConversion: Delta
+        #        revenuePcFromRepeatCustomers: Delta
+        #        salesCostPcOfRevenue: Delta
+        #        saleConversionDays: Delta
+        #        totalComissionPaid: Delta
+        #        totalEmployeeSalaries: Delta
+        #        totalEmployeeExpenditure: Delta
     }
-    
+
     type SalesOverviewStatistics {
         stats: SalesOverviewPerformanceStatistics
         revenueGraph: [RevenueGraphEntry]
         divisionRevenueGraph: [GenericSalesGraphEntry]
         salesLeadRevenueGraph: [GenericSalesGraphEntry]
     }
-   
+
     type Query {
         employee(id: Int): Employee
-        
+
         employeeList(
             term: String
             facets: [FacetFilterInput]
             paging: PagingInput
             sort: SortInput
-            ): EmployeeResult
-            
+        ): EmployeeResult
+
         saleList(
             term: String
             facets: [FacetFilterInput]
             paging: PagingInput
             sort: SortInput
         ): SaleResult
-        
+
         searchSuggestions(
             term: String
         ): SearchSuggestionResult
@@ -249,7 +249,7 @@ const typeDefs = gql`
             id: Int!
             timeframe: Int!
         ): EmployeeSalesStatistics
-        
+
         salesOverviewStatistics(
             timeframe: Int!
         ): SalesOverviewStatistics

@@ -14,5 +14,8 @@ $bar-height: 50px;
     background-color: white;
     z-index: 1000;
     border-bottom: $border-color 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 }

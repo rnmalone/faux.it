@@ -8,7 +8,7 @@ interface IRevenueGraph {
     data: IRevenueGraphEntry[]
 }
 
-export default function RevenueGraph({ data }: IRevenueGraph) {
+export default function RevenueGraph({data}: IRevenueGraph) {
 
     return (
         <ResponsiveContainer width={'100%'} height={'100%'}>
@@ -18,9 +18,9 @@ export default function RevenueGraph({ data }: IRevenueGraph) {
                     top: 5, left: 16, bottom: 0,
                 }}
             >
-                <XAxis stroke={colors.lightGrey} dataKey="date" tickLine={false} />
-                <YAxis tickCount={2} stroke={colors.lightGrey} tickFormatter={price} tickSize={10} tickLine={false} />
-                <Tooltip />
+                <XAxis stroke={colors.lightGrey} dataKey="date" tickLine={false}/>
+                <YAxis tickCount={2} stroke={colors.lightGrey} tickFormatter={price} tickSize={10} tickLine={false}/>
+                <Tooltip/>
                 <Line
                     dot={false}
                     strokeWidth={3}

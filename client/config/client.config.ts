@@ -1,3 +1,4 @@
 export const {
-    apiBaseUri
+    apiBaseUri,
+    localeUrl
 } = window.__INITIAL_STATE__

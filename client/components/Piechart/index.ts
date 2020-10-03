@@ -1,1 +1,1 @@
-export { default } from './LabelledPieChart';
+export {default} from './LabelledPieChart';

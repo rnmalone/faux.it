@@ -4,10 +4,10 @@ import './BarDistribution.scss';
 import {pc} from "../../lib/utils/formatters";
 
 interface IBarDistributionSegment {
-   pc: number;
-   label: string;
-   value: number;
-   color?: string;
+    pc: number;
+    label: string;
+    value: number;
+    color?: string;
 }
 
 interface IBarDistribution {
@@ -15,13 +15,13 @@ interface IBarDistribution {
     right?: IBarDistributionSegment
 }
 
-export default function BarDistribution({ left, right }: IBarDistribution) {
+export default function BarDistribution({left, right}: IBarDistribution) {
 
     return (
         <div className="BarDistribution">
             <div className="BarDistribution__labels">
                 <span>{`${left.label} - ${pc(Math.round(left.pc))}`}</span>
-                { right ? <span>{`${pc(Math.round(right.pc))} - ${right.label}`}</span> : null}
+                {right ? <span>{`${pc(Math.round(right.pc))} - ${right.label}`}</span> : null}
             </div>
             <div className="BarDistribution__bar">
                 <span
@@ -29,8 +29,8 @@ export default function BarDistribution({ left, right }: IBarDistribution) {
                         width: `${left.pc}%`,
                         backgroundColor: `${left.color}`
                     }}
-                    className="BarDistribution__bar__segment" />
-                { right ?
+                    className="BarDistribution__bar__segment"/>
+                {right ?
                     <span
                         style={{
                             width: `${right.pc}%`,
@@ -38,7 +38,7 @@ export default function BarDistribution({ left, right }: IBarDistribution) {
                             backgroundColor: `${right.color}`
                         }}
                         className="BarDistribution__bar__segment"
-                    /> : null }
+                    /> : null}
             </div>
         </div>
     )

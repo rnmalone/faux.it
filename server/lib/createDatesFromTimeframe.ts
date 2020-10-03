@@ -14,5 +14,5 @@ export default function createDatesFromTimeframe(timeframe: number): ITimeframeD
     const dayRange = moment(dateTo).diff(moment(dateFrom), 'days')
     const doubleTimeRangeMoment = moment(dateFrom).subtract(dayRange, 'days').toISOString()
 
-    return { dateFrom, dateTo, doubleTimeRangeMoment }
+    return {dateFrom, dateTo, doubleTimeRangeMoment}
 }

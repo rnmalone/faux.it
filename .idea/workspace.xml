@@ -3,42 +3,90 @@
   <component name="ChangeListManager">
     <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/@types/Division.ts" beforeDir="false" afterPath="$PROJECT_DIR$/@types/Division.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/@types/Query.ts" beforeDir="false" afterPath="$PROJECT_DIR$/@types/Query.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/@types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/@types/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/@types/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/@types/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/assets/images/flags/FR.svg" beforeDir="false" afterPath="$PROJECT_DIR$/client/assets/images/flags/FR.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/BarDistribution/BarDistribution.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/BarDistribution/BarDistribution.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/BarDistribution/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/BarDistribution/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Delta/Delta.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Delta/Delta.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Delta/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Delta/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/Division/Division.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Division/Division.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Division/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Division/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/Dropdown/Dropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Dropdown/Dropdown.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/EmployeeRow/EmployeeRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/EmployeeRow/EmployeeRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/EmployeeCard/EmployeeCard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/EmployeeCard/EmployeeCard.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/EmployeeCard/EmployeeCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/EmployeeCard/EmployeeCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/EmployeeCard/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/EmployeeCard/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/Filters/component/Filters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Filters/component/Filters.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Filters/container/Filters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Filters/container/Filters.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Flag/Flag.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Flag/Flag.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Grid/Grid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Grid/Grid.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Grid/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Grid/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Icon/Icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Icon/Icon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ListTable/ListTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ListTable/ListTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Location/Location.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Location/Location.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Location/Location.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Location/Location.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Location/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Location/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Navigation/components/Navigation-Desktop.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Navigation/components/Navigation-Desktop.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Navigation/styles/Navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Navigation/styles/Navigation.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/Piechart/LabelledPieChart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Piechart/LabelledPieChart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Piechart/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Piechart/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/RevenueGraph/RevenueGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/RevenueGraph/RevenueGraph.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/RevenueGraph/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/RevenueGraph/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/ScrollBoundary/ScrollBoundary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ScrollBoundary/ScrollBoundary.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ScrollBoundary/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ScrollBoundary/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/SegmentControl/SegmentControl.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/SegmentControl/SegmentControl.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/SegmentControl/SegmentControl.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/SegmentControl/SegmentControl.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/SegmentControl/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/SegmentControl/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Statistic/components/Statistic.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Statistic/components/Statistic.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Statistic/components/StatisticWidget.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Statistic/components/StatisticWidget.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Statistic/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Statistic/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Statistic/styles/Statistic.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Statistic/styles/Statistic.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/TextPlaceholder/TextPlaceholder.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/TextPlaceholder/TextPlaceholder.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/TextPlaceholder/TextPlaceholder.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/TextPlaceholder/TextPlaceholder.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/TextPlaceholder/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/TextPlaceholder/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/TopBar/TopBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/TopBar/TopBar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/TopBar/TopBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/TopBar/TopBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/TopBar/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/TopBar/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/Value/Value.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Value/Value.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Value/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Value/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/config/client.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/config/client.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/config/color.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/config/color.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/config/navigation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/config/navigation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/containers/Apollo/Apollo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/containers/Apollo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/containers/Apollo/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/layouts/CoreLayout/CoreLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/layouts/CoreLayout/CoreLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/lib/buildFacetInputFromFilters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/buildFacetInputFromFilters.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/lib/hooks/useTimeframe.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/hooks/useTimeframe.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/lib/utils/formatters/formatNumber.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/utils/formatters/formatNumber.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/modules/filters/filters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/modules/filters/filters.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/lib/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/modules/filters/filters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/modules/filters.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/modules/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/modules/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/routes/Employee/components/Employee.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/components/Employee.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/routes/Employee/components/EmployeeStatistics/EmployeeStatistics.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/components/EmployeeStatistics/EmployeeStatistics.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/routes/Employee/components/EmployeeStatistics/GenderInsights.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/components/EmployeeStatistics/GenderInsights.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/routes/Employee/components/EmployeeStatistics/SmallStats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/components/EmployeeStatistics/SmallStats.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/routes/EmployeeList/components/EmployeeList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/EmployeeList/components/EmployeeList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/routes/EmployeeList/container/EmployeeList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/EmployeeList/container/EmployeeList.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/routes/SalesOverview/components/SalesOverview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/SalesOverview/components/SalesOverview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/routes/SalesOverview/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/SalesOverview/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/routes/SalesOverview/styles/SalesOverview.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/SalesOverview/styles/SalesOverview.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/@types/Dates.ts" beforeDir="false" afterPath="$PROJECT_DIR$/@types/Dates.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/@types/Direction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/@types/Direction.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/@types/Division.ts" beforeDir="false" afterPath="$PROJECT_DIR$/@types/Division.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/@types/Facet.ts" beforeDir="false" afterPath="$PROJECT_DIR$/@types/Facet.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/@types/Paging.ts" beforeDir="false" afterPath="$PROJECT_DIR$/@types/Paging.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/@types/SortInput.ts" beforeDir="false" afterPath="$PROJECT_DIR$/@types/SortInput.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/@types/SortType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/@types/SortType.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/@types/Stats/Employee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/@types/Stats/Employee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/@types/Stats/Timeframe.ts" beforeDir="false" afterPath="$PROJECT_DIR$/@types/Stats/Timeframe.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/config/timeframe.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/config/timeframe.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/Results.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/Results.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/createDelta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/createDelta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/facetExtractor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/facetExtractor.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/filterResults.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/filterResults.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/paginateResults.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/paginateResults.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/core/vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/core/vars.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/project.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/project.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nodemon.json" beforeDir="false" afterPath="$PROJECT_DIR$/nodemon.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/entities/Employee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/entities/Employee.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/createDatesFromTimeframe.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/createDatesFromTimeframe.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/db/mock/createMockSales.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/db/mock/createMockSales.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/db/mock/injectMockData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/db/mock/injectMockData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/extractSalesMetrics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/extractSalesMetrics.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/getGraphXAxisKeyByTimeframeSize.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/getGraphXAxisKeyByTimeframeSize.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/logger.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/logger.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/plugins/LoggingPlugin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/plugins/LoggingPlugin.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/plugins/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/plugins/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectAllSalesForDivision.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectAllSalesForDivision.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/lib/queries/selectAllSalesForEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectAllSalesForEmployee.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/lib/queries/selectEmployeeProductCategoryProfit.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectEmployeeProductCategoryProfit.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/lib/queries/selectEmployeeSaleSourceProfit.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectEmployeeSaleSourceProfit.ts" afterDir="false" />
@@ -52,12 +100,15 @@
       <change beforePath="$PROJECT_DIR$/server/lib/queries/selectSalesStatsForSalesChannels.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectSalesStatsForSalesChannels.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/lib/queries/selectSumProfitForDivisionGroupByEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectSumProfitForDivisionGroupByEmployee.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/lib/queries/selectSumSalesForDivisionGroupByEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectSumSalesForDivisionGroupByEmployee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/reduceGraphArray.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/reduceGraphArray.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/sorters/alphanumberic.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/sorters/alphanumberic.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/sorters/sort.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/sorters/sort.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/utils/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/middleware/clientRenderer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/middleware/clientRenderer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/middleware/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/middleware/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/resolvers/employee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/employee.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/resolvers/employeeStatistics/buildEmployeeSalesStatistics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/employeeStatistics/buildEmployeeSalesStatistics.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/resolvers/sale.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/sale.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/schema/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/schema/schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,8 +119,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="JavaScript File" />
         <option value="GraphQL File" />
+        <option value="JavaScript File" />
         <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
       </list>
@@ -107,11 +158,11 @@
       <recent name="C:\Users\Rorym\Documents\faux.it\client\assets\images\flags" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Rory Malone\Documents\faux.it\client\containers\AppIntlProvider\component" />
+      <recent name="C:\Users\Rory Malone\Documents\faux.it\client\containers\AppIntlProvider" />
+      <recent name="C:\Users\Rory Malone\Documents\faux.it\client\containers" />
+      <recent name="C:\Users\Rory Malone\Documents\faux.it\client\modules" />
       <recent name="C:\Users\Rory Malone\Documents\faux.it\@types" />
-      <recent name="C:\Users\Rory Malone\Documents\faux.it\client\routes\SalesOverview\components" />
-      <recent name="C:\Users\Rory Malone\Documents\faux.it\server\assets\images\banner" />
-      <recent name="C:\Users\Rory Malone\Documents\faux.it\server\assets\images\profile" />
-      <recent name="C:\Users\Rory Malone\Documents\faux.it\client\routes\Employee\components\EmployeeStatistics" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -163,7 +214,8 @@
       <workItem from="1601400038031" duration="16894000" />
       <workItem from="1601458195522" duration="38259000" />
       <workItem from="1601553749515" duration="21707000" />
-      <workItem from="1601629907999" duration="14443000" />
+      <workItem from="1601629907999" duration="37828000" />
+      <workItem from="1601723478189" duration="2011000" />
     </task>
     <servers />
   </component>
@@ -189,11 +241,11 @@
     <state x="951" y="417" key="#com.intellij.fileTypes.FileTypeChooser/-1920.160.1920.1040/0.0.2560.1400/2560.160.1920.1040@0.0.2560.1400" timestamp="1601406461755" />
     <state x="951" y="417" key="#com.intellij.fileTypes.FileTypeChooser/-1920.366.1920.1040/2560.366.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1600596974210" />
     <state x="713" y="310" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600115732315" />
-    <state x="920" y="358" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601230660154">
+    <state x="920" y="358" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601669858983">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600274610024" />
-    <state x="920" y="358" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/-1920.160.1920.1040/2560.160.1920.1040@0.0.2560.1400" timestamp="1601230660154" />
+    <state x="920" y="358" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/-1920.160.1920.1040/2560.160.1920.1040@0.0.2560.1400" timestamp="1601669858983" />
     <state x="92" y="92" width="2376" height="1216" key="DiffContextDialog" timestamp="1600597211670">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -216,22 +268,24 @@
     </state>
     <state x="123" y="124" width="2315" height="1153" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-1920.366.1920.1040/2560.366.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1600597211670" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600275661711" />
-    <state x="861" y="324" width="836" height="840" key="find.popup" timestamp="1601508632902">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="3206" y="401" width="627" height="624" key="find.popup" timestamp="1601649355820">
+      <screen x="2560" y="160" width="1920" height="1040" />
     </state>
     <state x="861" y="324" width="836" height="840" key="find.popup/-1920.160.1920.1040/0.0.2560.1400/2560.160.1920.1040@0.0.2560.1400" timestamp="1601412056288" />
     <state x="861" y="324" width="836" height="840" key="find.popup/-1920.160.1920.1040/2560.160.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1601048213166" />
     <state x="646" y="241" width="627" height="624" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600274308240" />
     <state x="861" y="324" width="836" height="840" key="find.popup/0.0.2560.1400/-1920.160.1920.1040/2560.160.1920.1040@0.0.2560.1400" timestamp="1601508632902" />
-    <state x="821" y="323" key="run.anything.popup" timestamp="1601211806895">
+    <state x="3206" y="401" width="627" height="624" key="find.popup/0.0.2560.1400/-1920.160.1920.1040/2560.160.1920.1040@2560.160.1920.1040" timestamp="1601649355820" />
+    <state x="821" y="323" key="run.anything.popup" timestamp="1601669794486">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600203803517" />
-    <state x="821" y="323" key="run.anything.popup/0.0.2560.1400/-1920.160.1920.1040/2560.160.1920.1040@0.0.2560.1400" timestamp="1601211806895" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600201807480">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="821" y="323" key="run.anything.popup/0.0.2560.1400/-1920.160.1920.1040/2560.160.1920.1040@0.0.2560.1400" timestamp="1601669794486" />
+    <state x="831" y="303" width="896" height="913" key="search.everywhere.popup" timestamp="1601672048560">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600201807480" />
+    <state x="831" y="303" width="896" height="913" key="search.everywhere.popup/0.0.2560.1400/-1920.160.1920.1040/2560.160.1920.1040@0.0.2560.1400" timestamp="1601672048560" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

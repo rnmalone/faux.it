@@ -1,1 +1,1 @@
-export { default } from './RevenueGraph';
+export {default} from './RevenueGraph';

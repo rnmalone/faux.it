@@ -11,6 +11,7 @@ interface IDropdownProps {
     label: string;
     itemList: IFacet[],
     selectedList: string[],
+
     onSelect(filterKey: string, value: string): () => void
 }
 
@@ -31,7 +32,7 @@ export default function Dropdown({filterKey, label, itemList = [], selectedList,
 
             return value
         }
-        if(selectedList.length > 1) {
+        if (selectedList.length > 1) {
             return `${selectedList.length} selected`
         }
     }

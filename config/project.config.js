@@ -41,6 +41,7 @@ const config = {
         publicAddress: process.env.HOST || 'localhost',
 
         apiBaseUri: process.env.API_BASE_PATH || '/v1/api',
+        localeUrl: process.env.LOCALE_URL || '/locale',
 
         templateLocals: {
             title: 'Template'

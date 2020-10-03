@@ -4,11 +4,11 @@ export default function getGraphXAxisKeyByTimeframeSize(days: number): string {
         return 'Q - YYYY'
     }
 
-    if(days > YEAR * 1.2 || days < YEAR * 0.4) {
+    if (days > YEAR * 1.2 || days < YEAR * 0.4) {
         return 'MMM - YYYY'
     }
 
-    if(days > 31) {
+    if (days > 31) {
         return 'Week - ww'
     }
 

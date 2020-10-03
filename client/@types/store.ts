@@ -1,7 +1,9 @@
-import {IFilterState} from "../modules/filters/filters";
+import {IFilterState} from "../modules/filters";
+import {ILocaleState} from "../modules/locale";
 
 export interface IAppStore {
-    filters: IFilterState
+    filters: IFilterState,
+    locale: ILocaleState
 }
 
 export type Dispatch<T> = (action: IAction<T>) => void

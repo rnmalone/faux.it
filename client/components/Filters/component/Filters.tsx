@@ -4,21 +4,23 @@ import {IFacetResult} from "../../../../@types/Facet";
 import {EMPLOYEE_KEY_STRING_MAP} from "../../../../server/config/strings.config";
 import {IEmployeeEntity} from "../../../@types/employe";
 import Input from "../../Input/Input";
-import {FilterType, IFilterState} from "../../../modules/filters/filters";
+import {FilterType, IFilterState} from "../../../modules/filters";
 import {SortType} from "../../../../@types/SortType";
 
 import '../styles/Filters.scss'
 
 interface IFilters {
     stateKey: FilterType;
-    setTerm(term: string): () => void;
     facets: IFacetResult[];
     filters: IFilterState['filter'];
     sortTpe: SortType;
+
+    setTerm(term: string): () => void;
+
     toggleFilterItem(stateKey: FilterType): (toToggle: string) => () => void
 }
 
-export default function Filters({ stateKey, facets = [], filters, toggleFilterItem, setTerm }: IFilters) {
+export default function Filters({stateKey, facets = [], filters, toggleFilterItem, setTerm}: IFilters) {
     return (
         <section className="Filters">
             <div className="Filters__left">

@@ -44,4 +44,4 @@ export default class Employee {
     sales: Sale[];
 }
 
-export type EmployeeDTO = Pick<Employee, 'id' | 'firstName' | 'lastName' | 'jobTitle' | 'division' | 'salary' | 'commissionRate' | 'joinDate' | 'profileImageUrl' | 'bannerImageUrl' |  'email' | 'locationId'>
+export type EmployeeDTO = Pick<Employee, 'id' | 'firstName' | 'lastName' | 'jobTitle' | 'division' | 'salary' | 'commissionRate' | 'joinDate' | 'profileImageUrl' | 'bannerImageUrl' | 'email' | 'locationId'>

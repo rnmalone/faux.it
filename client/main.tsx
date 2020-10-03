@@ -8,23 +8,31 @@ import Routes from './routes';
 import './styles/main.scss';
 
 import {BrowserRouter} from "react-router-dom";
-import Apollo from "./containers/Apollo";
 import createStore from './store/createStore';
+import {Apollo, AppIntlProvider} from "./containers";
 
 const MOUNT_NODE = document.getElementById('root');
 
-const store = createStore()
+const {localeMessages, supportedLanguages} = window.__INITIAL_STATE__
+const store = createStore({
+    locale: {
+        localeMessages,
+        supportedLanguages,
+    }
+})
 
 ReactDOM.render(
     <HotLoaderContainer>
         <Provider store={store}>
-            <Apollo>
-                <BrowserRouter basename={'/'}>
-                    <CoreLayout>
-                        <Routes/>
-                    </CoreLayout>
-                </BrowserRouter>
-            </Apollo>
+            <AppIntlProvider>
+                <Apollo>
+                    <BrowserRouter basename={'/'}>
+                        <CoreLayout>
+                            <Routes/>
+                        </CoreLayout>
+                    </BrowserRouter>
+                </Apollo>
+            </AppIntlProvider>
         </Provider>
     </HotLoaderContainer>,
     MOUNT_NODE

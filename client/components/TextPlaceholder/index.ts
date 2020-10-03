@@ -1,1 +1,1 @@
-export { default } from './TextPlaceholder';
+export {default} from './TextPlaceholder';

@@ -4,7 +4,7 @@ import {Connection} from "typeorm";
 import {IDateRange} from "../../../@types/Dates";
 
 
-export default async function selectReducibleStatsForAllSales(connection: Connection, { dateFrom, dateTo }: IDateRange) {
+export default async function selectReducibleStatsForAllSales(connection: Connection, {dateFrom, dateTo}: IDateRange) {
     return await connection
         .getRepository(Sale)
         .createQueryBuilder('sale')
@@ -12,8 +12,8 @@ export default async function selectReducibleStatsForAllSales(connection: Connec
             'SUM(sale.agreedPrice - sale.itemCost) as grossSalesProfit,' +
             'COUNT(DISTINCT customerName) as uniqueCustomers, ' +
             'COUNT(*) as sales')
-        .andWhere('sale.dateOpened >= :dateFrom', { dateFrom })
-        .andWhere('sale.dateOpened <= :dateTo', { dateTo })
-        .andWhere('sale.status = :status', { status: SaleStatus.Complete })
+        .andWhere('sale.dateOpened >= :dateFrom', {dateFrom})
+        .andWhere('sale.dateOpened <= :dateTo', {dateTo})
+        .andWhere('sale.status = :status', {status: SaleStatus.Complete})
         .execute()
 }

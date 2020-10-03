@@ -1,1 +1,1 @@
-export { default } from './Delta'
+export {default} from './Delta'

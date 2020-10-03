@@ -5,7 +5,7 @@ import {Division as DivisionType} from "../../../@types/Division";
 import './Division.scss';
 
 
-export default function Division({ type }: { type: string }) {
+export default function Division({type}: { type: string }) {
 
     return (
         <span className={cx('Division', {

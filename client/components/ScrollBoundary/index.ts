@@ -1,1 +1,1 @@
-export { default } from './ScrollBoundary';
+export {default} from './ScrollBoundary';

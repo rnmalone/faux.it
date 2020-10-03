@@ -10,7 +10,7 @@ interface ITextPlaceholder {
     height?: string;
 }
 
-export default function TextPlaceholder({ loading, children, width, height }: ITextPlaceholder) {
+export default function TextPlaceholder({loading, children, width, height}: ITextPlaceholder) {
     return (<div className={cx(
         'TextPlaceholder', {
             [`TextPlaceholder--width-${width}`]: width,
@@ -18,7 +18,7 @@ export default function TextPlaceholder({ loading, children, width, height }: IT
         }
     )}>
         {
-            loading ? <div className="TextPlaceholder__loader" /> : children
+            loading ? <div className="TextPlaceholder__loader"/> : children
         }
     </div>)
 }

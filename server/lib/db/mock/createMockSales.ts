@@ -125,12 +125,12 @@ export default function createMockSales() {
         const employeeSales: SaleDTO[] = Array(numberOfSales)
             .fill(null)
             .map((_: null, i) => {
-                const { division } = employee
+                const {division} = employee
                 // @ts-ignore
                 const bounds = priceBounds[division]
 
                 const employeeId = employee.id;
-                const item = randomWords({ min: 2, max: 3, join: ' '})
+                const item = randomWords({min: 2, max: 3, join: ' '})
                 const dayOffset = Math.round(Math.random() * 365 * 2)
                 const dateOpened = moment().subtract(dayOffset, 'days').toISOString()
                 const itemCost = getRandomInt(bounds.min, bounds.max)
@@ -138,9 +138,9 @@ export default function createMockSales() {
                 let status = SaleStatus.Complete;
                 const statusRn = Math.random()
 
-                if(statusRn > .6 && statusRn < .9) {
+                if (statusRn > .6 && statusRn < .9) {
                     status = SaleStatus.InProgress
-                } else if(statusRn > .9 && statusRn < .95) {
+                } else if (statusRn > .9 && statusRn < .95) {
                     status = SaleStatus.Closed
                 } else if (statusRn > .95) {
                     status = SaleStatus.AwaitingPayment
@@ -148,9 +148,9 @@ export default function createMockSales() {
 
                 const repeatCustomer: boolean = Math.random() > .15
                 let customerName = chance.name()
-                if(Math.random() > .15 && repeatCustomerBuffer.length) {
-                    customerName = repeatCustomerBuffer[getRandomInt(0, repeatCustomerBuffer.length -1)]
-                } else if(repeatCustomer) repeatCustomerBuffer.push(customerName)
+                if (Math.random() > .15 && repeatCustomerBuffer.length) {
+                    customerName = repeatCustomerBuffer[getRandomInt(0, repeatCustomerBuffer.length - 1)]
+                } else if (repeatCustomer) repeatCustomerBuffer.push(customerName)
 
                 return {
                     employeeId,
@@ -164,7 +164,7 @@ export default function createMockSales() {
                     leadSource: leadSources[getRandomInt(0, leadSources.length - 1)],
                     customerGender: chance.gender(),
                     // @ts-ignore
-                    productCategory: productCategories[division][getRandomInt(0, productCategories[division].length -1)],
+                    productCategory: productCategories[division][getRandomInt(0, productCategories[division].length - 1)],
                     division,
                     dateOpened,
                     dateClosed: (status === SaleStatus.Complete || status === SaleStatus.Closed) ? moment(dateOpened).add(getRandomInt(1, 5), 'days').toISOString() : null

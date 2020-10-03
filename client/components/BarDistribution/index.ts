@@ -1,1 +1,1 @@
-export { default } from './BarDistribution'
+export {default} from './BarDistribution'

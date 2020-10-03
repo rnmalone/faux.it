@@ -21,7 +21,7 @@ export default function extractSalesMetrics(sales: SaleDTO[]): IReducedSalesMetr
             totalDaysBetweenOpenAndClosedSales
         } = a
 
-        if(sale.status === SaleStatus.Complete) {
+        if (sale.status === SaleStatus.Complete) {
             totalRevenue = totalRevenue + sale.agreedPrice;
             salesComplete = salesComplete + 1;
 
@@ -29,10 +29,10 @@ export default function extractSalesMetrics(sales: SaleDTO[]): IReducedSalesMetr
             totalProfit = totalProfit + itemProfit;
             totalItemCost = totalItemCost + sale.itemCost;
 
-            totalDaysBetweenOpenAndClosedSales =  totalDaysBetweenOpenAndClosedSales + moment.duration(moment(sale.dateClosed).diff(moment(sale.dateOpened))).asDays();
+            totalDaysBetweenOpenAndClosedSales = totalDaysBetweenOpenAndClosedSales + moment.duration(moment(sale.dateClosed).diff(moment(sale.dateOpened))).asDays();
         }
 
-        if(sale.status === SaleStatus.Closed) {
+        if (sale.status === SaleStatus.Closed) {
             salesFailed = salesFailed + 1;
         }
 

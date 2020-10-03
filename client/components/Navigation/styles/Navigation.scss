@@ -40,6 +40,9 @@
 
     &__options {
       margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       &__item {
         text-transform: uppercase;

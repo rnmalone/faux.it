@@ -7,12 +7,12 @@ export interface INavigationRoute {
 
 export const NAVIGATION_ROUTES = [
     {
-        displayName: 'Employees',
+        displayName: 'general.employees',
         route: '/employees',
         icon: IconType.Employee
     },
     {
-        displayName: 'Sales',
+        displayName: 'general.sales',
         route: '/sales',
         icon: IconType.Graph
     }

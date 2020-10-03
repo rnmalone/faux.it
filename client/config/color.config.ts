@@ -13,7 +13,7 @@ export const divisionColorsByString: { [key: string]: string } = {
     Aerospace: 'green'
 }
 
-export const divisionHexColorMap: { [key:string]: string } = {
+export const divisionHexColorMap: { [key: string]: string } = {
     Nautical: core.blue,
     Motor: core.purple,
     Watches: core.yellow,
@@ -21,7 +21,7 @@ export const divisionHexColorMap: { [key:string]: string } = {
     Electrical: core.orange
 }
 
-export const divisionHexColorMapLighten: { [key:string]: string } = {
+export const divisionHexColorMapLighten: { [key: string]: string } = {
     Nautical: core.blue7,
     Motor: core.purple7,
     Watches: core.yellow7,

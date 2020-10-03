@@ -7,7 +7,7 @@ const LoggingPlugin: GraphQLRequestListener = {
         logger.info("Starting GQL Server")
     },
     requestDidStart(requestContext) {
-        if(requestContext.request.operationName === 'IntrospectionQuery') {
+        if (requestContext.request.operationName === 'IntrospectionQuery') {
             return void 0
         }
 
