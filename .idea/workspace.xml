@@ -2,113 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/@types/Division.ts" beforeDir="false" afterPath="$PROJECT_DIR$/@types/Division.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/@types/Query.ts" beforeDir="false" afterPath="$PROJECT_DIR$/@types/Query.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/@types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/@types/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/@types/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/@types/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/assets/images/flags/FR.svg" beforeDir="false" afterPath="$PROJECT_DIR$/client/assets/images/flags/FR.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/BarDistribution/BarDistribution.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/BarDistribution/BarDistribution.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/BarDistribution/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/BarDistribution/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Delta/Delta.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Delta/Delta.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Delta/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Delta/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Division/Division.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Division/Division.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Division/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Division/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Dropdown/Dropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Dropdown/Dropdown.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/EmployeeCard/EmployeeCard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/EmployeeCard/EmployeeCard.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/EmployeeCard/EmployeeCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/EmployeeCard/EmployeeCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/EmployeeCard/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/EmployeeCard/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Filters/component/Filters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Filters/component/Filters.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Filters/container/Filters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Filters/container/Filters.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Flag/Flag.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Flag/Flag.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Grid/Grid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Grid/Grid.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Grid/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Grid/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Icon/Icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Icon/Icon.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ListTable/ListTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ListTable/ListTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Location/Location.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Location/Location.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Location/Location.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Location/Location.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Location/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Location/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Navigation/components/Navigation-Desktop.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Navigation/components/Navigation-Desktop.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Navigation/styles/Navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Navigation/styles/Navigation.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Piechart/LabelledPieChart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Piechart/LabelledPieChart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Piechart/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Piechart/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/RevenueGraph/RevenueGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/RevenueGraph/RevenueGraph.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/RevenueGraph/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/RevenueGraph/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ScrollBoundary/ScrollBoundary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ScrollBoundary/ScrollBoundary.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ScrollBoundary/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ScrollBoundary/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/SegmentControl/SegmentControl.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/SegmentControl/SegmentControl.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/SegmentControl/SegmentControl.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/SegmentControl/SegmentControl.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/SegmentControl/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/SegmentControl/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Statistic/components/Statistic.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Statistic/components/Statistic.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Statistic/components/StatisticWidget.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Statistic/components/StatisticWidget.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Statistic/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Statistic/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Statistic/styles/Statistic.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Statistic/styles/Statistic.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/TextPlaceholder/TextPlaceholder.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/TextPlaceholder/TextPlaceholder.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/TextPlaceholder/TextPlaceholder.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/TextPlaceholder/TextPlaceholder.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/TextPlaceholder/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/TextPlaceholder/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/TopBar/TopBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/TopBar/TopBar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/TopBar/TopBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/TopBar/TopBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/TopBar/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/TopBar/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Value/Value.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Value/Value.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Value/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Value/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/config/client.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/config/client.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/config/color.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/config/color.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/config/navigation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/config/navigation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/containers/Apollo/Apollo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/containers/Apollo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/containers/Apollo/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/layouts/CoreLayout/CoreLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/layouts/CoreLayout/CoreLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/lib/buildFacetInputFromFilters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/buildFacetInputFromFilters.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/lib/hooks/useTimeframe.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/hooks/useTimeframe.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/lib/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/lib/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/modules/filters/filters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/modules/filters.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/modules/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/modules/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/routes/Employee/components/Employee.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/components/Employee.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/routes/Employee/components/EmployeeStatistics/EmployeeStatistics.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/components/EmployeeStatistics/EmployeeStatistics.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/routes/Employee/components/EmployeeStatistics/GenderInsights.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/components/EmployeeStatistics/GenderInsights.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/routes/Employee/components/EmployeeStatistics/SmallStats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/Employee/components/EmployeeStatistics/SmallStats.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/routes/EmployeeList/components/EmployeeList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/EmployeeList/components/EmployeeList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/routes/EmployeeList/container/EmployeeList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/EmployeeList/container/EmployeeList.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/routes/SalesOverview/components/SalesOverview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/SalesOverview/components/SalesOverview.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/routes/SalesOverview/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/SalesOverview/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/routes/SalesOverview/styles/SalesOverview.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/SalesOverview/styles/SalesOverview.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/styles/core/vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/core/vars.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/project.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/project.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodemon.json" beforeDir="false" afterPath="$PROJECT_DIR$/nodemon.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/entities/Employee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/entities/Employee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/createDatesFromTimeframe.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/createDatesFromTimeframe.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/db/mock/createMockSales.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/db/mock/createMockSales.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/db/mock/injectMockData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/db/mock/injectMockData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/extractSalesMetrics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/extractSalesMetrics.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/getGraphXAxisKeyByTimeframeSize.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/getGraphXAxisKeyByTimeframeSize.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/logger.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/logger.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/plugins/LoggingPlugin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/plugins/LoggingPlugin.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/plugins/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/plugins/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectAllSalesForDivision.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectAllSalesForDivision.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectAllSalesForEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectAllSalesForEmployee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectEmployeeProductCategoryProfit.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectEmployeeProductCategoryProfit.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectEmployeeSaleSourceProfit.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectEmployeeSaleSourceProfit.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectReducibleStatsForAllSales.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectReducibleStatsForAllSales.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectRevenueFromSales.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectRevenueFromSales.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectRevenueFromSalesByEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectRevenueFromSalesByEmployee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectSaleCustomerStats.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectSaleCustomerStats.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectSaleStatusForEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectSaleStatusForEmployee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectSaleStatusGraphDataForEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectSaleStatusGraphDataForEmployee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectSalesStatsForDivisions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectSalesStatsForDivisions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectSalesStatsForSalesChannels.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectSalesStatsForSalesChannels.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectSumProfitForDivisionGroupByEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectSumProfitForDivisionGroupByEmployee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectSumSalesForDivisionGroupByEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectSumSalesForDivisionGroupByEmployee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/utils/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/middleware/clientRenderer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/middleware/clientRenderer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/middleware/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/middleware/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/resolvers/employee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/employee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/resolvers/employeeStatistics/buildEmployeeSalesStatistics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/employeeStatistics/buildEmployeeSalesStatistics.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/resolvers/sale.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/sale.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/schema/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/schema/schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BarlowSemiCondensed-Black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BarlowSemiCondensed-BlackItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BarlowSemiCondensed-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BarlowSemiCondensed-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BarlowSemiCondensed-ExtraBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BarlowSemiCondensed-ExtraBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BarlowSemiCondensed-ExtraLight.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BarlowSemiCondensed-ExtraLightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BarlowSemiCondensed-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BarlowSemiCondensed-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BarlowSemiCondensed-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BarlowSemiCondensed-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BarlowSemiCondensed-MediumItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BarlowSemiCondensed-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BarlowSemiCondensed-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BarlowSemiCondensed-SemiBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BarlowSemiCondensed-Thin.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/BarlowSemiCondensed-ThinItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Exo2-Italic-VariableFont_wght.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Exo2-VariableFont_wght.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Poppins-Black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Poppins-BlackItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Poppins-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Poppins-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Poppins-ExtraBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Poppins-ExtraBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Poppins-ExtraLight.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Poppins-ExtraLightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Poppins-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Poppins-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Poppins-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Poppins-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Poppins-MediumItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Poppins-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Poppins-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Poppins-SemiBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Poppins-Thin.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Poppins-ThinItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/fonts/BarlowSemiCondensed.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/fonts/Exo2.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/main.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +151,7 @@
       <workItem from="1601458195522" duration="38259000" />
       <workItem from="1601553749515" duration="21707000" />
       <workItem from="1601629907999" duration="37828000" />
-      <workItem from="1601723478189" duration="2011000" />
+      <workItem from="1601723478189" duration="2186000" />
     </task>
     <servers />
   </component>
@@ -241,11 +177,11 @@
     <state x="951" y="417" key="#com.intellij.fileTypes.FileTypeChooser/-1920.160.1920.1040/0.0.2560.1400/2560.160.1920.1040@0.0.2560.1400" timestamp="1601406461755" />
     <state x="951" y="417" key="#com.intellij.fileTypes.FileTypeChooser/-1920.366.1920.1040/2560.366.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1600596974210" />
     <state x="713" y="310" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600115732315" />
-    <state x="920" y="358" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601669858983">
+    <state x="920" y="358" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601725829300">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600274610024" />
-    <state x="920" y="358" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/-1920.160.1920.1040/2560.160.1920.1040@0.0.2560.1400" timestamp="1601669858983" />
+    <state x="920" y="358" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/-1920.160.1920.1040/2560.160.1920.1040@0.0.2560.1400" timestamp="1601725829300" />
     <state x="92" y="92" width="2376" height="1216" key="DiffContextDialog" timestamp="1600597211670">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
