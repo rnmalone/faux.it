@@ -3,22 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/banner/2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/banner/2.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/banner/37.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/banner/37.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/banner/38.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/banner/38.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/banner/39.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/banner/39.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/banner/40.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/banner/40.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/banner/41.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/banner/41.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/banner/42.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/banner/42.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/profile/11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/11.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/profile/14.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/14.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/profile/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/profile/24.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/24.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/profile/33.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/33.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/profile/38.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/38.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/assets/images/profile/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/server/assets/images/profile/4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/data/employees.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/data/employees.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/db/mock/createMockSales.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/db/mock/createMockSales.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/routes/SalesOverview/components/SalesOverview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/SalesOverview/components/SalesOverview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/common/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/common/layout.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

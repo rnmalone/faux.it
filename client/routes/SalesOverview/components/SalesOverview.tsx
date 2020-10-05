@@ -28,24 +28,28 @@ export default function SalesOverview() {
                             value={price(data?.salesOverviewStatistics.stats.revenue.current!)}
                             delta={data?.salesOverviewStatistics.stats.revenue.delta}
                             label={str('statistic.revenue')}
+                            isPositive={data?.salesOverviewStatistics.stats.revenue.delta! > 0}
                             loading={loading}
                         />
                         <Statistic
                             value={price(data?.salesOverviewStatistics.stats.grossSalesProfit.current!)}
                             delta={data?.salesOverviewStatistics.stats.grossSalesProfit.delta}
                             label={str('statistic.salesProfit')}
+                            isPositive={data?.salesOverviewStatistics.stats.grossSalesProfit.delta! > 0}
                             loading={loading}
                         />
                         <Statistic
                             value={String(data?.salesOverviewStatistics.stats.uniqueCustomers.current)}
                             delta={data?.salesOverviewStatistics.stats.uniqueCustomers.delta}
                             label={str('statistic.uniqueCustomers')}
+                            isPositive={data?.salesOverviewStatistics.stats.uniqueCustomers.delta! > 0}
                             loading={loading}
                         />
                         <Statistic
                             value={String(data?.salesOverviewStatistics.stats.sales.current)}
                             delta={data?.salesOverviewStatistics.stats.sales.delta}
                             label={str('statistic.sales')}
+                            isPositive={data?.salesOverviewStatistics.stats.sales.delta! > 0}
                             loading={loading}
                         />
                     </div>
