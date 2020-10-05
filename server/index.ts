@@ -13,7 +13,7 @@ const project = require('../config/project.config');
 
 
 (async () => {
-    const database = await initDb();
+    await initDb();
     const connection = await createConnection(dbConfig.orm);
 
     await injectMockData(connection)

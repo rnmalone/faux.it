@@ -1,5 +1,7 @@
 import {IContext} from "../server";
 import {Sale} from "../entities";
+import 'apollo-cache-control';
+
 import {createDatesFromTimeframe, createDelta, logger, Results} from "../lib";
 import {
     selectAllSales,
@@ -80,8 +82,12 @@ const saleResolver = {
 
             return null
         },
-        salesOverviewStatistics: async (root: any, {timeframe}: { timeframe: number }, {connection}: IContext): Promise<ISalesOverviewStatisticsResponse['salesOverviewStatistics']> => {
+        // @ts-ignore
+        salesOverviewStatistics: async (root: any, {timeframe}: { timeframe: number }, {connection}: IContext, info): Promise<ISalesOverviewStatisticsResponse['salesOverviewStatistics']> => {
             const {dateFrom, dateTo, doubleTimeRangeMoment} = createDatesFromTimeframe(timeframe);
+            info.cacheControl.setCacheHint({ maxAge: 86400, scope: 'PUBLIC' });
+
+            logger.info(`Query: salesOverviewStatistics TIMEFRAME: ${timeframe}`)
 
             const [
                 reducedStatsForSalesCurrentTerm,

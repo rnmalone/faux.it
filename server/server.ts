@@ -1,18 +1,18 @@
 import express from 'express';
 import cors from 'cors';
 import compress from 'compression';
-import _debug from 'debug';
 import webpackConfig from '../config/webpack.config';
 import webpack, {Configuration} from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
+import responseCachePlugin from 'apollo-server-plugin-response-cache';
 import schema from './schema/schema'
 import resolvers from './resolvers'
 import {assets, clientRenderer, localeMiddleware} from "./middleware";
 import {Connection} from "typeorm";
 import {LoggingPlugin} from "./lib/plugins";
 import {locale} from './routes';
-
+import {logger} from "./lib";
 const {ApolloServer} = require('apollo-server-express');
 
 export interface IContext {
@@ -25,13 +25,16 @@ export default function startServer(connection: Connection) {
         resolvers,
         tracing: process.env.NODE_ENV === 'dev',
         plugins: [
-            LoggingPlugin
+            LoggingPlugin,
+            responseCachePlugin()
         ],
-        context: () => ({connection})
+        cacheControl: {
+            defaultMaxAge: 86400,
+        },
+        context: () => ({ connection })
     })
 
     const webpackCompiler = webpack(webpackConfig as Configuration);
-    const debug = _debug('app:server:main');
 
     let config = require('../config/project.config');
     const app = express();
@@ -48,7 +51,7 @@ export default function startServer(connection: Connection) {
 
     config = require('../config/project.config');
 
-    debug('Enabling webpack dev and hot reloading middleware.');
+    logger.info('Enabling webpack dev and hot reloading middleware.');
 
     app.use(webpackDevMiddleware(webpackCompiler, {
         publicPath: config.client.basePath
