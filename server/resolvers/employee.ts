@@ -4,6 +4,8 @@ import {logger, Results} from "../lib";
 import {selectAllEmployees, selectEmployeeById} from "../lib/queries";
 import {EMPLOYEE_SEARCHABLE_FIELDS} from "../config/search.config";
 import {IListQueryInput} from "../../@types";
+import {SortType} from "../../@types/SortType";
+import {Direction} from "../../@types/Direction";
 
 const EMPLOYEE_FACET_FIELDS: (keyof Partial<EmployeeDTO>)[] = [
     'division',
@@ -21,7 +23,10 @@ const employeeResolver = {
             const resultsBuilder = new Results(items, {
                 facetFields: EMPLOYEE_FACET_FIELDS,
                 searchableFields: EMPLOYEE_SEARCHABLE_FIELDS,
-                sortInput,
+                sortInput: {
+                    type: SortType.ALPHANUMERIC,
+                    direction: Direction.DOWN
+                },
                 facetInput,
                 searchTerm: term,
                 sortKey: 'lastName',

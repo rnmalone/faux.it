@@ -2,9 +2,7 @@ query EmployeeList(
     $term: String,
     $facets: [FacetFilterInput],
     $offset: Int,
-    $limit: Int,
-    $sortType: SortType!,
-    $sortDirection: Direction
+    $limit: Int
 ) {
     employeeList(
         term: $term
@@ -12,10 +10,6 @@ query EmployeeList(
         paging: {
             offset: $offset,
             limit: $limit
-        }
-        sort: {
-            type: $sortType,
-            direction: $sortDirection
         }
     ) {
         count

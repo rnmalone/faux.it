@@ -11,6 +11,7 @@ import {
     ISaleSourceProfit,
     ISalesOverviewStatisticsResponse,
     ISalesStatusGraph,
+    IListQueryInput,
     Statistics
 } from './Query'
 

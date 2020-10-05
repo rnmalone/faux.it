@@ -231,7 +231,6 @@ const typeDefs = gql`
             term: String
             facets: [FacetFilterInput]
             paging: PagingInput
-            sort: SortInput
         ): EmployeeResult
 
         saleList(

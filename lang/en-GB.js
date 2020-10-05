@@ -11,7 +11,7 @@ module.exports = {
 
     'attribute.jobTitle': 'Job title',
     'attribute.salary': 'Salary',
-    'attribute.commission': 'Commission',
+    'attribute.commissionRate': 'Commission',
     'attribute.division': 'Division',
     'attribute.email': 'Email',
 
