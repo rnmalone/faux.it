@@ -138,10 +138,10 @@ export default function createMockSales() {
                 let status = SaleStatus.Complete;
                 const statusRn = Math.random()
 
-                if (statusRn > .6 && statusRn < .9) {
-                    status = SaleStatus.InProgress
-                } else if (statusRn > .9 && statusRn < .95) {
+                if (statusRn > .4 && statusRn < .9) {
                     status = SaleStatus.Closed
+                } else if (statusRn > .9 && statusRn < .95) {
+                    status = SaleStatus.InProgress
                 } else if (statusRn > .95) {
                     status = SaleStatus.AwaitingPayment
                 }

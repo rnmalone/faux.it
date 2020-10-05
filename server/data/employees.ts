@@ -577,7 +577,7 @@ const employees: EmployeeDTO[] = [
     },
     {
         id: 42,
-        firstName: 'Vasiliki',
+        firstName: 'Salazar',
         lastName: 'Zotikos',
         jobTitle: 'Sales Executive',
         division: 'Nautical',
