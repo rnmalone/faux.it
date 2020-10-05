@@ -1,6 +1,6 @@
 export type EmployeeSaleStatusPie = IEmployeeSalesStatusPieSegment[]
 
 export interface IEmployeeSalesStatusPieSegment {
-    name: string;
+    status: string;
     value: number;
 }

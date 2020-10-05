@@ -21,6 +21,7 @@ import buildEmployeeSalesStatistics from "./employeeStatistics/buildEmployeeSale
 import reduceGraphArray from "../lib/reduceGraphArray";
 import {Timeframe} from "../../@types/Stats/Timeframe";
 import {IEmployeeStatisticsResponse, IListQueryInput, ISalesOverviewStatisticsResponse} from "../../@types";
+import {SaleStatus} from "../entities/Sale";
 
 const SALE_FACET_FIELDS: (keyof Partial<Sale>)[] = [
     'status'
@@ -72,7 +73,7 @@ const saleResolver = {
                 return {
                     stats: createDelta(currentTerm, previousTerm),
                     revenueGraph: reduceGraphArray(timeframe, revenueGraphEntries, ['revenue']),
-                    salesStatusPieChartData,
+                    salesStatusPieChartData: salesStatusPieChartData.filter((entry) => entry.status === SaleStatus.Complete || entry.status === SaleStatus.Closed),
                     saleStatusGraph: reduceGraphArray(timeframe, salesStatusGraphEntries, ['closed', 'completed']),
                     productCategoryProfit,
                     saleSourceProfit,

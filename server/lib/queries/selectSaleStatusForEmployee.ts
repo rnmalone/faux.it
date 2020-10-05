@@ -11,6 +11,7 @@ export default async function selectSaleStatusForEmployee(connection: Connection
         .where('sale.employeeId = :employeeId', {employeeId})
         .andWhere('sale.dateOpened >= :dateFrom', {dateFrom})
         .andWhere('sale.dateOpened <= :dateTo', {dateTo})
+        // .andWhere("sale.status = 'COMPLETE' OR sale.status='CLOSED'")
         .groupBy('sale.status')
         .execute()
 }
