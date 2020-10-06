@@ -83,10 +83,8 @@ const saleResolver = {
 
             return null
         },
-        // @ts-ignore
-        salesOverviewStatistics: async (root: any, {timeframe}: { timeframe: number }, {connection}: IContext, info): Promise<ISalesOverviewStatisticsResponse['salesOverviewStatistics']> => {
+        salesOverviewStatistics: async (root: any, {timeframe}: { timeframe: number }, {connection}: IContext): Promise<ISalesOverviewStatisticsResponse['salesOverviewStatistics']> => {
             const {dateFrom, dateTo, doubleTimeRangeMoment} = createDatesFromTimeframe(timeframe);
-            info.cacheControl.setCacheHint({ maxAge: 86400, scope: 'PUBLIC' });
 
             logger.info(`Query: salesOverviewStatistics TIMEFRAME: ${timeframe}`)
 
