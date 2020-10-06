@@ -1,15 +1,17 @@
-
 require('dotenv').config();
 
-const debug = require('debug')('app:config:project');
 const path = require('path');
 
-debug('Creating default config.');
 // ===================================================================
 // Default Configuration
 // ===================================================================
 const config = {
     env: 'development',
+
+    // Seed mock database entries on startup
+    seedData: process.env.SEED_DATA || true,
+    // Add seed data on every server reload
+    forceSeed: false,
 
     // -------------------------------------
     // Project dirs structure

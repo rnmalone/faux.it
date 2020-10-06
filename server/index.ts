@@ -2,7 +2,7 @@ import "reflect-metadata";
 import dotenv from 'dotenv';
 import server from './server';
 import {sqliteDb} from "./lib/db";
-import seedMockData from "./lib/db/seed/seedMockData";
+import seedMockData from "./lib/db/seed";
 import {createConnection} from "typeorm";
 import dbConfig from "./config/database.config";
 import {logger} from "./lib";
@@ -10,7 +10,6 @@ import {logger} from "./lib";
 dotenv.config();
 
 const project = require('../config/project.config');
-
 
 (async () => {
     let connection;
@@ -25,7 +24,7 @@ const project = require('../config/project.config');
     }
 
     if(connection) {
-        await seedMockData(connection)
+        await seedMockData()
         server(connection);
     } else {
         throw new Error('Cannot create server without an active db connection')

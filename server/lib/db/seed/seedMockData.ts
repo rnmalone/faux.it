@@ -1,12 +1,13 @@
 import {employees, locations} from "../../../data";
 import {Employee, Location, Sale} from "../../../entities";
-import {Connection} from "typeorm";
+import { getConnection} from "typeorm";
 import createMockSales from "./createMockSales";
 import logger from "../../logger";
 
-export default async function seedMockData(connection: Connection) {
+export default async function seedMockData() {
     logger.info('--- Seeding mock data ---')
     try {
+        const connection = await getConnection()
         await connection.getRepository(Employee).save(employees)
         logger.info(`Added ${employees.length} Employees`, {task: 'lib/seedMockData'})
 

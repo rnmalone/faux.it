@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/entities/Employee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/entities/Employee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/entities/Sale.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/entities/Sale.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/extractSalesMetrics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/extractSalesMetrics.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectSumProfitForDivisionGroupByEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectSumProfitForDivisionGroupByEmployee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectSumSalesForDivisionGroupByEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectSumSalesForDivisionGroupByEmployee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/resolvers/employeeStatistics/buildEmployeeSalesStatistics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/employeeStatistics/buildEmployeeSalesStatistics.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/resolvers/sale.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/sale.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/project.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/project.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/db/seed/seedMockData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/db/seed/seedMockData.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +17,8 @@
       <list>
         <option value="tsconfig.json" />
         <option value="GraphQL File" />
-        <option value="JavaScript File" />
         <option value="TypeScript JSX File" />
+        <option value="JavaScript File" />
         <option value="TypeScript File" />
       </list>
     </option>
@@ -51,19 +47,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Rory Malone\Documents\faux.it\scripts" />
+      <recent name="C:\Users\Rory Malone\Documents\faux.it\scripts\seed" />
+      <recent name="C:\Users\Rory Malone\Documents\faux.it\client\containers\AppIntlProvider\component" />
+      <recent name="C:\Users\Rory Malone\Documents\faux.it\client\containers\AppIntlProvider" />
+      <recent name="C:\Users\Rory Malone\Documents\faux.it\client\containers" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Rory Malone\Documents\faux.it\client\assets\images\flags" />
       <recent name="C:\Users\Rory Malone\Documents\faux.it\client" />
       <recent name="C:\Users\Rory Malone\Documents\faux.it\client\styles\fonts" />
       <recent name="C:\Users\Rory Malone\Documents\faux.it\server\lib\queries" />
       <recent name="C:\Users\Rorym\Documents\faux.it\client\assets\images\flags" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Rory Malone\Documents\faux.it\client\containers\AppIntlProvider\component" />
-      <recent name="C:\Users\Rory Malone\Documents\faux.it\client\containers\AppIntlProvider" />
-      <recent name="C:\Users\Rory Malone\Documents\faux.it\client\containers" />
-      <recent name="C:\Users\Rory Malone\Documents\faux.it\client\modules" />
-      <recent name="C:\Users\Rory Malone\Documents\faux.it\@types" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -119,7 +115,7 @@
       <workItem from="1601723478189" duration="3047000" />
       <workItem from="1601892046070" duration="3010000" />
       <workItem from="1601976253304" duration="12233000" />
-      <workItem from="1601995032777" duration="8956000" />
+      <workItem from="1601995032777" duration="11473000" />
     </task>
     <servers />
   </component>
