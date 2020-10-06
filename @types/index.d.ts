@@ -2,6 +2,7 @@ import {IDateRange} from './Dates'
 import {IPagingInput} from './Paging'
 import {ILocaleMessages, ILanguageMeta} from './Intl'
 
+
 import {
     ICustomerStats,
     IDelta,
@@ -12,10 +13,13 @@ import {
     ISalesOverviewStatisticsResponse,
     ISalesStatusGraph,
     IListQueryInput,
-    Statistics
+    ISalesStatusPieSegment,
+    Statistics,
+    SaleStatusPie
 } from './Query'
 
 export {
+    SaleStatusPie,
     IRevenueGraphEntry,
     IDelta,
     ISalesOverviewStatisticsResponse,

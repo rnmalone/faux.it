@@ -13,7 +13,7 @@ import {
     selectSaleCustomerStats,
     selectSaleGraphDataForEmployee,
     selectSalesStatsForDivisions, selectSalesStatsForLocations,
-    selectSalesStatsForSalesChannels,
+    selectSalesStatsForSalesChannels, selectSaleStatus,
     selectSaleStatusForEmployee
 } from "../lib/queries";
 import {SALE_SEARCHABLE_FIELDS} from "../config/search.config";
@@ -73,7 +73,7 @@ const saleResolver = {
                 return {
                     stats: createDelta(currentTerm, previousTerm),
                     revenueGraph: reduceGraphArray(timeframe, revenueGraphEntries, ['revenue']),
-                    salesStatusPieChartData: salesStatusPieChartData.filter((entry) => entry.status === SaleStatus.Complete || entry.status === SaleStatus.Closed),
+                    salesStatusPieChartData,
                     saleStatusGraph: reduceGraphArray(timeframe, salesStatusGraphEntries, ['closed', 'completed']),
                     productCategoryProfit,
                     saleSourceProfit,
@@ -94,14 +94,16 @@ const saleResolver = {
                 revenueGraphEntries,
                 divisionSalesStats,
                 salesLeadSalesStats,
-                locationSalesStats
+                locationSalesStats,
+                saleConversion
             ] = await Promise.all([
                 selectReducibleStatsForAllSales(connection, {dateFrom, dateTo}),
                 selectReducibleStatsForAllSales(connection, {dateFrom: doubleTimeRangeMoment, dateTo: dateFrom}),
                 selectRevenueFromSales(connection, {dateFrom, dateTo}),
                 selectSalesStatsForDivisions(connection, {dateFrom, dateTo}),
                 selectSalesStatsForSalesChannels(connection, {dateFrom, dateTo}),
-                selectSalesStatsForLocations(connection, {dateFrom, dateTo})
+                selectSalesStatsForLocations(connection, {dateFrom, dateTo}),
+                selectSaleStatus(connection, {dateFrom, dateTo})
             ])
 
             const delta = createDelta(reducedStatsForSalesCurrentTerm[0], reducedStatsForSalesPreviousTerm[0])
@@ -111,7 +113,8 @@ const saleResolver = {
                 revenueGraph: reduceGraphArray(timeframe, revenueGraphEntries, ['revenue']),
                 salesLeadRevenueGraph: salesLeadSalesStats,
                 divisionRevenueGraph: divisionSalesStats,
-                locationSalesStats
+                locationSalesStats,
+                salesStatusPieChartData: saleConversion
             }
         }
     }

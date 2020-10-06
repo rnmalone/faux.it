@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/@types/Query.ts" beforeDir="false" afterPath="$PROJECT_DIR$/@types/Query.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/@types/Stats/Employee.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/@types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/@types/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/queries/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectSaleStatusForEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectSaleStatusForEmployee.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/resolvers/sale.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/sale.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +117,7 @@
       <workItem from="1601629907999" duration="37828000" />
       <workItem from="1601723478189" duration="3047000" />
       <workItem from="1601892046070" duration="3010000" />
-      <workItem from="1601976253304" duration="11382000" />
+      <workItem from="1601976253304" duration="12233000" />
     </task>
     <servers />
   </component>

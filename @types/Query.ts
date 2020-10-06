@@ -40,13 +40,21 @@ export interface ILocationSalesStats {
     sales: number;
 }
 
+export type SaleStatusPie = ISalesStatusPieSegment[]
+
+export interface ISalesStatusPieSegment {
+    status: string;
+    value: number;
+}
+
 export interface ISalesOverviewStatisticsResponse {
     salesOverviewStatistics: {
         stats: Statistics<'revenue' | 'grossSalesProfit' | 'uniqueCustomers' | 'sales'>
         divisionRevenueGraph: IGenericGraphEntry[]
         salesLeadRevenueGraph: IGenericGraphEntry[]
         revenueGraph: IRevenueGraphEntry[];
-        locationSalesStats: ILocationSalesStats[]
+        locationSalesStats: ILocationSalesStats[];
+        salesStatusPieChartData: SaleStatusPie
     }
 }
 

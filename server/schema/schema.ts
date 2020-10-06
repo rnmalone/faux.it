@@ -233,6 +233,7 @@ const typeDefs = gql`
         divisionRevenueGraph: [GenericSalesGraphEntry]
         salesLeadRevenueGraph: [GenericSalesGraphEntry]
         locationSalesStats: [LocationSalesStats]
+        salesStatusPieChartData: [SaleStatusPieEntry]
     }
 
     type Query {
