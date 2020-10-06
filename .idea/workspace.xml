@@ -3,8 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/@types/Query.ts" beforeDir="false" afterPath="$PROJECT_DIR$/@types/Query.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/EmployeeCard/EmployeeCard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/EmployeeCard/EmployeeCard.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Navigation/styles/Navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Navigation/styles/Navigation.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/routes/SalesOverview/components/SalesOverview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/SalesOverview/components/SalesOverview.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/styles/common/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/common/layout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/entities/Sale.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/entities/Sale.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/queries/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectEmployeeById.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectEmployeeById.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/resolvers/sale.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/sale.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/schema/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/schema/schema.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +120,7 @@
       <workItem from="1601629907999" duration="37828000" />
       <workItem from="1601723478189" duration="3047000" />
       <workItem from="1601892046070" duration="3010000" />
+      <workItem from="1601976253304" duration="10783000" />
     </task>
     <servers />
   </component>

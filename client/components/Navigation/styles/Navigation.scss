@@ -51,10 +51,9 @@
         cursor: pointer;
         display: flex;
         padding: 1rem 2rem;
-        transition: border-right-width, color .2s linear;
+        transition: all .2s linear;
         color: white;
-        border-right: $secondary-color 0 solid;
-        display: flex;
+        border-right: $primary-color 5px solid;
         justify-content: space-between;
         align-items: center;
 
@@ -64,7 +63,7 @@
 
         &--selected {
           color: $secondary-color;
-          border-right-width: 5px;
+          border-right-color: $secondary-color;
 
           i {
             color: $secondary-color;

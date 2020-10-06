@@ -12,7 +12,7 @@ import {
     selectRevenueFromSalesByEmployee,
     selectSaleCustomerStats,
     selectSaleGraphDataForEmployee,
-    selectSalesStatsForDivisions,
+    selectSalesStatsForDivisions, selectSalesStatsForLocations,
     selectSalesStatsForSalesChannels,
     selectSaleStatusForEmployee
 } from "../lib/queries";
@@ -95,13 +95,15 @@ const saleResolver = {
                 reducedStatsForSalesPreviousTerm,
                 revenueGraphEntries,
                 divisionSalesStats,
-                salesLeadSalesStats
+                salesLeadSalesStats,
+                locationSalesStats
             ] = await Promise.all([
                 selectReducibleStatsForAllSales(connection, {dateFrom, dateTo}),
                 selectReducibleStatsForAllSales(connection, {dateFrom: doubleTimeRangeMoment, dateTo: dateFrom}),
                 selectRevenueFromSales(connection, {dateFrom, dateTo}),
                 selectSalesStatsForDivisions(connection, {dateFrom, dateTo}),
-                selectSalesStatsForSalesChannels(connection, {dateFrom, dateTo})
+                selectSalesStatsForSalesChannels(connection, {dateFrom, dateTo}),
+                selectSalesStatsForLocations(connection, {dateFrom, dateTo})
             ])
 
             const delta = createDelta(reducedStatsForSalesCurrentTerm[0], reducedStatsForSalesPreviousTerm[0])
@@ -111,6 +113,7 @@ const saleResolver = {
                 revenueGraph: reduceGraphArray(timeframe, revenueGraphEntries, ['revenue']),
                 salesLeadRevenueGraph: salesLeadSalesStats,
                 divisionRevenueGraph: divisionSalesStats,
+                locationSalesStats
             }
         }
     }

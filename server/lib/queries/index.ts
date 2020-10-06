@@ -15,3 +15,4 @@ export {default as selectRevenueFromSalesByEmployee} from './selectRevenueFromSa
 export {default as selectRevenueFromSales} from './selectRevenueFromSales';
 export {default as selectSalesStatsForDivisions} from './selectSalesStatsForDivisions';
 export {default as selectSalesStatsForSalesChannels} from './selectSalesStatsForSalesChannels';
+export {default as selectSalesStatsForLocations} from './selectSalesStatsForLocations';

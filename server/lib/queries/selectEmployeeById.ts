@@ -7,6 +7,5 @@ export default async function selectEmployeeById(connection: Connection, id: num
         .createQueryBuilder("employee")
         .where('employee.id = :id', {id})
         .innerJoinAndMapOne('employee.location', 'Location', 'location', 'location.id = employee.locationId')
-        .innerJoinAndMapMany('employee.sales', 'Sale', 'sale', 'sale.employeeId = employee.id')
         .getOne()
 }

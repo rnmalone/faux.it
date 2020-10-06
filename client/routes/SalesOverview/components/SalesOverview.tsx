@@ -2,7 +2,7 @@ import React from 'react';
 import salesOverviewStatisticsQuery from '../../../api/salesOverviewStatistics.graphql';
 import '../styles/SalesOverview.scss'
 import {useQuery} from "@apollo/client";
-import {useTimeframe} from "../../../lib/hooks";
+import {useScrollTo, useTimeframe} from "../../../lib/hooks";
 import {Statistic} from "../../../components/Statistic";
 import {price} from "../../../lib/utils/formatters";
 import RevenueGraph from "../../../components/RevenueGraph";
@@ -14,6 +14,7 @@ import {ISalesOverviewStatisticsResponse} from "../../../../@types";
 import {str} from "../../../lib";
 
 export default function SalesOverview() {
+    useScrollTo(false)(0)
     const {timeframe, toggleTimeframe, options} = useTimeframe()
     const {data, loading} = useQuery<ISalesOverviewStatisticsResponse, { timeframe: number }>(salesOverviewStatisticsQuery, {variables: {timeframe}})
 

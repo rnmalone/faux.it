@@ -216,12 +216,23 @@ const typeDefs = gql`
         #        totalEmployeeSalaries: Delta
         #        totalEmployeeExpenditure: Delta
     }
+    
+    type LocationSalesStats {
+        locationId: String
+        countryName: String
+        countryCode: String
+        address: String
+        profit: Int
+        revenue: Int
+        sales: Int
+    }
 
     type SalesOverviewStatistics {
         stats: SalesOverviewPerformanceStatistics
         revenueGraph: [RevenueGraphEntry]
         divisionRevenueGraph: [GenericSalesGraphEntry]
         salesLeadRevenueGraph: [GenericSalesGraphEntry]
+        locationSalesStats: [LocationSalesStats]
     }
 
     type Query {

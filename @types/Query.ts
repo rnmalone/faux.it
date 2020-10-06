@@ -30,12 +30,23 @@ export interface IListQueryInput {
     facets: IFacetInput[]
 }
 
+export interface ILocationSalesStats {
+    locationId: string;
+    countryName: string;
+    countryCode: string;
+    address: string;
+    profit: number;
+    revenue: number;
+    sales: number;
+}
+
 export interface ISalesOverviewStatisticsResponse {
     salesOverviewStatistics: {
         stats: Statistics<'revenue' | 'grossSalesProfit' | 'uniqueCustomers' | 'sales'>
         divisionRevenueGraph: IGenericGraphEntry[]
         salesLeadRevenueGraph: IGenericGraphEntry[]
-        revenueGraph: IRevenueGraphEntry[]
+        revenueGraph: IRevenueGraphEntry[];
+        locationSalesStats: ILocationSalesStats[]
     }
 }
 

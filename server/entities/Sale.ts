@@ -1,4 +1,5 @@
-import {Column, Entity, PrimaryGeneratedColumn} from 'typeorm';
+import {Column, Entity, ManyToOne, PrimaryGeneratedColumn} from 'typeorm';
+import Employee from "./Employee";
 
 export enum SaleStatus {
     InProgress = 'IN_PROGRESS',
@@ -13,7 +14,7 @@ export default class Sale {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column()
+    @ManyToOne(() => Employee, (employee: Employee) => employee.id)
     employeeId: number;
 
     @Column()
