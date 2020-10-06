@@ -40,7 +40,7 @@ export default class Employee {
     @Column()
     locationId: number;
 
-    @OneToMany(() => Sale, (sale: Sale) => sale.employeeId)
+    @OneToMany(() => Sale, (sale: Sale) => sale.employee)
     sales: Sale[];
 }
 

@@ -1,9 +1,14 @@
 import {Connection} from "typeorm";
 import {Sale} from "../../entities";
-import {SaleStatus} from "../../entities/Sale";
-import {IDateRange} from "../../../@types/Dates";
+import {SaleDTO, SaleStatus} from "../../entities/Sale";
+import {IDateRange} from "../../../@types";
 
-export default async function selectSumSalesForDivisionGroupByEmployee(connection: Connection, {dateFrom, dateTo}: IDateRange, division: string): Promise<Sale[]> {
+export interface IDivisionSalesByEmployee {
+    sales: number;
+    employeeId: string
+}
+
+export default async function selectSumSalesForDivisionGroupByEmployee(connection: Connection, {dateFrom, dateTo}: IDateRange, division: string): Promise<IDivisionSalesByEmployee[]> {
     return await connection
         .getRepository(Sale)
         .createQueryBuilder('sale')

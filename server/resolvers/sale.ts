@@ -21,7 +21,6 @@ import buildEmployeeSalesStatistics from "./employeeStatistics/buildEmployeeSale
 import reduceGraphArray from "../lib/reduceGraphArray";
 import {Timeframe} from "../../@types/Stats/Timeframe";
 import {IEmployeeStatisticsResponse, IListQueryInput, ISalesOverviewStatisticsResponse} from "../../@types";
-import {SaleStatus} from "../entities/Sale";
 
 const SALE_FACET_FIELDS: (keyof Partial<Sale>)[] = [
     'status'
@@ -77,8 +76,6 @@ const saleResolver = {
                 selectEmployeeSaleSourceProfit(connection, id, {dateFrom, dateTo}),
                 selectSaleCustomerStats(connection, id, {dateFrom, dateTo})
             ])
-
-            console.log(salesStatusGraphEntries)
 
             if (currentTerm && previousTerm) {
                 return {

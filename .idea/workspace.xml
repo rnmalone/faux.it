@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="" />
+    <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/entities/Employee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/entities/Employee.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/entities/Sale.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/entities/Sale.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/extractSalesMetrics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/extractSalesMetrics.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectSumProfitForDivisionGroupByEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectSumProfitForDivisionGroupByEmployee.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/queries/selectSumSalesForDivisionGroupByEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/queries/selectSumSalesForDivisionGroupByEmployee.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/resolvers/employeeStatistics/buildEmployeeSalesStatistics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/employeeStatistics/buildEmployeeSalesStatistics.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/resolvers/sale.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/sale.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,7 +119,7 @@
       <workItem from="1601723478189" duration="3047000" />
       <workItem from="1601892046070" duration="3010000" />
       <workItem from="1601976253304" duration="12233000" />
-      <workItem from="1601995032777" duration="5768000" />
+      <workItem from="1601995032777" duration="8956000" />
     </task>
     <servers />
   </component>
@@ -130,12 +139,13 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="951" y="417" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601406461755">
+    <state x="951" y="417" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602001041564">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="951" y="417" key="#com.intellij.fileTypes.FileTypeChooser/-1920.160.1920.1040/0.0.2560.1400/2560.160.1920.1040@0.0.2560.1400" timestamp="1601406461755" />
     <state x="951" y="417" key="#com.intellij.fileTypes.FileTypeChooser/-1920.366.1920.1040/2560.366.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1600596974210" />
     <state x="713" y="310" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600115732315" />
+    <state x="951" y="417" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1400/-1920.160.1920.1040/2560.160.1920.1040@0.0.2560.1400" timestamp="1602001041564" />
     <state x="920" y="358" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601725829300">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

@@ -6,11 +6,11 @@ import {
     selectSumSalesForDivisionGroupByEmployee
 } from "../../lib/queries";
 import selectAllSalesForEmployee from "../../lib/queries/selectAllSalesForEmployee";
-import {SaleDTO} from "../../entities/Sale";
 import {extractSalesMetrics} from "../../lib";
 import {IReducedSalesMetrics} from "../../lib/extractSalesMetrics";
 import {decimalPlaces2} from "../../lib/utils";
-import {IDateRange} from "../../../@types/Dates";
+import {IDateRange} from "../../../@types";
+import {Sale} from "../../entities";
 
 export interface IEmployeeSalesStatistics {
     totalRevenue: number;
@@ -40,8 +40,7 @@ export default async function buildEmployeeSalesStatistics(connection: Connectio
         return null;
     }
 
-    const divisionSales: SaleDTO[] = await selectAllSalesForDivision(connection, dateFrom, employee.division)
-
+    const divisionSales: Sale[] = await selectAllSalesForDivision(connection, dateFrom, employee.division)
     const divisionSalesMetrics: IReducedSalesMetrics = extractSalesMetrics(divisionSales)
     const employeeReducedSalesMetrics: IReducedSalesMetrics = extractSalesMetrics(employeeSales)
 
@@ -55,8 +54,8 @@ export default async function buildEmployeeSalesStatistics(connection: Connectio
 
     const revenueContributionPcForDivision = decimalPlaces2((100 / divisionSalesMetrics.totalProfit) * employeeReducedSalesMetrics.totalProfit)
     const targetRevenueContributionPcForDivision = decimalPlaces2(100 / divisionProfitsByEmployee.length)
-    const employeeDivisionProfitRank = divisionProfitsByEmployee.findIndex(({employeeId: id}) => id === employeeId) + 1
-    const employeeDivisionSalesRank = divisionSalesByEmployee.findIndex(({employeeId: id}) => id === employeeId) + 1
+    const employeeDivisionProfitRank = divisionProfitsByEmployee.findIndex(({employeeId: id}) => Number(id) === Number(employeeId)) + 1
+    const employeeDivisionSalesRank = divisionSalesByEmployee.findIndex(({employeeId: id}) => Number(id) === Number(employeeId)) + 1
 
     const saleConversionPc = decimalPlaces2((100 / (employeeReducedSalesMetrics.salesComplete + employeeReducedSalesMetrics.salesFailed)) * employeeReducedSalesMetrics.salesComplete);
     const averageProfit = Math.round(employeeReducedSalesMetrics.totalProfit / employeeReducedSalesMetrics.salesComplete);

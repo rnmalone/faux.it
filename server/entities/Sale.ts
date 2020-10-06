@@ -15,7 +15,7 @@ export default class Sale {
     id: number;
 
     @ManyToOne(() => Employee, (employee: Employee) => employee.id)
-    employeeId: number;
+    employee: number;
 
     @Column()
     item: string;
@@ -57,4 +57,8 @@ export default class Sale {
     dateClosed: Date | null;
 }
 
-export type SaleDTO = Pick<Sale, 'id' | 'division' | 'employeeId' | 'item' | 'agreedPrice' | 'itemCost' | 'customerName' | 'status' | 'dateOpened' | 'dateClosed'>
+export type SaleDTOFields = Pick<Sale, 'id' | 'division' | 'employee' | 'item' | 'agreedPrice' | 'itemCost' | 'customerName' | 'status' | 'dateOpened' | 'dateClosed'>
+
+export interface SaleDTO extends SaleDTOFields {
+    employeeId: string;
+}

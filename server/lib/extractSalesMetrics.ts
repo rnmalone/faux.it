@@ -1,5 +1,6 @@
 import {SaleDTO, SaleStatus} from "../entities/Sale";
 import moment from "moment";
+import {Sale} from "../entities";
 
 export interface IReducedSalesMetrics {
     totalRevenue: number;
@@ -10,8 +11,8 @@ export interface IReducedSalesMetrics {
     totalItemCost: number;
 }
 
-export default function extractSalesMetrics(sales: SaleDTO[]): IReducedSalesMetrics {
-    return sales.reduce((a: IReducedSalesMetrics, sale: SaleDTO) => {
+export default function extractSalesMetrics(sales: Sale[]): IReducedSalesMetrics {
+    return sales.reduce((a: IReducedSalesMetrics, sale: Sale) => {
         let {
             totalRevenue,
             salesComplete,
