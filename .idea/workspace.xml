@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/project.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/project.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/config/database.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/config/database.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/db/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/db/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/db/initDb.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/db/sqliteDb.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/db/mock/createMockSales.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/db/seed/createMockSales.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/db/mock/injectMockData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/db/seed/seedMockData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/db/mock/mockInventory.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/reduceGraphArray.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/reduceGraphArray.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/resolvers/sale.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/sale.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/schema/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/schema/schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -125,7 +110,7 @@
       <workItem from="1601723478189" duration="3047000" />
       <workItem from="1601892046070" duration="3010000" />
       <workItem from="1601976253304" duration="12233000" />
-      <workItem from="1601995032777" duration="5171000" />
+      <workItem from="1601995032777" duration="5768000" />
     </task>
     <servers />
   </component>
