@@ -167,8 +167,8 @@ const typeDefs = gql`
     }
 
     type SaleStatusGraphEntry {
-        closed: Int
-        completed: Int
+        closed: Float
+        completed: Float
         date: String
     }
 

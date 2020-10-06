@@ -1,1 +1,1 @@
-export {default as initDb} from './initDb';
+export {default as sqliteDb} from './sqliteDb';

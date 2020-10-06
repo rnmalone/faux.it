@@ -23,7 +23,7 @@ export default function reduceGraphArray<T extends { date: string }>(timeframe: 
         ...mergeOnKeys.reduce((a, key) => ({
             ...a,
             // @ts-ignore
-            [key]: rawData.reduce((b, point) => moment(point.date).format(dateFormatByTimeFrame[timeframe]) === item.date ? b + point[key] : b, 0)
+            [key]: rawData.reduce((b, point) => moment(point.date).format(dateFormatByTimeFrame[timeframe]) === item.date ? b + Number(point[key]) : b, 0)
         }), Object.create(null))
     }))
 }

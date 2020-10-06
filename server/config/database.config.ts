@@ -1,28 +1,15 @@
 import {APP_ENTITIES} from "../entities";
 import {ConnectionOptions} from "typeorm";
-
-const port = process.env.DB_PORT || 3306
-const host = process.env.DB_HOST || 'localhost';
+const config = require('../../config/project.config')
 
 const dbConfig: {
     driver: any,
     orm: ConnectionOptions
 } = {
-    driver: {
-        host,
-        port,
-        filename: process.env.DB_FILE || ':memory:'
-    },
+    driver: config.db.driver,
     orm: {
-        type: "sqlite",
-        // host,
-        // port,
-        // username: "root",
-        // password: "admin",
-        database: ":memory:",
-        entities: APP_ENTITIES,
-        synchronize: true,
-        logging: false
+        ...config.db.orm,
+        entities: APP_ENTITIES
     }
 }
 

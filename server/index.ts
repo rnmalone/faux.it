@@ -1,24 +1,36 @@
 import "reflect-metadata";
 import dotenv from 'dotenv';
 import server from './server';
-import {initDb} from "./lib/db";
-import injectMockData from "./lib/db/mock/injectMockData";
+import {sqliteDb} from "./lib/db";
+import seedMockData from "./lib/db/seed/seedMockData";
 import {createConnection} from "typeorm";
 import dbConfig from "./config/database.config";
+import {logger} from "./lib";
 
 dotenv.config();
 
-const debug = require('debug')('app:bin:server');
 const project = require('../config/project.config');
 
 
 (async () => {
-    await initDb();
-    const connection = await createConnection(dbConfig.orm);
+    let connection;
 
-    await injectMockData(connection)
-    server(connection);
+    try {
+        connection = await createConnection(dbConfig.orm);
+        logger.info(`Connected to ${project.db.orm.type} database at http://${project.db.host}:${project.db.port}.`)
+    } catch(e) {
+        logger.error('Error creating connection to configured database. Falling back to sqlite.')
+
+        await sqliteDb();
+    }
+
+    if(connection) {
+        await seedMockData(connection)
+        server(connection);
+    } else {
+        throw new Error('Cannot create server without an active db connection')
+    }
 })()
 
 
-debug(`server is now running at http://${project.server.host}:${project.server.port}.`);
+logger.info(`Server is now running at http://${project.server.host}:${project.server.port}.`);

@@ -1,3 +1,4 @@
+
 require('dotenv').config();
 
 const debug = require('debug')('app:config:project');
@@ -48,6 +49,7 @@ const config = {
         }
     },
 
+
     // -------------------------------------
     // Build configuration
     // -------------------------------------
@@ -56,6 +58,35 @@ const config = {
         hashType: 'hash'
     }
 };
+
+
+
+// -------------------------------------
+// Database configuration
+// -------------------------------------
+const dbHost = process.env.DB_HOST || 'localhost'
+const dbPort = process.env.DB_PORT || 3306
+
+config.db = {
+    port: dbPort,
+    host: dbHost,
+    // For in memory db development
+    driver: {
+        port: dbPort,
+        host: dbHost,
+        filename: process.env.DB_FILE || ':memory:'
+    },
+    orm: {
+        host: dbHost,
+        port: dbPort,
+        type: process.env.DB_TYPE || "mysql",
+        username: process.env.DB_USERNAME || "root",
+        password: process.env.DB_PASSWORD || "",
+        database: process.env.DB_NAME || "fauxit",
+        synchronize: true,
+        logging: false
+    }
+}
 
 config.server.templateLocals.basePath = config.client.basePath;
 

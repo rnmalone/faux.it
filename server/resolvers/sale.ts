@@ -58,7 +58,16 @@ const saleResolver = {
 
             logger.info(`Query: employeeStatistics ID: ${id}, TIMEFRAME: ${timeframe}`)
 
-            const [currentTerm, previousTerm, revenueGraphEntries, salesStatusPieChartData, salesStatusGraphEntries, productCategoryProfit, saleSourceProfit, saleCustomerStats] = await Promise.all([
+            const [
+                currentTerm,
+                previousTerm,
+                revenueGraphEntries,
+                salesStatusPieChartData,
+                salesStatusGraphEntries,
+                productCategoryProfit,
+                saleSourceProfit,
+                saleCustomerStats
+            ] = await Promise.all([
                 buildEmployeeSalesStatistics(connection, id, {dateFrom, dateTo}),
                 buildEmployeeSalesStatistics(connection, id, {dateFrom: doubleTimeRangeMoment, dateTo: dateFrom}),
                 selectRevenueFromSalesByEmployee(connection, id, {dateFrom, dateTo}),
@@ -68,6 +77,8 @@ const saleResolver = {
                 selectEmployeeSaleSourceProfit(connection, id, {dateFrom, dateTo}),
                 selectSaleCustomerStats(connection, id, {dateFrom, dateTo})
             ])
+
+            console.log(salesStatusGraphEntries)
 
             if (currentTerm && previousTerm) {
                 return {
