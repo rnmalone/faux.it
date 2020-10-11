@@ -1,7 +1,7 @@
 @import 'core/vars';
 @import 'transitions/slideIn';
 @import 'transitions/opacity';
-@import 'fonts/Barlow';
+@import 'fonts/Lato';
 @import 'common/images.scss';
 @import 'common/table.scss';
 @import 'common/page-item.scss';
@@ -16,7 +16,7 @@
 
 #root, input {
   margin: 0;
-  font-family: 'Barlow' !important;
+  font-family: 'Lato' !important;
 }
 
 body {

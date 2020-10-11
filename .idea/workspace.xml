@@ -3,9 +3,52 @@
   <component name="ChangeListManager">
     <list default="true" id="9e577322-4eae-4f6d-a8f2-6e74f5747eaf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Barlow-Black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Barlow-BlackItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Barlow-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Barlow-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Barlow-ExtraBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Barlow-ExtraBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Barlow-ExtraLight.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Barlow-ExtraLightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Barlow-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Barlow-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Barlow-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Barlow-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Barlow-MediumItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Barlow-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Barlow-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Barlow-SemiBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Barlow-Thin.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Barlow-ThinItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/static/Exo2-Black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/static/Exo2-BlackItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/static/Exo2-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/static/Exo2-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/static/Exo2-ExtraBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/static/Exo2-ExtraBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/static/Exo2-ExtraLight.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/static/Exo2-ExtraLightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/static/Exo2-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/static/Exo2-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/static/Exo2-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/static/Exo2-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/static/Exo2-MediumItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/static/Exo2-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/static/Exo2-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/static/Exo2-SemiBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/static/Exo2-Thin.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/static/Exo2-ThinItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Input/Input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Input/Input.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Navigation/styles/Navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Navigation/styles/Navigation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Statistic/styles/Statistic.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Statistic/styles/Statistic.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/core/vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/core/vars.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/fonts/Barlow.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/fonts/Lato.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/project.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/project.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lib/db/seed/seedMockData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/db/seed/seedMockData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/db/seed/createMockSales.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/db/seed/createMockSales.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lib/db/seed/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/lib/db/seed/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/resolvers/sale.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/resolvers/sale.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +159,8 @@
       <workItem from="1601892046070" duration="3010000" />
       <workItem from="1601976253304" duration="12233000" />
       <workItem from="1601995032777" duration="11473000" />
+      <workItem from="1602185151744" duration="413000" />
+      <workItem from="1602417352248" duration="3734000" />
     </task>
     <servers />
   </component>
@@ -169,13 +214,13 @@
     </state>
     <state x="123" y="124" width="2315" height="1153" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-1920.366.1920.1040/2560.366.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1600597211670" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600275661711" />
-    <state x="861" y="324" width="836" height="840" key="find.popup" timestamp="1601999054773">
+    <state x="861" y="324" width="836" height="840" key="find.popup" timestamp="1602422103452">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="861" y="324" width="836" height="840" key="find.popup/-1920.160.1920.1040/0.0.2560.1400/2560.160.1920.1040@0.0.2560.1400" timestamp="1601412056288" />
     <state x="861" y="324" width="836" height="840" key="find.popup/-1920.160.1920.1040/2560.160.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1601048213166" />
     <state x="646" y="241" width="627" height="624" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600274308240" />
-    <state x="861" y="324" width="836" height="840" key="find.popup/0.0.2560.1400/-1920.160.1920.1040/2560.160.1920.1040@0.0.2560.1400" timestamp="1601999054773" />
+    <state x="861" y="324" width="836" height="840" key="find.popup/0.0.2560.1400/-1920.160.1920.1040/2560.160.1920.1040@0.0.2560.1400" timestamp="1602422103452" />
     <state x="3206" y="401" width="627" height="624" key="find.popup/0.0.2560.1400/-1920.160.1920.1040/2560.160.1920.1040@2560.160.1920.1040" timestamp="1601649355820" />
     <state x="821" y="323" key="run.anything.popup" timestamp="1601669794486">
       <screen x="0" y="0" width="2560" height="1400" />

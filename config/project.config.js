@@ -9,7 +9,7 @@ const config = {
     env: 'development',
 
     // Seed mock database entries on startup
-    seedData: process.env.SEED_DATA || true,
+    seedData: process.env.SEED_DATA || false,
     // Add seed data on every server reload
     forceSeed: false,
 
