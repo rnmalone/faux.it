@@ -153,7 +153,7 @@ export default function createMockSales() {
                 } else if (repeatCustomer) repeatCustomerBuffer.push(customerName)
 
                 return {
-                    employeeId,
+                    employee: employeeId,
                     item,
                     itemCost,
                     agreedPrice,

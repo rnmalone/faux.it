@@ -77,6 +77,7 @@ const saleResolver = {
                 selectSaleCustomerStats(connection, id, {dateFrom, dateTo})
             ])
 
+
             if (currentTerm && previousTerm) {
                 return {
                     stats: createDelta(currentTerm, previousTerm),
